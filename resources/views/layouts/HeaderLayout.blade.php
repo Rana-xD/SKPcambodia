@@ -1,10 +1,6 @@
 <header id="header" class="header-style-1">
   <div class="container">
 
-    <div class="col-md-4">
-      <a id="header-logo" class="site-logo" href="/"></a>
-    </div>
-    <div class="col-md-8">
       <div class="line hidden-xs">
         <div class="social-btns style-2">
           <a class="circled fb icon-facebook" href="#" target="_blank"></a>
@@ -20,7 +16,7 @@
       </div>
 
 
-
+     <a id="header-logo" class="site-logo" href="/"></a>
       <a id="menu-toggler" href="javascript:void(0);"><span></span></a>
 
       <div class="inner">
@@ -72,7 +68,7 @@
           </div>
         </div>
       </div>
-    </div>
+
   </div>
 
 </header>
