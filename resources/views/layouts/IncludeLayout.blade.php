@@ -1,0 +1,31 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui" />
+
+<meta name="theme-color" content="#C1AA81" />
+<meta name="msapplication-navbutton-color" content="#C1AA81" />
+<meta name="apple-mobile-web-app-status-bar-style" content="#C1AA81" />
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="/css/style.min.css" type="text/css">
+
+<!-- / color -->
+<link class="colors_style" rel="stylesheet" href="/css/color_scheme/color_1.css" type="text/css"/>
+
+<!-- / google font -->
+<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Rufina:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Load jQuery
+================================================== -->
+<script type="text/javascript" src="/js/device.min.js"></script>
+<script type="text/javascript" src="/js/modernizr.custom.min.js"></script>

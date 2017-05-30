@@ -6,112 +6,11 @@
 
 	<head>
 		<title>Saul Attorneys</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-		<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui" />
-
-		<meta name="theme-color" content="#C1AA81" />
-		<meta name="msapplication-navbutton-color" content="#C1AA81" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="#C1AA81" />
-
-		<!-- Favicons
-		================================================== -->
-		<link rel="shortcut icon" href="../img/favicon.ico">
-		<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
-
-		<!-- CSS
-		================================================== -->
-		<link rel="stylesheet" href="/css/style.min.css" type="text/css">
-
-		<!-- / color -->
-		<link class="colors_style" rel="stylesheet" href="/css/color_scheme/color_1.css" type="text/css"/>
-
-		<!-- / google font -->
-		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Rufina:400,700' rel='stylesheet' type='text/css'>
-
-		<!-- Load jQuery
-		================================================== -->
-		<script type="text/javascript" src="/js/device.min.js"></script>
-		<script type="text/javascript" src="/js/modernizr.custom.min.js"></script>
+		@include('layouts/IncludeLayout')
 	</head>
 
 	<body class="home">
-		<header id="header" class="header-style-1">
-			<div class="container">
-				<div class="line hidden-xs">
-					<div class="social-btns style-2">
-						<a class="circled fb icon-facebook" href="#" target="_blank"></a>
-						<a class="circled tw icon-twitter" href="#" target="_blank"></a>
-						<a class="circled ggl icon-gplus" href="#" target="_blank"></a>
-					</div>
-
-					<div class="header-contact">
-						<span class="phone"><a href="tel:88005000550"><i class="icon-phone"></i>8 800 500 05 50</a></span>
-
-						<span class="mail"><a href="mailto:info@saulsattorneys.com">info@saulsattorneys.com</a></span>
-					</div>
-				</div>
-
-				<a id="header-logo" class="site-logo" href="index.html">SaulAttorneys</a>
-
-				<a id="menu-toggler" href="javascript:void(0);"><span></span></a>
-
-				<div class="inner">
-					<nav id="navigation" role="navigation">
-						<ul>
-							<li class="menu-item current">
-								<a href="javascript:void(0);">Home</a>
-							</li>
-							<li class="menu-item">
-								<a href="javascript:void(0);">About Us</a>
-								<div class="submenu">
-									<ul>
-										<li class="menu-item"><a href="practices_1.html">About Us</a></li>
-										<li class="menu-item"><a href="practices_2.html">Mission</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="menu-item">
-								<a href="javascript:void(0);">Team</a>
-							</li>
-							<li class="menu-item"><a href="services.html">Services</a></li>
-							<li class="menu-item">
-								<a href="javascript:void(0);">Resources</a>
-								<div class="submenu">
-									<ul>
-										<li class="menu-item"><a href="practices_1.html">Report</a></li>
-										<li class="menu-item"><a href="practices_2.html">Publication</a></li>
-										<li class="menu-item"><a href="practices_details.html">Laws and Regulations of Kingdom of Cambodia</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="menu-item"><a href="blog.html">Publication and Announcement</a></li>
-							<li class="menu-item"><a href="blog.html">Blog</a></li>
-							<li class="menu-item"><a href="contacts.html">Contact Us</a></li>
-						</ul>
-					</nav>
-
-					<div class="line visible-xs">
-						<div class="social-btns style-2">
-							<a class="circled fb icon-facebook" href="#" target="_blank"></a>
-							<a class="circled tw icon-twitter" href="#" target="_blank"></a>
-							<a class="circled ggl icon-gplus" href="#" target="_blank"></a>
-						</div>
-
-						<div class="header-contact">
-							<span class="phone"><a href="tel:88005000550"><i class="icon-phone"></i>8 800 500 05 50</a></span>
-
-							<span class="mail"><a href="mailto:info@saulsattorneys.com">info@saulsattorneys.com</a></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-
+		@include('layouts/HeaderLayout')
 		<div id="start-screen">
 			<ul class="hero-slider autoplay">
 				<li class="selected" style="background-image: url(../img/slider_img/1.jpg);">

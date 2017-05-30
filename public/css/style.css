@@ -840,7 +840,7 @@ ul, ol { list-style: none; list-style-image: none; }
 iframe { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
 
 /*
-if you use custom scroll remove this comment  
+if you use custom scroll remove this comment
 
 html.js.desktop { overflow-y: hidden; }
 */
@@ -1358,7 +1358,7 @@ main form button[type=submit] { margin-top: 10px; }
   #header.header-style-2 #navigation .submenu li:hover .submenu { margin-left: -10px; }
   #header.header-style-2 #navigation .submenu .submenu { left: 100%; margin-left: 20px; }
   #header.header-style-3 { position: absolute; top: 0; left: 0; width: 100%; }
-  #header.header-style-3 #header-logo { float: none; margin-left: auto; margin-right: auto; margin-bottom: 2px; background: url(../img/logo_2.png); }
+  #header.header-style-3 #header-logo { float: none; margin-left: auto; margin-right: auto; margin-bottom: 2px; background: url(../img/logo.svg); }
   #header.header-style-3 .inner { -webkit-transition: none; transition: none; }
   #header.header-style-3 .inner.fixed { position: fixed; top: 0; left: 0; width: 100%; background-color: #3f3f3f; -webkit-transition: background-color 0.3s ease-in-out; transition: background-color 0.3s ease-in-out; }
   #header.header-style-3 #navigation { margin-top: 0; padding-top: 28px; padding-bottom: 28px; text-align: center; }
@@ -1433,9 +1433,9 @@ main form button[type=submit] { margin-top: 10px; }
   #navigation .submenu .submenu { top: 10px; padding-top: 0; }
   #navigation .submenu .submenu ul { background-color: #c1aa81; } }
 
-#header-logo { width: 253px; height: 50px; background-image: url(../img/logo_2.png); }
+#header-logo { width: 350px; height: 88px; background-image: url(../img/logo.svg); }
 
-@media only screen and (min-width: 768px) { #header-logo { float: left; background-image: url(../img/logo_1.png); } }
+@media only screen and (min-width: 768px) { #header-logo { float: left; background-image: url(../img/logo.svg); } }
 
 .site-logo { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; background-repeat: no-repeat; }
 
@@ -1487,7 +1487,7 @@ main form button[type=submit] { margin-top: 10px; }
 
 .hero-slider li.is-moving, .hero-slider li.selected { /* the is-moving class is assigned to the slide which is moving outside the viewport */ -webkit-transition: transform 0.5s; -webkit-transition: -webkit-transform 0.5s; transition: -webkit-transform 0.5s; transition: transform 0.5s; transition: transform 0.5s, -webkit-transform 0.5s; }
 
-/* -------------------------------- 
+/* --------------------------------
 	Single slide style
 -------------------------------- */
 .hero-slider li { background-position: center center; background-repeat: no-repeat; background-size: cover; }
@@ -1519,7 +1519,7 @@ main form button[type=submit] { margin-top: 10px; }
   .hero-slider li.selected p { -webkit-transition: opacity 0.4s 0.3s, transform 0.5s 0.3s; -webkit-transition: opacity 0.4s 0.3s, -webkit-transform 0.5s 0.3s; transition: opacity 0.4s 0.3s, -webkit-transform 0.5s 0.3s; transition: opacity 0.4s 0.3s, transform 0.5s 0.3s; transition: opacity 0.4s 0.3s, transform 0.5s 0.3s, -webkit-transform 0.5s 0.3s; }
   .hero-slider li.selected .custom-btn { -webkit-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s; -webkit-transition: opacity 0.4s 0.4s, background-color 0.2s 0s, -webkit-transform 0.5s 0.4s; transition: opacity 0.4s 0.4s, background-color 0.2s 0s, -webkit-transform 0.5s 0.4s; transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s; transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s, -webkit-transform 0.5s 0.4s; } }
 
-/* -------------------------------- 
+/* --------------------------------
 	Slider navigation
 -------------------------------- */
 .slider-nav { position: absolute; z-index: 2; }
