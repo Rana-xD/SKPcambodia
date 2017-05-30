@@ -13,9 +13,9 @@
         </div>
 
         <div class="header-contact">
-          <span class="phone"><a href="tel:88005000550"><i class="icon-phone"></i>093860146</a></span>
-
-          <span class="mail"><a href="mailto:info@saulsattorneys.com">info</a></span>
+          <span class="phone"><a href="tel:88005000550">English</a></span>
+          <span class="mail"><a href="mailto:info@saulsattorneys.com">ភាសាខ្មែរ</a></span>
+          <span class="mail"><a href="mailto:info@saulsattorneys.com">中文</a></span>
         </div>
       </div>
 
@@ -52,7 +52,7 @@
                 </ul>
               </div>
             </li>
-            <li class="menu-item"><a href="blog.html">Publication and Announcement</a></li>
+            <li class="menu-item"><a href="blog.html">Publication &amp; Announcement</a></li>
             <li class="menu-item"><a href="blog.html">Blog</a></li>
             <li class="menu-item"><a href="contacts.html">Contact Us</a></li>
           </ul>
