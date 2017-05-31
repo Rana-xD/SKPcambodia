@@ -26,7 +26,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-md-3">
 						<div class="col-md-MB-30">
-							<h2>Saul’s Team Services</h2>
+							<h2>SK &amp; P Legal Services</h2>
 
 							<p>
 								There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
@@ -302,151 +302,11 @@
 			</div>
 		</section>
 
-		<section class="section transparent">
-			<div class="container">
-				<div class="team-container team-four-columns team-style-2">
-					<div class="team-container--inner">
-						<div class="row">
-							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="team-item center-block">
-									<div class="inner">
-										<figure class="img-wrap">
-											<img src="../img/team_img/4_col/1.jpg" alt="demo" />
-										</figure>
-
-										<div class="description">
-											<div class="description--inner">
-												<p>
-													If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true ge
-												</p>
-
-												<div class="social-btns style-1">
-													<a class="icon-facebook" href="#" target="_blank"></a>
-													<a class="icon-twitter" href="#" target="_blank"></a>
-													<a class="icon-linkedin" href="#" target="_blank"></a>
-													<a class="icon-youtube-play" href="#" target="_blank"></a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<h3 class="name"><a href="team_single.html">William Angler</a></h3>
-
-									<h5 class="position">PARTNER / CRIMINAL LAWYER</h5>
-								</div>
-							</div>
-
-							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="team-item center-block">
-									<div class="inner">
-										<figure class="img-wrap">
-											<img src="../img/team_img/4_col/2.jpg" alt="demo" />
-										</figure>
-
-										<div class="description">
-											<div class="description--inner">
-												<p>
-													If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true ge
-												</p>
-
-												<div class="social-btns style-1">
-													<a class="icon-facebook" href="#" target="_blank"></a>
-													<a class="icon-twitter" href="#" target="_blank"></a>
-													<a class="icon-linkedin" href="#" target="_blank"></a>
-													<a class="icon-youtube-play" href="#" target="_blank"></a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<h3 class="name"><a href="team_single.html">Andrew Phillips</a></h3>
-
-									<h5 class="position">Business Lawyer</h5>
-								</div>
-							</div>
-
-							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="team-item center-block">
-									<div class="inner">
-										<figure class="img-wrap">
-											<img src="../img/team_img/4_col/3.jpg" alt="demo" />
-										</figure>
-
-										<div class="description">
-											<div class="description--inner">
-												<p>
-													If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true ge
-												</p>
-
-												<div class="social-btns style-1">
-													<a class="icon-facebook" href="#" target="_blank"></a>
-													<a class="icon-twitter" href="#" target="_blank"></a>
-													<a class="icon-linkedin" href="#" target="_blank"></a>
-													<a class="icon-youtube-play" href="#" target="_blank"></a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<h3 class="name"><a href="team_single.html">Billy Dowson</a></h3>
-
-									<h5 class="position">Attorney in Law</h5>
-								</div>
-							</div>
-
-							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-								<div class="team-item center-block">
-									<div class="inner">
-										<figure class="img-wrap">
-											<img src="../img/team_img/4_col/4.jpg" alt="demo" />
-										</figure>
-
-										<div class="description">
-											<div class="description--inner">
-												<p>
-													If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true ge
-												</p>
-
-												<div class="social-btns style-1">
-													<a class="icon-facebook" href="#" target="_blank"></a>
-													<a class="icon-twitter" href="#" target="_blank"></a>
-													<a class="icon-linkedin" href="#" target="_blank"></a>
-													<a class="icon-youtube-play" href="#" target="_blank"></a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<h3 class="name"><a href="team_single.html">Jim Wagner</a></h3>
-
-									<h5 class="position">judge high category</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="s-video">
-			<div class="b-video parallax" data-stellar-background-ratio="0.35" data-stellar-vertical-offset="300" data-stellar-offset-parent="true" style="background-image: url(../img/bg/6.jpg);">
-				<div class="pattern"></div>
-
-				<div class="v-align">
-					<div class="btn-play-container">
-						<a class="btn-play" href="https://www.youtube.com/embed/1zG1iq9LZ2U" data-gallery="s-video"></a>
-
-						<span>Video Presentation</span>
-					</div>
-				</div>
-			</div>
-		</section>
 
 		<section class="section transparent">
 			<div class="container">
 				<div class="s-title">
 					<h2>Latest News</h2>
-
 					<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus</p>
 				</div>
 

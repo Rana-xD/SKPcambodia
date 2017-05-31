@@ -159,23 +159,18 @@
 								<div class="contact-item_info">
 									<article>
 										<h4>Address</h4>
-
-										12345 4th Street<br />
-										Los Angeles 70312
+										House C38, Street Cheerfullness, Khan Sensok, Phnom Penh Capital (Canadia City, Ratana Plaza area, Off Russian Blvd 50 meters)<br />
 									</article>
 
 									<article>
 										<h4>Phone & Fax</h4>
-
-										<strong>+01 222 4321 765</strong><br />
-										<strong>+01 222 4321 567</strong>
+										<strong>H/P: +(855) 023 883 885</strong><br />
+										<strong>Fax: +(855) 023 883 885</strong>
 									</article>
 
 									<article>
-										<h4>Email</h4>
-
-										<a href="mailto:demo@email.com">demo@email.com</a><br />
-										<a href="mailto:info@saulsattorneys.com">info@saulsattorneys.com</a>
+										<strong>Email: </strong><a href="mailto:info@skpcambodia.com">info@skpcambodia.com</a><br />
+										<strong>Website: </strong><a href="http://skpcambodia.com/">www.skpcambodia.com</a><br />
 									</article>
 								</div>
 							</div>
@@ -183,7 +178,7 @@
 
 						<div class="col-xs-12 col-md-7 col-lg-7 col-lg-offset-1">
 							<div class="contact-item">
-								<h2>Feedback Form</h2>
+								<h2>Contact Us</h2>
 
 								<form action="#">
 									<label class="input-wrp">
@@ -212,8 +207,7 @@
 						</div>
 					</div>
 
-					<div class="g_map" data-longitude="44.958309" data-latitude="34.109925" data-marker="../images/marker.png"></div>
-					<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+					<iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJEc400QpRCTEROTerQE7JFF0&key=AIzaSyD11aEIKVbapCNk0zA5GXUyQpWH3XW8ax0" width="100%" height="450" frameborder="0" style="border:0"></iframe>
 				</div>
 			</section>
 
@@ -230,7 +224,7 @@
 							<li class="slide"><img src="../img/partners_img/7.png" alt="demo" /></li>
 							<li class="slide"><img src="../img/partners_img/8.png" alt="demo" /></li>
 						</ul>
-			
+
 						<span id="partners-slide-prev-1" class="control-btn control-btn-style-2 prev-btn icon-left"></span>
 						<span id="partners-slide-next-1" class="control-btn control-btn-style-2 next-btn icon-right"></span>
 					</div>
@@ -246,7 +240,7 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="footer-item">
 									<a id="footer-logo" class="site-logo" href="index.html">Sauls Attorneys</a>
-		
+
 									<address>
 										<span>Ukraine, UA<br /> 10, First May, International st</span>
 										<br />
@@ -254,7 +248,7 @@
 										<span>Mobile: +3856 459 37 98</span>
 										<span>E-mail: <a href="mailto:hello@inch.com">hello@inch.com</a></span>
 									</address>
-		
+
 									<div class="social-btns style-1">
 										<a class="icon-facebook" href="#" target="_blank"></a>
 										<a class="icon-twitter" href="#" target="_blank"></a>
@@ -263,11 +257,11 @@
 									</div>
 								</div>
 							</div>
-		
+
 							<div class="col-xs-12 col-sm-6">
 								<div class="footer-item">
 									<h3 class="title">Main Services</h3>
-		
+
 									<ul class="list">
 										<li><i class="icon-right"></i><a href="#">Construction of houses</a></li>
 										<li><i class="icon-right"></i><a href="#">Repair soft of roofs</a></li>
@@ -278,65 +272,65 @@
 								</div>
 							</div>
 						</div>
-		
+
 						<div class="footer-item hidden-xs hidden-sm">
 							<p class="copy">© 2015 Sauls Attorneys Theme. All rights reserved</p>
 						</div>
 					</div>
-		
+
 					<div class="col-xs-12 col-md-6">
 						<div class="row">
 							<div class="col-xs-12 col-sm-6">
 								<div class="footer-item">
 									<h3 class="title">Blog Posts</h3>
-		
+
 									<div>
 										<article class="recent-posts">
 											<p><a href="#">Talking sensible advertising spacious youthful shine a discover excellent.</a></p>
-		
+
 											<span class="date-post">May 07, 2015</span>
 										</article>
-		
+
 										<article class="recent-posts">
 											<p><a href="#">With in natural bold gigantic hurry adore low-cost spacious commercial</a></p>
-		
+
 											<span class="date-post">April 01, 2015</span>
 										</article>
-		
+
 										<article class="recent-posts">
 											<p><a href="#">Advantage you extra have world's clinically extra grab rare warm.</a></p>
-		
+
 											<span class="date-post">March 16, 2015</span>
 										</article>
 									</div>
 								</div>
 							</div>
-		
+
 							<div class="col-xs-12 col-sm-6">
 								<div class="footer-item">
 									<h3 class="title">How to Reach Us</h3>
-		
+
 									<form class="footer-form" action="#">
 										<label class="input-wrp">
 											<input type="text" placeholder="Name" />
 											<span></span>
 										</label>
-		
+
 										<label class="input-wrp">
 											<input type="text" placeholder="E-mail" />
 											<span></span>
 										</label>
-		
+
 										<label class="input-wrp">
 											<input type="text" placeholder="Phone" />
 											<span></span>
 										</label>
-		
+
 										<label class="input-wrp">
 											<textarea placeholder="Your message"></textarea>
 											<span></span>
 										</label>
-		
+
 										<button class="custom-btn small light-color" type="submit" data-text="Send"><span>Send</span></button>
 									</form>
 								</div>
@@ -344,7 +338,7 @@
 						</div>
 					</div>
 				</div>
-		
+
 				<div class="footer-item visible-xs visible-sm">
 					<p class="copy">© 2015 SaulsAttorneys Theme. All rights reserved</p>
 				</div>
