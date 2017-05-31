@@ -15,7 +15,6 @@
         </div>
       </div>
 
-
      <a id="header-logo" class="site-logo" href="/"></a>
       <a id="menu-toggler" href="javascript:void(0);"><span></span></a>
 

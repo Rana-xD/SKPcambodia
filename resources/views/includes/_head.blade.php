@@ -1,5 +1,7 @@
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<title>SKP Cambodia | @yield('title')</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui" />
 
@@ -25,7 +27,4 @@
 <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Rufina:400,700' rel='stylesheet' type='text/css'>
 
-<!-- Load jQuery
-================================================== -->
-<script type="text/javascript" src="/js/device.min.js"></script>
-<script type="text/javascript" src="/js/modernizr.custom.min.js"></script>
+
