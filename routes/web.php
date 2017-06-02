@@ -11,10 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+
+Route::group(['middleware' =>'locale'],function(){
+  Route::get('/', 'routing@home');
+  Route::get('/contacts', 'routing@contact');
+  Route::get('/about','routing@about');
+  Route::get('/team','routing@team');
+  Route::get('/services','routing@service');
+  Route::get('/report','routing@report');
+  Route::get('/blog','routing@blog');
+  Route::get('/publication','routing@publication');
+  Route::get('/law','routing@law');
+  Route::get('/announcement','routing@announcement');
+  Route::get('/training','routing@training');
+  Route::get('/employment&internship','routing@employment');
 });
 
-Route::get('/contacts.html', function () {
-    return view('contacts');
-});
+Route::get('locale/{localeId?}','locale@locales');

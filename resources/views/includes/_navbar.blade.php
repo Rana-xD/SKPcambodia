@@ -13,50 +13,57 @@
           <a class="circled ggl icon-gplus" href="#" target="_blank"></a>
         </div>
         <div class="header-contact">
-          <span class="phone"><a href="tel:88005000550">English</a></span>
-          <span class="mail"><a href="mailto:info@saulsattorneys.com">ភាសាខ្មែរ</a></span>
-          <span class="mail"><a href="mailto:info@saulsattorneys.com">中文</a></span>
+          <span class="phone"><a href="locale/en">English</a></span>
+          <span class="mail"><a href="locale/kh">ភាសាខ្មែរ</a></span>
+          <span class="mail"><a href="locale/ch">中文</a></span>
         </div>
       </div>
       <div class="">
         <nav id="navigation" role="navigation">
           <ul>
             <li class="menu-item current">
-              <a href="javascript:void(0);">Home</a>
+              <a href="/">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->home): strip_tags ($Menu->home) }}}</a>
             </li>
             <li class="menu-item">
-              <a href="javascript:void(0);">About Us</a>
+              <a href="javascript:void(0);">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->about_us): strip_tags ($Menu->about_us) }}}</a>
               <div class="submenu">
                 <ul>
-                  <li class="menu-item"><a href="practices_1.html">About Us</a></li>
-                  <li class="menu-item"><a href="practices_2.html">Mission</a></li>
+                  <li class="menu-item"><a href="about">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->about_us): strip_tags ($Menu->about_us) }}}</a></li>
+                  <li class="menu-item"><a href="practices_2.html">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->mission): strip_tags ($Menu->mission) }}}</a></li>
                 </ul>
               </div>
             </li>
             <li class="menu-item">
-              <a href="javascript:void(0);">Team</a>
+              <a href="team">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->team): strip_tags ($Menu->team) }}}</a>
             </li>
             <li class="menu-item">
-              <a href="services.html">Services</a>
+              <a href="services">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->services): strip_tags ($Menu->services) }}}</a>
             </li>
             <li class="menu-item">
-              <a href="javascript:void(0);">Resources</a>
+              <a href="javascript:void(0);">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->resources): strip_tags ($Menu->resources) }}}</a>
               <div class="submenu">
                 <ul>
-                  <li class="menu-item"><a href="practices_1.html">Report</a></li>
-                  <li class="menu-item"><a href="practices_2.html">Publication</a></li>
-                  <li class="menu-item"><a href="practices_details.html">Laws and Regulations of Kingdom of Cambodia</a></li>
+                  <li class="menu-item"><a href="report">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->report): strip_tags ($Menu->report) }}}</a></li>
+                  <li class="menu-item"><a href="publication">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->publication): strip_tags ($Menu->publication) }}}</a></li>
+                  <li class="menu-item"><a href="law">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->law): strip_tags ($Menu->law) }}}</a></li>
                 </ul>
               </div>
             </li>
             <li class="menu-item">
-              <a href="blog.html">Publication &amp; Announcement</a>
+              <a href="javascript:void(0);">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->news): strip_tags ($Menu->news) }}}</a>
+              <div class="submenu">
+                <ul>
+                  <li class="menu-item"><a href="training">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->training): strip_tags ($Menu->training) }}}</a></li>
+                  <li class="menu-item"><a href="announcement">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->announment): strip_tags ($Menu->announment) }}}</a></li>
+                  <li class="menu-item"><a href="employment&internship">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->employment): strip_tags ($Menu->employment) }}}</a></li>
+                </ul>
+              </div>
             </li>
             <li class="menu-item">
-              <a href="blog.html">Blog</a>
+              <a href="blog">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->blog): strip_tags ($Menu->blog) }}}</a>
             </li>
             <li class="menu-item">
-              <a href="contacts.html">Contact Us</a>
+              <a href="contacts">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->contact_us): strip_tags ($Menu->contact_us) }}}</a>
             </li>
           </ul>
         </nav>
@@ -69,9 +76,9 @@
             </div>
 
             <div class="header-contact">
-              <span class="phone"><a href="tel:88005000550">English</a></span>
-              <span class="mail"><a href="mailto:info@saulsattorneys.com">ភាសាខ្មែរ</a></span>
-              <span class="mail"><a href="mailto:info@saulsattorneys.com">中文</a></span>
+              <span class="phone"><a href="locale/en">English</a></span>
+              <span class="mail"><a href="locale/kh">ភាសាខ្មែរ</a></span>
+              <span class="mail"><a href="locale/ch">中文</a></span>
             </div>
           </div>
       </div>

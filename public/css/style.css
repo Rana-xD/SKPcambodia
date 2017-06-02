@@ -1433,7 +1433,7 @@ main form button[type=submit] { margin-top: 10px; }
   #navigation .submenu .submenu { top: 10px; padding-top: 0; }
   #navigation .submenu .submenu ul { background-color: #c1aa81; } }
 
-#header-logo { width: 350px; height: 88px; background-image: url(../img/logo.svg); }
+#header-logo { width: 300px; height: 88px; background-image: url(../img/logo.svg); }
 
 @media only screen and (min-width: 768px) { #header-logo { float: left; background-image: url(../img/logo.svg); } }
 
