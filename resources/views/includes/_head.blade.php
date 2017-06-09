@@ -18,6 +18,7 @@
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" href="/css/style.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- / color -->
 <link class="colors_style" rel="stylesheet" href="/css/color_scheme/color_1.css" type="text/css"/>

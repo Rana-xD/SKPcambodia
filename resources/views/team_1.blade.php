@@ -59,7 +59,7 @@
 
 			<section class="section transparent">
 				<div class="container">
-					<div class="hidden-xs col-MB-20"><h2>Saul’s Team Attorneys</h2></div>
+					<div class="hidden-xs col-MB-20"><h2>SK &amp; P’s Team Attorneys</h2></div>
 
 					<div class="visible-xs col-md-MB-20"><h2 class="text-center">Saul’s Team Attorneys</h2></div>
 
@@ -89,7 +89,7 @@
 											</div>
 										</div>
 
-										<h3 class="name"><a href="team_single.html">William Angler</a></h3>
+										<h3 class="name"><a href="team_single.html">Keo Sokea</a></h3>
 
 										<h5 class="position">PARTNER / CRIMINAL LAWYER</h5>
 									</div>
@@ -118,7 +118,7 @@
 											</div>
 										</div>
 
-										<h3 class="name"><a href="team_single.html">Andrew Phillips</a></h3>
+										<h3 class="name"><a href="team_single.html">Eang Sopheak</a></h3>
 
 										<h5 class="position">Business Lawyer</h5>
 									</div>
@@ -147,7 +147,7 @@
 											</div>
 										</div>
 
-										<h3 class="name"><a href="team_single.html">Billy Dowson</a></h3>
+										<h3 class="name"><a href="team_single.html">Ham Somnang</a></h3>
 
 										<h5 class="position">Attorney in Law</h5>
 									</div>
@@ -176,189 +176,9 @@
 											</div>
 										</div>
 
-										<h3 class="name"><a href="team_single.html">Jim Wagner</a></h3>
+										<h3 class="name"><a href="team_single.html">Men Sedtharoat</a></h3>
 
 										<h5 class="position">judge high category</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="s-feedback" class="feedback-style-2 parallax" data-stellar-background-ratio="0.45" data-stellar-vertical-offset="200" data-stellar-offset-parent="true" style="background-image: url(../img/bg/2.jpg);">
-				<div class="pattern"></div>
-				<div class="pattern half hidden-xs hidden-sm"></div>
-
-				<div class="container">
-					<div class="row matchHeight-container">
-						<div class="col-xs-12 col-md-6">
-							<div class="item first matchHeight-item">
-								<h2>Free Case Evaluation</h2>
-
-								<form class="clearfix" action="#">
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="input-wrp">
-												<input type="text" placeholder="First name" />
-												<span></span>
-											</label>
-										</div>
-
-										<div class="col-xs-12 col-sm-6">
-											<label class="input-wrp">
-												<input type="text" placeholder="Last name" />
-												<span></span>
-											</label>
-										</div>
-									</div>
-
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="input-wrp">
-												<input type="text" placeholder="Your name" />
-												<span></span>
-											</label>
-										</div>
-
-										<div class="col-xs-12 col-sm-6">
-											<label class="input-wrp">
-												<input type="text" placeholder="Phone namber" />
-												<span></span>
-											</label>
-										</div>
-									</div>
-
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="input-wrp">
-												<input type="text" placeholder="Street address" />
-												<span></span>
-											</label>
-										</div>
-
-										<div class="col-xs-12 col-sm-6">
-											<label class="input-wrp">
-												<input type="text" placeholder="City" />
-												<span></span>
-											</label>
-										</div>
-									</div>
-
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="input-wrp">
-												<input type="text" placeholder="State" />
-												<span></span>
-											</label>
-										</div>
-
-										<div class="col-xs-12 col-sm-6">
-											<label class="input-wrp">
-												<input type="text" placeholder="Zip code" />
-												<span></span>
-											</label>
-										</div>
-									</div>
-
-									<label class="input-wrp">
-										<input type="text" placeholder="Subject" />
-										<span></span>
-									</label>
-
-									<label class="input-wrp">
-										<textarea placeholder="Case details"></textarea>
-										<span></span>
-									</label>
-
-									<button class="custom-btn small light-color fl-r" type="submit" data-text="Submit Evaluation"><span>Submit Evaluation</span></button>
-								</form>
-							</div>
-						</div>
-
-						<div class="col-xs-12 col-md-6">
-							<div class="item second matchHeight-item">
-								<div class="v-align">
-									<div>
-										<div class="feedback-bxslider-container bxslider-container">
-											<ul class="bxslider" data-slidewidth="970" data-slidemargin="20" data-speed="500" data-auto="true" data-adaptiveheight="true" data-pager="false" data-prevselector="#feedback-slide-prev-2" data-nextselector="#feedback-slide-next-2">
-												<li class="slide">
-													<div class="text">
-														<p>
-															Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
-														</p>
-													</div>
-
-													<div class="rating">
-														<i class="icon-star active"></i>
-														<i class="icon-star active"></i>
-														<i class="icon-star active"></i>
-														<i class="icon-star active"></i>
-														<i class="icon-star"></i>
-													</div>
-
-													<div class="author">
-														<img class="circled" src="../img/users_photos/1.png" height="84" width="84" alt="demo" />
-
-														<h3 class="name">Ann Gilbert</h3>
-
-														<h5 class="position">CEO / Vice president</h5>
-													</div>
-												</li>
-
-												<li class="slide">
-													<div class="text">
-														<p>
-															2 Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing to be sure there isn't anything embarrassing
-														</p>
-													</div>
-
-													<div class="rating">
-														<i class="icon-star active"></i>
-														<i class="icon-star active"></i>
-														<i class="icon-star active"></i>
-														<i class="icon-star"></i>
-														<i class="icon-star"></i>
-													</div>
-
-													<div class="author">
-														<img class="circled" src="../img/users_photos/2.png" height="84" width="84" alt="demo" />
-
-														<h3 class="name">Andrew Dowson</h3>
-
-														<h5 class="position">Art Directoar</h5>
-													</div>
-												</li>
-
-												<li class="slide">
-													<div class="text">
-														<p>
-															3 Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing to Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet
-														</p>
-													</div>
-
-													<div class="rating">
-														<i class="icon-star active"></i>
-														<i class="icon-star active"></i>
-														<i class="icon-star active"></i>
-														<i class="icon-star"></i>
-														<i class="icon-star"></i>
-													</div>
-
-													<div class="author">
-														<img class="circled" src="../img/users_photos/2.png" height="84" width="84" alt="demo" />
-
-														<h3 class="name">Andrew Dowson</h3>
-
-														<h5 class="position">Art Directoar</h5>
-													</div>
-												</li>
-											</ul>
-
-											<span id="feedback-slide-prev-2" class="control-btn control-btn-style-2 invers prev-btn icon-left"></span>
-											<span id="feedback-slide-next-2" class="control-btn control-btn-style-2 invers next-btn icon-right"></span>
-										</div>
 									</div>
 								</div>
 							</div>

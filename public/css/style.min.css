@@ -3267,7 +3267,6 @@ main form button[type=submit] {
     overflow: hidden;
     width: 100%;
     height: 0;
-    opacity: .5;
     -webkit-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
 }

@@ -19,20 +19,37 @@
 		<section id="headline">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-5">
-						<p id="page-title" class="h1">Gallery</p>
-					</div>
-
-					<div class="col-xs-12 col-md-7">
-						<p id="headline-text">
-							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-						</p>
+					<div class="col-xs-12 col-md-12">
+						<p id="page-title" class="h1">Activities of SK &amp; P Law Firm</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<main role="main">
+			<section class="section transparent">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-2">
+							<div class="col-md-MB-30">
+								<img class="img-responsive" src="../img/img_2.png" alt="demo" />
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-10">
+							<div class="col-md-MB-30">
+								<p>
+									Apart from our routine works such as litigations, development and witnessing business agreements/contracts (loan agreements, lease agreement, immovable property sale agreements, share transfer agreements, etc), business protection arrangements (between real owner and owner by proxy in case foreigners own land in Cambodia), property protection (will, donation, trust), family law related activities (adoption, guardian appointment), issuance of legal opinions on sppecific subject matters (e.g. adoption, loan) and international business and private law related issues (hearing before immigration authorities, legal opinion for court abroad), legal consultation on business and family law (opening company, registration of company/organization, adoption, guardianship), below are selected activities of our law group. 
+								</p>
+
+								<p>
+									These activities are limited to the information that we can share as we are professionally required to maintain confidentiality of our clients:
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section id="s-portfolio" class="section transparent">
 				<div class="container">
 					<ul id="option-set">
@@ -56,9 +73,9 @@
 										</div>
 
 										<div class="description">
-											<h3 class="h4 title"><a href="#">Bankruptcy</a></h3>
+											<h3 class="h4 title"><a href="#">Draft Law on Alcohol Control</a></h3>
 
-											<p>Sed eros minim abdo. Aliquip cui adipiscing proprius quod vel eum quis.</p>
+											<p>SK &amp; P Team during the meeting with Minister of Information on August 18, 2015 at the Ministry of Information</p>
 										</div>
 									</div>
 								</div>
@@ -67,16 +84,16 @@
 									<div class="portfolio-item center-block">
 										<div class="inner">
 											<figure class="img-wrap">
-												<img src="../img/portfolio_img/3_col/1.jpg" alt="demo" />
+												<img src="../img/portfolio_img/3_col/2.jpg" alt="demo" />
 											</figure>
 
 											<a href="../img/portfolio_img/3_col/1.jpg" data-gallery="gall"></a>
 										</div>
 
 										<div class="description">
-											<h3 class="h4 title"><a href="#">Bilateral Agreement</a></h3>
+											<h3 class="h4 title"><a href="#">Radio Talkshow</a></h3>
 
-											<p>Pagus dolore ludus. Qui ne in proprius suscipit rusticus at praemitto usitas.</p>
+											<p>KEO Sokea at Radio Free Asia Talkshow on August 4, 2015 as resource speaker with Dr Mom Kong, CMH</p>
 										</div>
 									</div>
 								</div>
@@ -92,9 +109,9 @@
 										</div>
 
 										<div class="description">
-											<h3 class="h4 title"><a href="#">Legal Action</a></h3>
+											<h3 class="h4 title"><a href="#">National Radio Talkshow</a></h3>
 
-											<p>Defui refero minim. Importunus nisl huic ulciscor quibus valde.</p>
+											<p>KEO Sokea at National Radio Talkshow​ on July 31, 2015 as resource speaker with Dr.Yel Daravuth, WHO</p>
 										</div>
 									</div>
 								</div>
@@ -110,9 +127,9 @@
 										</div>
 
 										<div class="description">
-											<h3 class="h4 title"><a href="#">Assessment of Damage</a></h3>
+											<h3 class="h4 title"><a href="#">TV Talkshow</a></h3>
 
-											<p>Quis enim odio consequat dignissim dignissim iriure consequat abbas.</p>
+											<p>Speaker at Bayon TV Talkshow on July 21, 2015</p>
 										</div>
 									</div>
 								</div>
@@ -128,9 +145,9 @@
 										</div>
 
 										<div class="description">
-											<h3 class="h4 title"><a href="#">Mortgage</a></h3>
+											<h3 class="h4 title"><a href="#">Speaker</a></h3>
 
-											<p>Hendrerit iustum commoveo zelus suscipit vulputate voco ex sudo.</p>
+											<p>Resource Speaker during Press Conference, Phnom Penh University July 14, 2015</p>
 										</div>
 									</div>
 								</div>
@@ -146,9 +163,9 @@
 										</div>
 
 										<div class="description">
-											<h3 class="h4 title"><a href="#">Patent Pending</a></h3>
+											<h3 class="h4 title"><a href="#">National Radio Talkshow​</a></h3>
 
-											<p>Feugait vereor refoveo aliquip at. Opto os wisi commodo pertineo lobortis </p>
+											<p>National Radio Talkshow​ at the National Radio Wat Phnom, May 18, 2015 as resource speaker</p>
 										</div>
 									</div>
 								</div>
@@ -164,9 +181,9 @@
 										</div>
 
 										<div class="description">
-											<h3 class="h4 title"><a href="#">Probate administration</a></h3>
+											<h3 class="h4 title"><a href="#">Public Presentation</a></h3>
 
-											<p>Inhibeo praesent autem rusticus abico. Duis facilisi patria te veniam appellatio</p>
+											<p>Presentation by Attorney KEO Sophea at the Senate, about Interference by Tobacco Industry, on February 12, 2015</p>
 										</div>
 									</div>
 								</div>
@@ -182,9 +199,9 @@
 										</div>
 
 										<div class="description">
-											<h3 class="h4 title"><a href="#">Wrongful death</a></h3>
+											<h3 class="h4 title"><a href="#">Meeting</a></h3>
 
-											<p>Tation illum quidem abico at damnum neque iriure typicus accumsan paratus nullus.</p>
+											<p>Review meeting on Tobacco Control at WHO Regional Office, Manila, Philippines, May 2012</p>
 										</div>
 									</div>
 								</div>
@@ -200,9 +217,137 @@
 										</div>
 
 										<div class="description">
-											<h3 class="h4 title"><a href="#">Guardinship</a></h3>
+											<h3 class="h4 title"><a href="#">Workshop Presentation</a></h3>
 
-											<p>Ex refoveo consequat qui qui mauris letatio nonummy proprius. </p>
+											<p>Presentation by Attorney KEO Sophea during Workshop on Tobacco Control Law, Phnom Penh Municipality Hall, September 19, 2015 </p>
+										</div>
+									</div>
+								</div>
+
+								<div class="element category-3 col-xs-12 col-sm-6 col-md-4">
+									<div class="portfolio-item center-block">
+										<div class="inner">
+											<figure class="img-wrap">
+												<img src="../img/portfolio_img/3_col/10.jpg" alt="demo" />
+											</figure>
+
+											<a href="../img/portfolio_img/3_col/10.jpg" data-gallery="gall"></a>
+										</div>
+
+										<div class="description">
+											<h3 class="h4 title"><a href="#">Youth Forum</a></h3>
+
+											<p>Youth Forum on Smoke Free,November 22, 2013,  Phnom Penh Capital</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="element category-3 col-xs-12 col-sm-6 col-md-4">
+									<div class="portfolio-item center-block">
+										<div class="inner">
+											<figure class="img-wrap">
+												<img src="../img/portfolio_img/3_col/11.jpg" alt="demo" />
+											</figure>
+
+											<a href="../img/portfolio_img/3_col/11.jpg" data-gallery="gall"></a>
+										</div>
+
+										<div class="description">
+											<h3 class="h4 title"><a href="#">Youth Workshop</a></h3>
+
+											<p>Youth Workshop on Tobacco Taxation September 03, 2013  in Phnom Penh Capital</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="element category-3 col-xs-12 col-sm-6 col-md-4">
+									<div class="portfolio-item center-block">
+										<div class="inner">
+											<figure class="img-wrap">
+												<img src="../img/portfolio_img/3_col/12.jpg" alt="demo" />
+											</figure>
+
+											<a href="../img/portfolio_img/3_col/12.jpg" data-gallery="gall"></a>
+										</div>
+
+										<div class="description">
+											<h3 class="h4 title"><a href="#">Contribution</a></h3>
+
+											<p>Our Contribution to Public Health: Campaign against Tobacco Product Advertisement, Phnom Penh Capital, June 06, 2013</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="element category-3 col-xs-12 col-sm-6 col-md-4">
+									<div class="portfolio-item center-block">
+										<div class="inner">
+											<figure class="img-wrap">
+												<img src="../img/portfolio_img/3_col/13.jpg" alt="demo" />
+											</figure>
+
+											<a href="../img/portfolio_img/3_col/13.jpg" data-gallery="gall"></a>
+										</div>
+
+										<div class="description">
+											<h3 class="h4 title"><a href="#">Evaluation Panel Judge</a></h3>
+
+											<p>Awarding Ceremony, Poem and Drawing Contest, Royal Phnom Penh University, March 2015. Our team member was one of the panel members that evaluated and determined the winners</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="element category-3 col-xs-12 col-sm-6 col-md-4">
+									<div class="portfolio-item center-block">
+										<div class="inner">
+											<figure class="img-wrap">
+												<img src="../img/portfolio_img/3_col/14.jpg" alt="demo" />
+											</figure>
+
+											<a href="../img/portfolio_img/3_col/14.jpg" data-gallery="gall"></a>
+										</div>
+
+										<div class="description">
+											<h3 class="h4 title"><a href="#">Field Inquiry</a></h3>
+
+											<p>Making inquiries in the field: Osvay Commune, Anlongveng District, Oddormeanchey, August, 07, 2015</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="element category-3 col-xs-12 col-sm-6 col-md-4">
+									<div class="portfolio-item center-block">
+										<div class="inner">
+											<figure class="img-wrap">
+												<img src="../img/portfolio_img/3_col/15.jpg" alt="demo" />
+											</figure>
+
+											<a href="../img/portfolio_img/3_col/15.jpg" data-gallery="gall"></a>
+										</div>
+
+										<div class="description">
+											<h3 class="h4 title"><a href="#">Land Survey</a></h3>
+
+											<p>Attorney EA Sopheap and District Land Cadastral Official, 01 January, 2015, Kandal Province</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="element category-3 col-xs-12 col-sm-6 col-md-4">
+									<div class="portfolio-item center-block">
+										<div class="inner">
+											<figure class="img-wrap">
+												<img src="../img/portfolio_img/3_col/16.jpg" alt="demo" />
+											</figure>
+
+											<a href="../img/portfolio_img/3_col/16.jpg" data-gallery="gall"></a>
+										</div>
+
+										<div class="description">
+											<h3 class="h4 title"><a href="#">Agreement</a></h3>
+
+											<p> Attorney KEO Sophea and EA Sopheap at the field to monitor land measuring on 01 January, 2015 after HENG TIAN(CAMBODIA) PROPERTY CO., LTD.
+and KOY KAOTAY VENG SRENG CONSTRUCTION CO.,LTD,signed land purchase agreement. SK &amp; P Team was then instructed to assist HENG TIAN PROPY CO., LTD
+to draft land sale agreement, protection agreement, to witness fingerprinting and signing relevant documents, to take photos regarding the signing and receiving of money, to facilitate land titles processing, to monitor at the field, and to document relevant files of the transaction.</p>
 										</div>
 									</div>
 								</div>

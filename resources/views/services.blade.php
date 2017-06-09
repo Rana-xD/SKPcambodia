@@ -12,6 +12,20 @@
 @endpush
 @push('styles')
 <style type="text/css">
+	.table_title{
+	 	background: #4F86C6;
+	 	text-align: center;
+	 	color: white;
+	}
+	.table{
+		border: 2px solid #ddd;
+		width:100%;
+	}
+	th, td{
+		border: 2px solid #ddd;
+		padding: 8px;
+		text-align: center;
+	}
 
 </style>
 @endpush
@@ -33,6 +47,31 @@
 		</section>
 
 		<main role="main">
+
+			<section class="section transparent">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-8 col-md-9">
+							<h2>Providing Legal Service</h2>
+
+							<img class="img-responsive visible-xs" src="../img/img_1.png" alt="demo" >
+
+							<p>
+								<strong>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</strong>
+							</p>
+
+							<p>
+								If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words.
+							</p>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 col-md-3">
+							<img class="img-responsive center-block hidden-xs" src="../img/img_1.png" alt="demo" >
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<section id="s-services" class="section transparent">
 				<div class="container">
 					<div class="s-title">
@@ -133,178 +172,64 @@
 				</div>
 			</section>
 
+			<!--Translation Service-->
 			<section class="section transparent">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-12 col-sm-8 col-md-9">
-							<h2>Providing Legal Service</h2>
+						<div class="col-xs-12 col-sm-8 col-md-6">
+							<h2>Translation and Interpretation Service</h2>
 
 							<img class="img-responsive visible-xs" src="../img/img_1.png" alt="demo" >
 
 							<p>
-								<strong>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</strong>
+								<strong>SK &amp; P Cambodia Law Firm provides the following translation/interpretation services:</strong>
 							</p>
 
 							<p>
-								If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words.
+								<i class="fa fa-check"></i> Translation of all kinds of documents relating to political, social, economic and cultural matters; human rights,; education; law; and etc. from English to Khmer and vice versa<br/>
+								<i class="fa fa-check"></i> Simultaneous/consecutive translation for workshop/conference/meeting relating to political, social, economic and cultural matters; human rights; education; law; and etc. from English to Khmer and vice versa<br/>
 							</p>
+							<p><strong>Note:</strong> One page is 300 word counts in English or 1,500 Khmer characters without space</p>
 						</div>
 
-						<div class="col-xs-12 col-sm-4 col-md-3">
-							<img class="img-responsive center-block hidden-xs" src="../img/img_1.png" alt="demo" >
-						</div>
-					</div>
-				</div>
-			</section>
+						<div class="col-xs-12 col-sm-4 col-md-6">
+							<h3 style="text-align:center">Document Translation</h3>
+							<table class="table table-bordered">
+								<tr>
+									<th colspan="3" class="table_title">English - Khmer / Khmer - English</th>
+								</tr>
 
-			<section class="special-tabs parallax" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="400" data-stellar-offset-parent="true" style="background-image: url(../img/bg/5.jpg);">
-				<div class="pattern"></div>
+								<tr>
+									<th>1 - 10 Pages</th>
+									<th>11 - 50 Pages</th>
+									<th>50+ Pages</th>
+								</tr>
+								<tr>
+									<td>12 USD</td>
+									<td>11 USD</td>
+									<td>10 USD</td>
+								</tr>
+							</table>
 
-				<div class="container">
-					<div class="tab-container">
-						<div class="tab-content">
-							<div class="tab-item">
-								<h2 class="title">Family Law Solutions</h2>
-
-								<p>
-									Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet
-								</p>
-							</div>
-
-							<div class="tab-item">
-								<h2 class="title">2 Family Law Solutions</h2>
-
-								<p>
-									Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet
-								</p>
-							</div>
-
-							<div class="tab-item">
-								<h2 class="title">3 Family Law Solutions</h2>
-
-								<p>
-									Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet
-								</p>
-							</div>
-						</div>
-
-						<nav>
-							<a href="javascript:void(0);"><i class="ico icon-eye"></i><span>Divorce & Separation</span></a>
-							<a href="javascript:void(0);"><i class="ico icon-money"></i><span>Child Support & Alimony</span></a>
-							<a href="javascript:void(0);"><i class="ico icon-heart"></i><span>Custody</span></a>
-						</nav>
-					</div>
-				</div>
-			</section>
-
-			<section class="section transparent">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-md-8">
-							<div class="col-md-MB-30">
-								<h2>Interesting Services</h2>
-
-								<div class="tab-container">
-									<nav>
-										<a href="#">Criminal Law</a>
-										<a href="#">Judjes Expirience</a>
-										<a href="#">Legislation</a>
-									</nav>
-
-									<div class="tab-content">
-										<div class="tab-item">
-											<p>
-												<strong>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</strong> <br />
-												If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of
-											</p>
-										</div>
-
-										<div class="tab-item">
-											<p>
-												If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of <br />
-												<strong>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</strong>
-											</p>
-
-											<p>
-												If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of
-											</p>
-										</div>
-
-										<div class="tab-item">
-											<p>
-												<strong>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of </strong>
-											</p>
-
-											<p>
-												If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-12 col-md-4">
-							<div class="col-md-MB-30">
-								<h2>Our Expirience</h2>
-
-								<div class="skills-container">
-									<div class="skill-item">
-										<span class="skill-percent fl-r" data-percent="75"></span>
-
-										<span class="caption"><strong>Justice</strong></span>
-
-										<div class="progress-bar b-table">
-											<span class="cell v-top"></span>
-											<span class="cell v-top"></span>
-										</div>
-									</div>
-
-									<div class="skill-item">
-										<span class="skill-percent fl-r" data-percent="58"></span>
-
-										<span class="caption"><strong>Criminal Law</strong></span>
-
-										<div class="progress-bar b-table">
-											<span class="cell v-top"></span>
-											<span class="cell v-top"></span>
-										</div>
-									</div>
-
-									<div class="skill-item">
-										<span class="skill-percent fl-r" data-percent="63"></span>
-
-										<span class="caption"><strong>Legislation</strong></span>
-
-										<div class="progress-bar b-table">
-											<span class="cell v-top"></span>
-											<span class="cell v-top"></span>
-										</div>
-									</div>
-
-									<div class="skill-item">
-										<span class="skill-percent fl-r" data-percent="32"></span>
-
-										<span class="caption"><strong>JIndependent judge</strong></span>
-
-										<div class="progress-bar b-table">
-											<span class="cell v-top"></span>
-											<span class="cell v-top"></span>
-										</div>
-									</div>
-
-									<div class="skill-item">
-										<span class="skill-percent fl-r" data-percent="91"></span>
-
-										<span class="caption"><strong>Judjes Expirience</strong></span>
-
-										<div class="progress-bar b-table">
-											<span class="cell v-top"></span>
-											<span class="cell v-top"></span>
-										</div>
-									</div>
-								</div>
-							</div>
+							<h3 style="text-align:center">Interpretation</h3>
+							<table class="table table-bordered">
+								<tr>
+									<th colspan="2" class="table_title">Simultaneous</th>
+									<th colspan="2" class="table_title">Consecutive</th>
+								</tr>
+								<tr>
+									<th>1/2 Day</th>
+									<th>Full Day</th>
+									<th>1/2 Day</th>
+									<th>Full Day</th>
+								</tr>
+								<tr>
+									<td>150 USD</td>
+									<td>250 USD</td>
+									<td>120 USD</td>
+									<td>200 USD</td>
+								</tr>
+							</table>
 						</div>
 					</div>
 				</div>
