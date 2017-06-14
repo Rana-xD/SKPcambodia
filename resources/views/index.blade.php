@@ -110,46 +110,76 @@
 				<div class="row">
 					<div class="col-xs-12 col-md-7">
 						<div class="col-md-MB-30">
-							<h2>Some Fun Facts</h2>
-
-							<p style="font-size:15px;font-family: Rufina,serif;color:#9b9b9b">
-								The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+							<h2>Welcome to SK &amp; P Cambodia Law Firm</h2>
+							<p>
+								SK &amp; P Cambodia Law Group is the Cambodian law firm that was established with the permission N0: 860 k.m of the Bar Association of the Kingdom of Cambodia. We are specialized in many areas, particularly family law issues, child protection, contract law, land law, banking, and criminal law, and provision of training in these areas.
 							</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-5 col-lg-4">
+						<div class="col-md-MB-30">
+							<h2>Our Expirience</h2>
 
-							<div class="counters-container counters-style-1">
-								<div class="counters-container--inner">
-									<div class="counter-item">
-										<span class="count" data-from="0" data-to="500" data-after="+"></span>
-										<h4 class="count-details">Happy Clients</h4>
+							<div class="skills-container">
+								<div class="skill-item">
+									<span class="skill-percent fl-r" data-percent="75"></span>
+
+									<span class="caption"><strong>Justice</strong></span>
+
+									<div class="progress-bar b-table">
+										<span class="cell v-top"></span>
+										<span class="cell v-top"></span>
 									</div>
+								</div>
 
-									<div class="counter-item">
-										<span class="count" data-from="0" data-to="200" data-after="+"></span>
-										<h4 class="count-details">Successfuly Cases</h4>
+								<div class="skill-item">
+									<span class="skill-percent fl-r" data-percent="58"></span>
+
+									<span class="caption"><strong>Criminal Law</strong></span>
+
+									<div class="progress-bar b-table">
+										<span class="cell v-top"></span>
+										<span class="cell v-top"></span>
 									</div>
+								</div>
 
-									<div class="counter-item">
-										<span class="count" data-from="0" data-to="1000" data-after="+"></span>
-										<h4 class="count-details">Lawsuits</h4>
+								<div class="skill-item">
+									<span class="skill-percent fl-r" data-percent="63"></span>
+
+									<span class="caption"><strong>Legislation</strong></span>
+
+									<div class="progress-bar b-table">
+										<span class="cell v-top"></span>
+										<span class="cell v-top"></span>
+									</div>
+								</div>
+
+								<div class="skill-item">
+									<span class="skill-percent fl-r" data-percent="32"></span>
+
+									<span class="caption"><strong>JIndependent judge</strong></span>
+
+									<div class="progress-bar b-table">
+										<span class="cell v-top"></span>
+										<span class="cell v-top"></span>
+									</div>
+								</div>
+
+								<div class="skill-item">
+									<span class="skill-percent fl-r" data-percent="91"></span>
+
+									<span class="caption"><strong>Judjes Expirience</strong></span>
+
+									<div class="progress-bar b-table">
+										<span class="cell v-top"></span>
+										<span class="cell v-top"></span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-xs-12 col-md-5">
-						<div class="col-md-MB-30">
-							<h2>We are in Your Life</h2>
 
-							<p>
-								<strong>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </strong>
-							</p>
-
-							<p>
-								If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-							</p>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
@@ -240,7 +270,7 @@
 
 			<div class="col-xs-12 col-md-6">
 				<div class="item second matchHeight-item" data-mh="items-a">
-					<div class="b-about" style="background-image: url(../img/bg/1.jpg);">
+					<div class="b-about" style="background-image: url(../img/bg/mission.jpg);">
 						<div class="pattern"></div>
 
 						<div class="outer v-align">
@@ -442,4 +472,3 @@
 	});
 </script>
 @endsection
-

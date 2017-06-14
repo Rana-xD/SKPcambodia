@@ -1506,7 +1506,7 @@ to {
     -webkit-overflow-scrolling: touch;
 }
 body {
-    font-family: Oxygen, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
     line-height: 1.538;
     color: #555;
@@ -1988,7 +1988,7 @@ main .h1, main .h2, main .h3, main .h4, main .h5, main h1, main h2, main h3, mai
     margin-bottom: 20px;
 }
 .h5, h5 {
-    font-family: Oxygen, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
 .s-title {
@@ -2870,7 +2870,7 @@ main form button[type=submit] {
     background-color: #c1aa81;
 }
 }#header-logo {
-    width: 300px;
+    width: 330px;
     height: 88px;
     background-image: url(../img/logo.svg);
 }
@@ -4759,7 +4759,7 @@ main form button[type=submit] {
     box-shadow: none;
     line-height: 1;
     font-weight: 700;
-    font-family: Oxygen, sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
     text-decoration: none;
     outline: none;
