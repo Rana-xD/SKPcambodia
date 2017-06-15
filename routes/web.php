@@ -30,3 +30,4 @@ Route::group(['middleware' =>'locale'],function(){
 });
 
 Route::get('locale/{localeId?}','locale@locales');
+Route::get('PDF/{path}/{filename}','system@downloadpdf');

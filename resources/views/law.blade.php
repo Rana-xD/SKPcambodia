@@ -12,7 +12,120 @@
 @endpush
 @push('styles')
 <style type="text/css">
+.files-wrapper{
+	position: relative;
+	width: 100%;
+}
+.files-wrapper .inner{
+	position: relative;
+	width: 100%;
+}
+.files-wrapper .accordion{
+	position: relative;
+	width: 50%;
+	float: left;
+	margin-bottom: 20px;
+	padding: 20px;
 
+}
+
+.files-wrapper .accordion-heading{
+	display: block;
+	position: relative;
+	width: 100%;
+	text-align: left;
+	background: #2b90d9;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+
+}
+
+.files-wrapper .accordion-heading h3{
+	padding: 15px 25px;
+	display: block;
+	margin: 0;
+	font-size: 18px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.files-wrapper .accordion-body{
+	position: relative;
+	width: 100%;
+	float: left;
+	height: 0;
+	overflow: hidden;
+	padding: 0px;
+	background: #f1f1f1;
+	transition: height 0.45s linear;
+	-webkit-transition: height 0.45s linear;
+	-moz-transition: height 0.45s linear;
+	-ms-transition: height 0.45s linear;
+	-o-transition: height 0.45s linear;
+}
+
+.files-wrapper .accordion-body.active{
+	height: auto;
+	border-top: 1px solid #d3d3d3;
+
+}
+
+
+.files-wrapper .accordion-body .file-item{
+	position: relative;
+	float: left;
+	display: block;
+	width: 100%;
+	padding: 12px 30px;
+	transition: all 0.27s ease;
+	-webkit-transition: all 0.27s ease;
+	-moz-transition: all 0.27s ease;
+	-ms-transition: all 0.27s ease;
+	-o-transition: all 0.27s ease;
+
+}
+
+.file-item a{
+	text-decoration: none;
+	color: #534847;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.file-item .download{
+	transition: transform 0.25s ease;
+	-webkit-transition: transform 0.25s ease;
+	-moz-transition: transform 0.25s ease;
+	-ms-transition: transform 0.25s ease;
+	-o-transition: transform 0.25s ease;
+}
+.file-item .view{
+	transition: all 0.33s ease;
+	-webkit-transition: all 0.33s ease;
+	-moz-transition: all 0.33s ease;
+	-ms-transition: all 0.33s ease;
+	-o-transition: all 0.33s ease;
+}
+.file-item .download:hover i{
+	transform: scale(1.1, 1.1);
+	-webkit-transform: scale(1.1, 1.1);
+	-moz-transform: scale(1.1, 1.1);
+	-ms-transform: scale(1.1, 1.1);
+	-o-transform: scale(1.1, 1.1);
+}
+.file-item .view:hover{
+	text-decoration: underline;
+}
+.file-item:hover{
+	background: #F0E5DE;
+}
+
+.file-item i{
+	margin-right: 15px;
+	color: #60c5ba;
+	font-size: 18px;
+}
 </style>
 @endpush
 @section('content')
@@ -33,333 +146,86 @@
 		</section>
 
 		<main role="main">
-			<section id="s-practices" class="section transparent">
+			<section class="section transparent">
 				<div class="container">
 					<div class="hidden-xs col-MB-20"><h2>Practice Area</h2></div>
 
 					<div class="visible-xs col-md-MB-20"><h2 class="text-center">Practice Area</h2></div>
 
-					<div class="practices-container practices-four-columns practices-style-2">
-						<div class="practices-container--inner">
-							<div class="row js-isotope" data-isotope-options='{ "layoutMode": "fitRows",  "itemSelector": ".element", "transitionDuration": "0.8s", "percentPosition": "true"}'>
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/1.jpg" alt="demo" />
-											</figure>
+					<div class="files-wrapper clearfix">
+						<div class="inner clearfix">
 
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Bankruptcy</a></h3>
-
-											<p>Sed eros minim abdo. Aliquip cui adipiscing proprius quod vel eum quis.</p>
-										</div>
-									</div>
+							<div class="accordion clearfix">
+								<div class="accordion-heading">
+									<h3 data-target="#filecontainer1">Adoption</h3>
 								</div>
+								<div id="filecontainer1" class="accordion-body clearfix">
 
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/2.jpg" alt="demo" />
-											</figure>
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng.pdf" target="_blank">Adoption Prakas-N0-074_Eng</a>
+									</li>
 
-											<a href="practices_details.html"></a>
-										</div>
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210.pdf" target="_blank">Announcement 078 on Number of Agencies-E 091210</a>
+									</li>
 
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Bilateral Agreement</a></h3>
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208.pdf" target="_blank">Certificate of Adoption-Prakas-E-161208</a>
+									</li>
 
-											<p>Pagus dolore ludus. Qui ne in proprius suscipit rusticus at praemitto usitas.</p>
-										</div>
-									</div>
-								</div>
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_.pdf" target="_blank">HagueConv Adoption.Kh_Unicode_</a>
+									</li>
 
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/3.jpg" alt="demo" />
-											</figure>
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh.pdf" target="_blank">Inter-country Adaption Law 2009-Kh</a>
+									</li>
 
-											<a href="practices_details.html"></a>
-										</div>
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng.pdf" target="_blank">Inter-country Adoption Law-2009-Eng</a>
+									</li>
 
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Legal Action</a></h3>
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001.pdf" target="_blank">Inter-country Adoption-Subdecree No 29-Eng 2001</a>
+									</li>
 
-											<p>Defui refero minim. Importunus nisl huic ulciscor quibus valde.</p>
-										</div>
-									</div>
-								</div>
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107.pdf" target="_blank">Law on Accession2 HagueConv-E-220107</a>
+									</li>
 
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/4.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Legal Action</a></h3>
-
-											<p>Abigo multo pertineo dolus odio facilisis gravis in abbas.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/5.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Bankruptcy</a></h3>
-
-											<p>Sed eros minim abdo. Aliquip cui adipiscing proprius quod vel eum quis.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/6.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Bilateral Agreement</a></h3>
-
-											<p>Pagus dolore ludus. Qui ne in proprius suscipit rusticus at praemitto usitas.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/7.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Legal Action</a></h3>
-
-											<p>Defui refero minim. Importunus nisl huic ulciscor quibus valde.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/8.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Legal Action</a></h3>
-
-											<p>Abigo multo pertineo dolus odio facilisis gravis in abbas.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/9.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Bankruptcy</a></h3>
-
-											<p>Sed eros minim abdo. Aliquip cui adipiscing proprius quod vel eum quis.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/10.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Bilateral Agreement</a></h3>
-
-											<p>Pagus dolore ludus. Qui ne in proprius suscipit rusticus at praemitto usitas.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/11.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Legal Action</a></h3>
-
-											<p>Defui refero minim. Importunus nisl huic ulciscor quibus valde.</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="element col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_2/12.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"></a>
-										</div>
-
-										<div class="description">
-											<h3 class="h4 title"><a href="practices_details.html">Legal Action</a></h3>
-
-											<p>Abigo multo pertineo dolus odio facilisis gravis in abbas.</p>
-										</div>
-									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 
-			<section class="section transparent">
-				<div class="container">
-					<div class="s-title">
-						<h2>We Are Effective In Such Areas Of Practices</h2>
-
-						<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus</p>
-					</div>
-
-					<div class="services-container services-style-2">
-						<div class="services-container--inner">
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-sm-offset-1">
-									<div class="service-item center-block">
-										<i class="ico ico-1"></i>
-
-										<div class="inner">
-											<h3 class="title">Corruption Schemes</h3>
-
-											<p>
-												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even
-											</p>
-										</div>
-									</div>
+							<div class="accordion clearfix">
+								<div class="accordion-heading">
+									<h3 data-target="#filecontainer2">Agriculture_Forest_Fishery</h3>
 								</div>
+								<div id="filecontainer2" class="accordion-body clearfix">
+									<li class="file-item">
+										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh</a>
+									</li>
 
-								<div class="col-xs-12 col-sm-6 col-sm-offset-5">
-									<div class="service-item center-block">
-										<i class="ico ico-2"></i>
+									<li class="file-item">
+										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh</a>
+									</li>
 
-										<div class="inner">
-											<h3 class="title">Justice</h3>
 
-											<p>
-												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-sm-offset-1">
-									<div class="service-item center-block">
-										<i class="ico ico-3"></i>
-
-										<div class="inner">
-											<h3 class="title">Legislation</h3>
-
-											<p>
-												Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-sm-offset-5">
-									<div class="service-item center-block">
-										<i class="ico ico-4"></i>
-
-										<div class="inner">
-											<h3 class="title">Court Hearings</h3>
-
-											<p>
-												It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-sm-offset-1">
-									<div class="service-item center-block">
-										<i class="ico ico-5"></i>
-
-										<div class="inner">
-											<h3 class="title">Criminal Law</h3>
-
-											<p>
-												It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-sm-offset-5">
-									<div class="service-item center-block">
-										<i class="ico ico-6"></i>
-
-										<div class="inner">
-											<h3 class="title">Independent Judges</h3>
-
-											<p>
-												The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
-											</p>
-										</div>
-									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
+
 				</div>
 			</section>
 
@@ -393,6 +259,10 @@
 	@section('scripts')
 	<script>
 		$(document).ready(function(){
+			$('.accordion-heading h3').on('click', function(){
+				var target = $(this).attr('data-target');
+				$(target).toggleClass('active');
+			});
 		});
 	</script>
 	@endsection
