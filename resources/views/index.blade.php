@@ -21,6 +21,7 @@
 @section('content')
 	@includeIf('includes._slider')
 	<main role="main">
+		<!--Service-->
 		<section class="section transparent" style="padding-top:60px;">
 			<div class="container">
 				<div class="row">
@@ -29,7 +30,7 @@
 							<h2>SK &amp; P Legal Services</h2>
 
 							<p>
-								There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+								We have built our reputation by providing clients with exceptional creative thinking, and a deep commitment to solving their problems. We are committed to providing exceptional service to our clients in a cost-effective manner.
 							</p>
 
 							<a class="custom-btn medium dark-color" href="#" data-text="Details"><span>Details</span></a>
@@ -41,7 +42,21 @@
 							<div class="services-container services-style-4">
 								<div class="services-container--inner">
 									<div class="row">
-										<div class="col-xs-12 col-sm-6">
+										<div class="col-xs-12 col-sm-4">
+											<div class="service-item center-block">
+												<i class="ico ico-1"></i>
+
+												<div class="inner">
+													<h3 class="title">Corruption</h3>
+
+													<p>
+														There are many variations of passages of Lorem Ipsum available
+													</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xs-12 col-sm-4">
 											<div class="service-item center-block">
 												<i class="ico ico-2"></i>
 
@@ -49,13 +64,13 @@
 													<h3 class="title">Justice</h3>
 
 													<p>
-														There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected
+														There are many variations of passages of Lorem Ipsum available
 													</p>
 												</div>
 											</div>
 										</div>
 
-										<div class="col-xs-12 col-sm-6">
+										<div class="col-xs-12 col-sm-4">
 											<div class="service-item center-block">
 												<i class="ico ico-3"></i>
 
@@ -63,13 +78,27 @@
 													<h3 class="title">Legislation</h3>
 
 													<p>
-														Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it
+														It is a long established fact that a reader will be distracted
 													</p>
 												</div>
 											</div>
 										</div>
 
-										<div class="col-xs-12 col-sm-6">
+										<div class="col-xs-12 col-sm-4">
+											<div class="service-item center-block">
+												<i class="ico ico-4"></i>
+
+												<div class="inner">
+													<h3 class="title">Banking and Finance</h3>
+
+													<p>
+														Loan, Settlement of Loan, Escrow, Legal Opinion for Bank
+													</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xs-12 col-sm-4">
 											<div class="service-item center-block">
 												<i class="ico ico-5"></i>
 
@@ -77,13 +106,13 @@
 													<h3 class="title">Criminal Law</h3>
 
 													<p>
-														It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+														The standard chunk of Lorem Ipsum used since the 1500s
 													</p>
 												</div>
 											</div>
 										</div>
 
-										<div class="col-xs-12 col-sm-6">
+										<div class="col-xs-12 col-sm-4">
 											<div class="service-item center-block">
 												<i class="ico ico-6"></i>
 
@@ -91,7 +120,7 @@
 													<h3 class="title">Independent Judges</h3>
 
 													<p>
-														The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
+														The standard chunk of Lorem Ipsum used since the 1500s
 													</p>
 												</div>
 											</div>
@@ -105,6 +134,7 @@
 			</div>
 		</section>
 
+		<!--Welcome Section-->
 		<section class="section transparent">
 			<div class="container">
 				<div class="row">
@@ -114,6 +144,10 @@
 							<p>
 								SK &amp; P Cambodia Law Group is the Cambodian law firm that was established with the permission N0: 860 k.m of the Bar Association of the Kingdom of Cambodia. We are specialized in many areas, particularly family law issues, child protection, contract law, land law, banking, and criminal law, and provision of training in these areas.
 							</p>
+							<blockquote class="quote">
+						      <p>Our clients' interests are paramount consideration in all our activities. This is how we exist as a legal team.</p>
+						    </blockquote>
+
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-5 col-lg-4">
@@ -184,6 +218,7 @@
 			</div>
 		</section>
 
+		<!--Quote-->
 		<section class="special-section matchHeight-container clearfix">
 			<div class="col-xs-12 col-md-6">
 				<div class="item first text matchHeight-item" data-mh="items-a">
@@ -205,9 +240,9 @@
 												</div>
 
 												<div class="cell v-middle">
-													<h3 class="name">Ann Gilbert</h3>
+													<h3 class="name">Keo Sokea</h3>
 
-													<h5 class="position">CEO / Vice president</h5>
+													<h5 class="position">Director / Founder</h5>
 												</div>
 											</div>
 										</div>
@@ -275,9 +310,9 @@
 
 						<div class="outer v-align">
 							<div class="inner">
-								<p><img src="../img/logo_2.png" alt="logo" /></p>
+								{{-- <p><img src="../img/logo_2.png" alt="logo" /></p> --}}
 
-								<a class="custom-btn medium light-color" href="#" data-text="About Us"><span>About Us</span></a>
+								<a class="custom-btn medium light-color" href="about" data-text="About Us"><span>About Us</span></a>
 							</div>
 						</div>
 					</div>
@@ -285,58 +320,11 @@
 			</div>
 		</section>
 
-		<section class="section transparent">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<h2>Saul’s Team Attorneys</h2>
-
-						<div class="col-md-MB-20">
-							<div class="row">
-								<div class="col-xs-12 col-sm-2">
-									<div class="col-md-MB-30">
-										<img class="img-responsive hidden-xs center-block" src="../img/img_3.png" alt="demo" >
-										<img class="img-responsive visible-xs" src="../img/img_3.png" alt="demo" >
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-10">
-									<div class="col-md-MB-30">
-										<p>
-											<strong>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend</strong>
-										</p>
-
-										<p>
-											Here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-md-4">
-						<div class="col-md-MB-30">
-							<h2>Professionalism</h2>
-
-							<p>
-								<strong>All the Lorem Ipsum generators on the Internet tend to repeat Predefined chunks as necessary</strong>
-							</p>
-
-							<p>
-								Making this the first true generator on Here are many variations of passages of Lorem Ipsum available
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
+		<!--Latest Blog Posts-->
 		<section class="section transparent">
 			<div class="container">
 				<div class="s-title">
-					<h2>Latest News</h2>
+					<h2>Latest Blog Posts</h2>
 					<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus</p>
 				</div>
 
@@ -438,6 +426,7 @@
 			</div>
 		</section>
 
+		<!--Footer Client-->
 		<section class="s-partners partners-style-1">
 			<div class="container">
 				<div class="bxslider-container">

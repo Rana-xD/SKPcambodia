@@ -5,21 +5,21 @@
                 <div class="container">
                     <div class="v-align">
                         <div>
-                            <h2>De jure-De facto...</h2>
+                            <h2>Meet Our Great Team</h2>
 
-                            <a class="custom-btn medium light-color" href="#" data-text="Discover"><span>Discover</span></a>
+                            <a class="custom-btn medium light-color" href="team" data-text="Discover"><span>Discover</span></a>
                         </div>
                     </div>
                 </div>
             </div>
         </li>
 
-        <li class="bg-video" style="background-image: url(../img/slider_img/2.jpg);">
+        <li class="bg-video" style="background-image: url(../img/slider_img/1.jpg);">
             <div class="full-width">
                 <div class="container">
                     <div class="v-align">
                         <div>
-                            <h2>Better call Saul!</h2>
+                            <h2>Consult with us</h2>
 
                             <a class="custom-btn medium light-color" href="#" data-text="CAll now!"><span>CAll now!</span></a>
                         </div>
@@ -32,12 +32,12 @@
             </div> <!-- .cd-bg-video-wrapper -->
         </li>
 
-        <li style="background-image: url(../img/slider_img/3.jpg);">
+        <li style="background-image: url(../img/slider_img/1.jpg);">
             <div class="full-width">
                 <div class="container">
                     <div class="v-align">
                         <div>
-                            <h2>Saul’s Attorneys</h2>
+                            <h2>SK &amp; P Cambodia Law Firm</h2>
 
                             <p>
                                 There are many variations of passages of Lorem Ipsum available, but the majority have<br /> suffered alteration in some form, by injected humour, or randomised words which don't look

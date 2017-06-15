@@ -20,7 +20,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-5">
-						<p id="page-title" class="h1">We are Attorneys</p>
+						<p id="page-title" class="h1">Meet Our Attorneys</p>
 					</div>
 
 					<div class="col-xs-12 col-md-7">
@@ -35,33 +35,9 @@
 		<main role="main">
 			<section class="section transparent">
 				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-md-2">
-							<div class="col-md-MB-30">
-								<img class="img-responsive" src="../img/img_2.png" alt="demo" />
-							</div>
-						</div>
-
-						<div class="col-xs-12 col-md-10">
-							<div class="col-md-MB-30">
-								<p>
-									There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-								</p>
-
-								<p>
-									If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="section transparent">
-				<div class="container">
 					<div class="hidden-xs col-MB-20"><h2>SK &amp; P’s Team Attorneys</h2></div>
 
-					<div class="visible-xs col-md-MB-20"><h2 class="text-center">Saul’s Team Attorneys</h2></div>
+					<div class="visible-xs col-md-MB-20"><h2 class="text-center">SK &amp; P’s Team Attorneys</h2></div>
 
 					<div class="team-container team-four-columns team-style-2">
 						<div class="team-container--inner">
@@ -91,7 +67,7 @@
 
 										<h3 class="name"><a href="team_single.html">Keo Sokea</a></h3>
 
-										<h5 class="position">PARTNER / CRIMINAL LAWYER</h5>
+										<h5 class="position">Director / Founder<br/>Attorney-At-Law</h5>
 									</div>
 								</div>
 
@@ -120,7 +96,7 @@
 
 										<h3 class="name"><a href="team_single.html">Eang Sopheak</a></h3>
 
-										<h5 class="position">Business Lawyer</h5>
+										<h5 class="position">Deputy Director / Founder<br/>Attorney-At-Law</h5>
 									</div>
 								</div>
 
@@ -149,7 +125,7 @@
 
 										<h3 class="name"><a href="team_single.html">Ham Somnang</a></h3>
 
-										<h5 class="position">Attorney in Law</h5>
+										<h5 class="position">Researcher and Legal Assistant</h5>
 									</div>
 								</div>
 
@@ -178,7 +154,7 @@
 
 										<h3 class="name"><a href="team_single.html">Men Sedtharoat</a></h3>
 
-										<h5 class="position">judge high category</h5>
+										<h5 class="position">Legal and Social Work Consultant</h5>
 									</div>
 								</div>
 							</div>

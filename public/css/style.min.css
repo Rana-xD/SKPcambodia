@@ -2642,7 +2642,7 @@ main form button[type=submit] {
     height: 80px;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: #3f3f3f;
+    background-color: #fff;
 }
 #header .line {
     position: absolute;
@@ -2788,7 +2788,7 @@ main form button[type=submit] {
     margin-top: 5px;
 }
 #navigation li.active>a, #navigation li.current>a, #navigation li.drop_active>a, #navigation li:hover>a {
-    background-color: #4a4a4a;
+    background-color: lightgrey;
 }
 }#navigation a {
     position: relative;
@@ -2798,7 +2798,7 @@ main form button[type=submit] {
     font-weight: 700;
     letter-spacing: 0;
     white-space: normal;
-    color: #fff;
+    color: #4F86C6;
     padding: 5px;
 }
 #navigation a:hover {
@@ -2870,7 +2870,7 @@ main form button[type=submit] {
     background-color: #c1aa81;
 }
 }#header-logo {
-    width: 330px;
+    width: 350px;
     height: 88px;
     background-image: url(../img/logo.svg);
 }
@@ -2917,7 +2917,7 @@ main form button[type=submit] {
 #menu-toggler span, #menu-toggler span:after, #menu-toggler span:before {
     height: 3px;
     width: 20px;
-    background-color: #fff;
+    background-color: #4F86C6;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
@@ -5276,3 +5276,63 @@ main form button[type=submit] {
 }
 }
 /*# sourceMappingURL=style.min.css.map */
+
+
+@media only screen and (max-width: 767px){
+   #header-logo{
+      height: 50px;
+   }
+}
+
+.quote {
+  background: #fff;
+  color: #222222;
+  padding: 20px;
+  padding-left: 50px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(34, 34, 34, 0.12);
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+}
+
+.quote p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 80%;
+}
+.quote cite {
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+  font-weight: 200;
+  opacity: 0.8;
+}
+.quote:before {
+  font-family: Georgia, serif;
+  content: "“";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 5em;
+  color: rgba(238, 238, 238, 0.8);
+  font-weight: normal;
+}
+.quote:after {
+  font-family: Georgia, serif;
+  content: "”";
+  position: absolute;
+  bottom: -110px;
+  line-height: 100px;
+  right: -32px;
+  font-size: 25em;
+  color: rgba(238, 238, 238, 0.8);
+  font-weight: normal;
+}
+@media (max-width: 640px) {
+  .quote:after {
+    font-size: 22em;
+    right: -25px;
+  }
+}
