@@ -22,6 +22,7 @@
         <script type="text/javascript" src="/js/device.min.js"></script>
         <script type="text/javascript" src="/js/modernizr.custom.min.js"></script>
         <script type="text/javascript" src="../js/main.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
         @yield('scripts')
     </body>
 </html>
