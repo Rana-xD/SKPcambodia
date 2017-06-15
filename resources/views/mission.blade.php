@@ -22,7 +22,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
-						<p id="page-title" class="h1">About SK &amp; P Cambodia Law Firm</p>
+						<p id="page-title" class="h1">SK &amp; P Law Firm Mission</p>
 					</div>
 				</div>
 			</div>
@@ -33,54 +33,37 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-8 col-md-9">
-
-							<img class="img-responsive visible-xs" src="../img/img_1.png" alt="demo" >
+							<img class="img-responsive visible-xs" src="../img/bg/mission.jpg" alt="demo" >
 
 							<p>
-								<strong>We have a team of experts, include attorneys, professors, researchers and translators/ interpreters on top of our advisers and support staff. We are the experts that are committed to provide legal, research and other services of international standards in the Kingdom of Cambodia. Our attorneys have experience in government, UN agencies and legal NGOs. SK &amp; P Cambodia Law Firm's team works in a democratic and friendly environment. The firm's major decisions are made by consensus, and all attorneys are encouraged to participate in firm governance.</strong>
+								<strong>As a unique result-oriented legal team in the Kingdom of Cambodia, the SK &amp; P Law Firm Mission is to:</strong>
 							</p>
 
-							<h2>Establishment and Team</h2>
 							<ul class="circlelist">
-								<li>We are established by Permission N0: 860 k.m of the Bar Association (2010)</li>
-								<li>Composition: Attorneys: 7, Legal Assistant(s):3, Accountant &amp; Administrative Assistant: 1, Research
-									and training Consultants: 3, Translator and Interpreter : 1(3 languages: English-French-Khmer), and
-									legal interns</li>
-								<li>We have:full/part-time time attorneys, part time consultant and others as agents</li>
-							</ul>
-
-							<h2>Social Responsibility</h2>
-							<ul class="circlelist">
-								<li>Referral of poor people who need legal aid to legal aid NGOs where possible</li>
-								<li>Legal Advise to poor clients : poor clients who approached us will be provided assistance by interns or
-									young lawyers (started as of 2012)</li>
-								<li>Tobacco Control and Alcohol Control are part of our regular activities that we cooperate with non-profit
-									NGOs, agencies and institutions</li>
-								<li>SEATCA Project on tobacco control in Cambodia 2009 – 2011 (completed), however we still cooperate with
-									SEATCA on case by case basis</li>
-								<li>Networking with international community such as SEATCA (regional) and Tobacco Free Kids (USA)</li>
-								<li>CTFK (USA NGO): June 2012-December, 2012</li>
-								<li>Advocacy: Bayon TV, ASEAT TV, Press Conference, National Radio</li>
-								<li>Awareness Raising through Vayo Radio talkshow under cooperation with the Bar Association of Cambodia</li>
-								<li>CTFK (USA NGO): June 2012-December, 2012</li>
-								<li>Cooperation: WHO in Cambodia, Ministry of Health and CMH</li>
-								<li>Discount for people with limited financial capacity. General discount 30%</li>
-								<li>Legal Intern(s): to assist young people to build their skills</li>
-								<li>Brief for law students</li>
-								<li>As part of pro-bono activities, KEO Sokea, Director of SK &amp; P Law Firm voluntarily serves as member of the Board of Directors of two NGOS: GADC (member) and ANNOC (Chairperson)</li>
-							</ul>
-
-							<h2>Cooperation and Collaboration with other Agencies and Experts</h2>
-
-							<ul class="circlelist">
-								<li>SK &amp; P Law Firm is the only number one law firm in Cambodia that is specialised in public health. The firm closely cooperates with WHO, CMH (Cambodia Movement for Health) and Ministry of Health to undertake activities concerning tobacco control and alcohol control</li>
-								<li>Current Partners: Aibi (Italian Adoption Agency), Aplus Consulting Co., Ltd.,</li>
-								<li>SK &amp; P Law Firm has very close cooperation with other international lawyers such as Chinese lawyer who is based in Phnom Penh Capital. Our cooperation includes establishment of private company, business consultation, land purchase, due diligence on land, land and property lease, legal opinions concerning investment, among other things. We also have relationship with American lawyer who is based in Phnom Penh</li>
+								<li>Deliver high quality legal services to all kinds of clients in and outside the Kingdom of Cambodia and strive to achieve results that exceed expectations through our commitment to our clients by finding ways to best advance to clients' cause and adding maximum value to their business and interests</li>
+								<li>Adhere to the highest standards of excellence and integrity, and be thorough and effective in our work</li>
+								<li>Provide the client with pragmatic legal services, explanation to relevant procedures, alternative dispute resolution options as much as possible, procedural options and consequences as appropriate</li>
+								<li>To the best of our knowledge, inform the probabilities of success and failure on each alternative in a fair manner, and keep the client informed of all case developments and other progresses taken</li>
+								<li>Increase the SK &amp; P Law Firm's potentiality by satisfying the needs of existing and prospective clients and anticipating their needs in the future</li>
+								<li>Do our best to make our clients feel welcome, cared for and comfortable</li>
+								<li>Seek and maintain the best reputation in the Kingdom of Cambodia and in the counterpart country regarding legal representation, ethics, morals, and professionalism</li>
+								<li>Adhere to the Law on the Bar Association of the Kingdom of Cambodia and Professional Code of Conduct as well as international standards</li>
+								<li>Protect our clients confidences from unlawful disclosure and ensure that their secrets are safe with our relevant professional only</li>
+								<li>Perform legal and other works in a timely manner and with attention and ready to be accessible when our clients need us</li>
+								<li>Communicate clearly in both Khmer and English languages</li>
+								<li>Stay abreast of all new technology and resources as well as legal framework development that provide better services for the clients, namely Civil Code, Civil Procedure Code, Criminal Code, Criminal Procedure Code, Commercial Laws as well as other laws and regulations of the Kingdom of Cambodia</li>
+								<li>Adhere to the principle that individual development through education</li>
+								<li>Enhances our ability and the quality of our work</li>
+								<li>Serve our clients at fair fees to both clients and SK &amp; P Law Firm, that our clients are willing and able to pay</li>
+								<li>Always be proactive</li>
 							</ul>
 						</div>
 
 						<div class="col-xs-12 col-sm-4 col-md-3">
-							<img class="img-responsive center-block hidden-xs" src="../img/img_1.png" alt="demo" >
+							<img class="img-responsive center-block hidden-xs" src="../img/bg/mission.jpg" alt="demo" >
+							<blockquote class="quote">
+						      <p>Our clients' interests are paramount consideration in all our activities. This is how we exist as a legal team.</p>
+						    </blockquote>
 						</div>
 					</div>
 				</div>

@@ -20,13 +20,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-5">
-						<p id="page-title" class="h1">William Angler</p>
-					</div>
-
-					<div class="col-xs-12 col-md-7">
-						<p id="headline-text">
-							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-						</p>
+						<p id="page-title" class="h1">KEO SOKEA</p>
 					</div>
 				</div>
 			</div>
@@ -47,8 +41,8 @@
 								<div class="col-xs-12 col-md-6">
 									<div class="col-MB-30">
 										<div class="col-MB-30">
-											<h2 class="name">William Angler</h2>
-											<h5 class="position">PARTNER / CRIMINAL LAWYER</h5>
+											<h2 class="name">KEO SOKEA</h2>
+											<h5 class="position">DIRECTOR / FOUNDER<br />ATTORNEY-AT-LAW</h5>
 										</div>
 
 										<div class="row">
@@ -56,18 +50,18 @@
 												<div class="col-md-MB-20">
 													<h4>Contact</h4>
 
-													12345 4th Street Los Angeles 70312<br />
-													<a href="#">demo@email.com</a><br />
-													<strong>+01 222 4321 765</strong>
+													N0: 220 Eo, Street 156, Sangkat Tuklaak II, Khan Toulkok, Phnom Penh<br />
+													<strong>Tel: +(855) 023 883 885</strong><br />
+													<strong>H/P: +(855) 012 267 897</strong><br />
+													<strong>Fax: +(855) 023 883 885</strong>
 												</div>
 											</div>
 
 											<div class="col-xs-12 col-md-6">
 												<div class="col-md-MB-20">
-													<h4>Office hours</h4>
-
-													<strong>Mon - Fri:</strong> 7am - 4pm<br />
-													<strong>Sat - Sun:</strong> 11am - 2pm
+													<h4>Email</h4>
+													<strong><a href="mailto:sokea@skpcambodia.com">sokea@skpcambodia.com</a></strong><br />
+													<strong><a href="mailto:keosokea77@yahoo.com">keosokea77@yahoo.com</a></strong>
 												</div>
 											</div>
 										</div>
@@ -79,17 +73,6 @@
 											<a class="icon-youtube-play" href="#" target="_blank"></a>
 										</div>
 
-										<p>
-											In eros orci, pharetra at lacinia non, ultricies et libero. Nunc in purus ac diam tempus pretium id tempor justo. Mauris viverra ultrices dui. <a href="#">Nulla eget nulla sed lectus tincidunt</a> sagittis eget et quam. Aliquam tempus eu erat mollis tincidunt. Phasellus ut lacus vitae sapien varius pretium sed et est.
-										</p>
-
-										<p>
-											Mauris sed fringilla nisi, a semper dolor. Morbi gravida volutpat ligula, et placerat mi suscipit in. In dapibus ornare tempus. Donec vitae diam ex. Sed blandit suscipit consectetur. Phasellus turpis tortor, tincidunt eu erat sed, volutpat scelerisque nunc.
-										</p>
-
-										<p>
-											Maecenas eleifend, risus at laoreet hendrerit, elit dolor egestas urna, id finibus tellus ipsum vitae risus. Nullam sed augue non
-										</p>
 									</div>
 								</div>
 							</div>
@@ -105,13 +88,13 @@
 											<i class="circled"></i>
 
 											<div class="inner">
-												<h4 class="title">UNIVERSITY OF MISSOURI SCHOOL OF LAW</h4>
+												<h4 class="title">PHNOM PENH UNIVERSITY</h4>
 
-												<span class="date">2004 - 2007</span>
+												<span class="date">1987 - 1992</span>
 
-												<p>
-													In eros orci, pharetra at lacinia non, ultricies et libero. Nunc in purus ac diam tempus pretium id tempor justo. Mauris viverra ultrices dui. Nulla eget nulla sed lectus tincidunt sagittis eget et quam. Aliquam tempus eu erat mollis tincidunt. Phasellus ut lacus vitae sapien varius pretium sed et est.
-												</p>
+												<p>Bachelor Degree in Education in 1992 (Specialized in Russian)</br>
+												<strong>Main subjects: </strong>Russian Language and literature of Russian and of Western countries</br>
+												<strong>Secondary subject: </strong>Linguistics, Phonetic, Khmer Literature, Philosophy, Pedagogy and Psychology, etc</p>
 											</div>
 										</div>
 
@@ -119,31 +102,12 @@
 											<i class="circled"></i>
 
 											<div class="inner">
-												<h4 class="title">UNDER GRADUATE COLLEGE</h4>
+												<h4 class="title">PENZA INSTITUTE FOR FOREIGN LANGUAGE AND PEDAGOGY, RUSSIA</h4>
 
-												<span class="date">2001 - 2003</span>
+												<span class="date">1990 - 1991</span>
 
-												<p>
-													Nulla eget nulla sed lectus tincidunt sagittis eget et quam. Aliquam tempus eu erat mollis tincidunt. Phasellus ut lacus vitae sapien varius pretium sed et est.
-												</p>
-											</div>
-										</div>
-									</div>
-
-									<div class="timeline">
-										<h4 class="h2">Professional experience</h4>
-
-										<div class="item">
-											<i class="circled"></i>
-
-											<div class="inner">
-												<h4 class="title">THE LAW OFFICES OF GRETCHEN MYERS, P.C.</h4>
-
-												<span class="date">2012 - 2015</span>
-
-												<p>
-													In eros orci, pharetra at lacinia non, ultricies et libero. Nunc in purus ac diam tempus pretium id tempor justo. Mauris viverra ultrices dui. Nulla eget nulla sed lectus tincidunt sagittis eget et quam. Aliquam tempus eu erat mollis tincidunt. Phasellus ut lacus vitae sapien varius pretium sed et est.
-												</p>
+												<p>Practical Language Training<br />
+												<strong>Main subjects: </strong>Russian Language, Linguistics, Phonetic, Pedagogy and Psychology, etc</p>
 											</div>
 										</div>
 
@@ -151,13 +115,12 @@
 											<i class="circled"></i>
 
 											<div class="inner">
-												<h4 class="title">PRINCIPAL/ATTORNEY, THE HULLVERSON LAW FIRM</h4>
+												<h4 class="title">FACULTY OF LAW AND ECONIMICS</h4>
 
-												<span class="date">2010 - 2012</span>
+												<span class="date">1997 - 2001</span>
 
-												<p>
-													Nulla eget nulla sed lectus tincidunt sagittis eget et quam. Aliquam tempus eu erat mollis tincidunt. Phasellus ut lacus vitae sapien varius pretium sed et est.
-												</p>
+												<p>Law Degree (on the job-training)</br>
+												<strong>Main subjects: </strong> Constitutional Law, Criminal Law and Criminal Procedure, Civil Law and Civil Procedure, Financial Law, Administrative Law, International Relation, History of Political Ideas, Public Rights and Freedoms etc</p>
 											</div>
 										</div>
 
@@ -165,27 +128,12 @@
 											<i class="circled"></i>
 
 											<div class="inner">
-												<h4 class="title">THE LAW OFFICES OF GRETCHEN MYERS, P.C.</h4>
+												<h4 class="title">PANASASTRA UNIVERSITY</h4>
 
-												<span class="date">2008 - 2010</span>
+												<span class="date">2002 - 2003</span>
 
-												<p>
-													Nulla eget nulla sed lectus tincidunt sagittis eget et quam. Aliquam tempus eu erat mollis tincidunt. Phasellus ut lacus vitae sapien varius pretium sed et est. Mauris sed fringilla nisi, a semper dolor. Morbi gravida volutpat
-												</p>
-											</div>
-										</div>
-
-										<div class="item">
-											<i class="circled"></i>
-
-											<div class="inner">
-												<h4 class="title">THE LAW OFFICES OF GRETCHEN MYERS, P.C.</h4>
-
-												<span class="date">2008 - 2010</span>
-
-												<p>
-													In dapibus ornare tempus. Donec vitae diam ex. Sed blandit suscipit consectetur. Phasellus turpis tortor, tincidunt eu erat sed, volutpat scelerisque nunc. Maecenas eleifend, risus at laoreet hendrerit, elit dolor egestas urna, id finibus tellus ipsum
-												</p>
+												<p><strong>Finished Year I of the Master Course majoring in Law (3 terms):</strong> Foundation of Law and Governance, Management, Advanced Business Law, Economics, Quantitative Analysis (Statistics), Foundation of Accounting and Finance. (Evening Class)</br>
+												<strong>Center for Lawyer Training and Professional Improvement of the Bar Association of the Kingdom of Cambodia:</strong> Administrative Law, Lawyer's activities in criminal and civil procedures, Criminal and Civil Law/Codes, Human Rights and NGOs Law, Labor Code, Contract Writing, Negotiation/Mediation Advocacy, Skills to communicate with clients, Commercial Law, E-commerce, Accounting, Tax Law, Bankruptcy, Prosecutor's Role and Legal Ethics & Professional Responsibility</p>
 											</div>
 										</div>
 									</div>
@@ -194,219 +142,91 @@
 
 							<div class="col-xs-12 col-md-6">
 								<div class="col-md-MB-30">
-									<h4 class="h2">Bar addmissions</h4>
+									<div class="timeline">
+										<h4 class="h2">Professional experience</h4>
 
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<ul class="list">
-												<li><i class="icon-star"></i>Drunk drving accidents</li>
-												<li><i class="icon-star"></i>Industrial accidents</li>
-												<li><i class="icon-star"></i>Maritime and jones act claims</li>
-												<li><i class="icon-star"></i>Nursing home neglect</li>
-											</ul>
-										</div>
-
-										<div class="col-xs-12 col-sm-6">
-											<ul class="list">
-												<li><i class="icon-star"></i>Nursing home neglect</li>
-												<li><i class="icon-star"></i>Products liability</li>
-												<li><i class="icon-star"></i>Qui tam and whistleblower actions</li>
-											</ul>
-										</div>
-									</div>
-
-									<h4 class="h2">Certifications & membership</h4>
-
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<ul class="list">
-												<li><i class="icon-star"></i>Drunk drving accidents</li>
-												<li><i class="icon-star"></i>Industrial accidents</li>
-												<li><i class="icon-star"></i>Maritime and jones act claims</li>
-												<li><i class="icon-star"></i>Nursing home neglect</li>
-											</ul>
-										</div>
-
-										<div class="col-xs-12 col-sm-6">
-											<ul class="list">
-												<li><i class="icon-star"></i>Nursing home neglect</li>
-												<li><i class="icon-star"></i>Products liability</li>
-												<li><i class="icon-star"></i>Qui tam and whistleblower actions</li>
-											</ul>
-										</div>
-									</div>
-
-									<h4 class="h2">Evalution form</h4>
-
-									<form action="#">
-										<div class="row">
-											<div class="col-xs-12 col-sm-6">
-												<label class="input-wrp">
-													<input type="text" placeholder="First name">
-													<span></span>
-												</label>
-											</div>
-
-											<div class="col-xs-12 col-sm-6">
-												<label class="input-wrp">
-													<input type="text" placeholder="Last name">
-													<span></span>
-												</label>
-											</div>
-
-											<div class="col-xs-12 col-sm-6">
-												<label class="input-wrp">
-													<input type="text" placeholder="Your name">
-													<span></span>
-												</label>
-											</div>
-
-											<div class="col-xs-12 col-sm-6">
-												<label class="input-wrp">
-													<input type="text" placeholder="Phone namber">
-													<span></span>
-												</label>
-											</div>
-
-											<div class="col-xs-12 col-sm-6">
-												<label class="input-wrp">
-													<input type="text" placeholder="Street address">
-													<span></span>
-												</label>
-											</div>
-
-											<div class="col-xs-12 col-sm-6">
-												<label class="input-wrp">
-													<input type="text" placeholder="City">
-													<span></span>
-												</label>
-											</div>
-
-											<div class="col-xs-12 col-sm-6">
-												<label class="input-wrp">
-													<input type="text" placeholder="State">
-													<span></span>
-												</label>
-											</div>
-
-											<div class="col-xs-12 col-sm-6">
-												<label class="input-wrp">
-													<input type="text" placeholder="Zip code">
-													<span></span>
-												</label>
-											</div>
-
-											<div class="col-xs-12">
-												<label class="input-wrp">
-													<input type="text" placeholder="Subject">
-													<span></span>
-												</label>
-											</div>
-
-											<div class="col-xs-12">
-												<label class="input-wrp">
-													<textarea placeholder="Case details"></textarea>
-													<span></span>
-												</label>
-
-												<button class="custom-btn small dark-color fl-r" type="submit" data-text="Submit Evaluation"><span>Submit Evaluation</span></button>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="s-practices" class="section transparent with-border">
-				<div class="container">
-					<div class="hidden-xs col-MB-20"><h2>My Practice Area</h2></div>
-
-					<div class="visible-xs col-md-MB-20"><h2 class="text-center">My Practice Area</h2></div>
-
-					<div class="practices-container practices-four-columns practices-style-1">
-						<div class="practices-container--inner">
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_1/1.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"
-												><div>
-													<ul class="b-table">
-														<li class="cell v-middle text-left first"><h3 class="title">Bankruptcy</h3></li>
-
-														<li class="cell v-middle text-right second"><span class="control-btn next-btn icon-right"></span></li>
-													</ul>
+											<div class="panel-group" id="accordion_reg" role="tablist" aria-multiselectable="true">
+												<div class="item">
+													<i class="circled"></i>
+													<div class="panel panel-default">
+								                	<div class="panel-heading" role="tab" id="headingOne_reg">
+								                  	<h4 class="panel-title">
+								                    		<a role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapseOne_reg" aria-expanded="true" aria-controls="collapseOne_reg">
+																	<h4 class="title">Judicial Assistant at Judicial Mentor Programme, UNHCHR</h4>
+	  		 														<span class="date">1995 - 1999<i class="fa fa-chevron-down pull-right"></i></span>
+								                    		</a>
+								                  	</h4>
+								                	</div>
+								                	<div id="collapseOne_reg" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_reg">
+								                  	<div class="panel-body">
+																<i class="fa fa-check"></i> Assisting international legal expert attached to provincial courts (Kompong Speu amd Takeo Courts) in providing trainings on human rights and laws to judicial police, judges and prosecutors<br/>
+																<i class="fa fa-check"></i> Interpreting legal lectures or consultation given by UNCHR's consultants attached to Kompongspeu and Takeo courts to respective judges, prosecutors, clerks and police officers<br/>
+																<i class="fa fa-check"></i> Assisting the aforementioned consultants in liaison with government and non-government institutions or Human Rights' NGOs<br/>
+																<i class="fa fa-check"></i> Translating laws, decrees, letters, and other documents akin to legal field<br/>
+																<i class="fa fa-check"></i> Performs other duties as required by the UN Center for Human Rights<br/>
+								                  	</div>
+								                	</div>
+								              	</div>
 												</div>
-											</a>
-										</div>
-									</div>
-								</div>
 
-								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_1/2.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"
-												><div>
-													<ul class="b-table">
-														<li class="cell v-middle text-left first"><h3 class="title">Bilateral Agreement</h3></li>
-
-														<li class="cell v-middle text-right second"><span class="control-btn next-btn icon-right"></span></li>
-													</ul>
+												<div class="item">
+													<i class="circled"></i>
+													<div class="panel panel-default">
+								                	<div class="panel-heading" role="tab" id="headingTwo_reg">
+								                  	<h4 class="panel-title">
+								                    		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapseTwo_reg" aria-expanded="false" aria-controls="collapseTwo_reg">
+															  		<h4 class="title">Child Protection Officer at Legal Protection, Child Protection Section, UNICEF Cambodia</h4>
+	 		 														<span class="date">1999 - August 2009<i class="fa fa-chevron-down pull-right"></i></span>
+								                    		</a>
+								                  	</h4>
+								                	</div>
+								                	<div id="collapseTwo_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_reg">
+								                  	<div class="panel-body">
+								                    		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								                  	</div>
+								                	</div>
+								              	</div>
 												</div>
-											</a>
-										</div>
-									</div>
-								</div>
 
-								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_1/3.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"
-												><div>
-													<ul class="b-table">
-														<li class="cell v-middle text-left first"><h3 class="title">Legal Action</h3></li>
-
-														<li class="cell v-middle text-right second"><span class="control-btn next-btn icon-right"></span></li>
-													</ul>
+												<div class="item">
+													<i class="circled"></i>
+													<div class="panel panel-default">
+								                	<div class="panel-heading" role="tab" id="headingThree_reg">
+								                  	<h4 class="panel-title">
+								                    		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapseThree_reg" aria-expanded="false" aria-controls="collapseThree_reg">
+																	<h4 class="title">Attorney-At-Law at Asia Cambodia Law Group, Cambodia</h4>
+	 		 														<span class="date">August 2009 - December 2010<i class="fa fa-chevron-down pull-right"></i></span>
+								                    		</a>
+								                  	</h4>
+								                	</div>
+								                	<div id="collapseThree_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree_reg">
+								                  	<div class="panel-body">
+								                    		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								                  	</div>
+								                	</div>
+								              	</div>
 												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-									<div class="practices-item center-block">
-										<div class="inner">
-											<figure class="img-wrap">
-												<img src="../img/practice_img/4_col_1/4.jpg" alt="demo" />
-											</figure>
-
-											<a href="practices_details.html"
-												><div>
-													<ul class="b-table">
-														<li class="cell v-middle text-left first"><h3 class="title">Legal Action</h3></li>
-
-														<li class="cell v-middle text-right second"><span class="control-btn next-btn icon-right"></span></li>
-													</ul>
+												<div class="item">
+													<i class="circled"></i>
+													<div class="panel panel-default">
+								                	<div class="panel-heading" role="tab" id="headingFour_reg">
+								                  	<h4 class="panel-title">
+								                    		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapseFour_reg" aria-expanded="false" aria-controls="collapseFour_reg">
+																	<h4 class="title">Founder/Attorney-At-Law at SK &amp; P Cambodia Law Firm</h4>
+	 		 														<span class="date">December 2010 - Present<i class="fa fa-chevron-down pull-right"></i></span>
+								                    		</a>
+								                  	</h4>
+								                	</div>
+								                	<div id="collapseFour_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour_reg">
+								                  	<div class="panel-body">
+								                    		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								                  	</div>
+								                	</div>
+								              	</div>
 												</div>
-											</a>
-										</div>
+							            </div>
 									</div>
+
 								</div>
 							</div>
 						</div>
