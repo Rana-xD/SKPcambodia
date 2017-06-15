@@ -89,7 +89,7 @@
 											</div>
 										</div>
 
-										<h3 class="name"><a href="team_single.html">Keo Sokea</a></h3>
+										<h3 class="name"><a href="teamsingle">Keo Sokea</a></h3>
 
 										<h5 class="position">PARTNER / CRIMINAL LAWYER</h5>
 									</div>
@@ -118,7 +118,7 @@
 											</div>
 										</div>
 
-										<h3 class="name"><a href="team_single.html">Eang Sopheak</a></h3>
+										<h3 class="name"><a href="teamsingle">Eang Sopheak</a></h3>
 
 										<h5 class="position">Business Lawyer</h5>
 									</div>
@@ -147,7 +147,7 @@
 											</div>
 										</div>
 
-										<h3 class="name"><a href="team_single.html">Ham Somnang</a></h3>
+										<h3 class="name"><a href="teamsingle">Ham Somnang</a></h3>
 
 										<h5 class="position">Attorney in Law</h5>
 									</div>
@@ -176,7 +176,7 @@
 											</div>
 										</div>
 
-										<h3 class="name"><a href="team_single.html">Men Sedtharoat</a></h3>
+										<h3 class="name"><a href="teamsingle">Men Sedtharoat</a></h3>
 
 										<h5 class="position">judge high category</h5>
 									</div>

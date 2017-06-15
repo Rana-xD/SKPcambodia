@@ -29,7 +29,7 @@
               <div class="submenu">
                 <ul>
                   <li class="menu-item"><a href="about">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->about_us): strip_tags ($Menu->about_us) }}}</a></li>
-                  <li class="menu-item"><a href="practices_2.html">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->mission): strip_tags ($Menu->mission) }}}</a></li>
+                  <li class="menu-item"><a href="mission">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->mission): strip_tags ($Menu->mission) }}}</a></li>
                 </ul>
               </div>
             </li>

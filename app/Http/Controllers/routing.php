@@ -78,5 +78,15 @@ class routing extends Controller
       $Menu = menu::find(1);
       return view('employment',compact('Menu'));
     }
+    public function mission()
+    {
+      $Menu = menu::find(1);
+      return view('mission',compact('Menu'));
+    }
+    public function teamsingle()
+    {
+      $Menu = menu::find(1);
+      return view('team_single',compact('Menu'));
+    }
 
 }

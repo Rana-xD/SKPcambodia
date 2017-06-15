@@ -25,6 +25,8 @@ Route::group(['middleware' =>'locale'],function(){
   Route::get('/announcement','routing@announcement');
   Route::get('/training','routing@training');
   Route::get('/employment&internship','routing@employment');
+  Route::get('/mission','routing@mission');
+  Route::get('/teamsingle','routing@teamsingle');
 });
 
 Route::get('locale/{localeId?}','locale@locales');
