@@ -5,14 +5,16 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="footer-item">
-                            <a id="footer-logo" class="site-logo" href="index.html">Sauls Attorneys</a>
-
+                           <h3 class="title">Contact Us</h3>
                             <address>
-                                <span>Ukraine, UA<br /> 10, First May, International st</span>
+                                <span>House C38, Street Cheerfullness, <br />
+                                   Khan Sensok, Phnom Penh Capital<br />
+                                   (Canadia City, Ratana Plaza area, <br />
+                                   Off Russian Blvd 50 meters).</span>
                                 <br />
-                                <span>Tel: 0385 65 98 16</span>
-                                <span>Mobile: +3856 459 37 98</span>
-                                <span>E-mail: <a href="mailto:hello@inch.com">hello@inch.com</a></span>
+                                <span>Tel: (+855) 023 883 885</span>
+                                <span>Fax: (+855) 023 883 885</span>
+                                <span>E-mail: <a href="mailto:info@skpcambodia.com"> info@skpcambodia.com</a></span>
                             </address>
 
                             <div class="social-btns style-1">
