@@ -204,6 +204,7 @@
 								</div>
 							</div>
 
+
 							<div class="accordion clearfix">
 								<div class="accordion-heading">
 									<h3 data-target="#filecontainer2">Agriculture_Forest_Fishery</h3>
@@ -222,6 +223,84 @@
 
 								</div>
 							</div>
+
+
+
+						</div>
+					</div>
+					<div class="files-wrapper clearfix">
+						<div class="inner clearfix">
+
+							<div class="accordion clearfix">
+								<div class="accordion-heading">
+									<h3 data-target="#filecontainer3">Adoption</h3>
+								</div>
+								<div id="filecontainer3" class="accordion-body clearfix">
+
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng.pdf" target="_blank">Adoption Prakas-N0-074_Eng</a>
+									</li>
+
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210.pdf" target="_blank">Announcement 078 on Number of Agencies-E 091210</a>
+									</li>
+
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208.pdf" target="_blank">Certificate of Adoption-Prakas-E-161208</a>
+									</li>
+
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_.pdf" target="_blank">HagueConv Adoption.Kh_Unicode_</a>
+									</li>
+
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh.pdf" target="_blank">Inter-country Adaption Law 2009-Kh</a>
+									</li>
+
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng.pdf" target="_blank">Inter-country Adoption Law-2009-Eng</a>
+									</li>
+
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001.pdf" target="_blank">Inter-country Adoption-Subdecree No 29-Eng 2001</a>
+									</li>
+
+									<li class="file-item">
+										<a class="download" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107.pdf" target="_blank">Law on Accession2 HagueConv-E-220107</a>
+									</li>
+
+								</div>
+							</div>
+
+
+							<div class="accordion clearfix">
+								<div class="accordion-heading">
+									<h3 data-target="#filecontainer4">Agriculture_Forest_Fishery</h3>
+								</div>
+								<div id="filecontainer4" class="accordion-body clearfix">
+									<li class="file-item">
+										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh</a>
+									</li>
+
+									<li class="file-item">
+										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
+										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh</a>
+									</li>
+
+
+								</div>
+							</div>
+
+
 
 						</div>
 					</div>
@@ -261,6 +340,7 @@
 		$(document).ready(function(){
 			$('.accordion-heading h3').on('click', function(){
 				var target = $(this).attr('data-target');
+				$('.accordion-body.active').not(target).removeClass('active');
 				$(target).toggleClass('active');
 			});
 		});
