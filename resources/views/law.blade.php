@@ -49,6 +49,12 @@
 	cursor: pointer;
 }
 
+.files-wrapper .accordion-heading i{
+	margin-right: 7px;
+	font-size: 2.1rem;
+	vertical-align: bottom;
+}
+
 .files-wrapper .accordion-body{
 	position: relative;
 	width: 100%;
@@ -157,9 +163,9 @@
 
 							<div class="accordion clearfix">
 								<div class="accordion-heading">
-									<h3 data-target="#filecontainer1">Adoption</h3>
+									<h3 data-target="#filecontainer1"><i class="fa fa-folder-open"></i> Adoption</h3>
 								</div>
-								<div id="filecontainer1" class="accordion-body clearfix">
+								<div id="filecontainer1" data-group="group1" class="accordion-body clearfix">
 
 									<li class="file-item">
 										<a class="download" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng"><i class="fa fa-download"></i></a>
@@ -204,12 +210,11 @@
 								</div>
 							</div>
 
-
 							<div class="accordion clearfix">
 								<div class="accordion-heading">
-									<h3 data-target="#filecontainer2">Agriculture_Forest_Fishery</h3>
+									<h3 data-target="#filecontainer2"><i class="fa fa-folder-open"></i> Agriculture_Forest_Fishery</h3>
 								</div>
-								<div id="filecontainer2" class="accordion-body clearfix">
+								<div id="filecontainer2" data-group="group1" class="accordion-body clearfix">
 									<li class="file-item">
 										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
 										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh</a>
@@ -223,8 +228,6 @@
 
 								</div>
 							</div>
-
-
 
 						</div>
 					</div>
@@ -233,9 +236,9 @@
 
 							<div class="accordion clearfix">
 								<div class="accordion-heading">
-									<h3 data-target="#filecontainer3">Adoption</h3>
+									<h3 data-target="#filecontainer3"><i class="fa fa-folder-open"></i> Adoption</h3>
 								</div>
-								<div id="filecontainer3" class="accordion-body clearfix">
+								<div id="filecontainer3" data-group="group2" class="accordion-body clearfix">
 
 									<li class="file-item">
 										<a class="download" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng"><i class="fa fa-download"></i></a>
@@ -280,12 +283,11 @@
 								</div>
 							</div>
 
-
 							<div class="accordion clearfix">
 								<div class="accordion-heading">
-									<h3 data-target="#filecontainer4">Agriculture_Forest_Fishery</h3>
+									<h3 data-target="#filecontainer4"><i class="fa fa-folder-open"></i> Agriculture_Forest_Fishery</h3>
 								</div>
-								<div id="filecontainer4" class="accordion-body clearfix">
+								<div id="filecontainer4" data-group="group2" class="accordion-body clearfix">
 									<li class="file-item">
 										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
 										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh</a>
@@ -299,8 +301,6 @@
 
 								</div>
 							</div>
-
-
 
 						</div>
 					</div>
@@ -340,7 +340,8 @@
 		$(document).ready(function(){
 			$('.accordion-heading h3').on('click', function(){
 				var target = $(this).attr('data-target');
-				$('.accordion-body.active').not(target).removeClass('active');
+				var group = $(target).attr('data-group');
+				$('.accordion-body.active').not('.accordion-body.active[data-group="'+group+'"]').not(target).removeClass('active');
 				$(target).toggleClass('active');
 			});
 		});
