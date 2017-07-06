@@ -12,282 +12,150 @@
 @endpush
 @push('styles')
 <style type="text/css">
+.tab-content>.tab-pane {
+    display: none
+}
+.tab-content>.active {
+    display: block
+}
+.tab-content{
+   box-shadow: 2px 2px 4px rgba(34, 34, 34, 0.12);
+}
+
+.list-group .selected::after {
+	content: "";
+	position: relative;
+   display: block;
+	width: 0;
+	height: 0;
+	top: -20px;
+	right: -40px;
+   float: right;
+	transform: rotate(45deg);
+	border: 20px solid;
+	border-color: transparent transparent white white;
+
+}
+.list-group-item {
+	line-height: 1.1;
+	font-size: 18px;
+	font-weight: 400;
+	font-family: Rufina, serif;
+	background-color: #e4e4e4;
+	padding: 10px 20px;
+	margin-bottom: .1em;
+
+}
+.panel-default .title{
+   margin-top: 20px;
+}
+.title-training{
+margin-bottom: 0px;
+font-family: 'Raleway', sans-serif;
+}
+
+.date{
+	font-size: 11px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.test{
+   position: absolute;
+}
+.circlelist{
+   list-style-type: circle;
+   padding-left: 15px;
+}
 
 </style>
 @endpush
 @section('content')
-		<section id="headline">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-5">
-						<p id="page-title" class="h1">Bankruptcy</p>
-					</div>
-
-					<div class="col-xs-12 col-md-7">
-						<p id="headline-text">
-							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-						</p>
-					</div>
+	<section id="headline">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<p id="page-title" class="h1">Trainings &amp; Consultations</p>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<main role="main">
+		<section class="section transparent">
+			<div class="container">
+				<div class="row" id="nav-row">
+			    	<div class="col-md-5" >
+						<ul class="list-group nav" role="tablist">
+
+                        <a href="#article1" data-toggle="tab" aria-controls="article1" role="tab" >
+									<li class="list-group-item selected">
+      								<p class="title-training">Training on Tobacco Control</p>
+      								<span class="date">04 June, 2012 - at SK&amp;P Cambodia Law Group Office</span>
+                           </li>
+								</a>
+
+                        <a href="#article2" data-toggle="tab" aria-controls="article2" role="tab" >
+									<li class="list-group-item">
+      								<p class="title-training">Adoption Consultation Announcement</p>
+      								<span class="date">27 April, 2012</span>
+                           </li>
+								</a>
+
+                        <a href="#article3" data-toggle="tab" aria-controls="article3" role="tab" >
+									<li class="list-group-item">
+      								<p class="title-training">Training on Inter-Country Adoption</p>
+      								<span class="date">August, 2011</span>
+                           </li>
+								</a>
+
+						</ul>
+					</div>
+					<div class="col-md-7 tab-content">
+						<div role="tabpanel" class="tab-pane active" id="article1">
+							<article class="panel-default">
+								<h2 class="title text-center">Training on Tobacco Control</h2>
+								<div class="panel-body">
+									<div class="row">
+	                            <div class="textbox">
+	                                 <p>The SKP CLG conducted a half day sensitization training on tobacco control in the Kingdom of Cambodia and relevant legal framework including progress in relation to the development of legislative framework. The training also covered briefing on the Country Report of the 2011 National Adult Tobacco Survey of Cambodia (NATSC, 2011). There are 10 participants including attorneys and legal assistants working for legal NGOs, UN agency and one law student.</p>
+                                    <p>Status and legal framework concerning tobacco control:</p>
+                                    <ul class="circlelist">
+                								<li>Framework Convention on Tobacco Control (FCTC): Cambodia ratified on 15/11/2005</li>
+                								<li>Constitutional Provision: The health of the people shall be guaranteed. The State shall give full consideration to
+                                          disease prevention and medical treatment. Poor citizens shall receive free medical consultation in public
+                                          hospitals, infirmaries and maternities (Article 72)</li>
+                								<li>Draft Law on Tobacco Control : at the Council of Ministers</li>
+                                       <li>Sub-decree # 35 of 24/02/2010 on Measures for the Banning of Tobacco Product Advertising</li>
+                								<li>Draft sub-decree on Smoke-Free Environment  was initiated in 1st quarter 2012</li>
+                                       <li>Other regulations re; Smoke Free were issued by 11 competent Ministries and Institutions : Ministry of Information</li>
+             							   </ul>
+                                    <p>(2010), Ministry of Agriculture (2010), Ministry of Interior (2009), MoEF (2007), MoEnvironment (2007),
+                                       MoIndustry(2006), MoWA(2001), MoCult(2000), MoEYS(2000), CoM (1994) and Cambodian Red Cross</p>
+                                    <strong class="pull-right">Author: Keo Sokea</strong></br>
+                                    <strong class="pull-right">Friday, 21 October 2011 21:17</strong>
+                               </div>
+									</div>
+		                  </div>
+		                </article>
+		            </div>
+
+						<div role="tabpanel" class="tab-pane " id="article2">
+                     <article class="panel-default">
+   							<h2 class="title text-center">Adoption Consultation Announcement</h2>
+   							<div class="panel-body">
+   								<div class="row">
+                               <div class="textbox">
+                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, corrupti, ullam, voluptatum provident deserunt natus reprehenderit inventore tempore aut neque cupiditate aspernatur. Nihil, sit, quibusdam, aliquid dolor a culpa officiis quisquam rerum fugiat magnam voluptatum ducimus expedita vel molestias unde ipsum atque ipsam optio consequatur incidunt animi corrupti sed aut!
+                               </div>
+   								</div>
+   	                  </div>
+   	               </article>
+			         </div>
+	            </div>
+	         </div>
+	      </div>
 		</section>
-
-		<main role="main">
-			<section id="s-single-post" class="section transparent">
-				<div class="pattern hidden-xs hidden-sm"></div>
-
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-md-8 col-lg-9">
-							<div id="single-post--container">
-								<img class="img-responsive" src="../img/practice_img/1.jpg" alt="demo">
-
-								<div class="row">
-									<div class="col-xs-12 col-md-11">
-										<h3 class="title">The court case of Adam Clark</h3>
-
-										<p>
-											<strong>Successful out creamy thought deal spend zesty. All sale know easily wherever zesty dual mouthwatering makes miracle peppy. Money surrender a jumbo deeply oily appreciate. Deeply surrender be in mothers. Appreciate cause advantage class flexible aromatic works love bonus. Spring messy brings this leading flip you.</strong>
-										</p>
-
-										<p>
-											Will all only far it's. Time clean neat hurry $19.95 money-back improved spicey have yours go newest. Seeing ever credit-card on what elegent soothing ultra very. Inside supreme to one handcrafted squeezable economical tangy while improved intense. Anything rosy world's than anti citrus. Soothing to polished whopping confident moist.
-										</p>
-
-										<p>
-											New reduced pleasing. Comfort made much rosy power win traditional ordinary monster absolutely so hit. Too introducing crispy delicious reputation smart splash neat healthy magically like original. With original stains economical action quick vast flip less too advanced however. Flash hurry aroma cholesterol appearance. Don't lower compare tighter time free goodbye families selfish high-tech available. Compact new energy multi-purpose tighter economical plus gentle deal fat-free reduced save. <br /> Seasoned money out. Catch creamy choose flip coming be you today fresh polished handling great. By accomodations choice recommended prevents feel. Quite touch feel absolutely picky coming. Traditional deserve extra confident jumbo lasting luxury recommended what luscious genuine chance.
-										</p>
-
-										<p>
-											Secret keeps chance quality. Improved revolutionary energy hello way millions oily than. Know feedback look with handcrafted treat parents fresh this squeezable. Sensational rated spacious today by. Healthy flexible burst citrus premium deeply industry. Deluxe newer families than chosen handcrafted introducing secret vast.
-										</p>
-
-										<br />
-
-										<h2>Certifications & Membership</h2>
-
-										<div class="row">
-											<div class="col-xs-12 col-sm-4">
-												<ul class="list">
-													<li><i class="icon-star"></i>Drunk drving accidents</li>
-													<li><i class="icon-star"></i>Industrial accidents</li>
-													<li><i class="icon-star"></i>Maritime and jones act claims</li>
-													<li><i class="icon-star"></i>Nursing home neglect</li>
-												</ul>
-											</div>
-
-											<div class="col-xs-12 col-sm-4">
-												<ul class="list">
-													<li><i class="icon-star"></i>Nursing home neglect</li>
-													<li><i class="icon-star"></i>Products liability</li>
-													<li><i class="icon-star"></i>Qui tam and whistleblower</li>
-													<li><i class="icon-star"></i>Industrial accidents</li>
-												</ul>
-											</div>
-
-											<div class="col-xs-12 col-sm-4">
-												<ul class="list">
-													<li><i class="icon-star"></i>Nursing home neglect</li>
-													<li><i class="icon-star"></i>Products liability</li>
-													<li><i class="icon-star"></i>Qui tam and whistleblower</li>
-													<li><i class="icon-star"></i>Industrial accidents</li>
-												</ul>
-											</div>
-										</div>
-
-										<p>
-											New reduced pleasing. Comfort made much rosy power win traditional ordinary monster absolutely so hit. Too introducing crispy delicious reputation smart splash neat healthy magically like original. With original stains economical action quick vast flip less too advanced however. Flash hurry aroma cholesterol appearance. Don't lower compare tighter time free goodbye families selfish high-tech available. Compact new energy multi-purpose tighter economical plus gentle deal fat-free reduced.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-12 col-md-4 col-lg-3">
-							<aside id="sidebar">
-								<div class="widget widget-categories">
-									<h4 class="widget-title h3">Practice Categories</h4>
-
-									<ul>
-										<li class="active"><a href="#"><i class="circled icon-right"></i>Mortgage</a></li>
-										<li><a href="#"><i class="circled icon-right"></i>Bankruptcy</a></li>
-										<li><a href="#"><i class="circled icon-right"></i>Guardinship</a></li>
-										<li><a href="#"><i class="circled icon-right"></i>Insurance</a></li>
-										<li><a href="#"><i class="circled icon-right"></i>banking</a></li>
-									</ul>
-								</div>
-
-								<span class="sep"></span>
-
-								<div class="widget widget-download">
-									<a class="download-btn" href="#">
-										<i class="ico"></i>
-										<span>Download a practice</span>
-									</a>
-								</div>
-
-								<span class="sep"></span>
-
-								<div class="widget widget-practices">
-									<h4 class="widget-title h3">Additioanal Practices</h4>
-
-									<div class="practices-container practices-four-columns practices-style-1">
-										<div class="practices-container--inner">
-											<div class="row">
-												<div class="col-xs-12 col-sm-6 col-md-12">
-													<div class="practices-item center-block">
-														<div class="inner">
-															<figure class="img-wrap">
-																<img src="../img/practice_img/4_col_1/6.jpg" alt="demo" />
-															</figure>
-
-															<a href="#"
-																><div>
-																	<ul class="b-table">
-																		<li class="cell v-middle text-left first"><h3 class="title">Mortgage</h3></li>
-
-																		<li class="cell v-middle text-right second"><span class="control-btn next-btn icon-right"></span></li>
-																	</ul>
-																</div>
-															</a>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-xs-12 col-sm-6 col-md-12">
-													<div class="practices-item center-block">
-														<div class="inner">
-															<figure class="img-wrap">
-																<img src="../img/practice_img/4_col_1/11.jpg" alt="demo" />
-															</figure>
-
-															<a href="#"
-																><div>
-																	<ul class="b-table">
-																		<li class="cell v-middle text-left first"><h3 class="title">Guardinship</h3></li>
-
-																		<li class="cell v-middle text-right second"><span class="control-btn next-btn icon-right"></span></li>
-																	</ul>
-																</div>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</aside>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="s-feedback" class="feedback-style-1 parallax" data-stellar-background-ratio="0.35" data-stellar-vertical-offset="100" data-stellar-offset-parent="true" style="background-image: url(../img/bg/1.jpg);">
-				<div class="pattern"></div>
-
-				<div class="container">
-					<div class="feedback-bxslider-container bxslider-container">
-						<ul class="bxslider" data-slidewidth="970" data-slidemargin="20" data-speed="500" data-auto="false" data-adaptiveheight="true" data-pager="false" data-prevselector="#feedback-slide-prev-1" data-nextselector="#feedback-slide-next-1">
-							<li class="slide">
-								<div class="text">
-									<p>
-										Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet
-									</p>
-								</div>
-
-								<div class="rating">
-									<i class="icon-star active"></i>
-									<i class="icon-star active"></i>
-									<i class="icon-star active"></i>
-									<i class="icon-star active"></i>
-									<i class="icon-star"></i>
-								</div>
-
-								<div class="author">
-									<img class="circled" src="../img/users_photos/1.png" height="84" width="84" alt="demo" />
-
-									<h3 class="name">Ann Gilbert</h3>
-
-									<h5 class="position">CEO / Vice president</h5>
-								</div>
-							</li>
-
-							<li class="slide">
-								<div class="text">
-									<p>
-										2 Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet
-									</p>
-								</div>
-
-								<div class="rating">
-									<i class="icon-star active"></i>
-									<i class="icon-star active"></i>
-									<i class="icon-star active"></i>
-									<i class="icon-star"></i>
-									<i class="icon-star"></i>
-								</div>
-
-								<div class="author">
-									<img class="circled" src="../img/users_photos/2.png" height="84" width="84" alt="demo" />
-
-									<h3 class="name">Andrew Dowson</h3>
-
-									<h5 class="position">Art Directoar</h5>
-								</div>
-							</li>
-
-							<li class="slide">
-								<div class="text">
-									<p>
-										3 Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet
-									</p>
-								</div>
-
-								<div class="rating">
-									<i class="icon-star active"></i>
-									<i class="icon-star active"></i>
-									<i class="icon-star active"></i>
-									<i class="icon-star active"></i>
-									<i class="icon-star active"></i>
-								</div>
-
-								<div class="author">
-									<img class="circled" src="../img/users_photos/3.png" height="84" width="84" alt="demo" />
-
-									<h3 class="name">John Smith</h3>
-
-									<h5 class="position">Art Directoar</h5>
-								</div>
-							</li>
-						</ul>
-
-						<span id="feedback-slide-prev-1" class="control-btn control-btn-style-2 prev-btn icon-left"></span>
-						<span id="feedback-slide-next-1" class="control-btn control-btn-style-2 next-btn icon-right"></span>
-					</div>
-				</div>
-			</section>
-
-			<section class="s-partners partners-style-1">
-				<div class="container">
-					<div class="bxslider-container">
-						<ul class="bxslider" data-slidewidth="100" data-minslides="2" data-maxslides="8" data-moveslides="2" data-slidemargin="30" data-auto="true" data-speed="500" data-pager="false" data-prevselector="#partners-slide-prev-1" data-nextselector="#partners-slide-next-1">
-							<li class="slide"><img src="../img/partners_img/1.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/2.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/3.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/4.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/5.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/6.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/7.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/8.png" alt="demo" /></li>
-						</ul>
-
-						<span id="partners-slide-prev-1" class="control-btn control-btn-style-2 prev-btn icon-left"></span>
-						<span id="partners-slide-next-1" class="control-btn control-btn-style-2 next-btn icon-right"></span>
-					</div>
-				</div>
-			</section>
-		</main>
+	</main>
 	@endsection
 	@push('scripts')
 
@@ -295,7 +163,11 @@
 
 	@section('scripts')
 	<script>
-		$(document).ready(function(){
-		});
+      $(document).ready(function(){
+         $('.list-group li').click(function() {
+            $('.list-group li').removeClass('selected');
+            $(this).addClass('selected');
+         });
+      });
 	</script>
 	@endsection

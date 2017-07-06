@@ -1634,6 +1634,23 @@ iframe {
 }
 .b-table, .v-align>* {
     width: 100%}
+
+ .s-align {
+     height: 100%}
+ .s-align:before {
+     content: "";
+     width: 0;
+     height: 100%;
+     margin-left: -4px;
+ }
+ .s-align:before, .s-align>* {
+     display: inline-block;
+     vertical-align: bottom;
+     padding-bottom: 25px;
+ }
+ .b-table, .s-align>* {
+     width: 100%}
+
 .b-table {
     display: table;
 }
@@ -1688,8 +1705,8 @@ iframe {
 }
 }.section {
     position: relative;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .section.transparent {
     background-color: transparent;
@@ -1711,8 +1728,8 @@ iframe {
 }
 }@media only screen and (min-width:992px) {
     .section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .section.transparent.with-border {
     padding-top: 99px!important;
@@ -5341,20 +5358,10 @@ main form button[type=submit] {
 #accordion .panel-heading { padding: 0;}
 #accordion .panel-title > a {
 	display: block;
-	padding: 0.4em 0.6em;
+	padding: 0.7em 1em;
     outline: none;
     font-weight:bold;
     text-decoration: none;
-}
-
-#accordion .panel-title > a.accordion-toggle::before, #accordion a[data-toggle="collapse"]::before  {
-    content:"\e113";
-    float: left;
-    font-family: 'Glyphicons Halflings';
-	margin-right :1em;
-}
-#accordion .panel-title > a.accordion-toggle.collapsed::before, #accordion a.collapsed[data-toggle="collapse"]::before  {
-    content:"\e114";
 }
 
 .collapse {
@@ -5389,12 +5396,16 @@ main form button[type=submit] {
 .panel-body {
     padding: 15px
 }
+.panel-body li{
+    text-decoration: none;
+}
 .panel-heading {
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px
 }
+
 .panel-heading>.dropdown .dropdown-toggle {
     color: inherit
 }
@@ -5445,4 +5456,9 @@ main form button[type=submit] {
 }
 .panel-default>.panel-footer+.panel-collapse>.panel-body {
     border-bottom-color: #ddd
+}
+
+
+.center{
+   text-align: center;
 }

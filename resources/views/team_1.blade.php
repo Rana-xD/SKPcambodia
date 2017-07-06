@@ -19,14 +19,8 @@
 		<section id="headline">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-5">
+					<div class="col-xs-12 col-md-12">
 						<p id="page-title" class="h1">Meet Our Attorneys</p>
-					</div>
-
-					<div class="col-xs-12 col-md-7">
-						<p id="headline-text">
-							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-						</p>
 					</div>
 				</div>
 			</div>
@@ -35,9 +29,7 @@
 		<main role="main">
 			<section class="section transparent">
 				<div class="container">
-					<div class="hidden-xs col-MB-20"><h2>SK &amp; P’s Team Attorneys</h2></div>
 
-					<div class="visible-xs col-md-MB-20"><h2 class="text-center">SK &amp; P’s Team Attorneys</h2></div>
 
 					<div class="team-container team-four-columns team-style-2">
 						<div class="team-container--inner">

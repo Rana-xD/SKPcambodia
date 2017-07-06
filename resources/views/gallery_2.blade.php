@@ -30,20 +30,15 @@
 			<section class="section transparent">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-12 col-md-2">
-							<div class="col-md-MB-30">
-								<img class="img-responsive" src="../img/img_2.png" alt="demo" />
-							</div>
-						</div>
 
-						<div class="col-xs-12 col-md-10">
+						<div class="col-xs-12 col-md-12">
 							<div class="col-md-MB-30">
 								<p>
-									Apart from our routine works such as litigations, development and witnessing business agreements/contracts (loan agreements, lease agreement, immovable property sale agreements, share transfer agreements, etc), business protection arrangements (between real owner and owner by proxy in case foreigners own land in Cambodia), property protection (will, donation, trust), family law related activities (adoption, guardian appointment), issuance of legal opinions on sppecific subject matters (e.g. adoption, loan) and international business and private law related issues (hearing before immigration authorities, legal opinion for court abroad), legal consultation on business and family law (opening company, registration of company/organization, adoption, guardianship), below are selected activities of our law group. 
+									Apart from our routine works such as litigations, development and witnessing business agreements/contracts (loan agreements, lease agreement, immovable property sale agreements, share transfer agreements, etc), business protection arrangements (between real owner and owner by proxy in case foreigners own land in Cambodia), property protection (will, donation, trust), family law related activities (adoption, guardian appointment), issuance of legal opinions on sppecific subject matters (e.g. adoption, loan) and international business and private law related issues (hearing before immigration authorities, legal opinion for court abroad), legal consultation on business and family law (opening company, registration of company/organization, adoption, guardianship), below are selected activities of our law group.
 								</p>
 
 								<p>
-									These activities are limited to the information that we can share as we are professionally required to maintain confidentiality of our clients:
+									<strong>These activities are limited to the information that we can share as we are professionally required to maintain confidentiality of our clients:</strong>
 								</p>
 							</div>
 						</div>

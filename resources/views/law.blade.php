@@ -12,77 +12,15 @@
 @endpush
 @push('styles')
 <style type="text/css">
-.files-wrapper{
-	position: relative;
-	width: 100%;
+.file-item{
+	list-style: none;
+	padding: 5px;
 }
-.files-wrapper .inner{
-	position: relative;
-	width: 100%;
-}
-.files-wrapper .accordion{
-	position: relative;
-	width: 50%;
-	float: left;
-	margin-bottom: 20px;
-	padding: 20px;
-
-}
-
-.files-wrapper .accordion-heading{
-	display: block;
-	position: relative;
-	width: 100%;
-	text-align: left;
-	background: #2b90d9;
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-
-}
-
-.files-wrapper .accordion-heading h3{
-	padding: 15px 25px;
-	display: block;
-	margin: 0;
-	font-size: 18px;
-	color: #fff;
-	cursor: pointer;
-}
-
-.files-wrapper .accordion-heading i{
-	margin-right: 7px;
-	font-size: 2.1rem;
-	vertical-align: bottom;
-}
-
-.files-wrapper .accordion-body{
-	position: relative;
-	width: 100%;
-	float: left;
-	height: 0;
-	overflow: hidden;
-	padding: 0px;
-	background: #f1f1f1;
-	transition: height 0.45s linear;
-	-webkit-transition: height 0.45s linear;
-	-moz-transition: height 0.45s linear;
-	-ms-transition: height 0.45s linear;
-	-o-transition: height 0.45s linear;
-}
-
-.files-wrapper .accordion-body.active{
-	height: auto;
-	border-top: 1px solid #d3d3d3;
-
-}
-
-
 .files-wrapper .accordion-body .file-item{
 	position: relative;
 	float: left;
 	display: block;
 	width: 100%;
-	padding: 12px 30px;
 	transition: all 0.27s ease;
 	-webkit-transition: all 0.27s ease;
 	-moz-transition: all 0.27s ease;
@@ -90,7 +28,6 @@
 	-o-transition: all 0.27s ease;
 
 }
-
 .file-item a{
 	text-decoration: none;
 	color: #534847;
@@ -129,7 +66,7 @@
 
 .file-item i{
 	margin-right: 15px;
-	color: #60c5ba;
+	color: #4F86C6;
 	font-size: 18px;
 }
 </style>
@@ -138,14 +75,8 @@
 		<section id="headline">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-5">
-						<p id="page-title" class="h1">Practices</p>
-					</div>
-
-					<div class="col-xs-12 col-md-7">
-						<p id="headline-text">
-							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-						</p>
+					<div class="col-xs-12 col-md-12">
+						<p id="page-title" class="h1">Laws &amp; Regulations of Kingdom of Cambodia</p>
 					</div>
 				</div>
 			</div>
@@ -154,155 +85,199 @@
 		<main role="main">
 			<section class="section transparent">
 				<div class="container">
-					<div class="hidden-xs col-MB-20"><h2>Practice Area</h2></div>
+					<div class="col-xs-12 col-md-6">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-folder-open"></i> Adoption
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng.pdf" target="_blank">Adoption Prakas-N0-074_Eng.pdf</a>
+											  </li>
 
-					<div class="visible-xs col-md-MB-20"><h2 class="text-center">Practice Area</h2></div>
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210.pdf" target="_blank">Announcement 078 on Number of Agencies-E 091210.pdf</a>
+											  </li>
 
-					<div class="files-wrapper clearfix">
-						<div class="inner clearfix">
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208.pdf" target="_blank">Certificate of Adoption-Prakas-E-161208.pdf</a>
+											  </li>
 
-							<div class="accordion clearfix">
-								<div class="accordion-heading">
-									<h3 data-target="#filecontainer1"><i class="fa fa-folder-open"></i> Adoption</h3>
-								</div>
-								<div id="filecontainer1" data-group="group1" class="accordion-body clearfix">
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_.pdf" target="_blank">HagueConv Adoption.Kh_Unicode_.pdf</a>
+											  </li>
 
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng.pdf" target="_blank">Adoption Prakas-N0-074_Eng</a>
-									</li>
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh.pdf" target="_blank">Inter-country Adaption Law 2009-Kh.pdf</a>
+											  </li>
 
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210.pdf" target="_blank">Announcement 078 on Number of Agencies-E 091210</a>
-									</li>
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng.pdf" target="_blank">Inter-country Adoption Law-2009-Eng.pdf</a>
+											  </li>
 
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208.pdf" target="_blank">Certificate of Adoption-Prakas-E-161208</a>
-									</li>
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001.pdf" target="_blank">Inter-country Adoption-Subdecree No 29-Eng 2001.pdf</a>
+											  </li>
 
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_.pdf" target="_blank">HagueConv Adoption.Kh_Unicode_</a>
-									</li>
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107.pdf" target="_blank">Law on Accession2 HagueConv-E-220107.pdf</a>
+											  </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-folder-open"></i> Agriculture Forest Fishery
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+											  <li class="file-item">
+												  <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh.pdf</a>
+											  </li>
 
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh.pdf" target="_blank">Inter-country Adaption Law 2009-Kh</a>
-									</li>
+											  <li class="file-item">
+												  <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh.pdf</a>
+											  </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-folder-open"></i> Alternative Care
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+										 <div class="panel-body">
+											 <li class="file-item">
+												 <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
+												 <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh.pdf</a>
+											 </li>
 
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng.pdf" target="_blank">Inter-country Adoption Law-2009-Eng</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001.pdf" target="_blank">Inter-country Adoption-Subdecree No 29-Eng 2001</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107.pdf" target="_blank">Law on Accession2 HagueConv-E-220107</a>
-									</li>
-
-								</div>
-							</div>
-
-							<div class="accordion clearfix">
-								<div class="accordion-heading">
-									<h3 data-target="#filecontainer2"><i class="fa fa-folder-open"></i> Agriculture_Forest_Fishery</h3>
-								</div>
-								<div id="filecontainer2" data-group="group1" class="accordion-body clearfix">
-									<li class="file-item">
-										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh</a>
-									</li>
-
-
-								</div>
-							</div>
-
-						</div>
+											 <li class="file-item">
+												 <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
+												 <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh.pdf</a>
+											 </li>
+										 </div>
+                            </div>
+                        </div>
+                    </div>
 					</div>
-					<div class="files-wrapper clearfix">
-						<div class="inner clearfix">
+					<div class="col-xs-12 col-md-6">
+						<div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+								<div class="panel panel-default">
+									 <div class="panel-heading" role="tab" id="headingFour">
+										  <h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i class="fa fa-folder-open"></i> Banking &amp; Finance Institutions
+												</a>
+										  </h4>
+									 </div>
+									 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+										  <div class="panel-body">
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng.pdf" target="_blank">Adoption Prakas-N0-074_Eng.pdf</a>
+											  </li>
 
-							<div class="accordion clearfix">
-								<div class="accordion-heading">
-									<h3 data-target="#filecontainer3"><i class="fa fa-folder-open"></i> Adoption</h3>
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210.pdf" target="_blank">Announcement 078 on Number of Agencies-E 091210.pdf</a>
+											  </li>
+
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208.pdf" target="_blank">Certificate of Adoption-Prakas-E-161208.pdf</a>
+											  </li>
+
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_.pdf" target="_blank">HagueConv Adoption.Kh_Unicode_.pdf</a>
+											  </li>
+
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh.pdf" target="_blank">Inter-country Adaption Law 2009-Kh.pdf</a>
+											  </li>
+
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng.pdf" target="_blank">Inter-country Adoption Law-2009-Eng.pdf</a>
+											  </li>
+
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001.pdf" target="_blank">Inter-country Adoption-Subdecree No 29-Eng 2001.pdf</a>
+											  </li>
+
+											  <li class="file-item">
+												  <a class="download" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107.pdf" target="_blank">Law on Accession2 HagueConv-E-220107.pdf</a>
+											  </li>
+										  </div>
+									 </div>
 								</div>
-								<div id="filecontainer3" data-group="group2" class="accordion-body clearfix">
+								<div class="panel panel-default">
+									 <div class="panel-heading" role="tab" id="headingFive">
+										  <h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><i class="fa fa-folder-open"></i> Children and Women
+												</a>
+										  </h4>
+									 </div>
+									 <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+										  <div class="panel-body">
+											  <li class="file-item">
+												  <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh.pdf</a>
+											  </li>
 
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Adoption-Prakas-N0-074_Eng.pdf" target="_blank">Adoption Prakas-N0-074_Eng</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Announcement-078-on-Number-of-Agencies-E-091210.pdf" target="_blank">Announcement 078 on Number of Agencies-E 091210</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Certificate-of-Adoption-Prakas-E-161208.pdf" target="_blank">Certificate of Adoption-Prakas-E-161208</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/HagueConv-Adoption.Kh_Unicode_.pdf" target="_blank">HagueConv Adoption.Kh_Unicode_</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Inter-country-Adaption-Law-2009-Kh.pdf" target="_blank">Inter-country Adaption Law 2009-Kh</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Inter-country-Adoption-Law-2009-Eng.pdf" target="_blank">Inter-country Adoption Law-2009-Eng</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Inter-country-Adoption-Subdecree-No-29-Eng-2001.pdf" target="_blank">Inter-country Adoption-Subdecree No 29-Eng 2001</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Adoption/Law-on-Accession2-HagueConv-E-220107.pdf" target="_blank">Law on Accession2 HagueConv-E-220107</a>
-									</li>
-
+											  <li class="file-item">
+												  <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
+												  <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh.pdf</a>
+											  </li>
+										  </div>
+									 </div>
 								</div>
-							</div>
+								<div class="panel panel-default">
+									 <div class="panel-heading" role="tab" id="headingSix">
+										  <h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix"><i class="fa fa-folder-open"></i> Civil &amp; Civil Procedure Law
+												</a>
+										  </h4>
+									 </div>
+									 <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+										 <div class="panel-body">
+											 <li class="file-item">
+												 <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
+												 <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh.pdf</a>
+											 </li>
 
-							<div class="accordion clearfix">
-								<div class="accordion-heading">
-									<h3 data-target="#filecontainer4"><i class="fa fa-folder-open"></i> Agriculture_Forest_Fishery</h3>
+											 <li class="file-item">
+												 <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
+												 <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh.pdf</a>
+											 </li>
+										 </div>
+									 </div>
 								</div>
-								<div id="filecontainer4" data-group="group2" class="accordion-body clearfix">
-									<li class="file-item">
-										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh</a>
-									</li>
-
-									<li class="file-item">
-										<a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
-										<a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh</a>
-									</li>
-
-
-								</div>
-							</div>
-
-						</div>
+						  </div>
 					</div>
 
 				</div>

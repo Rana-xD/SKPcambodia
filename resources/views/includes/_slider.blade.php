@@ -3,7 +3,7 @@
         <li class="selected" style="background-image: url(../img/slider_img/1.jpg);">
             <div class="full-width">
                 <div class="container">
-                    <div class="v-align">
+                    <div class="s-align">
                         <div>
                             <h2>Meet Our Great Team</h2>
 
@@ -14,10 +14,10 @@
             </div>
         </li>
 
-        <li class="bg-video" style="background-image: url(../img/slider_img/1.jpg);">
+        <li class="bg-video" style="background-image: url(../img/slider_img/2.jpg);">
             <div class="full-width">
                 <div class="container">
-                    <div class="v-align">
+                    <div class="s-align">
                         <div>
                             <h2>Consult with us</h2>
 
@@ -32,10 +32,10 @@
             </div> <!-- .cd-bg-video-wrapper -->
         </li>
 
-        <li style="background-image: url(../img/slider_img/1.jpg);">
+        <li style="background-image: url(../img/slider_img/3.jpg);">
             <div class="full-width">
                 <div class="container">
-                    <div class="v-align">
+                    <div class="s-align">
                         <div>
                             <h2>SK &amp; P Cambodia Law Firm</h2>
 
