@@ -15,8 +15,9 @@ class routing extends Controller
 
     public function contact()
     {
+      $send = 0;
       $Menu = menu::find(1);
-      return view('contacts',compact('Menu'));
+      return view('contacts',compact('Menu','send'));
     }
 
     public function about()
@@ -58,6 +59,7 @@ class routing extends Controller
     public function law()
     {
       $Menu = menu::find(1);
+      return DB::table('law_master')->join('files_master','law_master.id','=','files_master.law_id')->select('law_master.name as law_name','files_master.name')->get();
       return view('law',compact('Menu'));
     }
 

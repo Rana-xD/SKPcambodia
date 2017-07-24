@@ -58,24 +58,25 @@
 							<div class="contact-item">
 								<h2>Contact Us</h2>
 
-								<form action="#">
+								<form action="mail" id="myForm" method="post">
+									{{ csrf_field() }}
 									<label class="input-wrp">
-										<input type="text" placeholder="Name" />
+										<input type="text" placeholder="Name" name="name"/>
 										<span></span>
 									</label>
 
 									<label class="input-wrp">
-										<input type="text" placeholder="E-mail" />
+										<input type="email" placeholder="E-mail" name="email"/>
 										<span></span>
 									</label>
 
 									<label class="input-wrp">
-										<input type="text" placeholder="Phone" />
+										<input type="text" placeholder="Phone" name="phone"/>
 										<span></span>
 									</label>
 
 									<label class="input-wrp">
-										<textarea placeholder="Your message"></textarea>
+										<textarea placeholder="Your message" name="message"></textarea>
 										<span></span>
 									</label>
 
@@ -119,6 +120,14 @@
 	@section('scripts')
 	<script>
 		$(document).ready(function(){
+			$('#myForm').validate();
+			var send = @php
+				echo $send;
+			@endphp;
+			if(send==1)
+			{
+				swal("Thanks You!!!", "We will contact you soon")
+			}
 		});
 	</script>
 	@endsection

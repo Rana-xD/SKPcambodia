@@ -27,7 +27,9 @@ Route::group(['middleware' =>'locale'],function(){
   Route::get('/employment&internship','routing@employment');
   Route::get('/mission','routing@mission');
   Route::get('/teamsingle','routing@teamsingle');
+  Route::post('/mail','system@sendmail');
 });
 
 Route::get('locale/{localeId?}','locale@locales');
 Route::get('PDF/{path}/{filename}','system@downloadpdf');
+Route::post('/mail','system@sendmail');
