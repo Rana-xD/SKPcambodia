@@ -21,7 +21,7 @@
       <div class="">
         <nav id="navigation" role="navigation">
           <ul>
-            <li class="menu-item current">
+            <!-- <li class="menu-item current">
               <a href="/">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->home): strip_tags ($Menu->home) }}}</a>
             </li>
             <li class="menu-item">
@@ -64,7 +64,7 @@
             </li>
             <li class="menu-item">
               <a href="contacts">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->contact_us): strip_tags ($Menu->contact_us) }}}</a>
-            </li>
+            </li> -->
           </ul>
         </nav>
 
