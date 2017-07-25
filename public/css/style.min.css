@@ -2817,6 +2817,7 @@ main form button[type=submit] {
     white-space: normal;
     color: #4F86C6;
     padding: 5px;
+    font-family: 'Raleway','Nokora','Noto Sans Kannada', sans-serif;
 }
 #navigation a:hover {
     text-decoration: none;

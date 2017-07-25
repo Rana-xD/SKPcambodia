@@ -24,7 +24,5 @@
 <link class="colors_style" rel="stylesheet" href="/css/color_scheme/color_1.css" type="text/css"/>
 
 <!-- / google font -->
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Mate" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Rufina:400,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Raleway|Mate|Oxygen:400,700|Rufina:400,700|Nokora" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/notosanskannada.css">
