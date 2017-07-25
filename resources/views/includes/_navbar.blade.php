@@ -21,50 +21,7 @@
       <div class="">
         <nav id="navigation" role="navigation">
           <ul>
-            <!-- <li class="menu-item current">
-              <a href="/">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->home): strip_tags ($Menu->home) }}}</a>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->about_us): strip_tags ($Menu->about_us) }}}</a>
-              <div class="submenu">
-                <ul>
-                  <li class="menu-item"><a href="about">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->about_us): strip_tags ($Menu->about_us) }}}</a></li>
-                  <li class="menu-item"><a href="mission">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->mission): strip_tags ($Menu->mission) }}}</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="menu-item">
-              <a href="team">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->team): strip_tags ($Menu->team) }}}</a>
-            </li>
-            <li class="menu-item">
-              <a href="services">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->services): strip_tags ($Menu->services) }}}</a>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->resources): strip_tags ($Menu->resources) }}}</a>
-              <div class="submenu">
-                <ul>
-                  <li class="menu-item"><a href="report">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->report): strip_tags ($Menu->report) }}}</a></li>
-                  <li class="menu-item"><a href="publication">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->publication): strip_tags ($Menu->publication) }}}</a></li>
-                  <li class="menu-item"><a href="law">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->law): strip_tags ($Menu->law) }}}</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->news): strip_tags ($Menu->news) }}}</a>
-              <div class="submenu">
-                <ul>
-                  <li class="menu-item"><a href="training">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->training): strip_tags ($Menu->training) }}}</a></li>
-                  <li class="menu-item"><a href="announcement">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->announment): strip_tags ($Menu->announment) }}}</a></li>
-                  <li class="menu-item"><a href="employment&internship">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->employment): strip_tags ($Menu->employment) }}}</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="menu-item">
-              <a href="blog">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->blog): strip_tags ($Menu->blog) }}}</a>
-            </li>
-            <li class="menu-item">
-              <a href="contacts">{{{ $Menu->translation(Lang::locale())->first() ? strip_tags ($Menu->translation(Lang::locale())->first()->contact_us): strip_tags ($Menu->contact_us) }}}</a>
-            </li> -->
+            <!--  -->
           </ul>
         </nav>
 

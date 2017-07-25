@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => 'pgsql',
 
     /*
     |--------------------------------------------------------------------------
@@ -56,10 +56,11 @@ return [
 
         'pgsql' => [
             'driver'   => 'pgsql',
-            'host'     => parse_url(getenv("DATABASE_URL"))["host"],
-            'database' => substr(parse_url(getenv("DATABASE_URL"))["path"], 1),
-            'username' => parse_url(getenv("DATABASE_URL"))["user"],
-            'password' => parse_url(getenv("DATABASE_URL"))["pass"],
+            'host'     => 'ec2-54-243-252-232.compute-1.amazonaws.com',
+            'port'     => 5432,
+            'database' => 'ddoqfkojs6kn1c',
+            'username' => 'geztmwzvdhumrc',
+            'password' => 'e613e5dd8ea7265fd49d0f46e48c04d2c98aef7670ef477b5e364538176c0030',
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',
