@@ -13,23 +13,28 @@
 
 
 Route::group(['middleware' =>'locale'],function(){
-  Route::get('/', 'routing@home');
-  Route::get('/contacts', 'routing@contact');
-  Route::get('/about','routing@about');
-  Route::get('/team','routing@team');
-  Route::get('/services','routing@service');
-  Route::get('/report','routing@report');
-  Route::get('/blog','routing@blog');
-  Route::get('/publication','routing@publication');
-  Route::get('/law','routing@law');
-  Route::get('/announcement','routing@announcement');
-  Route::get('/training','routing@training');
-  Route::get('/employment&internship','routing@employment');
-  Route::get('/mission','routing@mission');
-  Route::get('/teamsingle','routing@teamsingle');
-  Route::post('/mail','system@sendmail');
+  Route::get('/', 'PageController@home');
+  Route::get('/contacts', 'PageController@contact');
+  Route::get('/about','PageController@about');
+  Route::get('/team','PageController@team');
+  Route::get('/services','PageController@service');
+  Route::get('/report','PageController@report');
+  Route::get('/blog','PageController@blog');
+  Route::get('/publication','PageController@publication');
+  Route::get('/law','PageController@law');
+  Route::get('/announcement','PageController@announcement');
+  Route::get('/training','PageController@training');
+  Route::get('/employment_and_internship','PageController@employment');
+  Route::get('/mission','PageController@mission');
+  Route::get('/teamsingle','PageController@teamsingle');
+  Route::post('/mail','System@sendmail');
 });
 
-Route::get('locale/{localeId?}','locale@locales');
-Route::get('PDF/{path}/{filename}','system@downloadpdf');
-Route::post('/mail','system@sendmail');
+Route::get('locale/{localeId?}','LocaleController@locales');
+Route::get('PDF/{path}/{filename}','System@downloadpdf');
+Route::post('/mail','System@sendmail');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
