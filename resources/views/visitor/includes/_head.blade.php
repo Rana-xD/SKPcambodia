@@ -26,3 +26,6 @@
 <!-- / google font -->
 <link href="https://fonts.googleapis.com/css?family=Raleway|Mate|Oxygen:400,700|Rufina:400,700|Nokora" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/notosanskannada.css">
+
+<!-- / Sweet alert -->
+<link rel="stylesheet" type="text/css" href="sweetalert/dist/sweetalert.css">

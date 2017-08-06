@@ -8,11 +8,12 @@ use URL;
 use Exception;
 use TCG\Voyager\Traits\Translatable;
 
-class Slider extends Model
+class TrainingProgram extends Model
 {
+
     use Translatable;
 
-    protected $translatable = ['title', 'description', 'button_text'];
+    protected $translatable = ['title', 'content', 'organized_by'];
 
     /**
      * Override save method
@@ -85,7 +86,7 @@ class Slider extends Model
     }
 
     /**
-     *   Method for returning specific thumbnail for slider.
+     *   Method for returning specific thumbnail for training program.
      */
     public function thumbnail($type)
     {

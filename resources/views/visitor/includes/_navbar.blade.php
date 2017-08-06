@@ -1,7 +1,8 @@
 <header id="header" class="header-style-1">
   <div class="container">
     <div class="col-lg-4 col-md-4">
-      <a id="header-logo" class="site-logo" href="/"></a>
+      <a id="header-logo" class="site-logo" href="/">
+      </a>
     </div>
     <a id="menu-toggler" href="javascript:void(0);"><span></span></a>
 
@@ -21,9 +22,11 @@
       <div class="">
         <nav id="navigation" role="navigation">
           <ul>
+
             <li class="menu-item current">
               <a href="/">@lang('menu.home')</a>
             </li>
+
             <li class="menu-item">
               <a href="javascript:void(0);">@lang('menu.about_us')</a>
               <div class="submenu">
@@ -33,6 +36,7 @@
                 </ul>
               </div>
             </li>
+
             <li class="menu-item">
               <a href="team">@lang('menu.team')</a>
             </li>

@@ -8,11 +8,11 @@ use URL;
 use Exception;
 use TCG\Voyager\Traits\Translatable;
 
-class Slider extends Model
+class Partner extends Model
 {
     use Translatable;
 
-    protected $translatable = ['title', 'description', 'button_text'];
+    protected $translatable = ['company_name', 'company_profile'];
 
     /**
      * Override save method
@@ -66,9 +66,9 @@ class Slider extends Model
      * Mutator for feature image attribute
      * remove domain from asset url
     */
-    public function setFeaturedImageAttribute($value){
+    public function setCompanyLogoAttribute($value){
         $img_path = str_replace(URL('/'), '', $value);
-        $this->attributes['featured_image'] = $img_path;
+        $this->attributes['company_logo'] = $img_path;
     }
 
     /**
@@ -84,18 +84,5 @@ class Slider extends Model
 
     }
 
-    /**
-     *   Method for returning specific thumbnail for slider.
-     */
-    public function thumbnail($type)
-    {
-        // We take image from posts field
-        $image = $this->attributes['image'];
-        // We need to get extension type ( .jpeg , .png ...)
-        $ext = pathinfo($image, PATHINFO_EXTENSION);
-        // We remove extension from file name so we can append thumbnail type
-        $name = rtrim($image, '.'.$ext);
-        // We merge original name + type + extension
-        return $name.'-'.$type.'.'.$ext;
-    }
+
 }

@@ -8,11 +8,12 @@ use URL;
 use Exception;
 use TCG\Voyager\Traits\Translatable;
 
-class Slider extends Model
+
+class Service extends Model
 {
     use Translatable;
 
-    protected $translatable = ['title', 'description', 'button_text'];
+    protected $translatable = ['title', 'content', 'excerpt'];
 
     /**
      * Override save method
@@ -82,20 +83,5 @@ class Slider extends Model
             throw new Exception("You don't have permission to perform this action.", 1);
         }
 
-    }
-
-    /**
-     *   Method for returning specific thumbnail for slider.
-     */
-    public function thumbnail($type)
-    {
-        // We take image from posts field
-        $image = $this->attributes['image'];
-        // We need to get extension type ( .jpeg , .png ...)
-        $ext = pathinfo($image, PATHINFO_EXTENSION);
-        // We remove extension from file name so we can append thumbnail type
-        $name = rtrim($image, '.'.$ext);
-        // We merge original name + type + extension
-        return $name.'-'.$type.'.'.$ext;
     }
 }

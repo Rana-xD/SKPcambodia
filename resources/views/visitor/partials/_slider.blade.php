@@ -1,62 +1,52 @@
 <div id="start-screen">
     <ul class="hero-slider autoplay">
-        <li class="selected" style="background-image: url(../img/slider_img/1.jpg);">
+    @foreach($sliders as $index => $slider)
+        @if($slider->type==1)
+        <li id="slide_{{++$index}}" class="@if($index==1){{ 'selected' }}@endif" style="background-image: url({{ asset('/storage/'.$slider->featured_image) }});">
             <div class="full-width">
                 <div class="container">
                     <div class="s-align">
                         <div>
-                            <h2>Meet Our Great Team</h2>
+                            <h2>{{ $slider->getTranslatedAttribute('title', $locale) }}</h2>
 
-                            <a class="custom-btn medium light-color" href="team" data-text="Discover"><span>Discover</span></a>
+                            <a class="custom-btn medium light-color" href="{{ $slider->link_url }}" data-text="{{ $slider->getTranslatedAttribute('button_text', $locale) }}"><span>{{ $slider->getTranslatedAttribute('button_text', $locale) }}</span></a>
                         </div>
                     </div>
                 </div>
             </div>
         </li>
-
-        <li class="bg-video" style="background-image: url(../img/slider_img/2.jpg);">
+        @elseif($slider->type==2)
+        <li id="slide_{{++$index}}" class="@if($index==1){{ 'selected' }}@endif bg-video" style="background-image: url({{ asset('/storage/'.$slider->featured_image) }});">
             <div class="full-width">
                 <div class="container">
                     <div class="s-align">
                         <div>
-                            <h2>Consult with us</h2>
+                            <h2>{{ $slider->getTranslatedAttribute('title', $locale) }}</h2>
 
-                            <a class="custom-btn medium light-color" href="#" data-text="CAll now!"><span>CAll now!</span></a>
+                            <a class="custom-btn medium light-color" href="{{ $slider->link_url }}" data-text="{{ $slider->getTranslatedAttribute('button_text', $locale) }}"><span>{{ $slider->getTranslatedAttribute('button_text', $locale) }}</span></a>
                         </div>
                     </div>
                 </div>
             </div> <!-- .cd-full-width -->
 
-            <div class="bg-video-wrapper" data-video="assets/video/video">
+            <div class="bg-video-wrapper" data-video="@if(!empty($slider->video_url)){{ $slider->video_url }}@endif">
                 <!-- video element will be loaded using jQuery -->
             </div> <!-- .cd-bg-video-wrapper -->
         </li>
-
-        <li style="background-image: url(../img/slider_img/3.jpg);">
-            <div class="full-width">
-                <div class="container">
-                    <div class="s-align">
-                        <div>
-                            <h2>SK &amp; P Cambodia Law Firm</h2>
-
-                            <p>
-                                There are many variations of passages of Lorem Ipsum available, but the majority have<br /> suffered alteration in some form, by injected humour, or randomised words which don't look
-                            </p>
-
-                            <a class="custom-btn medium light-color" href="#" data-text="CAll now!"><span>CAll now!</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- .cd-full-width -->
-        </li>
+        @endif
+    @endforeach
     </ul>
 
     <div class="slider-nav">
         <nav>
             <ul class="clearfix horizontal">
-                <li class="selected"><a href="#0">1</a></li>
-                <li><a href="#0">2</a></li>
-                <li><a href="#0">3</a></li>
+            @foreach($sliders as $index => $slider)
+                @if($index == 0)
+                <li class="selected"><a href="#slide_{{++$index}}">{{ $index }}</a></li>
+                @else
+                <li><a href="#slide_{{++$index}}">{{ $index }}</a></li>
+                @endif
+            @endforeach
             </ul>
         </nav>
     </div>

@@ -20,6 +20,7 @@ Route::group(['middleware' =>'locale'],function(){
   Route::get('/services','PageController@service');
   Route::get('/report','PageController@report');
   Route::get('/blog','PageController@blog');
+  Route::get('/blog/{slug}','PageController@blogDetail')->name('visitor.blog.detail');
   Route::get('/publication','PageController@publication');
   Route::get('/law','PageController@law');
   Route::get('/announcement','PageController@announcement');

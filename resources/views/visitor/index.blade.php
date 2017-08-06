@@ -19,8 +19,16 @@
 @endpush
 
 @section('content')
-	@includeIf('visitor.includes._slider')
+
+	@php
+	    $locale = App::getLocale();
+	@endphp
+
+	@if(isset($sliders) && count($sliders) > 0)
+		@includeIf('visitor.partials._slider', ['sliders' => $sliders])
+	@endif
 	<main role="main">
+
 		<!--Service-->
 		<section class="section transparent" style="padding-top:60px;">
 			<div class="container">
@@ -41,91 +49,27 @@
 						<div class="col-md-MB-30">
 							<div class="services-container services-style-4">
 								<div class="services-container--inner">
+									@foreach($services->chunk(3) as $service_content)
 									<div class="row">
+										@foreach($service_content as $service)
 										<div class="col-xs-12 col-sm-4">
 											<div class="service-item center-block">
-												<i class="ico ico-1"></i>
+												<i class="{{ $service->icon_class ? $service->icon_class : 'ico ico-1' }}"></i>
 
 												<div class="inner">
-													<h3 class="title">Corruption</h3>
+													<h3 class="title">
+														{{ $service->getTranslatedAttribute('title', $locale) }}
+													</h3>
 
 													<p>
-														There are many variations of passages of Lorem Ipsum available
+														{{ $service->getTranslatedAttribute('excerpt', $locale) }}
 													</p>
 												</div>
 											</div>
 										</div>
-
-										<div class="col-xs-12 col-sm-4">
-											<div class="service-item center-block">
-												<i class="ico ico-2"></i>
-
-												<div class="inner">
-													<h3 class="title">Justice</h3>
-
-													<p>
-														There are many variations of passages of Lorem Ipsum available
-													</p>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-xs-12 col-sm-4">
-											<div class="service-item center-block">
-												<i class="ico ico-3"></i>
-
-												<div class="inner">
-													<h3 class="title">Legislation</h3>
-
-													<p>
-														It is a long established fact that a reader will be distracted
-													</p>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-xs-12 col-sm-4">
-											<div class="service-item center-block">
-												<i class="ico ico-4"></i>
-
-												<div class="inner">
-													<h3 class="title">Banking and Finance</h3>
-
-													<p>
-														Loan, Settlement of Loan, Escrow, Legal Opinion for Bank
-													</p>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-xs-12 col-sm-4">
-											<div class="service-item center-block">
-												<i class="ico ico-5"></i>
-
-												<div class="inner">
-													<h3 class="title">Criminal Law</h3>
-
-													<p>
-														The standard chunk of Lorem Ipsum used since the 1500s
-													</p>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-xs-12 col-sm-4">
-											<div class="service-item center-block">
-												<i class="ico ico-6"></i>
-
-												<div class="inner">
-													<h3 class="title">Independent Judges</h3>
-
-													<p>
-														The standard chunk of Lorem Ipsum used since the 1500s
-													</p>
-												</div>
-											</div>
-										</div>
+										@endforeach
 									</div>
+									@endforeach
 								</div>
 							</div>
 						</div>
@@ -321,131 +265,10 @@
 		</section>
 
 		<!--Latest Blog Posts-->
-		<section class="section transparent">
-			<div class="container">
-				<div class="s-title">
-					<h2>Latest Blog Posts</h2>
-					<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus</p>
-				</div>
+		@if(isset($latest_blogs) && count($latest_blogs) > 0)
+			@includeIf('visitor.components.home.latest_blog')
+		@endif
 
-				<div class="blog-container">
-					<div class="blog-container--inner">
-						<div class="row js-isotope" data-isotope-options='{ "layoutMode": "fitRows",  "itemSelector": ".element", "transitionDuration": "0.8s", "percentPosition": "true"}'>
-							<div class="element col-xs-12 col-sm-6 col-md-4">
-								<div class="blog-item center-block">
-									<div class="inner fixed">
-										<figure class="img-wrap">
-											<img class="img-responsive" src="../img/blog_img/1.jpg" alt="demo">
-										</figure>
-
-										<a href="blog_post.html"></a>
-									</div>
-
-									<div class="description">
-										<span class="date-post">May 07, 2015</span>
-
-										<h3 class="title"><a href="#">Lawyer  Year Award</a></h3>
-
-										<div class="meta">
-											<span><i class="icon-user"></i><a href="#">Admin</a></span>
-
-											<span><i class="icon-comment"></i><a href="#">1 Comment</a></span>
-										</div>
-
-										<p>
-											There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even
-										</p>
-
-										<a class="custom-btn medium dark-color" href="blog_post.html" data-text="Continue Reading"><span>Continue Reading</span></a>
-									</div>
-								</div>
-							</div>
-
-							<div class="element col-xs-12 col-sm-6 col-md-4">
-								<div class="blog-item center-block">
-									<div class="inner fixed">
-										<figure class="img-wrap">
-											<img class="img-responsive" src="../img/blog_img/2.jpg" alt="demo">
-										</figure>
-
-										<a href="blog_post.html"></a>
-									</div>
-
-									<div class="description">
-										<span class="date-post">May 07, 2015</span>
-
-										<h3 class="title"><a href="#">Duis volutpat magna</a></h3>
-
-										<div class="meta">
-											<span><i class="icon-user"></i><a href="#">Admin</a></span>
-
-											<span><i class="icon-comment"></i><a href="#">1 Comment</a></span>
-										</div>
-
-										<p>
-											There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even
-										</p>
-
-										<a class="custom-btn medium dark-color" href="blog_post.html" data-text="Continue Reading"><span>Continue Reading</span></a>
-									</div>
-								</div>
-							</div>
-
-							<div class="element col-xs-12 col-sm-6 col-md-4">
-								<div class="blog-item center-block">
-									<div class="inner fixed">
-										<figure class="img-wrap">
-											<img class="img-responsive" src="../img/blog_img/3.jpg" alt="demo">
-										</figure>
-
-										<a href="blog_post.html"></a>
-									</div>
-
-									<div class="description">
-										<span class="date-post">May 07, 2015</span>
-
-										<h3 class="title"><a href="#">Lawyers  across states</a></h3>
-
-										<div class="meta">
-											<span><i class="icon-user"></i><a href="#">Admin</a></span>
-
-											<span><i class="icon-comment"></i><a href="#">1 Comment</a></span>
-										</div>
-
-										<p>
-											There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even
-										</p>
-
-										<a class="custom-btn medium dark-color" href="blog_post.html" data-text="Continue Reading"><span>Continue Reading</span></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--Footer Client-->
-		<section class="s-partners partners-style-1">
-			<div class="container">
-				<div class="bxslider-container">
-					<ul class="bxslider" data-slidewidth="100" data-minslides="2" data-maxslides="8" data-moveslides="2" data-slidemargin="30" data-auto="true" data-speed="500" data-pager="false" data-prevselector="#partners-slide-prev-1" data-nextselector="#partners-slide-next-1">
-						<li class="slide"><img src="../img/partners_img/1.png" alt="demo" /></li>
-						<li class="slide"><img src="../img/partners_img/2.png" alt="demo" /></li>
-						<li class="slide"><img src="../img/partners_img/3.png" alt="demo" /></li>
-						<li class="slide"><img src="../img/partners_img/4.png" alt="demo" /></li>
-						<li class="slide"><img src="../img/partners_img/5.png" alt="demo" /></li>
-						<li class="slide"><img src="../img/partners_img/6.png" alt="demo" /></li>
-						<li class="slide"><img src="../img/partners_img/7.png" alt="demo" /></li>
-						<li class="slide"><img src="../img/partners_img/8.png" alt="demo" /></li>
-					</ul>
-
-					<span id="partners-slide-prev-1" class="control-btn control-btn-style-2 prev-btn icon-left"></span>
-					<span id="partners-slide-next-1" class="control-btn control-btn-style-2 next-btn icon-right"></span>
-				</div>
-			</div>
-		</section>
 	</main>
 @endsection
 
