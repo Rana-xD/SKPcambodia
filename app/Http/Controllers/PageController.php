@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Slider;
 use App\Partner;
 use App\Service;
+use App\Law;
 use TCG\Voyager\Models\Post;
 use App;
 use Auth;
@@ -114,7 +115,12 @@ class PageController extends Controller
     // Return Law page
     public function law()
     {
-      return view('visitor.pages.law.law');
+        $result = Law::orderBy('name','asc')->get();
+        $half = ceil($result->count() / 2);
+        $chunks = $result->chunk($half);
+        $lefts = $chunks[0];
+        $rights = $chunks[1];
+      return view('visitor.pages.law.law2',compact('lefts','rights'));
     }
 
     // Return Announcement page

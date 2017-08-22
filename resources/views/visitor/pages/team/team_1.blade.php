@@ -154,26 +154,6 @@
 					</div>
 				</div>
 			</section>
-
-			<section class="s-partners partners-style-1">
-				<div class="container">
-					<div class="bxslider-container">
-						<ul class="bxslider" data-slidewidth="100" data-minslides="2" data-maxslides="8" data-moveslides="2" data-slidemargin="30" data-auto="true" data-speed="500" data-pager="false" data-prevselector="#partners-slide-prev-1" data-nextselector="#partners-slide-next-1">
-							<li class="slide"><img src="../img/partners_img/1.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/2.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/3.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/4.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/5.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/6.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/7.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/8.png" alt="demo" /></li>
-						</ul>
-
-						<span id="partners-slide-prev-1" class="control-btn control-btn-style-2 prev-btn icon-left"></span>
-						<span id="partners-slide-next-1" class="control-btn control-btn-style-2 next-btn icon-right"></span>
-					</div>
-				</div>
-			</section>
 		</main>
 
 	@endsection

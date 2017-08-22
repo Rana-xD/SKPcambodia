@@ -85,80 +85,59 @@
 		<main role="main">
 			<section class="section transparent">
 				<div class="container">
+
 					<div class="col-xs-12 col-md-6">
 						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-
+							@foreach ($lefts as $left)
                         <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingThree">
+                            <div class="panel-heading" role="tab" id="heading{{$left->id}}">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-folder-open"></i> Alternative Care
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$left->id}}" aria-expanded="false" aria-controls="collapse{{ $left->id }}"><i class="fa fa-folder-open"></i> {{ $left->name }}
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div id="collapse{{ $left->id }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $left->id }}">
 										 <div class="panel-body">
+											 @foreach ($left->files as $file)
 											 <li class="file-item">
-												 <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
-												 <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh.pdf</a>
+												 <a class="download" href="PDF/storage/{{ $file->file_url }}"><i class="fa fa-download"></i></a>
+												 <a class="view" href="storage/{{ $file->file_url }}" target="_blank">{{ $file->name }}.pdf</a>
 											 </li>
-
-											 <li class="file-item">
-												 <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
-												 <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh.pdf</a>
-											 </li>
+											 @endforeach
 										 </div>
                             </div>
                         </div>
+												@endforeach
                     </div>
 					</div>
+
+
 					<div class="col-xs-12 col-md-6">
 						<div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
-
+							@foreach ($rights as $right)
 								<div class="panel panel-default">
-									 <div class="panel-heading" role="tab" id="headingSix">
+									 <div class="panel-heading" role="tab" id="heading{{ $right->id }}">
 										  <h4 class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix"><i class="fa fa-folder-open"></i> Civil &amp; Civil Procedure Law
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse{{ $right->id }}" aria-expanded="false" aria-controls="collapse{{ $right->id }}"><i class="fa fa-folder-open"></i>{{ $right->name }}
 												</a>
 										  </h4>
 									 </div>
-									 <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+									 <div id="collapse{{ $right->id }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $right->id }}">
 										 <div class="panel-body">
+											 @foreach ($right->files as $file)
 											 <li class="file-item">
-												 <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh"><i class="fa fa-download"></i></a>
-												 <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Fishery_2006_Kh.pdf" target="_blank">Law on Fishery_2006_Kh.pdf</a>
+												 <a class="download" href="PDF/storage/{{ $file->file_url }}"><i class="fa fa-download"></i></a>
+												 <a class="view" href="storage/{{ $file->file_url }}" target="_blank">{{ $file->name }}.pdf</a>
 											 </li>
-
-											 <li class="file-item">
-												 <a class="download" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh"><i class="fa fa-download"></i></a>
-												 <a class="view" href="PDF/Agriculture_Forest_Fishery/Law on Forestry_Kh.pdf" target="_blank">Law on Forestry_Kh.pdf</a>
-											 </li>
+											 @endforeach
 										 </div>
 									 </div>
 								</div>
+								@endforeach
 						  </div>
 					</div>
 
-				</div>
-			</section>
-
-			<section class="s-partners partners-style-1">
-				<div class="container">
-					<div class="bxslider-container">
-						<ul class="bxslider" data-slidewidth="100" data-minslides="2" data-maxslides="8" data-moveslides="2" data-slidemargin="30" data-auto="true" data-speed="500" data-pager="false" data-prevselector="#partners-slide-prev-1" data-nextselector="#partners-slide-next-1">
-							<li class="slide"><img src="../img/partners_img/1.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/2.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/3.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/4.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/5.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/6.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/7.png" alt="demo" /></li>
-							<li class="slide"><img src="../img/partners_img/8.png" alt="demo" /></li>
-						</ul>
-
-						<span id="partners-slide-prev-1" class="control-btn control-btn-style-2 prev-btn icon-left"></span>
-						<span id="partners-slide-next-1" class="control-btn control-btn-style-2 next-btn icon-right"></span>
-					</div>
 				</div>
 			</section>
 		</main>

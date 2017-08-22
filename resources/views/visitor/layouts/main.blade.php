@@ -32,7 +32,17 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
         <script src="sweetalert/dist/sweetalert.min.js"></script>
-
+        <script>
+            $(document).ready(function(){
+                $('#myForm').validate();
+                var send = @if(Session::has('send_status')) {{ Session::get('send_status') }} @endif;
+                
+                if(send==1)
+                {
+                    swal("Thanks You!!!", "We will contact you soon")
+                }
+            });
+        </script>
         @stack('scripts')
         @yield('scripts')
     </body>

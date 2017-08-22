@@ -78,24 +78,25 @@
                         <div class="footer-item">
                             <h3 class="title">How to Reach Us</h3>
 
-                            <form class="footer-form" action="#">
+                            <form class="footer-form" action="mail" id="myForm" method="post">
+                                {{ csrf_field() }}
                                 <label class="input-wrp">
-                                    <input type="text" placeholder="Name" />
+                                    <input type="text" name="name" placeholder="Name" />
                                     <span></span>
                                 </label>
 
                                 <label class="input-wrp">
-                                    <input type="text" placeholder="E-mail" />
+                                    <input type="text" name="email" placeholder="E-mail" />
                                     <span></span>
                                 </label>
 
                                 <label class="input-wrp">
-                                    <input type="text" placeholder="Phone" />
+                                    <input type="text" name="phone" placeholder="Phone" />
                                     <span></span>
                                 </label>
 
                                 <label class="input-wrp">
-                                    <textarea placeholder="Your message"></textarea>
+                                    <textarea name="message" placeholder="Your message"></textarea>
                                     <span></span>
                                 </label>
 
