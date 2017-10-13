@@ -97,63 +97,11 @@
 					<div class="col-xs-12 col-md-5 col-lg-4">
 						<div class="col-md-MB-30">
 							<h2>Our Expirience</h2>
-
-							<div class="skills-container">
-								<div class="skill-item">
-									<span class="skill-percent fl-r" data-percent="75"></span>
-
-									<span class="caption"><strong>Justice</strong></span>
-
-									<div class="progress-bar b-table">
-										<span class="cell v-top"></span>
-										<span class="cell v-top"></span>
-									</div>
-								</div>
-
-								<div class="skill-item">
-									<span class="skill-percent fl-r" data-percent="58"></span>
-
-									<span class="caption"><strong>Criminal Law</strong></span>
-
-									<div class="progress-bar b-table">
-										<span class="cell v-top"></span>
-										<span class="cell v-top"></span>
-									</div>
-								</div>
-
-								<div class="skill-item">
-									<span class="skill-percent fl-r" data-percent="63"></span>
-
-									<span class="caption"><strong>Legislation</strong></span>
-
-									<div class="progress-bar b-table">
-										<span class="cell v-top"></span>
-										<span class="cell v-top"></span>
-									</div>
-								</div>
-
-								<div class="skill-item">
-									<span class="skill-percent fl-r" data-percent="32"></span>
-
-									<span class="caption"><strong>JIndependent judge</strong></span>
-
-									<div class="progress-bar b-table">
-										<span class="cell v-top"></span>
-										<span class="cell v-top"></span>
-									</div>
-								</div>
-
-								<div class="skill-item">
-									<span class="skill-percent fl-r" data-percent="91"></span>
-
-									<span class="caption"><strong>Judjes Expirience</strong></span>
-
-									<div class="progress-bar b-table">
-										<span class="cell v-top"></span>
-										<span class="cell v-top"></span>
-									</div>
-								</div>
-							</div>
+									<ul style="list-style-type:circle">
+										@foreach ($experiences as $experience)
+										<li><strong>{{ $experience->getTranslatedAttribute('content', $locale) }}</strong></li>
+										@endforeach
+									</ul>
 						</div>
 					</div>
 

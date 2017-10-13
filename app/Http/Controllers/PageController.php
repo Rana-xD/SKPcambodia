@@ -10,6 +10,7 @@ use App\Service;
 use App\Law;
 use App\publication;
 use App\Activity;
+use App\Experience;
 use App\TrainingProgram;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Category;
@@ -61,12 +62,13 @@ class PageController extends Controller
             $query->where('locale', $locale)
                   ->orWhere('locale', $fallback_locale);
         }])->get();
-
+        $experiences = Experience::all();
         return view('visitor.index')->with([
             'sliders' => $sliders,
             // 'partners' => $partners,
             'services' => $services,
-            'latest_blogs' => $latest_blogs
+            'latest_blogs' => $latest_blogs,
+            'experiences' => $experiences
         ]);
     }
 
