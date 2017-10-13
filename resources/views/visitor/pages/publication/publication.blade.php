@@ -43,23 +43,17 @@
 	<main role="main">
 		<section id="s-portfolio" class="section transparent">
 			<div class="container">
-							<div class="col-xs-12 col-sm-6 col-md-3 book">
-								<div class="book-img">
-										<img src="../img/publication/adoption_in_cambodia.jpg" alt="demo" />
-								</div>
-								<div class="description">
-									<h3 class="h4 title center"><a href="#">Adoption in the Kingdom of Cambodia</a></h3>
-								</div>
-							</div>
+				@foreach ($result as $info)
+					<div class="col-xs-12 col-sm-6 col-md-3 book">
+						<div class="book-img">
+								<img src="storage/{{ $info->featured_image }}" alt="demo" />
+						</div>
+						<div class="description">
+							<h3 class="h4 title center"><a href="storage/{{ $info->file_url }}" target="_blank">{{ $info->title }}</a></h3>
+						</div>
+					</div>
+				@endforeach
 
-							<div class="col-xs-12 col-sm-6 col-md-3 book">
-								<div class="book-img">
-										<img src="../img/publication/rel_lawyer.jpg" alt="demo" />
-								</div>
-								<div class="description">
-									<h3 class="h4 title center"><a href="#">Relationship Between Lawyers, Judges &amp; Prosecutors</h3>
-								</div>
-							</div>
 			</div>
 		</section>
 	@endsection

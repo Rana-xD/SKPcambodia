@@ -71,6 +71,11 @@ class Publication extends Model
         $this->attributes['featured_image'] = $img_path;
     }
 
+    public function setFileUrlAttribute($value){
+    $file_path = str_replace(URL('/'), '', $value);
+    $this->attributes['file_url'] = $file_path;
+    }
+
     /**
      * Mutator for updated_by attribute
      * Set mutator to current authenticated user

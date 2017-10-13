@@ -8,10 +8,13 @@ use App\Slider;
 use App\Partner;
 use App\Service;
 use App\Law;
+use App\publication;
 use TCG\Voyager\Models\Post;
 use App;
 use Auth;
 use Session;
+use DB;
+
 class PageController extends Controller
 {
     // Return view home page
@@ -109,7 +112,8 @@ class PageController extends Controller
     // Return Publication page
     public function publication()
     {
-      return view('visitor.pages.publication.publication');
+      $result = DB::table('publications')->select('title','featured_image','file_url')->get();
+      return view('visitor.pages.publication.publication',compact('result'));
     }
 
     // Return Law page
@@ -120,7 +124,7 @@ class PageController extends Controller
         $chunks = $result->chunk($half);
         $lefts = $chunks[0];
         $rights = $chunks[1];
-      return view('visitor.pages.law.law2',compact('lefts','rights'));
+      return view('visitor.pages.law.law',compact('lefts','rights'));
     }
 
     // Return Announcement page
