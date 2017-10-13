@@ -14,9 +14,9 @@
           <a class="circled ggl icon-gplus" href="#" target="_blank"></a>
         </div>
         <div class="header-contact">
-          <span class="phone"><a href="locale/en">English</a></span>
-          <span class="mail"><a href="locale/kh">ភាសាខ្មែរ</a></span>
-          <span class="mail"><a href="locale/ch">中文</a></span>
+          <span class="phone"><a href="/locale/en">English</a></span>
+          <span class="mail"><a href="/locale/kh">ភាសាខ្មែរ</a></span>
+          <span class="mail"><a href="/locale/ch">中文</a></span>
         </div>
       </div>
       <div class="">
@@ -31,26 +31,26 @@
               <a href="javascript:void(0);">@lang('menu.about_us')</a>
               <div class="submenu">
                 <ul>
-                  <li class="menu-item"><a href="about">@lang('menu.about_us')</a></li>
-                  <li class="menu-item"><a href="mission">@lang('menu.mission')</a></li>
+                  <li class="menu-item"><a href="/about">@lang('menu.about_us')</a></li>
+                  <li class="menu-item"><a href="/mission">@lang('menu.mission')</a></li>
                 </ul>
               </div>
             </li>
 
             <li class="menu-item">
-              <a href="team">@lang('menu.team')</a>
+              <a href="/team">@lang('menu.team')</a>
             </li>
             <li class="menu-item">
-              <a href="services">@lang('menu.services')</a>
+              <a href="/services">@lang('menu.services')</a>
             </li>
             <li class="menu-item">
               <a href="javascript:void(0);">@lang('menu.resources')</a>
               <div class="submenu">
                 <ul>
-                  <li class="menu-item"><a href="report">
+                  <li class="menu-item"><a href="/report">
                   @lang('menu.report')</a></li>
-                  <li class="menu-item"><a href="publication">@lang('menu.publication')</a></li>
-                  <li class="menu-item"><a href="law">@lang('menu.law_and_regulation')</a></li>
+                  <li class="menu-item"><a href="/publication">@lang('menu.publication')</a></li>
+                  <li class="menu-item"><a href="/law">@lang('menu.law_and_regulation')</a></li>
                 </ul>
               </div>
             </li>
@@ -58,16 +58,16 @@
               <a href="javascript:void(0);">@lang('menu.news')</a>
               <div class="submenu">
                 <ul>
-                  <li class="menu-item"><a href="training">@lang('menu.training')</a></li>
-                  <li class="menu-item"><a href="employment_and_internship">@lang('menu.employment')</a></li>
+                  <li class="menu-item"><a href="/training">@lang('menu.training')</a></li>
+                  <li class="menu-item"><a href="/employment_and_internship">@lang('menu.employment')</a></li>
                 </ul>
               </div>
             </li>
             <li class="menu-item">
-              <a href="blog">@lang('menu.blog')</a>
+              <a href="/blog">@lang('menu.blog')</a>
             </li>
             <li class="menu-item">
-              <a href="contacts">@lang('menu.contact_us')</a>
+              <a href="/contacts">@lang('menu.contact_us')</a>
             </li>
           </ul>
         </nav>
@@ -80,9 +80,9 @@
             </div>
 
             <div class="header-contact">
-              <span class="phone"><a href="locale/en">English</a></span>
-              <span class="mail"><a href="locale/kh">ភាសាខ្មែរ</a></span>
-              <span class="mail"><a href="locale/ch">中文</a></span>
+              <span class="phone"><a href="/locale/en">English</a></span>
+              <span class="mail"><a href="/locale/kh">ភាសាខ្មែរ</a></span>
+              <span class="mail"><a href="/locale/ch">中文</a></span>
             </div>
           </div>
       </div>
