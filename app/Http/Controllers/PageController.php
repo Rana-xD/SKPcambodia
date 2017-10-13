@@ -106,7 +106,24 @@ class PageController extends Controller
     // Return blog page
     public function blog()
     {
-      return view('visitor.pages.blog.blog');
+
+      // Catch up current locale code
+      $locale = App::getLocale();
+      $fallback_locale = config('app.fallback_locale', 'en');
+
+      // Query latest blog posts
+      $latest_blogs = Post::where([
+        'featured' => 1,
+        'status' => Post::PUBLISHED
+      ])->with(['translations' => function ($query) use ($locale, $fallback_locale) {
+          $query->where('locale', $locale)
+                ->orWhere('locale', $fallback_locale);
+      }])->get();
+      return view('visitor.pages.blog.blog')->with([
+        'latest_blogs' => $latest_blogs,
+        'locale' => $locale,
+        'fallback_locale' => $fallback_locale
+      ]);
     }
 
     // Blog detail
