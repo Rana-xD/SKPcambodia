@@ -35,8 +35,8 @@
         <script>
             $(document).ready(function(){
                 $('#myForm').validate();
-                var send = @if(Session::has('send_status')) {{ Session::get('send_status') }} @endif;
-                
+                var send = @if(Session::has('send_status')) {{ Session::get('send_status') }} @else {{ 0 }}@endif;
+
                 if(send==1)
                 {
                     swal("Thanks You!!!", "We will contact you soon")

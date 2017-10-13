@@ -9,6 +9,7 @@ use App\Partner;
 use App\Service;
 use App\Law;
 use App\publication;
+use App\Activity;
 use TCG\Voyager\Models\Post;
 use App;
 use Auth;
@@ -95,7 +96,10 @@ class PageController extends Controller
     // Return Report page
     public function report()
     {
-      return view('visitor.pages.gallery.gallery_2');
+      $locale = App::getLocale();
+      $fallback_locale = config('app.fallback_locale', 'en');
+      $results = Activity::orderBy('created_at','desc')->get();
+      return view('visitor.pages.gallery.report',compact('results','locale','fallback_locale'));
     }
 
     // Return blog page

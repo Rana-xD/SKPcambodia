@@ -59,7 +59,6 @@
               <div class="submenu">
                 <ul>
                   <li class="menu-item"><a href="training">@lang('menu.training')</a></li>
-                  <li class="menu-item"><a href="announcement">@lang('menu.publication_and_announcement')</a></li>
                   <li class="menu-item"><a href="employment_and_internship">@lang('menu.employment')</a></li>
                 </ul>
               </div>
