@@ -10,6 +10,7 @@ use App\Service;
 use App\Law;
 use App\publication;
 use App\Activity;
+use App\TrainingProgram;
 use TCG\Voyager\Models\Post;
 use App;
 use Auth;
@@ -140,7 +141,10 @@ class PageController extends Controller
     // Return Training page
     public function training()
     {
-      return view('visitor.pages.training.training');
+      $locale = App::getLocale();
+      $fallback_locale = config('app.fallback_locale', 'en');
+      $results = TrainingProgram::orderBy('created_at','desc')->get();
+      return view('visitor.pages.training.training',compact('results','locale','fallback_locale'));
     }
 
     // Return Employment page
