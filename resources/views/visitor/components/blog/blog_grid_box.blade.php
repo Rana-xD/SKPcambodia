@@ -2,7 +2,7 @@
     <div class="blog-item center-block">
         <div class="inner">
             <figure class="img-wrap">
-                <img class="img-responsive" src="{{ asset('/storage/'.$post->image) }}" alt="{{ $post->getTranslatedAttribute('title', $locale) }}" />
+                <img class="img-responsive" src="@if($post->image){{ asset('/storage/'.$post->image) }}@endif" alt="{{ $post->getTranslatedAttribute('title', $locale) }}" />
             </figure>
 
             <a href="{{ route('visitor.blog.detail', $post->slug) }}"></a>

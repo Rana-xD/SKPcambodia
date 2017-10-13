@@ -12,6 +12,7 @@ use App\publication;
 use App\Activity;
 use App\TrainingProgram;
 use TCG\Voyager\Models\Post;
+use TCG\Voyager\Models\Category;
 use App;
 use Auth;
 use Session;
@@ -128,7 +129,46 @@ class PageController extends Controller
 
     // Blog detail
     public function blogDetail(Request $request, $slug){
-        return view('visitor.pages.blog.blog_post');
+
+      // Catch up current locale code
+      $locale = App::getLocale();
+      $fallback_locale = config('app.fallback_locale', 'en');
+
+      // Find post by slug
+      $post = Post::where([
+        'slug' => $slug,
+        'featured' => 1,
+        'status' => Post::PUBLISHED
+      ])->with(['translations' => function ($query) use ($locale, $fallback_locale) {
+          $query->where('locale', $locale)
+                ->orWhere('locale', $fallback_locale);
+      }])->firstOrFail();
+
+      // Find related posts
+      $related_posts = Post::where([
+        'slug' => $slug,
+        'featured' => 1,
+        'status' => Post::PUBLISHED
+      ])
+      ->whereNot('slug', $slug)
+      ->with(['translations' => function ($query) use ($locale, $fallback_locale) {
+          $query->where('locale', $locale)
+                ->orWhere('locale', $fallback_locale);
+      }])
+      ->latest()
+      ->take(5)
+      ->get();
+
+      // Query all categories
+      $categories = Category::orderBy('order', 'desc')->get();
+
+      return view('visitor.pages.blog.blog_post')->with([
+        'post' => $post,
+        'related_posts' => $related_posts,
+        'categories' => $categories,
+        'locale' => $locale,
+        'fallback_locale' => $fallback_locale
+      ]);
     }
 
     // Return Publication page
