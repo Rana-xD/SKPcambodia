@@ -82,91 +82,27 @@
 
 					<div class="services-container services-style-1">
 						<div class="services-container--inner">
+							@foreach($services->chunk(3) as $service_content)
 							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-4">
+								@foreach($service_content as $service)
+								<div class="col-xs-12 col-sm-4">
 									<div class="service-item center-block">
-										<i class="ico ico-1"></i>
+										<i class="{{ $service->icon_class ? $service->icon_class : 'ico ico-1' }}"></i>
 
 										<div class="inner">
-											<h3 class="title">Corruption Schemes</h3>
+											<h3 class="title">
+												{{ $service->getTranslatedAttribute('title', $locale) }}
+											</h3>
 
 											<p>
-												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
+												{{ $service->getTranslatedAttribute('excerpt', $locale) }}
 											</p>
 										</div>
 									</div>
 								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-2"></i>
-
-										<div class="inner">
-											<h3 class="title">Justice</h3>
-
-											<p>
-												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-3"></i>
-
-										<div class="inner">
-											<h3 class="title">Legislation</h3>
-
-											<p>
-												Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-4"></i>
-
-										<div class="inner">
-											<h3 class="title">Court Hearings</h3>
-
-											<p>
-												It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-5"></i>
-
-										<div class="inner">
-											<h3 class="title">Criminal Law</h3>
-
-											<p>
-												It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-6"></i>
-
-										<div class="inner">
-											<h3 class="title">Independent Judges</h3>
-
-											<p>
-												The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
-											</p>
-										</div>
-									</div>
-								</div>
+								@endforeach
 							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>

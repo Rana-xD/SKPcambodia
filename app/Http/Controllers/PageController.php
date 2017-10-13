@@ -92,7 +92,17 @@ class PageController extends Controller
     // Return Services page
     public function service()
     {
-      return view('visitor.pages.service.services');
+      $locale = App::getLocale();
+      $fallback_locale = config('app.fallback_locale', 'en');
+      $services = Service::where([
+          'is_featured' => 1,
+          'status' => 1
+      ])->with(['translations' => function ($query) use ($locale, $fallback_locale) {
+          $query->where('locale', $locale)
+                ->orWhere('locale', $fallback_locale);
+      }])->get();
+
+      return view('visitor.pages.service.services',compact('services','locale','fallback_locale'));
     }
 
     // Return Report page
