@@ -145,12 +145,11 @@ class PageController extends Controller
       }])->firstOrFail();
 
       // Find related posts
-      $related_posts = Post::where([
-        'slug' => $slug,
+      $related_posts = Post::where('slug', '!=', $slug)
+      ->where([
         'featured' => 1,
         'status' => Post::PUBLISHED
       ])
-      ->whereNot('slug', $slug)
       ->with(['translations' => function ($query) use ($locale, $fallback_locale) {
           $query->where('locale', $locale)
                 ->orWhere('locale', $fallback_locale);
