@@ -9,6 +9,6 @@ class Law extends Model
 {
   public function files()
   {
-    return $this->hasMany(lawfile::class)->orderBy('name','asc');
+    return $this->hasMany(Lawfile::class)->orderBy('name','asc');
   }
 }
