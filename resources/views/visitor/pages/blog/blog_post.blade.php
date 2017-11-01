@@ -24,12 +24,6 @@
 				<div class="col-xs-12 col-md-5">
 					<p id="page-title" class="h1">Blog Post</p>
 				</div>
-
-				<div class="col-xs-12 col-md-7">
-					<p id="headline-text">
-						There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-					</p>
-				</div>
 			</div>
 		</div>
 	</section>

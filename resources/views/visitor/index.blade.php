@@ -96,7 +96,7 @@
 					</div>
 					<div class="col-xs-12 col-md-5 col-lg-4">
 						<div class="col-md-MB-30">
-							<h2>Our Expirience</h2>
+							<h2>Our Experiences</h2>
 									<ul style="list-style-type:circle">
 										@foreach ($experiences as $experience)
 										<li><strong>{{ $experience->getTranslatedAttribute('content', $locale) }}</strong></li>

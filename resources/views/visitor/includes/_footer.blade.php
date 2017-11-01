@@ -109,7 +109,7 @@
         </div>
 
         <div class="footer-item visible-xs visible-sm">
-            <p class="copy">© 2015 SaulsAttorneys Theme. All rights reserved</p>
+            <p class="copy">© 2017 SK &amp; P Cambodia . All rights reserved</p>
         </div>
     </div>
 </footer>

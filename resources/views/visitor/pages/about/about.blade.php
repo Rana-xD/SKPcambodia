@@ -22,7 +22,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
-						<p id="page-title" class="h1">About SK &amp; P Cambodia Law Firm</p>
+						<p id="page-title" class="h1">About SK &amp; P Cambodia Law Group</p>
 					</div>
 				</div>
 			</div>

@@ -20,13 +20,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-5">
-						<p id="page-title" class="h1">Blog</p>
-					</div>
-
-					<div class="col-xs-12 col-md-7">
-						<p id="headline-text">
-							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-						</p>
+						<p id="page-title" class="h1">SK &amp; P Cambodia's Blog</p>
 					</div>
 				</div>
 			</div>
@@ -45,7 +39,7 @@
 										@includeIf('visitor.components.blog.blog_grid_box', ['post' => $post])
 									@endforeach
 								@endif
-								
+
 							</div>
 						</div>
 
