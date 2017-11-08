@@ -28,21 +28,18 @@
 
                     <div class="col-xs-12 col-sm-6">
                         <div class="footer-item">
-                            <h3 class="title">Main Services</h3>
+                            <h3 class="title">Useful Links</h3>
 
                             <ul class="list">
-                                <li><i class="icon-right"></i><a href="#">Construction of houses</a></li>
-                                <li><i class="icon-right"></i><a href="#">Repair soft of roofs</a></li>
-                                <li><i class="icon-right"></i><a href="#">Installing the tiles</a></li>
-                                <li><i class="icon-right"></i><a href="#">Construction and repair</a></li>
-                                <li><i class="icon-right"></i><a href="#">Facade insulation</a></li>
+                                <li><i class="icon-right"></i><a href="http://www.bakc.org.kh/">The Bar Association of the Kingdom of Cambodia</a></li>
+                                <li><i class="icon-right"></i><a href="http://www.moc.gov.kh/en-us/">Ministry of Commerce, Cambodia</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="footer-item hidden-xs hidden-sm">
-                    <p class="copy">© 2015 Sauls Attorneys Theme. All rights reserved</p>
+                    <p class="copy">© 2017 SK &amp; P Cambodia Law Group. All rights reserved</p>
                 </div>
             </div>
 
@@ -109,7 +106,7 @@
         </div>
 
         <div class="footer-item visible-xs visible-sm">
-            <p class="copy">© 2017 SK &amp; P Cambodia . All rights reserved</p>
+            <p class="copy">© 2017 SK &amp; P Cambodia Law Group. All rights reserved</p>
         </div>
     </div>
 </footer>

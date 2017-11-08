@@ -36,12 +36,6 @@
 					<div class="col-xs-12 col-md-5">
 						<p id="page-title" class="h1">Services</p>
 					</div>
-
-					<div class="col-xs-12 col-md-7">
-						<p id="headline-text">
-							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.
-						</p>
-					</div>
 				</div>
 			</div>
 		</section>
@@ -51,22 +45,14 @@
 			<section class="section transparent">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-12 col-sm-8 col-md-9">
-							<h2>Providing Legal Service</h2>
-
-							<img class="img-responsive visible-xs" src="../img/img_1.png" alt="demo" >
-
+						<div class="col-xs-12 col-sm-12 col-md-12">
 							<p>
-								<strong>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</strong>
+								<strong>We have built our reputation by providing clients with exceptional creative thinking, and a deep commitment to solving their problems. We are committed to providing exceptional service to our clients in a cost-effective manner.</strong>
 							</p>
 
 							<p>
-								If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words.
+								We have a team of experts, include attorneys, professors, researchers and translators/ interpreters on top of our advisers and support staff. We are the experts that are committed to provide legal, research and other services of international standards in the Kingdom of Cambodia. Our attorneys have experience in government, UN agencies and legal NGOs. SK & P Cambodia Law Firm's team works in a democratic and friendly environment. The firm's major decisions are made by consensus, and all attorneys are encouraged to participate in firm governance.
 							</p>
-						</div>
-
-						<div class="col-xs-12 col-sm-4 col-md-3">
-							<img class="img-responsive center-block hidden-xs" src="../img/img_1.png" alt="demo" >
 						</div>
 					</div>
 				</div>
