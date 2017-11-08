@@ -18,7 +18,7 @@
         @yield('content')
 
         <!--Footer Client-->
-        @includeIf('visitor.components.home.partner_slideset')
+        <!-- @includeIf('visitor.components.home.partner_slideset') -->
 
         <!-- Site Footer -->
         @includeIf('visitor.includes._footer')
