@@ -34,7 +34,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-8 col-md-9">
 
-							<img class="img-responsive visible-xs" src="../img/img_1.png" alt="demo" >
+							<img class="img-responsive visible-xs" src="../img/bg/mission.jpg" alt="demo" >
 
 							<p>
 								<strong>We have a team of experts, include attorneys, professors, researchers and translators/ interpreters on top of our advisers and support staff. We are the experts that are committed to provide legal, research and other services of international standards in the Kingdom of Cambodia. Our attorneys have experience in government, UN agencies and legal NGOs. SK &amp; P Cambodia Law Firm's team works in a democratic and friendly environment. The firm's major decisions are made by consensus, and all attorneys are encouraged to participate in firm governance.</strong>
@@ -80,7 +80,10 @@
 						</div>
 
 						<div class="col-xs-12 col-sm-4 col-md-3">
-							<img class="img-responsive center-block hidden-xs" src="../img/img_1.png" alt="demo" >
+							<img class="img-responsive center-block hidden-xs" src="../img/bg/mission.jpg" alt="demo" >
+							<blockquote class="quote">
+						      <p>Our clients' interests are paramount consideration in all our activities. This is how we exist as a legal team.</p>
+						    </blockquote>
 						</div>
 					</div>
 				</div>
@@ -143,108 +146,6 @@
 
 						<span id="feedback-slide-prev-1" class="control-btn control-btn-style-2 prev-btn icon-left"></span>
 						<span id="feedback-slide-next-1" class="control-btn control-btn-style-2 next-btn icon-right"></span>
-					</div>
-				</div>
-			</section>
-
-			<section id="s-services" class="section transparent">
-				<div class="container">
-					<div class="s-title">
-						<h2>We Are Effective In<br />Such Areas Of Practices</h2>
-
-						<p>
-							The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus
-						</p>
-					</div>
-
-					<div class="services-container services-style-1">
-						<div class="services-container--inner">
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-1"></i>
-
-										<div class="inner">
-											<h3 class="title">Corruption Schemes</h3>
-
-											<p>
-												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-2"></i>
-
-										<div class="inner">
-											<h3 class="title">Justice</h3>
-
-											<p>
-												There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-3"></i>
-
-										<div class="inner">
-											<h3 class="title">Legislation</h3>
-
-											<p>
-												Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-4"></i>
-
-										<div class="inner">
-											<h3 class="title">Court Hearings</h3>
-
-											<p>
-												It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-5"></i>
-
-										<div class="inner">
-											<h3 class="title">Criminal Law</h3>
-
-											<p>
-												It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-6 col-md-4">
-									<div class="service-item center-block">
-										<i class="ico ico-6"></i>
-
-										<div class="inner">
-											<h3 class="title">Independent Judges</h3>
-
-											<p>
-												The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</section>
