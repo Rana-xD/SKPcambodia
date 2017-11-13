@@ -20,7 +20,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
-						<p id="page-title" class="h1">Get in touch with us</p>
+						<p id="page-title" class="h1">@lang('text.Get_in_touch_with_us')</p>
 					</div>
 				</div>
 			</div>
@@ -32,23 +32,23 @@
 					<div class="row">
 						<div class="col-xs-12 col-md-5 col-lg-4">
 							<div class="contact-item">
-								<h2>Contact Information</h2>
+								<h2>@lang('text.contact_information')</h2>
 
 								<div class="contact-item_info">
 									<article>
-										<h4>Address</h4>
-										House C38, Street Cheerfullness, Khan Sensok, Phnom Penh Capital (Canadia City, Ratana Plaza area, Off Russian Blvd 50 meters)<br />
+										<h4>@lang('text.Address')</h4>
+										{{ Voyager::setting('company_address') }}
 									</article>
 
 									<article>
-										<h4>Phone & Fax</h4>
-										<strong>H/P: +(855) 023 883 885</strong><br />
-										<strong>Fax: +(855) 023 883 885</strong>
+										<h4>@lang('text.Phone&Fax')</h4>
+										<strong>{{ Voyager::setting('company_tel') }}</strong><br />
+										<strong>{{ Voyager::setting('company_fax') }}</strong>
 									</article>
 
 									<article>
-										<strong>Email: </strong><a href="mailto:info@skpcambodia.com">info@skpcambodia.com</a><br />
-										<strong>Website: </strong><a href="http://skpcambodia.com/">www.skpcambodia.com</a><br />
+										<strong>@lang('text.Email'): </strong><a href="mailto:info@skpcambodia.com">{{ Voyager::setting('site_email') }}</a><br />
+										<strong>@lang('text.Website'): </strong><a href="http://skpcambodia.com/">{{ Voyager::setting('site_domain') }}</a><br />
 									</article>
 								</div>
 							</div>
@@ -56,31 +56,31 @@
 
 						<div class="col-xs-12 col-md-7 col-lg-7 col-lg-offset-1">
 							<div class="contact-item">
-								<h2>Contact Us</h2>
+								<h2>@lang('text.contact_us')</h2>
 
 								<form action="mail" id="myForm" method="post">
 									{{ csrf_field() }}
 									<label class="input-wrp">
-										<input type="text" placeholder="Name" name="name"/>
+										<input type="text" placeholder="@lang('text.Name')" name="name"/>
 										<span></span>
 									</label>
 
 									<label class="input-wrp">
-										<input type="email" placeholder="E-mail" name="email"/>
+										<input type="email" placeholder="@lang('text.Email')" name="email"/>
 										<span></span>
 									</label>
 
 									<label class="input-wrp">
-										<input type="text" placeholder="Phone" name="phone"/>
+										<input type="text" placeholder="@lang('text.Phone')" name="phone"/>
 										<span></span>
 									</label>
 
 									<label class="input-wrp">
-										<textarea placeholder="Your message" name="message"></textarea>
+										<textarea placeholder="@lang('text.Your_message')" name="message"></textarea>
 										<span></span>
 									</label>
 
-									<button class="custom-btn small dark-color" type="submit" data-text="Submit"><span>Submit</span></button>
+									<button class="custom-btn small dark-color" type="submit" data-text="Submit"><span>@lang('text.Submit')</span></button>
 								</form>
 							</div>
 						</div>
@@ -99,6 +99,6 @@
 
 	@section('scripts')
 	<script>
-		
+
 	</script>
 	@endsection

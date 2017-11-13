@@ -34,7 +34,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-5">
-						<p id="page-title" class="h1">Services</p>
+						<p id="page-title" class="h1">@lang('text.service')</p>
 					</div>
 				</div>
 			</div>

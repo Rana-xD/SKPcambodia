@@ -22,7 +22,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
-						<p id="page-title" class="h1">SK &amp; P Law Firm Mission</p>
+						<p id="page-title" class="h1">@lang('text.mission')</p>
 					</div>
 				</div>
 			</div>

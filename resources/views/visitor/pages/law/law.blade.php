@@ -76,7 +76,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
-						<p id="page-title" class="h1">Laws &amp; Regulations of Kingdom of Cambodia</p>
+						<p id="page-title" class="h1">@lang('text.law')</p>
 					</div>
 				</div>
 			</div>
