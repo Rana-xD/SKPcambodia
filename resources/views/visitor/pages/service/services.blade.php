@@ -46,13 +46,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
-							<p>
-								<strong>We have built our reputation by providing clients with exceptional creative thinking, and a deep commitment to solving their problems. We are committed to providing exceptional service to our clients in a cost-effective manner.</strong>
-							</p>
-
-							<p>
-								We have a team of experts, include attorneys, professors, researchers and translators/ interpreters on top of our advisers and support staff. We are the experts that are committed to provide legal, research and other services of international standards in the Kingdom of Cambodia. Our attorneys have experience in government, UN agencies and legal NGOs. SK & P Cambodia Law Firm's team works in a democratic and friendly environment. The firm's major decisions are made by consensus, and all attorneys are encouraged to participate in firm governance.
-							</p>
+							@if(isset($top_content) && $top_content)
+								{!! $top_content->body !!}
+							@endif
 						</div>
 					</div>
 				</div>
@@ -62,8 +58,6 @@
 				<div class="container">
 					<div class="s-title">
 						<h2>We Are Effective In<br />Such Areas Of Practices</h2>
-
-						<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus</p>
 					</div>
 
 					<div class="services-container services-style-1">
@@ -99,59 +93,15 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-8 col-md-6">
-							<h2>Translation and Interpretation Service</h2>
-
-							<img class="img-responsive visible-xs" src="../img/img_1.png" alt="demo" >
-
-							<p>
-								<strong>SK &amp; P Cambodia Law Firm provides the following translation/interpretation services:</strong>
-							</p>
-
-							<p>
-								<i class="fa fa-check"></i> Translation of all kinds of documents relating to political, social, economic and cultural matters; human rights,; education; law; and etc. from English to Khmer and vice versa<br/>
-								<i class="fa fa-check"></i> Simultaneous/consecutive translation for workshop/conference/meeting relating to political, social, economic and cultural matters; human rights; education; law; and etc. from English to Khmer and vice versa<br/>
-							</p>
-							<p><strong>Note:</strong> One page is 300 word counts in English or 1,500 Khmer characters without space</p>
+							@if(isset($translation_service) && $translation_service)
+								{!! $translation_service->body !!}
+							@endif
 						</div>
 
 						<div class="col-xs-12 col-sm-4 col-md-6">
-							<h3 style="text-align:center">Document Translation</h3>
-							<table class="table table-bordered">
-								<tr>
-									<th colspan="3" class="table_title">English - Khmer / Khmer - English</th>
-								</tr>
-
-								<tr>
-									<th>1 - 10 Pages</th>
-									<th>11 - 50 Pages</th>
-									<th>50+ Pages</th>
-								</tr>
-								<tr>
-									<td>12 USD</td>
-									<td>11 USD</td>
-									<td>10 USD</td>
-								</tr>
-							</table>
-
-							<h3 style="text-align:center">Interpretation</h3>
-							<table class="table table-bordered">
-								<tr>
-									<th colspan="2" class="table_title">Simultaneous</th>
-									<th colspan="2" class="table_title">Consecutive</th>
-								</tr>
-								<tr>
-									<th>1/2 Day</th>
-									<th>Full Day</th>
-									<th>1/2 Day</th>
-									<th>Full Day</th>
-								</tr>
-								<tr>
-									<td>150 USD</td>
-									<td>250 USD</td>
-									<td>120 USD</td>
-									<td>200 USD</td>
-								</tr>
-							</table>
+							@if(isset($translation_cost) && $translation_cost)
+								{!! $translation_cost->body !!}
+							@endif
 						</div>
 					</div>
 				</div>

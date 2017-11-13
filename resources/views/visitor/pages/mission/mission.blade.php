@@ -35,35 +35,20 @@
 						<div class="col-xs-12 col-sm-8 col-md-9">
 							<img class="img-responsive visible-xs" src="../img/bg/mission.jpg" alt="demo" >
 
-							<p>
-								<strong>As a unique result-oriented legal team in the Kingdom of Cambodia, the SK &amp; P Law Firm Mission is to:</strong>
-							</p>
-
-							<ul class="circlelist">
-								<li>Deliver high quality legal services to all kinds of clients in and outside the Kingdom of Cambodia and strive to achieve results that exceed expectations through our commitment to our clients by finding ways to best advance to clients' cause and adding maximum value to their business and interests</li>
-								<li>Adhere to the highest standards of excellence and integrity, and be thorough and effective in our work</li>
-								<li>Provide the client with pragmatic legal services, explanation to relevant procedures, alternative dispute resolution options as much as possible, procedural options and consequences as appropriate</li>
-								<li>To the best of our knowledge, inform the probabilities of success and failure on each alternative in a fair manner, and keep the client informed of all case developments and other progresses taken</li>
-								<li>Increase the SK &amp; P Law Firm's potentiality by satisfying the needs of existing and prospective clients and anticipating their needs in the future</li>
-								<li>Do our best to make our clients feel welcome, cared for and comfortable</li>
-								<li>Seek and maintain the best reputation in the Kingdom of Cambodia and in the counterpart country regarding legal representation, ethics, morals, and professionalism</li>
-								<li>Adhere to the Law on the Bar Association of the Kingdom of Cambodia and Professional Code of Conduct as well as international standards</li>
-								<li>Protect our clients confidences from unlawful disclosure and ensure that their secrets are safe with our relevant professional only</li>
-								<li>Perform legal and other works in a timely manner and with attention and ready to be accessible when our clients need us</li>
-								<li>Communicate clearly in both Khmer and English languages</li>
-								<li>Stay abreast of all new technology and resources as well as legal framework development that provide better services for the clients, namely Civil Code, Civil Procedure Code, Criminal Code, Criminal Procedure Code, Commercial Laws as well as other laws and regulations of the Kingdom of Cambodia</li>
-								<li>Adhere to the principle that individual development through education</li>
-								<li>Enhances our ability and the quality of our work</li>
-								<li>Serve our clients at fair fees to both clients and SK &amp; P Law Firm, that our clients are willing and able to pay</li>
-								<li>Always be proactive</li>
-							</ul>
+							@if(isset($mission_content) && $mission_content)
+								{!! $mission_content->body !!}
+							@endif
 						</div>
 
 						<div class="col-xs-12 col-sm-4 col-md-3">
-							<img class="img-responsive center-block hidden-xs" src="../img/bg/mission.jpg" alt="demo" >
-							<blockquote class="quote">
-						      <p>Our clients' interests are paramount consideration in all our activities. This is how we exist as a legal team.</p>
-						    </blockquote>
+							@if(isset($mission_sidebar) && $mission_sidebar)
+								@if(isset($mission_sidebar->image))
+								<img class="img-responsive center-block hidden-xs" src="{{ asset('/storage/'.$mission_sidebar->image) }}" alt="" >
+								@endif
+								<blockquote class="quote">
+						      	{!! $mission_sidebar->body !!}
+						    	</blockquote>
+							@endif
 						</div>
 					</div>
 				</div>

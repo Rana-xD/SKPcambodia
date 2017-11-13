@@ -12,6 +12,7 @@ use App\publication;
 use App\Activity;
 use App\Experience;
 use App\TrainingProgram;
+use App\Content;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Category;
 use App;
@@ -63,12 +64,18 @@ class PageController extends Controller
                   ->orWhere('locale', $fallback_locale);
         }])->get();
         $experiences = Experience::all();
+        $top_left_content = Content::where('position', 1)->first();
+        $welcome_content = Content::where('position', 2)->first();
+        $quote_content = Content::where('position', 3)->first();
         return view('visitor.index')->with([
-            'sliders' => $sliders,
-            // 'partners' => $partners,
-            'services' => $services,
-            'latest_blogs' => $latest_blogs,
-            'experiences' => $experiences
+          'sliders' => $sliders,
+          // 'partners' => $partners,
+          'services' => $services,
+          'latest_blogs' => $latest_blogs,
+          'experiences' => $experiences,
+          'quote_content' => $quote_content,
+          'welcome_content' => $welcome_content,
+          'top_left_content' => $top_left_content
         ]);
     }
 
@@ -82,7 +89,12 @@ class PageController extends Controller
     // Return about us page
     public function about()
     {
-      return view('visitor.pages.about.about');
+      $about_content = Content::where('position', 4)->first();
+      $about_sidebar = Content::where('position', 5)->first();
+      return view('visitor.pages.about.about')->with([
+        'about_content' => $about_content,
+        'about_sidebar' => $about_sidebar
+      ]);
     }
 
     // Return our team page
@@ -103,8 +115,20 @@ class PageController extends Controller
           $query->where('locale', $locale)
                 ->orWhere('locale', $fallback_locale);
       }])->get();
+      $top_content = Content::where('position', 8)->first();
+      $translation_service = Content::where('position', 9)->first();
+      $translation_cost = Content::where('position', 10)->first();
 
-      return view('visitor.pages.service.services',compact('services','locale','fallback_locale'));
+      return view('visitor.pages.service.services',
+        compact(
+          'services',
+          'locale',
+          'fallback_locale',
+          'top_content',
+          'translation_service',
+          'translation_cost'
+        )
+      );
     }
 
     // Return Report page
@@ -113,7 +137,15 @@ class PageController extends Controller
       $locale = App::getLocale();
       $fallback_locale = config('app.fallback_locale', 'en');
       $results = Activity::orderBy('created_at','desc')->get();
-      return view('visitor.pages.gallery.report',compact('results','locale','fallback_locale'));
+      $top_content = Content::where('position', 11)->first();
+      return view('visitor.pages.gallery.report',
+        compact(
+          'results', 
+          'locale', 
+          'fallback_locale', 
+          'top_content'
+        )
+      );
     }
 
     // Return blog page
@@ -224,7 +256,12 @@ class PageController extends Controller
     // Return Mission page
     public function mission()
     {
-      return view('visitor.pages.mission.mission');
+      $mission_content = Content::where('position', 6)->first();
+      $mission_sidebar = Content::where('position', 7)->first();
+      return view('visitor.pages.mission.mission')->with([
+        'mission_content' => $mission_content,
+        'mission_sidebar' => $mission_sidebar
+      ]);
     }
 
     // Return individaul team member

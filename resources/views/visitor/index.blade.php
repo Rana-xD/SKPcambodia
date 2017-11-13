@@ -35,13 +35,11 @@
 				<div class="row">
 					<div class="col-xs-12 col-md-3">
 						<div class="col-md-MB-30">
-							<h2>SK &amp; P Legal Services</h2>
-
-							<p>
-								We have built our reputation by providing clients with exceptional creative thinking, and a deep commitment to solving their problems. We are committed to providing exceptional service to our clients in a cost-effective manner.
-							</p>
-
-							<a class="custom-btn medium dark-color" href="#" data-text="Details"><span>Details</span></a>
+							
+							@if(isset($top_left_content) && $top_left_content)
+								{!! $top_left_content->body !!}
+							@endif
+							<a class="custom-btn medium dark-color" href="/services" data-text="Details"><span>Details</span></a>
 						</div>
 					</div>
 
@@ -84,12 +82,13 @@
 				<div class="row">
 					<div class="col-xs-12 col-md-7">
 						<div class="col-md-MB-30">
-							<h2>Welcome to SK &amp; P Cambodia Law Firm</h2>
-							<p>
-								SK &amp; P Cambodia Law Group is the Cambodian law firm that was established with the permission N0: 860 k.m of the Bar Association of the Kingdom of Cambodia. We are specialized in many areas, particularly family law issues, child protection, contract law, land law, banking, and criminal law, and provision of training in these areas.
-							</p>
+							@if(isset($welcome_content) && $welcome_content)
+								{!! $welcome_content->body !!}
+							@endif
 							<blockquote class="quote">
-						      <p>Our clients' interests are paramount consideration in all our activities. This is how we exist as a legal team.</p>
+						      	@if(isset($quote_content) && $quote_content)
+									{!! $quote_content->body !!}
+								@endif
 						    </blockquote>
 
 						</div>
