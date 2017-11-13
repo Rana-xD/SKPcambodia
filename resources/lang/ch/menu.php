@@ -12,7 +12,7 @@ return [
     'publication' => '出版物',
     'law_and_regulation' => '柬埔寨法律法规',
     'news' => '新闻',
-    'publication_and_announcement' => '出版和宣传',
+    'publication_and_announcement' => '出版物',
     'training' => '训练',
     'employment' => '就业机会和实习',
     'blog' => '博客',

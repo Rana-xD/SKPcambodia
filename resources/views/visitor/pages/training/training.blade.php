@@ -74,7 +74,7 @@ font-family: 'Raleway', sans-serif;
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-12">
-					<p id="page-title" class="h1">Trainings &amp; Consultations</p>
+					<p id="page-title" class="h1">@lang('text.training')</p>
 				</div>
 			</div>
 		</div>
