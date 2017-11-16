@@ -19,6 +19,10 @@ return [
     'law' => 'Laws & Regulations of Kingdom of Cambodia',
     'service' => 'Services',
     'about' => 'About SK & P Cambodia Law Group',
-    'mission' => 'SK & P Law Firm Mission'
+    'mission' => 'SK & P Law Firm Mission',
+    'fax' => 'Fax',
+    'send' => 'Send',
+    'link' => 'Useful Links',
+    'blog_post' => 'Blog Posts'
 
 ];

@@ -19,5 +19,9 @@ return [
     'law' => '柬埔寨法律法规',
     'service' => '服务',
     'about' => '关于SK＆P柬埔寨法律集团',
-    'mission' => 'SK＆P律师事务所使命'
+    'mission' => 'SK＆P律师事务所使命',
+    'fax' => '传真',
+    'send' => '发送',
+    'link' => '有用的链接',
+    'blog_post' => '博客文章'
 ];

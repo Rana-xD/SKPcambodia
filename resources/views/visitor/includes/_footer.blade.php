@@ -5,23 +5,34 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="footer-item">
-                           <h3 class="title">Contact Us</h3>
+                           <h3 class="title">@lang('text.contact_us')</h3>
                             <address>
-                                <span>House C38, Street Cheerfullness, <br />
-                                   Khan Sensok, Phnom Penh Capital<br />
-                                   (Canadia City, Ratana Plaza area, <br />
-                                   Off Russian Blvd 50 meters).</span>
+                                <span>{{ Voyager::setting('company_address') }}</span>
                                 <br />
-                                <span>Tel: (+855) 023 883 885</span>
-                                <span>Fax: (+855) 023 883 885</span>
-                                <span>E-mail: <a href="mailto:info@skpcambodia.com"> info@skpcambodia.com</a></span>
+                                <span>@lang('text.Phone'): {{ Voyager::setting('company_tel') }}</span>
+                                <span>@lang('text.fax'): {{ Voyager::setting('company_fax') }}</span>
+                                <span>@lang('text.Email'): <a href="mailto:{{ Voyager::setting('site_email') }}"> {{ Voyager::setting('site_email') }}</a></span>
                             </address>
 
                             <div class="social-btns style-1">
-                                <a class="icon-facebook" href="#" target="_blank"></a>
-                                <a class="icon-twitter" href="#" target="_blank"></a>
-                                <a class="icon-linkedin" href="#" target="_blank"></a>
-                                <a class="icon-youtube-play" href="#" target="_blank"></a>
+                                @if(Voyager::setting('site_social_fb'))
+                                <a class="icon-facebook" href="{{ Voyager::setting('site_social_fb') }}" target="_blank"></a>
+                                @endif
+                                @if(Voyager::setting('site_social_twitter'))
+                                <a class="icon-twitter" href="{{ Voyager::setting('site_social_twitter') }}" target="_blank"></a>
+                                @endif
+                                @if(Voyager::setting('site_social_linkedin'))
+                                <a class="icon-linkedin" href="{{ Voyager::setting('site_social_linkedin') }}" target="_blank"></a>
+                                @endif
+                                @if(Voyager::setting('site_social_youtube'))
+                                <a class="icon-youtube-play" href="{{ Voyager::setting('site_social_youtube') }}" target="_blank"></a>
+                                @endif
+                                @if(Voyager::setting('site_social_gplus'))
+                                <a class="icon-gplus" href="{{ Voyager::setting('site_social_gplus') }}" target="_blank"></a>
+                                @endif
+                                @if(Voyager::setting('site_social_ig'))
+                                <a class="icon-gplus" href="{{ Voyager::setting('site_social_ig') }}" target="_blank"></a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -78,26 +89,26 @@
                             <form class="footer-form" action="mail" id="myForm" method="post">
                                 {{ csrf_field() }}
                                 <label class="input-wrp">
-                                    <input type="text" name="name" placeholder="Name" />
+                                    <input type="text" name="name" placeholder="@lang('text.Name')" />
                                     <span></span>
                                 </label>
 
                                 <label class="input-wrp">
-                                    <input type="text" name="email" placeholder="E-mail" />
+                                    <input type="text" name="email" placeholder="@lang('text.Email')" />
                                     <span></span>
                                 </label>
 
                                 <label class="input-wrp">
-                                    <input type="text" name="phone" placeholder="Phone" />
+                                    <input type="text" name="phone" placeholder="@lang('text.Phone')" />
                                     <span></span>
                                 </label>
 
                                 <label class="input-wrp">
-                                    <textarea name="message" placeholder="Your message"></textarea>
+                                    <textarea name="message" placeholder="@lang('text.Your_message')"></textarea>
                                     <span></span>
                                 </label>
 
-                                <button class="custom-btn small light-color" type="submit" data-text="Send"><span>Send</span></button>
+                                <button class="custom-btn small light-color" type="submit" data-text="Send"><span>@lang('text.send')</span></button>
                             </form>
                         </div>
                     </div>
