@@ -12,7 +12,7 @@ class Team extends Model
 {
     use Translatable;
 
-    protected $translatable = ['email'];
+    protected $translatable = ['bio', 'firstname', 'lastname', 'fullname'];
 
 
 }

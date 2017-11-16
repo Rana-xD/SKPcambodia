@@ -221,11 +221,19 @@ return [
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
-        //'css/custom.css',
+        'lib/uikit/css/uikit.min.css',
+        'lib/font-awesome/css/font-awesome.min.css',
+        'admins/plugins/sweetalert/dist/sweetalert.css',
+        'admins/plugins/selectize/dist/css/selectize.bootstrap3.css',
+        'admins/css/dashboard.css',
     ],
 
     'additional_js' => [
-        //'js/custom.js',
+        'lib/uikit/js/uikit.min.js',
+        'admins/js/script.js',
+        'lib/modernizr/modernizr.min.js',
+        'admins/plugins/fastclick/fastclick.min.js',
+        'admins/plugins/sweetalert/dist/sweetalert.min.js',
     ],
 
 ];

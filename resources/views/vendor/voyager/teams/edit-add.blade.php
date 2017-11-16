@@ -1,242 +1,478 @@
 @extends('voyager::master')
 
-@section('css')
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-@stop
-
 @if(isset($dataTypeContent->id))
     @section('page_title','Edit '.$dataType->display_name_singular)
 @else
     @section('page_title','Add '.$dataType->display_name_singular)
 @endif
 
+@section('css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('/admins/css/dashboard.css') }}">
+    <style>
+        .panel .mce-panel {
+            border-left-color: #fff;
+            border-right-color: #fff;
+        }
+
+        .panel .mce-toolbar,
+        .panel .mce-statusbar {
+            padding-left: 20px;
+        }
+
+        .panel .mce-edit-area,
+        .panel .mce-edit-area iframe,
+        .panel .mce-edit-area iframe html {
+            padding: 0 10px;
+            min-height: 350px;
+        }
+
+        .mce-content-body {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .panel.is-fullscreen .mce-statusbar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 200000;
+        }
+
+        .panel.is-fullscreen .mce-tinymce {
+            height:100%;
+        }
+
+        .panel.is-fullscreen .mce-edit-area,
+        .panel.is-fullscreen .mce-edit-area iframe,
+        .panel.is-fullscreen .mce-edit-area iframe html {
+            height: 100%;
+            position: absolute;
+            width: 99%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            min-height: 100%;
+        }
+    </style>
+@stop
+
 @section('page_header')
     <h1 class="page-title">
         <i class="{{ $dataType->icon }}"></i> @if(isset($dataTypeContent->id)){{ 'Edit' }}@else{{ 'New' }}@endif {{ $dataType->display_name_singular }}
     </h1>
-    @include('voyager::multilingual.language-selector')
+    <!-- @include('voyager::multilingual.language-selector') -->
 @stop
 
 @section('content')
     <div class="page-content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
+        <form class="form-edit-add" role="form" action="@if(isset($dataTypeContent->id)){{ route('voyager.posts.update', $dataTypeContent->id) }}@else{{ route('voyager.posts.store') }}@endif" method="POST" enctype="multipart/form-data">
+            <!-- PUT Method if we are editing -->
+            @if(isset($dataTypeContent->id))
+                {{ method_field("PUT") }}
+            @endif
+            {{ csrf_field() }}
 
-                <div class="panel panel-bordered">
+            <div class="row">
+                <div class="col-md-8">
 
-                    <div class="panel-heading">
-                        <h3 class="panel-title">@if(isset($dataTypeContent->id)){{ 'Edit' }}@else{{ 'Add New' }}@endif {{ $dataType->display_name_singular }}</h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <!-- form start -->
-                    <form role="form"
-                            class="form-edit-add"
-                            action="@if(isset($dataTypeContent->id)){{ route('voyager.'.$dataType->slug.'.update', $dataTypeContent->id) }}@else{{ route('voyager.'.$dataType->slug.'.store') }}@endif"
-                            method="POST" enctype="multipart/form-data">
-                        <!-- PUT Method if we are editing -->
-                        @if(isset($dataTypeContent->id))
-                            {{ method_field("PUT") }}
-                        @endif
+                    <!-- ### CONTENT ### -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="icon wb-book"></i> Team Bio</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-resize-full" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <!-- @include('voyager::multilingual.input-hidden', [
+                            '_field_name'  => 'bio',
+                            '_field_trans' => get_field_translations($dataTypeContent, 'bio', 'rich_text_box', true)
+                        ]) -->
+                        <textarea class="form-control richTextBox" id="richtextbody" name="bio" style="border:0px;">@if(isset($dataTypeContent->bio)){{ $dataTypeContent->bio }}@endif</textarea>
+                    </div><!-- .panel -->
 
-                        <!-- CSRF TOKEN -->
-                        {{ csrf_field() }}
-
+                    <!-- ### EXCERPT ### -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Quote</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                            </div>
+                        </div>
                         <div class="panel-body">
+                            <!-- @include('voyager::multilingual.input-hidden', [
+                                '_field_name'  => 'quote',
+                                '_field_trans' => get_field_translations($dataTypeContent, 'quote')
+                            ]) -->
+                            <textarea class="form-control" name="quote">@if(isset($dataTypeContent->quote)){{ old('quote', $dataTypeContent->quote) }}@elseif(isset($options->default)){{ old('quote', $options->default) }}@else{{ old('quote') }}@endif</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- ### DETAILS ### -->
 
-                            @if (count($errors) > 0)
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-
-                            <!-- If we are editing -->
-                            @if(isset($dataTypeContent->id))
-                                <?php $dataTypeRows = $dataType->editRows; ?>
-                            @else
-                                <?php $dataTypeRows = $dataType->addRows; ?>
-                            @endif
-
-                            <!-- @foreach($dataTypeRows as $row)
-                                <div class="form-group @if($row->type == 'hidden') hidden @endif">
-                                    <label for="name">{{ $row->display_name }}</label>
-                                    @include('voyager::multilingual.input-hidden-bread-edit-add')
-                                    {!! app('voyager')->formField($row, $dataType, $dataTypeContent) !!}
-
-                                    @foreach (app('voyager')->afterFormFields($row, $dataType, $dataTypeContent) as $after)
-                                        {!! $after->handle($row, $dataType, $dataTypeContent) !!}
-                                    @endforeach
-                                </div>
-                            @endforeach -->
-
-
-                            <!-- If we are editing -->
-
+                    <!-- Avatar picture -->
+                    <div class="panel panel panel-bordered panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="icon wb-clipboard"></i> Advance Options</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            
                             <div class="form-group ">
                                 <label for="name">Firstname</label>
-                                <!-- @include('voyager::multilingual.input-hidden-bread-edit-add', ['dataTypeContent'=>$dataTypeContent,'']) -->
+                                <!-- @include('voyager::multilingual.input-hidden', [
+                                    '_field_name'  => 'firstname',
+                                    '_field_trans' => get_field_translations($dataTypeContent, 'firstname')
+                                ]) -->
                                 <input type="text" class="form-control" name="firstname" placeholder="Firstname" value="@if(isset($dataTypeContent->firstname)){{ old('firstname', $dataTypeContent->firstname) }}@elseif(isset($options->default)){{ old('firstname', $options->default) }}@else{{ old('firstname') }}@endif">
                             </div>
                             <div class="form-group ">
                                 <label for="name">Lastname</label>
+                                <!-- @include('voyager::multilingual.input-hidden', [
+                                    '_field_name'  => 'lastname',
+                                    '_field_trans' => get_field_translations($dataTypeContent, 'lastname')
+                                ]) -->
                                 <input type="text" class="form-control" name="lastname" placeholder="Lastname" value="@if(isset($dataTypeContent->lastname)){{ old('lastname', $dataTypeContent->lastname) }}@elseif(isset($options->default)){{ old('lastname', $options->default) }}@else{{ old('lastname') }}@endif">
                             </div>
                             <div class="form-group ">
                                 <label for="name">Fullname</label>
+                                <!-- @include('voyager::multilingual.input-hidden', [
+                                    '_field_name'  => 'fullname',
+                                    '_field_trans' => get_field_translations($dataTypeContent, 'fullname')
+                                ]) -->
                                 <input type="text" class="form-control" name="fullname" placeholder="Fullname" value="@if(isset($dataTypeContent->fullname)){{ old('fullname', $dataTypeContent->fullname) }}@elseif(isset($options->default)){{ old('fullname', $options->default) }}@else{{ old('fullname') }}@endif">
                             </div>
-                            <div class="form-group ">
-                                <label for="name">Position</label>
-                                <input type="text" class="form-control" name="position" placeholder="Position" value="@if(isset($dataTypeContent->position)){{ old('position', $dataTypeContent->position) }}@elseif(isset($options->default)){{ old('position', $options->default) }}@else{{ old('position') }}@endif">
-                            </div>
-                            <div class="form-group ">
-                                <label for="name">Contact</label>
-                                <input type="text" class="form-control" name="contact" placeholder="Contact" value="@if(isset($dataTypeContent->contact)){{ old('contact', $dataTypeContent->contact) }}@elseif(isset($options->default)){{ old('contact', $options->default) }}@else{{ old('contact') }}@endif">
-                            </div>
-                            <div class="form-group ">
-                                <label for="name">Email</label>
-                                <input type="hidden" data-i18n="true" name="email_i18n" id="email_i18n" value="">
-                                <input type="text" class="form-control" name="email" placeholder="Email" value="@if(isset($dataTypeContent->position)){{ old('position', $dataTypeContent->position) }}@elseif(isset($options->default)){{ old('position', $options->default) }}@else{{ old('position') }}@endif">
-                            </div>
-                            <div class="form-group ">
-                                <label for="name">Social Media</label>
-                                <textarea class="form-control" name="social_media"></textarea>
-                            </div>
-                            <div class="form-group ">
-                                <label for="name">Education</label>
-                                <textarea class="form-control" name="education"></textarea>
-                            </div>
-                            <div class="form-group ">
-                                <label for="name">Experience</label>
-                                <textarea class="form-control" name="experience"></textarea>
-                            </div>
-                            <div class="form-group ">
-                                <label for="name">Profile Pic</label>
-                                <input type="file" name="profile_pic">
-                            </div>
-                            <div class="form-group ">
-                                <label for="name">Bio</label>
-                                <textarea class="form-control" name="bio"></textarea>
-                            </div>
-                            <div class="form-group ">
-                                <label for="name">Quote</label>
-                                <textarea class="form-control" name="quote"></textarea>
-                            </div>
 
-                        </div><!-- panel-body -->
+                            <!-- Featured image field -->
+                            <div class="custom-form-group">
+                                <div class="file-input-wrapper">
+                                    <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i> Upload Avatar</button>
+                                    <input value="@if(isset($dataTypeContent->profile_pic)) {{ $dataTypeContent->profile_pic }} @endif" type="hidden" name="profile_pic" id="txtFeaturedImage" />
+                                </div>
+                                <div class="imagePreview">
+                                    <!-- <p>Image Preview</p> -->
+                                    <div id="imagePreviewDiv">
+                                        @if(isset($dataTypeContent->profile_pic))
 
-                        <div class="panel-footer">
-                            <button type="submit" class="btn btn-primary save">@if(isset($dataTypeContent->id)){{ 'Update' }}@else {{ 'Save' }} @endif</button>
+                                        <img src="{{ $dataTypeContent->profile_pic }}" style="width:150px; height: auto;" />
+
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            
+
                         </div>
-                    </form>
+                    </div>
+                    
+                    <!-- Experience -->
+                    <div class="panel panel panel-bordered panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="icon wb-clipboard"></i> Experience</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <input type="hidden" id="experienceDataJson" name="experience">
+                            <div id="experienceFormDiv">
+                                <div class="form-group">
+                                    <input class="exp_title form-control" type="text" placeholder="Experience title">
+                                    <input class="exp_year form-control" type="text" placeholder="From year - until year">
+                                    <textarea class="exp_desc form-control"></textarea>
+                                </div>
 
-                    <iframe id="form_target" name="form_target" style="display:none"></iframe>
-                    <form id="my_form" action="{{ route('voyager.upload') }}" target="form_target" method="post"
-                            enctype="multipart/form-data" style="width:0;height:0;overflow:hidden">
-                        <input name="image" id="upload_file" type="file"
-                                 onchange="$('#my_form').submit();this.value='';">
-                        <input type="hidden" name="type_slug" id="type_slug" value="{{ $dataType->slug }}">
-                        {{ csrf_field() }}
-                    </form>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button class="btnAddForm" data-form-type="experience" type="button">
+                                    Add More Experience
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="panel panel panel-bordered panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="icon wb-clipboard"></i> Education</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            
+                            <input type="hidden" id="educationDataJson" name="education">
+                            <div id="educationFormDiv">
+                                <div class="form-group">
+                                    <input class="edu_title form-control" type="text" placeholder="Education title">
+                                    <input class="edu_year form-control" type="text" placeholder="From year - until year">
+                                    <textarea class="edu_desc form-control"></textarea>
+                                </div>
+
+                            </div>
+                            
+                            <div class="form-group">
+                                <button class="btnAddForm" data-form-type="education" type="button">
+                                    Add More Education
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="panel panel panel-bordered panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="icon wb-clipboard"></i> Social Media</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            
+                            <input type="hidden" id="socialDataJson" value="@if(isset($dataTypeContent->social_media)){{ old('social_media', $dataTypeContent->social_media) }}@elseif(isset($options->default)){{ old('social_media', $options->default) }}@else{{ old('social_media') }}@endif" name="social_media">
+                            <div id="socialFormDiv">
+                                <div class="form-group">
+                                    <input data-key="facebook" class="social_fb form-control" type="text" placeholder="Facebook">
+                                </div>
+                                <div class="form-group">
+                                    <input data-key="twitter" class="social_twitter form-control" type="text" placeholder="Twitter">
+                                </div>
+                                <div class="form-group">
+                                    <input data-key="linkedin" class="social_linkedin form-control" type="text" placeholder="LinkedIn">
+                                </div>
+                                <div class="form-group">
+                                    <input data-key="gplus" class="social_gplus form-control" type="text" placeholder="Google plus">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="panel panel panel-bordered panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="icon wb-clipboard"></i> Email</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            
+                            <div class="form-group">
+                                <!-- <input type="hidden" data-i18n="true" name="email_i18n" id="email_i18n" value=""> -->
+                                <input type="hidden" id="emailDataJson" class="form-control" name="email" placeholder="Email" value="@if(isset($dataTypeContent->email)){{ old('email', $dataTypeContent->email) }}@elseif(isset($options->default)){{ old('email', $options->default) }}@else{{ old('email') }}@endif">
+                                <div id="emailFormDiv">
+                                    <div class="form-group">
+                                        <input class="email_input form-control" type="text" placeholder="Email address">
+                                    </div>
+
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button class="btnAddForm" data-form-type="email" type="button">
+                                        Add More Email
+                                    </button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="panel panel panel-bordered panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="icon wb-clipboard"></i> Contact</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <input type="hidden" id="contactDataJson" class="form-control" name="contact" placeholder="Contact" value="@if(isset($dataTypeContent->contact)){{ old('contact', $dataTypeContent->contact) }}@elseif(isset($options->default)){{ old('contact', $options->default) }}@else{{ old('contact') }}@endif">
+                            <div id="contactFormDiv">
+                                <div class="form-group">
+                                    <input data-key="tel" class="contact_tel form-control" type="text" placeholder="Telephone number">
+                                </div>
+                                <div class="form-group">
+                                    <input data-key="hp" class="contact_hp form-control" type="text" placeholder="H/P number">
+                                </div>
+                                <div class="form-group">
+                                    <input data-key="fax" class="contact_fax form-control" type="text" placeholder="Fax number">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Position -->
+                    <div class="panel panel panel-bordered panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="icon wb-clipboard"></i> Position</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            
+                            <input type="hidden" id="positionDataJson" class="form-control" name="position" placeholder="Position" value="@if(isset($dataTypeContent->position)){{ old('position', $dataTypeContent->position) }}@elseif(isset($options->default)){{ old('position', $options->default) }}@else{{ old('position') }}@endif">
+                            <div id="positionFormDiv">
+                                <div class="form-group">
+                                    <input class="position_input form-control" type="text" placeholder="Position">
+                                </div>
+
+                            </div>
+                            
+                            <div class="form-group">
+                                <button class="btnAddForm" data-form-type="position" type="button">
+                                    Add More Position
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
 
                 </div>
             </div>
-        </div>
+
+            <button type="submit" class="btn btn-primary pull-right">
+                @if(isset($dataTypeContent->id)){{ 'Update Team' }}@else <i class="icon wb-plus-circle"></i> Create New Team @endif
+            </button>
+        </form>
+
+        <!-- <iframe id="form_target" name="form_target" style="display:none"></iframe>
+        <form id="my_form" action="{{ route('voyager.upload') }}" target="form_target" method="post" enctype="multipart/form-data" style="width:0px;height:0;overflow:hidden">
+            {{ csrf_field() }}
+            <input name="image" id="upload_file" type="file" onchange="$('#my_form').submit();this.value='';">
+            <input type="hidden" name="type_slug" id="type_slug" value="{{ $dataType->slug }}">
+        </form> -->
     </div>
-
-    <div class="modal fade modal-danger" id="confirm_delete_modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"
-                            aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"><i class="voyager-warning"></i> Are You Sure</h4>
-                </div>
-
-                <div class="modal-body">
-                    <h4>Are you sure you want to delete '<span class="confirm_delete_name"></span>'</h4>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-danger" id="confirm_delete">Yes, Delete it!
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Delete File Modal -->
+    @includeIf('admin.partials._upload_file')
 @stop
 
 @section('javascript')
     <script>
-        var params = {}
-        var $image
-
         $('document').ready(function () {
-            $('.toggleswitch').bootstrapToggle();
+            $('#slug').slugify();
 
-            //Init datepicker for date fields if data-datepicker attribute defined
-            //or if browser does not handle date inputs
-            $('.form-group input[type=date]').each(function (idx, elt) {
-                if (elt.type != 'date' || elt.hasAttribute('data-datepicker')) {
-                    elt.type = 'text';
-                    $(elt).datetimepicker($(elt).data('datepicker'));
-                }
-            });
-
-            @if ($isModelTranslatable)
-                $('.side-body').multilingual({"editing": true});
-            @endif
-
-            $('.side-body input[data-slug-origin]').each(function(i, el) {
-                $(el).slugify();
-            });
-
-            $('.form-group').on('click', '.remove-multi-image', function (e) {
-                $image = $(this).siblings('img');
-
-                params = {
-                    slug:   '{{ $dataTypeContent->getTable() }}',
-                    image:  $image.data('image'),
-                    id:     $image.data('id'),
-                    field:  $image.parent().data('field-name'),
-                    _token: '{{ csrf_token() }}'
-                }
-
-                $('.confirm_delete_name').text($image.data('image'));
-                $('#confirm_delete_modal').modal('show');
-            });
-
-            $('#confirm_delete').on('click', function(){
-                $.post('{{ route('voyager.media.remove') }}', params, function (response) {
-                    if ( response
-                        && response.data
-                        && response.data.status
-                        && response.data.status == 200 ) {
-
-                        toastr.success(response.data.message);
-                        $image.parent().fadeOut(300, function() { $(this).remove(); })
-                    } else {
-                        toastr.error("Error removing image.");
-                    }
-                });
-
-                $('#confirm_delete_modal').modal('hide');
-            });
-            $('[data-toggle="tooltip"]').tooltip();
+        @if ($isModelTranslatable)
+            $('.side-body').multilingual({"editing": true});
+        @endif
         });
     </script>
     @if($isModelTranslatable)
         <script src="{{ voyager_asset('js/multilingual.js') }}"></script>
     @endif
-    <script src="{{ voyager_asset('lib/js/tinymce/tinymce.min.js') }}"></script>
-    <script src="{{ voyager_asset('js/voyager_tinymce.js') }}"></script>
-    <script src="{{ voyager_asset('lib/js/ace/ace.js') }}"></script>
-    <script src="{{ voyager_asset('js/voyager_ace_editor.js') }}"></script>
+    <script src="{{ asset('/admins/plugins/tinymce/tinymce.min.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ asset('/admins/plugins/tinymce/tinymce-config.js') }}"></script>
     <script src="{{ voyager_asset('js/slugify.js') }}"></script>
+    <script>
+        function responsive_filemanager_callback(field_id){
+            var uploadImageModal = UIkit.modal("#fileManagerModal")
+                imageUrl="",
+                imgArr = [],
+                domain = "{{ URL('/') }}";
+            switch(field_id){
+                case 'txtFeaturedImage':
+                    imageUrl = $('#'+field_id).val();
+                    $('#imagePreviewDiv').empty().append(''+
+                        '<img src="'+imageUrl+'" style="width:100%; margin-bottom:10px;">'+
+                    '');
+                    break;
+                case 'txtMultiImages':
+                    imageUrl = $('#'+field_id).val();
+                    imageUrl = imageUrl.replace(domain,'');
+                    imgArr.push(imageUrl);
+                    $('#slideImagesPreviewDiv img').each(function(i,k,v){
+                        var imgSrc = $(this).attr('src');
+                        imgArr.push(imgSrc);
+                    });
+                    $('#slideImgs').val(JSON.stringify(imgArr));
+                    $('#slideImagesPreviewDiv').append(''+
+                        '<div class="img_slide__outer">'+
+                            '<img src="'+imageUrl+'" style="width:100%; margin-bottom:10px;">'+
+                            '<span class="btnRmSlideImg">'+
+                                '<i class="fa fa-remove"></i>'+
+                            '</span>'+
+                        '</div>'+
+                    '');
+                    break;
+                case 'sound_url':
+                    var playing = false,
+                        audioEle = $('#audioEle').bind('play', function () {
+                                    playing = true;
+                                }).bind('pause', function () {
+                                    playing = false;
+                                }).bind('ended', function () {
+                                    audio.pause();
+                                }).get(0);
+                    var supportsAudio = !!document.createElement('audio').canPlayType;
+                    if (supportsAudio){
+                        $(audioEle).attr('src', $('#'+field_id).val());
+                    }
+                    break;
+
+                default:
+                    return;
+
+            }
+
+            uploadImageModal.toggle();
+
+        }
+        $(document).ready(function(){
+            var exp_html_template = 
+                '<div class="form-group">' +
+                    '<input class="exp_title form-control" type="text" placeholder="Experience title">' +
+                    '<input class="exp_year form-control" type="text" placeholder="From year - until year">' +
+                    '<textarea class="exp_desc form-control"></textarea>' +
+                '</div>';
+            var edu_html_template = 
+                '<div class="form-group">' +
+                    '<input class="edu_title form-control" type="text" placeholder="Education title">' +
+                    '<input class="edu_year form-control" type="text" placeholder="From year - until year">' +
+                    '<textarea class="edu_desc form-control"></textarea>' +
+                '</div>';
+
+            var email_html_template = '<input class="email_input form-control" type="text" placeholder="Email address">';
+            var position_html_template = '<input class="position_input form-control" type="text" placeholder="Position">';
+
+            $('#btnAddForm').on('click', function(e){
+                e.preventDefault();
+                var formType = $(e.target).attr('data-form-type');
+                switch(formType){
+                    case 'experience':
+                        $('#experienceFormDiv').append(exp_html_template);
+                        break;
+                    case 'education':
+                        $('#educationFormDiv').append(edu_html_template);
+                        break;
+                    case 'email':
+                        $('#emailFormDiv').append(email_html_template);
+                    case 'position':
+                        $('#positionFormDiv').append(position_html_template);
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            $('.gg').on('change', function(e){
+
+            });
+        });
+    </script>
 @stop
+
+
+
+
+
+
+
+
+
+
+
+
