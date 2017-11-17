@@ -93,8 +93,8 @@ return [
         'tables' => [
             'hidden' => [
                 'migrations', 
-                // 'data_rows', 
-                // 'data_types', 
+                'data_rows', 
+                'data_types', 
                 'menu_items', 
                 'password_resets', 
                 'permission_role', 

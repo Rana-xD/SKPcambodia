@@ -63,8 +63,21 @@
                             @foreach($dataTypeRows as $row)
                                 <div class="form-group @if($row->type == 'hidden') hidden @endif">
                                     
-                                    @if($row->type == 'image')
-                                    
+                                    @if($row->field == 'featured_image')
+                                        <div class="custom-form-group">
+                                            <div class="file-input-wrapper">
+                                                <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i>Featured image</button>
+                                                <input value="@if(isset($dataTypeContent->featured_image)){{ $dataTypeContent->featured_image }}@endif" type="hidden" name="featured_image" id="txtFeaturedImage" />
+                                            </div>
+                                            <div class="imagePreview">
+                                                <!-- <p>Image Preview</p> -->
+                                                <div id="imagePreviewDiv">
+                                                    @if(isset($dataTypeContent->featured_image))
+                                                    <img src="{{ $dataTypeContent->featured_image }}" style="width:150px; height: auto; margin-bottom: 15px;" />
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
                                     @else
                                     <label for="name">{{ $row->display_name }}</label>
                                     @include('voyager::multilingual.input-hidden-bread-edit-add')
@@ -76,21 +89,6 @@
                                     @endif
                                 </div>
                             @endforeach
-
-                            <div class="custom-form-group">
-                                <div class="file-input-wrapper">
-                                    <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i>{{ $row->display_name }}</button>
-                                    <input value="@if(isset($dataTypeContent->featured_image)){{ $dataTypeContent->featured_image }}@endif" type="hidden" name="featured_image" id="txtFeaturedImage" />
-                                </div>
-                                <div class="imagePreview">
-                                    <!-- <p>Image Preview</p> -->
-                                    <div id="imagePreviewDiv">
-                                        @if(isset($dataTypeContent->featured_image))
-                                        <img src="{{ $dataTypeContent->featured_image }}" style="width:150px; height: auto; margin-bottom: 15px;" />
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
 
                         </div><!-- panel-body -->
 
