@@ -1,12 +1,12 @@
-jQuery(function($){
+jQuery(function($) {
 
     // Upoad file dialog
-    $('.uploadFile').on('click', function(e){
+    $('.uploadFile').on('click', function(e) {
         e.preventDefault();
         var type = $(this).attr('data-type'),
             iframe = $('#fileManagerIframe'),
             uploadImageModal = UIkit.modal("#fileManagerModal");
-        switch(type){
+        switch (type) {
             case 'sound':
                 $(iframe).attr(
                     'src',
