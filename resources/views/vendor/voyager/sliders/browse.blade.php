@@ -36,8 +36,8 @@
                                     @foreach($dataType->browseRows as $row)
                                         <td>
                                             <?php $options = json_decode($row->details); ?>
-                                            @if($row->field == 'image')
-                                                <img src="@if( strpos($data->image, 'http://') === false && strpos($data->image, 'https://') === false){{ asset($data->image) }}@else{{ $data->image }}@endif" style="width:100px">
+                                            @if($row->field == 'featured_image')
+                                                <img src="@if( strpos($data->featured_image, 'http://') === false && strpos($data->featured_image, 'https://') === false){{ asset($data->featured_image) }}@else{{ $data->featured_image }}@endif" style="width:100px">
                                             @elseif($row->type == 'select_multiple')
                                                 @if(property_exists($options, 'relationship'))
 

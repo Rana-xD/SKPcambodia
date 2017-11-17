@@ -38,9 +38,9 @@
                         </div>
 
                         <div class="panel-body" style="padding-top:0;">
-                            @if($row->type == "image")
+                            @if($row->field == "image")
                                 <img class="img-responsive"
-                                     src="{{ Voyager::image($dataTypeContent->{$row->field}) }}">
+                                     src="@if( strpos($data->image, 'http://') === false && strpos($data->image, 'https://') === false){{ asset($data->image) }}@else{{ $data->image }}@endif">
                             @elseif($row->type == 'select_dropdown' && property_exists($rowDetails, 'options') &&
                                     !empty($rowDetails->options->{$dataTypeContent->{$row->field}})
                             )

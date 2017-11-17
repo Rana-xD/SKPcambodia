@@ -36,8 +36,8 @@
                                     @foreach($dataType->browseRows as $row)
                                         <td>
                                             <?php $options = json_decode($row->details); ?>
-                                            @if($row->type == 'image')
-                                                <img src="@if( strpos($data->{$row->field}, 'http://') === false && strpos($data->{$row->field}, 'https://') === false){{ Voyager::image( $data->{$row->field} ) }}@else{{ $data->{$row->field} }}@endif" style="width:100px">
+                                            @if($row->filed == 'featured_image')
+                                                <img src="@if( strpos($data->featured_image, 'http://') === false && strpos($data->featured_image, 'https://') === false){{ asset($data->featured_image) }}@else{{ $data->featured_image }}@endif" style="width:100px">
                                             @elseif($row->type == 'select_multiple')
                                                 @if(property_exists($options, 'relationship'))
 
