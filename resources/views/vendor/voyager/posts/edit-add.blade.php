@@ -174,7 +174,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Featured</label>
-                                @if(isset($dataTypeContent) && $dataTypeContent->is_active == 1)
+                                @if(isset($dataTypeContent) && $dataTypeContent->featured == 1)
                                     <input id="feature" type="checkbox" name="featured" class="toggleswitch" data-on="Yes" checked="checked" data-off="No">
                                 @else
                                     <input id="feature" type="checkbox" name="featured" class="toggleswitch" data-on="Yes" data-off="No">
@@ -282,6 +282,9 @@
     <script type="text/javascript" src="{{ asset('/admins/plugins/tinymce/tinymce-config.js') }}"></script>
     <script src="{{ voyager_asset('js/slugify.js') }}"></script>
     <script type="text/javascript">
+        $('document').ready(function () {
+            $('.toggleswitch').bootstrapToggle();
+        });
         function responsive_filemanager_callback(field_id){
             var uploadImageModal = UIkit.modal("#fileManagerModal")
                 imageUrl="",
