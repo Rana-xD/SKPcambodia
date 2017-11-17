@@ -67,15 +67,16 @@
                                     <div class="custom-form-group">
                                         <div class="file-input-wrapper">
                                             <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i>{{ $row->display_name }}</button>
-                                            <input value="@if(isset($dataTypeContent->{$row->field})){{ $dataTypeContent->{$row->field} }}@else{{'no-image.png'}}@endif" type="hidden" name="{{ $row->field }}" id="txtFeaturedImage" />
+                                            <input value="@if(isset($dataTypeContent->{$row->field})){{ $dataTypeContent->{$row->field} }}@endif" type="hidden" name="{{ $row->field }}" id="txtFeaturedImage" />
+                                            @foreach (app('voyager')->afterFormFields($row, $dataType, $dataTypeContent) as $after)
+                                                {!! $after->handle($row, $dataType, $dataTypeContent) !!}
+                                            @endforeach
                                         </div>
                                         <div class="imagePreview">
                                             <!-- <p>Image Preview</p> -->
                                             <div id="imagePreviewDiv">
                                                 @if(isset($dataTypeContent->{$row->field}))
                                                 <img src="{{ $dataTypeContent->{$row->field} }}" style="width:150px; height: auto; margin-bottom: 15px;" />
-                                                @else
-                                                    {{'no-image.png'}}
                                                 @endif
                                             </div>
                                         </div>
