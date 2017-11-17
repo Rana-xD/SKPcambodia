@@ -11,13 +11,13 @@ class Content extends Model
     
     protected $translatable = ['title', 'body'];
 
-        /**
-     * Mutator for feature image attribute
-     * remove domain from asset url
-    */
-    public function setImageAttribute($value){
-        $img_path = str_replace(URL('/'), '', $value);
-        $this->attributes['image'] = $img_path;
-    }
+    // /**
+    //  * Mutator for feature image attribute
+    //  * remove domain from asset url
+    // */
+    // public function setImageAttribute($value){
+    //     $img_path = str_replace(URL('/'), '', $value);
+    //     $this->attributes['image'] = $img_path;
+    // }
 
 }
