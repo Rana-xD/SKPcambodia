@@ -61,34 +61,19 @@
                             @endif
 
                             @foreach($dataTypeRows as $row)
-                                <div class="form-group @if($row->type == 'hidden' && $row->field != 'featured_image' && $row->field != 'file_url') hidden @endif">
+                                <div class="form-group @if($row->type == 'hidden' && $row->field != 'company_logo') hidden @endif">
                                     
-                                    @if($row->field == 'featured_image')
+                                    @if($row->field == 'company_logo')
                                     <div class="custom-form-group">
                                         <div class="file-input-wrapper">
                                             <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i>{{$row->display_name}}</button>
-                                            <input value="@if(isset($dataTypeContent->featured_image)){{ $dataTypeContent->featured_image }}@endif" type="hidden" name="featured_image" id="txtFeaturedImage" />
+                                            <input value="@if(isset($dataTypeContent->company_logo)){{ $dataTypeContent->company_logo }}@endif" type="hidden" name="company_logo" id="txtFeaturedImage" />
                                         </div>
                                         <div class="imagePreview">
                                             <!-- <p>Image Preview</p> -->
                                             <div id="imagePreviewDiv uk-padding-small">
-                                                @if(isset($dataTypeContent->featured_image))
-                                                <img src="{{ $dataTypeContent->featured_image }}" style="width:150px; height: auto; margin-bottom: 15px;" />
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @elseif($row->field == 'file_url')
-                                    <div class="custom-form-group">
-                                        <div class="file-input-wrapper">
-                                            <button class="custom-upload-btn file uploadFile" data-type="file" id="uploadFile"><i class="fa fa-upload"></i>{{$row->display_name}}</button>
-                                            <input value="@if(isset($dataTypeContent->file_url)){{ $dataTypeContent->file_url }}@endif" type="hidden" name="file_url" id="txtFileUpload" />
-                                        </div>
-                                        <div class="previewFileName">
-                                            <!-- <p>Image Preview</p> -->
-                                            <div id="previewFileName">
-                                                @if(isset($dataTypeContent->file_url))
-                                                <li class="uk-display-block uk-padding-small">{{ $dataTypeContent->file_url }}</li>
+                                                @if(isset($dataTypeContent->company_logo))
+                                                <img src="{{ $dataTypeContent->company_logo }}" style="width:150px; height: auto; margin-bottom: 15px;" />
                                                 @endif
                                             </div>
                                         </div>

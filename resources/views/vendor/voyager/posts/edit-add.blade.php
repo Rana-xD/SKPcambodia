@@ -200,7 +200,7 @@
                                 </div>
                                 <div class="imagePreview">
                                     <!-- <p>Image Preview</p> -->
-                                    <div id="imagePreviewDiv">
+                                    <div id="imagePreviewDiv uk-padding-small">
                                         @if(isset($dataTypeContent->image))
                                         <img src="{{ $dataTypeContent->image }}" style="width:150px; height: auto; margin-bottom: 15px;" />
                                         @endif
