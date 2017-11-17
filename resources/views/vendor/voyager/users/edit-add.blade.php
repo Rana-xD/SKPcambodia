@@ -114,7 +114,7 @@
                             <div class="custom-form-group">
                                 <div class="file-input-wrapper">
                                     <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i> Upload Avatar</button>
-                                    <input value="@if(isset($dataTypeContent->avatar)) {{ $dataTypeContent->avatar }} @endif" type="hidden" name="avatar" id="txtFeaturedImage" />
+                                    <input value="@if(isset($dataTypeContent->avatar)){{ $dataTypeContent->avatar }}@endif" type="hidden" name="avatar" id="txtFeaturedImage" />
                                 </div>
                                 <div class="imagePreview">
                                     <!-- <p>Image Preview</p> -->
