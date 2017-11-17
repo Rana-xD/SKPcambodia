@@ -61,19 +61,19 @@
                             @endif
 
                             @foreach($dataTypeRows as $row)
-                                <div class="form-group @if($row->type == 'hidden') hidden @endif">
+                                <div class="form-group @if($row->type == 'hidden' && $row->field != 'image') hidden @endif">
                                     
-                                    @if($row->type == 'image')
+                                    @if($row->field == 'image')
                                     <div class="custom-form-group">
                                         <div class="file-input-wrapper">
-                                            <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i>{{ $row->display_name }}</button>
-                                            <input value="@if(isset($dataTypeContent->{$row->field})){{ $dataTypeContent->{$row->field} }}@endif" type="hidden" name="{{ $row->field }}" id="txtFeaturedImage" />
+                                            <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i>upload Image</button>
+                                            <input value="@if(isset($dataTypeContent->image)){{ $dataTypeContent->image }}@endif" type="hidden" name="image" id="txtFeaturedImage" />
                                         </div>
                                         <div class="imagePreview">
                                             <!-- <p>Image Preview</p> -->
                                             <div id="imagePreviewDiv">
-                                                @if(isset($dataTypeContent->{$row->field}))
-                                                <img src="{{ $dataTypeContent->{$row->field} }}" style="width:150px; height: auto; margin-bottom: 15px;" />
+                                                @if(isset($dataTypeContent->image))
+                                                <img src="{{ $dataTypeContent->image }}" style="width:150px; height: auto; margin-bottom: 15px;" />
                                                 @endif
                                             </div>
                                         </div>

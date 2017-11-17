@@ -61,7 +61,7 @@
                             @endif
 
                             @foreach($dataTypeRows as $row)
-                                <div class="form-group @if($row->type == 'hidden') hidden @endif">
+                                <div class="form-group @if($row->type == 'hidden' && $row->field != 'featured_image') hidden @endif">
                                     
                                     @if($row->field == 'featured_image')
                                         <div class="custom-form-group">
