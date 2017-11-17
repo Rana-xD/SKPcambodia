@@ -176,7 +176,7 @@
         });
     </script>
     <script src="{{ asset('/admins/plugins/tinymce/tinymce.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('/admins/plugins/tinymce/tinymce-config.js') }}"></script>
+    <script src="{{ asset('/admins/plugins/tinymce/tinymce-config.js') }}"></script>
     <script type="text/javascript">
         function responsive_filemanager_callback(field_id){
             var uploadImageModal = UIkit.modal("#fileManagerModal")

@@ -279,7 +279,7 @@
     @endif
     
     <script src="{{ asset('/admins/plugins/tinymce/tinymce.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('/admins/plugins/tinymce/tinymce-config.js') }}"></script>
+    <script src="{{ asset('/admins/plugins/tinymce/tinymce-config.js') }}"></script>
     <script src="{{ voyager_asset('js/slugify.js') }}"></script>
     <script type="text/javascript">
         $('document').ready(function () {
@@ -293,6 +293,7 @@
             switch(field_id){
                 case 'txtFeaturedImage':
                     imageUrl = $('#'+field_id).val();
+                    imageUrl.replace(domain, '');
                     $('#imagePreviewDiv').empty().append(''+
                         '<img src="'+imageUrl+'" style="width:150px; margin-bottom:10px;">'+
                     '');
