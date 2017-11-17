@@ -293,7 +293,6 @@
             switch(field_id){
                 case 'txtFeaturedImage':
                     imageUrl = $('#'+field_id).val();
-                    imageUrl.replace(domain, '');
                     $('#imagePreviewDiv').empty().append(''+
                         '<img src="'+imageUrl+'" style="width:150px; margin-bottom:10px;">'+
                     '');
