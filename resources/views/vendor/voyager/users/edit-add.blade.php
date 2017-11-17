@@ -140,7 +140,7 @@
                                 @if(isset($dataTypeContent) && $dataTypeContent->is_active == 1)
                                     <input type="checkbox" name="is_active" class="toggleswitch" data-on="Active" checked="checked" data-off="Deactive">
                                 @else
-                                    <input type="checkbox" name="is_active" class="toggleswitch" data-on="Active" checked="checked" data-off="Deactive">
+                                    <input type="checkbox" name="is_active" class="toggleswitch" data-on="Active" data-off="Deactive">
                                 @endif
                             </div>  
 

@@ -174,7 +174,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Featured</label>
-                                <input type="checkbox" name="featured" @if(isset($dataTypeContent->featured) && $dataTypeContent->featured){{ 'checked="checked"' }}@endif>
+                                @if(isset($dataTypeContent) && $dataTypeContent->is_active == 1)
+                                    <input id="feature" type="checkbox" name="featured" class="toggleswitch" data-on="Yes" checked="checked" data-off="No">
+                                @else
+                                    <input id="feature" type="checkbox" name="featured" class="toggleswitch" data-on="Yes" data-off="No">
+                                @endif
                             </div>
                         </div>
                     </div>
