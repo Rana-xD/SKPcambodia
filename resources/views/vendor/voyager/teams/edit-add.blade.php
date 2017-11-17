@@ -148,7 +148,7 @@
                             <div class="custom-form-group">
                                 <div class="file-input-wrapper">
                                     <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i> Upload Avatar</button>
-                                    <input value="@if(isset($dataTypeContent->profile_pic)) {{ $dataTypeContent->profile_pic }} @endif" type="hidden" name="profile_pic" id="txtFeaturedImage" />
+                                    <input value="@if(isset($dataTypeContent->profile_pic)){{ $dataTypeContent->profile_pic }}@endif" type="hidden" name="profile_pic" id="txtFeaturedImage" />
                                 </div>
                                 <div class="imagePreview uk-padding-small">
                                     <!-- <p>Image Preview</p> -->
@@ -175,7 +175,7 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <input type="hidden" id="experienceDataJson" name="experience">
+                            <input type="hidden" id="experienceDataJson" name="experience" value="@if(isset($dataTypeContent->experience)){{ $dataTypeContent->experience }}@endif">
                             <div id="experienceFormDiv">
                                 <div class="form-group">
                                     <input class="exp_title form-control" type="text" placeholder="Experience title">
@@ -203,7 +203,7 @@
                         </div>
                         <div class="panel-body">
                             
-                            <input type="hidden" id="educationDataJson" name="education">
+                            <input type="hidden" id="educationDataJson" name="education" value="@if(isset($dataTypeContent->education)){{ $dataTypeContent->education }}@endif">
                             <div id="educationFormDiv">
                                 <div class="form-group">
                                     <input class="edu_title form-control" type="text" placeholder="Education title">
