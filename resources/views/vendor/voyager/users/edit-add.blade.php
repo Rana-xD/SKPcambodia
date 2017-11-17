@@ -114,15 +114,13 @@
                             <div class="custom-form-group">
                                 <div class="file-input-wrapper">
                                     <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i> Upload Avatar</button>
-                                    <input value="@if(isset($dataTypeContent->profile_pic)) {{ $dataTypeContent->profile_pic }} @endif" type="hidden" name="avatar" id="txtFeaturedImage" />
+                                    <input value="@if(isset($dataTypeContent->avatar)) {{ $dataTypeContent->avatar }} @endif" type="hidden" name="avatar" id="txtFeaturedImage" />
                                 </div>
                                 <div class="imagePreview">
                                     <!-- <p>Image Preview</p> -->
                                     <div id="imagePreviewDiv">
                                         @if(isset($dataTypeContent->avatar))
-
-                                        <img src="{{ $dataTypeContent->avatar }}" style="width:150px; height: auto;" />
-
+                                        <img src="{{ $dataTypeContent->avatar }}" style="width:150px; height: auto; margin-bottom: 15px;" />
                                         @endif
                                     </div>
                                 </div>
@@ -189,7 +187,7 @@
                 case 'txtFeaturedImage':
                     imageUrl = $('#'+field_id).val();
                     $('#imagePreviewDiv').empty().append(''+
-                        '<img src="'+imageUrl+'" style="width:100%; margin-bottom:10px;">'+
+                        '<img src="'+imageUrl+'" style="width:150px; margin-bottom:10px;">'+
                     '');
                     break;
                 case 'txtMultiImages':
@@ -203,7 +201,7 @@
                     $('#slideImgs').val(JSON.stringify(imgArr));
                     $('#slideImagesPreviewDiv').append(''+
                         '<div class="img_slide__outer">'+
-                            '<img src="'+imageUrl+'" style="width:100%; margin-bottom:10px;">'+
+                            '<img src="'+imageUrl+'" style="width:150px; margin-bottom:10px;">'+
                             '<span class="btnRmSlideImg">'+
                                 '<i class="fa fa-remove"></i>'+
                             '</span>'+
