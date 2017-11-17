@@ -43,6 +43,12 @@ function responsive_filemanager_callback(field_id) {
             }
             break;
 
+        case 'txtFileUpload':
+            fileUrl = $('#' + field_id).val();
+            file_name = fileUrl.split('\\').pop().split('/').pop();
+            $('#previewFileName').append('<li class="uk-display-block uk-padding-small">'+ file_name +'</li>');
+            break;
+
         default:
             return;
 

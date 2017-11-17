@@ -13,6 +13,12 @@ jQuery(function($) {
                     "/admins/filemanager/dialog.php?type=2&field_id=sound_url'&fldr=musics"
                 );
                 break;
+            case 'file':
+                $(iframe).attr(
+                    'src',
+                    "/admins/filemanager/dialog.php?type=2&field_id=txtFileUpload'&fldr=files"
+                );
+                break;
             case 'image':
                 $(iframe).attr(
                     'src',

@@ -38,6 +38,8 @@
                                             <?php $options = json_decode($row->details); ?>
                                             @if($row->field == 'featured_image')
                                                 <img src="@if( strpos($data->featured_image, 'http://') === false && strpos($data->featured_image, 'https://') === false){{ asset($data->featured_image) }}@else{{ $data->featured_image }}@endif" style="width:100px">
+                                            @elseif($row->field == 'file_url')
+                                                <a href="@if( strpos($data->file_url, 'http://') === false && strpos($data->file_url, 'https://') === false){{ asset($data->file_url) }}@else{{ $data->file_url }}@endif" target="_blank" class="file_download_link">Download</a>
                                             @elseif($row->type == 'select_multiple')
                                                 @if(property_exists($options, 'relationship'))
 
