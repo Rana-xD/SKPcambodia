@@ -150,9 +150,9 @@
                                     <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i> Upload Avatar</button>
                                     <input value="@if(isset($dataTypeContent->profile_pic)) {{ $dataTypeContent->profile_pic }} @endif" type="hidden" name="profile_pic" id="txtFeaturedImage" />
                                 </div>
-                                <div class="imagePreview">
+                                <div class="imagePreview uk-padding-small">
                                     <!-- <p>Image Preview</p> -->
-                                    <div id="imagePreviewDiv uk-padding-small">
+                                    <div id="imagePreviewDiv">
                                         @if(isset($dataTypeContent->profile_pic))
 
                                         <img src="{{ $dataTypeContent->profile_pic }}" style="width:150px; height: auto;" />

@@ -84,7 +84,7 @@
                                             <button class="custom-upload-btn file uploadFile" data-type="file" id="uploadFile"><i class="fa fa-upload"></i>{{$row->display_name}}</button>
                                             <input value="@if(isset($dataTypeContent->file_url)){{ $dataTypeContent->file_url }}@endif" type="hidden" name="file_url" id="txtFileUpload" />
                                         </div>
-                                        <div class="previewFileName">
+                                        <div class="previewFileName uk-padding-small">
                                             <!-- <p>Image Preview</p> -->
                                             <div id="previewFileName">
                                                 @if(isset($dataTypeContent->file_url))

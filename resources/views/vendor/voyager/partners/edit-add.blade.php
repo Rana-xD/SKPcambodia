@@ -69,9 +69,9 @@
                                             <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i>{{$row->display_name}}</button>
                                             <input value="@if(isset($dataTypeContent->company_logo)){{ $dataTypeContent->company_logo }}@endif" type="hidden" name="company_logo" id="txtFeaturedImage" />
                                         </div>
-                                        <div class="imagePreview">
+                                        <div class="imagePreview uk-padding-small">
                                             <!-- <p>Image Preview</p> -->
-                                            <div id="imagePreviewDiv uk-padding-small">
+                                            <div id="imagePreviewDiv">
                                                 @if(isset($dataTypeContent->company_logo))
                                                 <img src="{{ $dataTypeContent->company_logo }}" style="width:150px; height: auto; margin-bottom: 15px;" />
                                                 @endif
