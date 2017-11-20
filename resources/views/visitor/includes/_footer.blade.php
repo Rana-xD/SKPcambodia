@@ -39,7 +39,7 @@
 
                     <div class="col-xs-12 col-sm-6">
                         <div class="footer-item">
-                            <h3 class="title">Useful Links</h3>
+                            <h3 class="title">@lang('text.link')</h3>
 
                             <ul class="list">
                                 <li><i class="icon-right"></i><a href="http://www.bakc.org.kh/">The Bar Association of the Kingdom of Cambodia</a></li>
@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="footer-item">
-                            <h3 class="title">Blog Posts</h3>
+                            <h3 class="title">@lang('text.blog_post')</h3>
 
                             <div>
                                 <article class="recent-posts">
@@ -84,7 +84,7 @@
 
                     <div class="col-xs-12 col-sm-6">
                         <div class="footer-item">
-                            <h3 class="title">How to Reach Us</h3>
+                            <h3 class="title">@lang('text.contact_us')</h3>
 
                             <form class="footer-form" action="mail" id="myForm" method="post">
                                 {{ csrf_field() }}

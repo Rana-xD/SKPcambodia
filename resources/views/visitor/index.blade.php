@@ -35,7 +35,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-md-3">
 						<div class="col-md-MB-30">
-							
+
 							@if(isset($top_left_content) && $top_left_content)
 								{!! $top_left_content->body !!}
 							@endif
@@ -203,7 +203,7 @@
 							<div class="inner">
 								{{-- <p><img src="../img/logo_2.png" alt="logo" /></p> --}}
 
-								<a class="custom-btn medium light-color" href="about" data-text="About Us"><span>About Us</span></a>
+								<a class="custom-btn medium light-color" href="about" data-text="About Us"><span>@lang('text.contact_us')</span></a>
 							</div>
 						</div>
 					</div>
