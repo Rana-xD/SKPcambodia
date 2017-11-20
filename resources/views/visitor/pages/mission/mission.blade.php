@@ -36,17 +36,17 @@
 							<img class="img-responsive visible-xs" src="../img/bg/mission.jpg" alt="demo" >
 
 							@if(isset($mission_content) && $mission_content)
-								{!! $mission_content->body !!}
+								{!! $mission_content->getTranslatedAttribute('body', App::getLocale()) !!}
 							@endif
 						</div>
 
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							@if(isset($mission_sidebar) && $mission_sidebar)
 								@if(isset($mission_sidebar->image))
-								<img class="img-responsive center-block hidden-xs" src="{{ asset('/storage/'.$mission_sidebar->image) }}" alt="" >
+								<img class="img-responsive center-block hidden-xs" src="{{ asset($mission_sidebar->image) }}" alt="" >
 								@endif
 								<blockquote class="quote">
-						      	{!! $mission_sidebar->body !!}
+						      	{!! $mission_sidebar->getTranslatedAttribute('body', App::getLocale()) !!}
 						    	</blockquote>
 							@endif
 						</div>

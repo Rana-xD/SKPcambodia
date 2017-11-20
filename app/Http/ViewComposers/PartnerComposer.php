@@ -3,12 +3,16 @@
 namespace App\Http\ViewComposers;
 
 use Illuminate\View\View;
-use App\Partner;
+use TCG\Voyager\Models\Post;
 use App;
+use App\UsefulLink;
 class PartnerComposer
 {
 
-    protected $partners;
+    protected $footer_blogs;
+    protected $locale;
+    protected $fallback_locale;
+    protected $useful_links;
     /**
      * Create a new profile composer.
      *
@@ -18,15 +22,22 @@ class PartnerComposer
     public function __construct()
     {
 
-        $locale = App::getLocale();
-        $fallback_locale = config('app.fallback_locale', 'en');
-        // Query featured partners
-        $this->partners = Partner::where([
-            'is_featured' => 1,
+        $this->locale = App::getLocale();
+        $this->fallback_locale = config('app.fallback_locale', 'en');
+        $locale = $this->locale;
+        $fallback_locale = $this->fallback_locale;
+        // Query footer blog
+        $this->footer_blogs = Post::where([
+            'status' => Post::PUBLISHED
         ])->with(['translations' => function ($query) use ($locale, $fallback_locale) {
             $query->where('locale', $locale)
                   ->orWhere('locale', $fallback_locale);
-        }])->get();
+        }])->take(3)->get();
+
+        $this->useful_links = UsefulLink::orderBy('created_at')->with(['translations' => function ($query) use ($locale, $fallback_locale) {
+            $query->where('locale', $locale)
+                  ->orWhere('locale', $fallback_locale);
+        }])->take(5)->get();
 
     }
 
@@ -40,7 +51,10 @@ class PartnerComposer
     {
 
         $view->with([
-            'partners' => $this->partners,
+            'footer_blogs' => $this->footer_blogs,
+            'locale' => $this->locale,
+            'fallback_locale' => $this->fallback_locale,
+            'links' => $this->useful_links
         ]);
     }
 }

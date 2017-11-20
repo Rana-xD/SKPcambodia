@@ -47,7 +47,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
 							@if(isset($top_content) && $top_content)
-								{!! $top_content->body !!}
+								{!! $top_content->getTranslatedAttribute('body', App::getLocale()) !!}
 							@endif
 						</div>
 					</div>
@@ -94,13 +94,13 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-8 col-md-6">
 							@if(isset($translation_service) && $translation_service)
-								{!! $translation_service->body !!}
+								{!! $translation_service->getTranslatedAttribute('body', App::getLocale()) !!}
 							@endif
 						</div>
 
 						<div class="col-xs-12 col-sm-4 col-md-6">
 							@if(isset($translation_cost) && $translation_cost)
-								{!! $translation_cost->body !!}
+								{!! $translation_cost->getTranslatedAttribute('body', App::getLocale()) !!}
 							@endif
 						</div>
 					</div>

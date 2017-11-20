@@ -37,17 +37,17 @@
 							<img class="img-responsive visible-xs" src="../img/bg/mission.jpg" alt="" >
 
 							@if(isset($about_content) && $about_content)
-								{!! $about_content->body !!}
+								{!! $about_content->getTranslatedAttribute('body', App::getLocale()) !!}
 							@endif
 						</div>
 
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							@if(isset($about_sidebar) && $about_sidebar)
 								@if(isset($about_sidebar->image))
-								<img class="img-responsive center-block hidden-xs" src="{{ asset('/storage/'.$about_sidebar->image) }}" alt="demo" >
+								<img class="img-responsive center-block hidden-xs" src="{{ asset($about_sidebar->image) }}" alt="demo" >
 								@endif
 								<blockquote class="quote">
-						      	{!! $about_sidebar->body !!}
+							      	{!! $about_sidebar->getTranslatedAttribute('body', App::getLocale()) !!}
 						    	</blockquote>
 							@endif
 						</div>

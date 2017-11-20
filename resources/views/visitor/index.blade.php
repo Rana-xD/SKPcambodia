@@ -37,7 +37,7 @@
 						<div class="col-md-MB-30">
 
 							@if(isset($top_left_content) && $top_left_content)
-								{!! $top_left_content->body !!}
+								{!! $top_left_content->getTranslatedAttribute('body', App::getLocale()) !!}
 							@endif
 							<a class="custom-btn medium dark-color" href="/services" data-text="Details"><span>Details</span></a>
 						</div>
@@ -83,11 +83,11 @@
 					<div class="col-xs-12 col-md-7">
 						<div class="col-md-MB-30">
 							@if(isset($welcome_content) && $welcome_content)
-								{!! $welcome_content->body !!}
+								{!! $welcome_content->getTranslatedAttribute('body', App::getLocale()) !!}
 							@endif
 							<blockquote class="quote">
 						      	@if(isset($quote_content) && $quote_content)
-									{!! $quote_content->body !!}
+									{!! $quote_content->getTranslatedAttribute('body', App::getLocale()) !!}
 								@endif
 						    </blockquote>
 

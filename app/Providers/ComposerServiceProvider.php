@@ -15,7 +15,7 @@ class ComposerServiceProvider extends ServiceProvider
     {
         View::composer(
 
-            ['visitor.components.home.partner_slideset'],
+            ['visitor.includes._footer'],
             'App\Http\ViewComposers\PartnerComposer'
         );
     }

@@ -31,7 +31,9 @@
                                 <a class="icon-gplus" href="{{ Voyager::setting('site_social_gplus') }}" target="_blank"></a>
                                 @endif
                                 @if(Voyager::setting('site_social_ig'))
-                                <a class="icon-gplus" href="{{ Voyager::setting('site_social_ig') }}" target="_blank"></a>
+                                <a class="" href="{{ Voyager::setting('site_social_ig') }}" target="_blank">
+                                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
                                 @endif
                             </div>
                         </div>
@@ -42,8 +44,9 @@
                             <h3 class="title">@lang('text.link')</h3>
 
                             <ul class="list">
-                                <li><i class="icon-right"></i><a href="http://www.bakc.org.kh/">The Bar Association of the Kingdom of Cambodia</a></li>
-                                <li><i class="icon-right"></i><a href="http://www.moc.gov.kh/en-us/">Ministry of Commerce, Cambodia</a></li>
+                              @foreach($links as $link)
+                                <li><i class="icon-right"></i><a href="{{ $link->link }}" target="_blank">{{ $link->getTranslatedAttribute('title', $locale) }}</a></li>
+                              @endforeach
                             </ul>
                         </div>
                     </div>
@@ -61,23 +64,13 @@
                             <h3 class="title">@lang('text.blog_post')</h3>
 
                             <div>
+                              @foreach($footer_blogs as $f_post)
                                 <article class="recent-posts">
-                                    <p><a href="#">Talking sensible advertising spacious youthful shine a discover excellent.</a></p>
+                                    <p><a href="{{ route('visitor.blog.detail', $f_post->slug) }}">{{ $f_post->getTranslatedAttribute('title', $locale) }}</a></p>
 
-                                    <span class="date-post">May 07, 2015</span>
+                                    <span class="date-post">{{ $f_post->created_at->format('M d\, Y') }}</span>
                                 </article>
-
-                                <article class="recent-posts">
-                                    <p><a href="#">With in natural bold gigantic hurry adore low-cost spacious commercial</a></p>
-
-                                    <span class="date-post">April 01, 2015</span>
-                                </article>
-
-                                <article class="recent-posts">
-                                    <p><a href="#">Advantage you extra have world's clinically extra grab rare warm.</a></p>
-
-                                    <span class="date-post">March 16, 2015</span>
-                                </article>
+                              @endforeach
                             </div>
                         </div>
                     </div>

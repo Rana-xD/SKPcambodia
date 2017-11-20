@@ -34,7 +34,7 @@
 						<div class="col-xs-12 col-md-12">
 							<div class="col-md-MB-30">
 								@if(isset($top_content) && $top_content)
-									{!! $top_content->body !!}
+									{!! $top_content->getTranslatedAttribute('body', App::getLocale()) !!}
 								@endif
 							</div>
 						</div>

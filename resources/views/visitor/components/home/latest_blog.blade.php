@@ -13,7 +13,7 @@
                         <div class="blog-item center-block">
                             <div class="inner fixed">
                                 <figure class="img-wrap">
-                                    <img class="img-responsive" src="{{ asset('/storage/'.$post->image) }}" alt="{{ $post->getTranslatedAttribute('title', $locale) }}">
+                                    <img class="img-responsive" src="{{ asset($post->image) }}" alt="{{ $post->getTranslatedAttribute('title', $locale) }}">
                                 </figure>
 
                                 <a href="{{ route('visitor.blog.detail', $post->slug) }}"></a>
@@ -22,7 +22,7 @@
                             <div class="description">
                                 <span class="date-post">{{ $post->created_at->format('M d\, Y') }}</span>
 
-                                <h3 class="title"><a href="#">{{ $post->getTranslatedAttribute('title', $locale) }}</a></h3>
+                                <h3 class="title"><a href="{{ route('visitor.blog.detail', $post->slug) }}">{{ $post->getTranslatedAttribute('title', $locale) }}</a></h3>
 
                                 <div class="meta">
                                     <span><i class="icon-user"></i><a href="#">{{ $post->authorId->name }}</a></span>

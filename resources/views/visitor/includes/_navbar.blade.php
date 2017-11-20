@@ -25,7 +25,9 @@
           <a class="circled icon-youtube-play" style="background-color:red;" href="{{ Voyager::setting('site_social_youtube') }}" target="_blank"></a>
           @endif
           @if(Voyager::setting('site_social_ig'))
-          <a class="circled icon-ig" style="background-color:red;" href="{{ Voyager::setting('site_social_ig') }}" target="_blank"></a>
+          <a class="circled" style="background-color:#754F44;" href="{{ Voyager::setting('site_social_ig') }}" target="_blank">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
           @endif
         </div>
         <div class="header-contact">
