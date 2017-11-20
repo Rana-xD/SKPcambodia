@@ -2,7 +2,7 @@
     <ul class="hero-slider autoplay">
     @foreach($sliders as $index => $slider)
         @if($slider->type==1)
-        <li id="slide_{{++$index}}" class="@if($index==1){{ 'selected' }}@endif" style="background-image: url({{ asset('/storage/'.$slider->featured_image) }});">
+        <li id="slide_{{++$index}}" class="@if($index==1){{ 'selected' }}@endif" style="background-image: url(@if( strpos($data->featured_image, 'http://') === false && strpos($data->featured_image, 'https://') === false){{ asset($data->featured_image) }}@else{{ $data->featured_image }}@endif);">
             <div class="full-width">
                 <div class="container">
                     <div class="s-align">
@@ -16,7 +16,7 @@
             </div>
         </li>
         @elseif($slider->type==2)
-        <li id="slide_{{++$index}}" class="@if($index==1){{ 'selected' }}@endif bg-video" style="background-image: url({{ asset('/storage/'.$slider->featured_image) }});">
+        <li id="slide_{{++$index}}" class="@if($index==1){{ 'selected' }}@endif bg-video" style="background-image: url(@if( strpos($data->featured_image, 'http://') === false && strpos($data->featured_image, 'https://') === false){{ asset($data->featured_image) }}@else{{ $data->featured_image }}@endif);">
             <div class="full-width">
                 <div class="container">
                     <div class="s-align">
