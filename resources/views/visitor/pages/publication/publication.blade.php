@@ -46,10 +46,10 @@
 				@foreach ($result as $info)
 					<div class="col-xs-12 col-sm-6 col-md-3 book">
 						<div class="book-img">
-								<img src="storage/{{ $info->featured_image }}" alt="demo" />
+								<img src="{{ $info->featured_image }}" alt="demo" />
 						</div>
 						<div class="description">
-							<h3 class="h4 title center"><a href="storage/{{ $info->file_url }}" target="_blank">{{ $info->title }}</a></h3>
+							<h3 class="h4 title center"><a href="{{ $info->file_url }}" target="_blank">{{ $info->title }}</a></h3>
 						</div>
 					</div>
 				@endforeach

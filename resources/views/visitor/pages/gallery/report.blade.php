@@ -52,10 +52,10 @@
 									<div class="portfolio-item center-block">
 										<div class="inner">
 											<figure class="img-wrap">
-												<img src="storage/{{ $result->featured_image }}" alt="demo" />
+												<img src="{{ $result->featured_image }}" alt="demo" />
 											</figure>
 
-											<a href="storage/{{ $result->featured_image }}" data-gallery="gall"></a>
+											<a href="{{ $result->featured_image }}" data-gallery="gall"></a>
 										</div>
 
 										<div class="description">
