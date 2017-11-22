@@ -12,6 +12,7 @@ use App\publication;
 use App\Activity;
 use App\Experience;
 use App\TrainingProgram;
+use App\Team;
 use App\Content;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Category;
@@ -100,7 +101,8 @@ class PageController extends Controller
     // Return our team page
     public function team()
     {
-      return view('visitor.pages.team.team_1');
+      $teams = Team::all();
+      return view('visitor.pages.team.team',compact('teams'));
     }
 
     // Return Services page
@@ -140,9 +142,9 @@ class PageController extends Controller
       $top_content = Content::where('position', 11)->first();
       return view('visitor.pages.gallery.report',
         compact(
-          'results', 
-          'locale', 
-          'fallback_locale', 
+          'results',
+          'locale',
+          'fallback_locale',
           'top_content'
         )
       );
