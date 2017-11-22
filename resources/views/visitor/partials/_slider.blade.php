@@ -67,15 +67,13 @@
 
         .hero-slider li:nth-of-type(2) h2
         {
-            font-size: 50px;
-            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
             font-weight: 400;
         }
 
         .hero-slider li:nth-of-type(3) h2
         {
-            font-size: 50px;
-            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
         }
 
         .slider-nav
@@ -94,18 +92,18 @@
 
             .hero-slider li:first-of-type h2
             {
-                font-size: 60px;
+                font-size: 50px;
                 margin-bottom: 40px;
             }
 
             .hero-slider li:nth-of-type(2) h2
             {
-                font-size: 100px;
+                font-size: 50px;
             }
 
             .hero-slider li:nth-of-type(3) h2
             {
-                font-size: 90px;
+                font-size: 50px;
             }
         }
 
@@ -119,17 +117,17 @@
 
             .hero-slider li:first-of-type h2
             {
-                font-size: 60px;
+                font-size: 40px;
                 margin-bottom: 40px;
             }
             .hero-slider li:nth-of-type(2) h2
             {
-                font-size: 80px;
+                font-size: 40px;
             }
 
             .hero-slider li:nth-of-type(3) h2
             {
-                font-size: 75px;
+                font-size: 40px;
             }
         }
 
@@ -143,17 +141,17 @@
 
             .hero-slider li:first-of-type h2
             {
-                font-size: 50px;
+                font-size: 30px;
             }
 
             .hero-slider li:nth-of-type(2) h2
             {
-                font-size: 60px;
+                font-size: 30px;
             }
 
             .hero-slider li:nth-of-type(3) h2
             {
-                font-size: 60px;
+                font-size: 30px;
             }
         }
 

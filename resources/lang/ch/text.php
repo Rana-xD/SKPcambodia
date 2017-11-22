@@ -23,5 +23,6 @@ return [
     'fax' => '传真',
     'send' => '发送',
     'link' => '有用的链接',
-    'blog_post' => '博客文章'
+    'blog_post' => '博客文章',
+    'continue_reading' => '继续阅读'
 ];

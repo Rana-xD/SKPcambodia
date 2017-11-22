@@ -23,6 +23,6 @@ return [
     'fax' => 'Fax',
     'send' => 'Send',
     'link' => 'Useful Links',
-    'blog_post' => 'Blog Posts'
-
+    'blog_post' => 'Blog Posts',
+    'continue_reading' => 'Continue Reading'
 ];

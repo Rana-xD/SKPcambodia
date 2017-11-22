@@ -18,11 +18,11 @@
           @if(Voyager::setting('site_social_gplus'))
           <a class="circled ggl icon-gplus" href="{{ Voyager::setting('site_social_gplus') }}" target="_blank"></a>
           @endif
-          @if(Voyager::setting('site_social_linkedin'))
-          <a class="circled icon-linkedin" style="background-color:blue;" href="{{ Voyager::setting('site_social_linkedin') }}" target="_blank"></a>
-          @endif
           @if(Voyager::setting('site_social_youtube'))
-          <a class="circled icon-youtube-play" style="background-color:red;" href="{{ Voyager::setting('site_social_youtube') }}" target="_blank"></a>
+          <a class="circled icon-youtube-play" style="background-color:#bb0000;" href="{{ Voyager::setting('site_social_youtube') }}" target="_blank"></a>
+          @endif
+          @if(Voyager::setting('site_social_linkedin'))
+          <a class="circled icon-linkedin" style="background-color:#0077B5;" href="{{ Voyager::setting('site_social_linkedin') }}" target="_blank"></a>
           @endif
           @if(Voyager::setting('site_social_ig'))
           <a class="circled" style="background-color:#754F44;" href="{{ Voyager::setting('site_social_ig') }}" target="_blank">

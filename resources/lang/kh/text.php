@@ -21,7 +21,8 @@ return [
     'about' => 'អំពីក្រុមហ៊ុន SK & P Cambodia Law Group',
     'mission' => 'បេសកកម្មរបស់ SK & P',
     'fax' => 'ទូរសារ',
-    'send' => 'ផ្ញើរ',
+    'send' => 'ដាក់ផ្ញើរ',
     'link' => 'ពត៌មានបន្ថែម',
-    'blog_post' => 'ប្លុក'
+    'blog_post' => 'ប្លុក',
+    'continue_reading' => 'អានបន្ថែម'
 ];

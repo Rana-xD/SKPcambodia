@@ -2,7 +2,7 @@
     <div class="container">
         <div class="s-title">
             <h2>Latest Blog Posts</h2>
-            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus</p>
+            <p>Get the latest information, insights, announcements, and news from SK &amp; P Cambodia Law Group experts through our blog posts.</p>
         </div>
 
         <div class="blog-container">
@@ -34,7 +34,7 @@
                                     {{ $post->getTranslatedAttribute('excerpt', $locale) }}
                                 </p>
 
-                                <a class="custom-btn medium dark-color" href="{{ route('visitor.blog.detail', $post->slug) }}" data-text="Continue Reading"><span>Continue Reading</span></a>
+                                <a class="custom-btn medium dark-color" href="{{ route('visitor.blog.detail', $post->slug) }}" data-text="Continue Reading"><span>@lang('text.continue_reading')</span></a>
                             </div>
                         </div>
                     </div>
