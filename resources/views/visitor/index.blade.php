@@ -14,7 +14,12 @@
 
 @push('styles')
 <style type="text/css">
-
+	p{
+		font-family: 'Raleway', sans-serif, Suwannaphum !important;
+	}
+	h2{
+		font-family: Rufina, serif, Suwannaphum !important;
+	}
 </style>
 @endpush
 
