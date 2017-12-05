@@ -24,5 +24,6 @@ return [
     'send' => 'ដាក់ផ្ញើរ',
     'link' => 'តំណភ្ជាប់សំខាន់ៗ',
     'blog_post' => 'ប្លុក',
-    'continue_reading' => 'អានបន្ថែម'
+    'continue_reading' => 'អានបន្ថែម',
+    'details' => 'ព័ត៌មានលំអិត'
 ];

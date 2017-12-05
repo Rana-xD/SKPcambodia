@@ -44,7 +44,7 @@
 							@if(isset($top_left_content) && $top_left_content)
 								{!! $top_left_content->getTranslatedAttribute('body', App::getLocale()) !!}
 							@endif
-							<a class="custom-btn medium dark-color" href="/services" data-text="Details"><span>Details</span></a>
+							<a class="custom-btn medium dark-color" href="/services" data-text="Details"><span>@lang('text.details')</span></a>
 						</div>
 					</div>
 
