@@ -25,5 +25,6 @@ return [
     'link' => '有用的链接',
     'blog_post' => '博客文章',
     'continue_reading' => '继续阅读',
-    'details' => '细节'
+    'details' => '细节',
+    'experience' => '我们的经验'
 ];

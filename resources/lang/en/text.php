@@ -25,5 +25,6 @@ return [
     'link' => 'Useful Links',
     'blog_post' => 'Blog Posts',
     'continue_reading' => 'Continue Reading',
-    'details' => 'Details'
+    'details' => 'Details',
+    'experience' => 'Our Experiences'
 ];
