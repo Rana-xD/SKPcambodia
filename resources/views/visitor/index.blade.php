@@ -14,7 +14,12 @@
 
 @push('styles')
 <style type="text/css">
-
+	p{
+		font-family: 'Raleway', sans-serif, Suwannaphum !important;
+	}
+	h2{
+		font-family: Rufina, serif, Suwannaphum !important;
+	}
 </style>
 @endpush
 
@@ -39,7 +44,7 @@
 							@if(isset($top_left_content) && $top_left_content)
 								{!! $top_left_content->getTranslatedAttribute('body', App::getLocale()) !!}
 							@endif
-							<a class="custom-btn medium dark-color" href="/services" data-text="Details"><span>Details</span></a>
+							<a class="custom-btn medium dark-color" href="/services" data-text="Details"><span>@lang('text.details')</span></a>
 						</div>
 					</div>
 
@@ -95,7 +100,7 @@
 					</div>
 					<div class="col-xs-12 col-md-5 col-lg-4">
 						<div class="col-md-MB-30">
-							<h2>Our Experiences</h2>
+							<h2>@lang('text.experience')</h2>
 									<ul style="list-style-type:circle">
 										@foreach ($experiences as $experience)
 										<li><strong>{{ $experience->getTranslatedAttribute('content', $locale) }}</strong></li>

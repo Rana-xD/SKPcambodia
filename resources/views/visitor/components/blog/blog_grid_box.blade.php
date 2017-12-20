@@ -23,7 +23,7 @@
                 {{ $post->getTranslatedAttribute('excerpt', $locale) }}
             </p>
 
-            <a class="custom-btn medium dark-color" href="{{ route('visitor.blog.detail', $post->slug) }}" data-text="Continue Reading"><span>Continue Reading</span></a>
+            <a class="custom-btn medium dark-color" href="{{ route('visitor.blog.detail', $post->slug) }}" data-text="Continue Reading"><span>@lang('text.continue_reading')</span></a>
         </div>
     </div>
 </div>

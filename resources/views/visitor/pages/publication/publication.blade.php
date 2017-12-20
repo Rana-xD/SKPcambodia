@@ -56,6 +56,7 @@
 
 			</div>
 		</section>
+	</main>
 	@endsection
 
 	@push('scripts')

@@ -119,7 +119,7 @@
 								<div class="panel panel-default">
 									 <div class="panel-heading" role="tab" id="heading{{ $right->id }}">
 										  <h4 class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse{{ $right->id }}" aria-expanded="false" aria-controls="collapse{{ $right->id }}"><i class="fa fa-folder-open"></i>{{ $right->name }}
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse{{ $right->id }}" aria-expanded="false" aria-controls="collapse{{ $right->id }}"><i class="fa fa-folder-open"></i> {{ $right->name }}
 												</a>
 										  </h4>
 									 </div>

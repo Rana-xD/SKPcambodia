@@ -24,5 +24,7 @@ return [
     'send' => 'Send',
     'link' => 'Useful Links',
     'blog_post' => 'Blog Posts',
-    'continue_reading' => 'Continue Reading'
+    'continue_reading' => 'Continue Reading',
+    'details' => 'Details',
+    'experience' => 'Our Experiences'
 ];

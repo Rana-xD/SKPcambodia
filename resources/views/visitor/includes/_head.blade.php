@@ -24,8 +24,18 @@
 <link class="colors_style" rel="stylesheet" href="/css/color_scheme/color_1.css" type="text/css"/>
 
 <!-- / google font -->
-<link href="https://fonts.googleapis.com/css?family=Raleway|Mate|Oxygen:400,700|Rufina:400,700|Nokora" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Mate|Oxygen:400,700|Rufina:400,700|Suwannaphum" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/notosanskannada.css">
 
 <!-- / Sweet alert -->
 <link rel="stylesheet" type="text/css" href="sweetalert/dist/sweetalert.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110656799-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110656799-1');
+</script>

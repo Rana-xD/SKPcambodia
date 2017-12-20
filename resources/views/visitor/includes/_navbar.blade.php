@@ -40,11 +40,11 @@
         <nav id="navigation" role="navigation">
           <ul>
 
-            <li class="menu-item current">
+            <li class="menu-item {{ Request::path() == '/' ? 'current' : '' }}">
               <a href="/">@lang('menu.home')</a>
             </li>
 
-            <li class="menu-item">
+            <li class="menu-item {{ Request::path() == 'about' || Request::path() == 'mission' ? 'current' : '' }}">
               <a href="javascript:void(0);">@lang('menu.about_us')</a>
               <div class="submenu">
                 <ul>
@@ -54,13 +54,13 @@
               </div>
             </li>
 
-            <li class="menu-item">
+            <li class="menu-item {{ Request::path() == 'team' ? 'current' : '' }}">
               <a href="/team">@lang('menu.team')</a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item {{ Request::path() == 'services' ? 'current' : '' }}">
               <a href="/services">@lang('menu.services')</a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item {{ Request::path() == 'report' || Request::path() == 'publication' || Request::path() == 'law' ? 'current' : '' }}">
               <a href="javascript:void(0);">@lang('menu.resources')</a>
               <div class="submenu">
                 <ul>
@@ -71,7 +71,7 @@
                 </ul>
               </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item {{ Request::path() == 'training' || Request::path() == 'employment_and_internship' ? 'current' : '' }}">
               <a href="javascript:void(0);">@lang('menu.news')</a>
               <div class="submenu">
                 <ul>
@@ -80,10 +80,10 @@
                 </ul>
               </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item {{ Request::path() == 'blog' ? 'current' : '' }}">
               <a href="/blog">@lang('menu.blog')</a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item {{ Request::path() == 'contacts' ? 'current' : '' }}">
               <a href="/contacts">@lang('menu.contact_us')</a>
             </li>
           </ul>
@@ -91,9 +91,26 @@
 
           <div class="line visible-xs">
             <div class="social-btns style-2">
-              <a class="circled fb icon-facebook" href="#" target="_blank"></a>
-              <a class="circled tw icon-twitter" href="#" target="_blank"></a>
-              <a class="circled ggl icon-gplus" href="#" target="_blank"></a>
+               @if(Voyager::setting('site_social_fb'))
+              <a class="circled fb icon-facebook" href="{{ Voyager::setting('site_social_fb') }}" target="_blank"></a>
+              @endif
+              @if(Voyager::setting('site_social_twitter'))
+              <a class="circled tw icon-twitter" href="{{ Voyager::setting('site_social_twitter') }}" target="_blank"></a>
+              @endif
+              @if(Voyager::setting('site_social_gplus'))
+              <a class="circled ggl icon-gplus" href="{{ Voyager::setting('site_social_gplus') }}" target="_blank"></a>
+              @endif
+              @if(Voyager::setting('site_social_youtube'))
+              <a class="circled icon-youtube-play" style="background-color:#bb0000;" href="{{ Voyager::setting('site_social_youtube') }}" target="_blank"></a>
+              @endif
+              @if(Voyager::setting('site_social_linkedin'))
+              <a class="circled icon-linkedin" style="background-color:#0077B5;" href="{{ Voyager::setting('site_social_linkedin') }}" target="_blank"></a>
+              @endif
+              @if(Voyager::setting('site_social_ig'))
+              <a class="circled" style="background-color:#754F44;" href="{{ Voyager::setting('site_social_ig') }}" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              @endif
             </div>
 
             <div class="header-contact">
