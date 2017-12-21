@@ -219,7 +219,13 @@ class PageController extends Controller
     // Return Publication page
     public function publication()
     {
-      $result = DB::table('publications')->select('title','featured_image','file_url')->get();
+      $locale = App::getLocale();
+      $fallback_locale = config('app.fallback_locale', 'en');
+      $result = publication::with(['translations' => function ($query) use ($locale, $fallback_locale) {
+          $query->where('locale', $locale)
+                ->orWhere('locale', $fallback_locale);
+      }])->get();
+      // $result = DB::table('publications')->select('title','featured_image','file_url')->get();
       return view('visitor.pages.publication.publication',compact('result'));
     }
 

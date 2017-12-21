@@ -49,7 +49,7 @@
 								<img src="{{ $info->featured_image }}" alt="demo" />
 						</div>
 						<div class="description">
-							<h3 class="h4 title center"><a href="{{ $info->file_url }}" target="_blank">{{ $info->title }}</a></h3>
+							<h3 class="h4 title center"><a href="{{ $info->file_url }}" target="_blank">{{ $info->getTranslatedAttribute('title', App::getLocale()) }}</a></h3>
 						</div>
 					</div>
 				@endforeach
