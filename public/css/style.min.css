@@ -3259,6 +3259,7 @@ main form button[type=submit] {
 .portfolio-container.portfolio-style-2 .portfolio-item .title {
     color: #444;
     margin-bottom: 5px;
+    line-height: 20px;
 }
 .portfolio-container.portfolio-style-2 .portfolio-item p {
     margin-top: 0;
