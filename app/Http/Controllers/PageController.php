@@ -8,7 +8,7 @@ use App\Slider;
 use App\Partner;
 use App\Service;
 use App\Law;
-use App\publication;
+use App\Publication;
 use App\Activity;
 use App\Experience;
 use App\TrainingProgram;
@@ -221,7 +221,7 @@ class PageController extends Controller
     {
       $locale = App::getLocale();
       $fallback_locale = config('app.fallback_locale', 'en');
-      $result = publication::with(['translations' => function ($query) use ($locale, $fallback_locale) {
+      $result = Publication::with(['translations' => function ($query) use ($locale, $fallback_locale) {
           $query->where('locale', $locale)
                 ->orWhere('locale', $fallback_locale);
       }])->get();
