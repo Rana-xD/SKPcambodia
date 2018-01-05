@@ -27,7 +27,7 @@ Route::group(['middleware' =>'locale'],function(){
   Route::get('training','PageController@training');
   Route::get('employment_and_internship','PageController@employment');
   Route::get('mission','PageController@mission');
-  Route::get('teamsingle','PageController@teamsingle');
+  Route::get('teamsingle/{name}','PageController@teamsingle');
   Route::post('mail','System@sendmail');
 });
 

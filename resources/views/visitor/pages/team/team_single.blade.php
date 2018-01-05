@@ -20,7 +20,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-5">
-						<p id="page-title" class="h1">KEO SOKEA</p>
+						<p id="page-title" class="h1">{{ $teamsingle->fullname }}</p>
 					</div>
 				</div>
 			</div>
@@ -34,15 +34,17 @@
 							<div class="row">
 								<div class="col-xs-12 col-md-6">
 									<div class="col-MB-30">
-										<img class="img-responsive" src="../img/team_img/1.jpg" alt="demo" />
+										<img class="img-responsive" src="{{ $teamsingle->profile_pic }}" alt="demo" />
 									</div>
 								</div>
 
 								<div class="col-xs-12 col-md-6">
 									<div class="col-MB-30">
 										<div class="col-MB-30">
-											<h2 class="name">KEO SOKEA</h2>
-											<h5 class="position">DIRECTOR / FOUNDER<br />ATTORNEY-AT-LAW</h5>
+											<h2 class="name">{{ $teamsingle->fullname }}</h2>
+											@foreach(json_decode($teamsingle->position)->data as $pos)
+											<h5 class="position">{{ $pos }}<br/></h5>
+											@endforeach
 										</div>
 
 										<div class="row">
@@ -50,27 +52,42 @@
 												<div class="col-md-MB-20">
 													<h4>Contact</h4>
 
-													N0: 220 Eo, Street 156, Sangkat Tuklaak II, Khan Toulkok, Phnom Penh<br />
-													<strong>Tel: +(855) 023 883 885</strong><br />
-													<strong>H/P: +(855) 012 267 897</strong><br />
-													<strong>Fax: +(855) 023 883 885</strong>
+													{{--  N0: 220 Eo, Street 156, Sangkat Tuklaak II, Khan Toulkok, Phnom Penh<br />  --}}
+													@if(json_decode($teamsingle->contact)->data->tel)
+													<strong>Tel: {{ json_decode($teamsingle->contact)->data->tel }}</strong><br />
+													@endif
+													@if(json_decode($teamsingle->contact)->data->hp)
+													<strong>H/P: {{ json_decode($teamsingle->contact)->data->hp }}</strong><br />
+													@endif
+													@if(json_decode($teamsingle->contact)->data->fax)
+													<strong>Fax: {{ json_decode($teamsingle->contact)->data->fax }}</strong>
+													@endif
 												</div>
 											</div>
 
 											<div class="col-xs-12 col-md-6">
 												<div class="col-md-MB-20">
 													<h4>Email</h4>
-													<strong><a href="mailto:sokea@skpcambodia.com">sokea@skpcambodia.com</a></strong><br />
-													<strong><a href="mailto:keosokea77@yahoo.com">keosokea77@yahoo.com</a></strong>
+													@foreach(json_decode($teamsingle->email)->data as $email)
+													<strong><a href="mailto:{{ $email }}">{{ $email }}</a></strong><br />
+													@endforeach
 												</div>
 											</div>
 										</div>
 
 										<div class="social-btns style-1">
-											<a class="icon-facebook" href="#" target="_blank"></a>
-											<a class="icon-twitter" href="#" target="_blank"></a>
-											<a class="icon-linkedin" href="#" target="_blank"></a>
-											<a class="icon-youtube-play" href="#" target="_blank"></a>
+											@if(json_decode($teamsingle->social_media)->data->facebook)
+											<a class="icon-facebook" href="{{ json_decode($teamsingle->social_media)->data->facebook }}" target="_blank"></a>
+											@endif
+											@if(json_decode($teamsingle->social_media)->data->twitter)
+											<a class="icon-twitter" href="{{ json_decode($teamsingle->social_media)->data->twitter }}" target="_blank"></a>
+											@endif
+											@if(json_decode($teamsingle->social_media)->data->linkedin)
+											<a class="icon-linkedin" href="{{ json_decode($teamsingle->social_media)->data->linkedin }}" target="_blank"></a>
+											@endif
+											@if(json_decode($teamsingle->social_media)->data->gplus)
+											<a class="icon-gplus" href="{{ json_decode($teamsingle->social_media)->data->gplus }}" target="_blank"></a>
+											@endif
 										</div>
 
 									</div>
@@ -83,59 +100,19 @@
 								<div class="col-md-MB-30">
 									<div class="timeline">
 										<h4 class="h2">Education</h4>
-
+                                        @foreach(json_decode($teamsingle->education)->data as $education)
 										<div class="item">
 											<i class="circled"></i>
 
 											<div class="inner">
-												<h4 class="title">PHNOM PENH UNIVERSITY</h4>
+												<h4 class="title">{{ $education->title }}</h4>
 
-												<span class="date">1987 - 1992</span>
+												<span class="date">{{ $education->year }}</span>
 
-												<p>Bachelor Degree in Education in 1992 (Specialized in Russian)</br>
-												<strong>Main subjects: </strong>Russian Language and literature of Russian and of Western countries</br>
-												<strong>Secondary subject: </strong>Linguistics, Phonetic, Khmer Literature, Philosophy, Pedagogy and Psychology, etc</p>
+												<p>{{ $education->description }}</p>
 											</div>
 										</div>
-
-										<div class="item">
-											<i class="circled"></i>
-
-											<div class="inner">
-												<h4 class="title">PENZA INSTITUTE FOR FOREIGN LANGUAGE AND PEDAGOGY, RUSSIA</h4>
-
-												<span class="date">1990 - 1991</span>
-
-												<p>Practical Language Training<br />
-												<strong>Main subjects: </strong>Russian Language, Linguistics, Phonetic, Pedagogy and Psychology, etc</p>
-											</div>
-										</div>
-
-										<div class="item">
-											<i class="circled"></i>
-
-											<div class="inner">
-												<h4 class="title">FACULTY OF LAW AND ECONIMICS</h4>
-
-												<span class="date">1997 - 2001</span>
-
-												<p>Law Degree (on the job-training)</br>
-												<strong>Main subjects: </strong> Constitutional Law, Criminal Law and Criminal Procedure, Civil Law and Civil Procedure, Financial Law, Administrative Law, International Relation, History of Political Ideas, Public Rights and Freedoms etc</p>
-											</div>
-										</div>
-
-										<div class="item">
-											<i class="circled"></i>
-
-											<div class="inner">
-												<h4 class="title">PANASASTRA UNIVERSITY</h4>
-
-												<span class="date">2002 - 2003</span>
-
-												<p><strong>Finished Year I of the Master Course majoring in Law (3 terms):</strong> Foundation of Law and Governance, Management, Advanced Business Law, Economics, Quantitative Analysis (Statistics), Foundation of Accounting and Finance. (Evening Class)</br>
-												<strong>Center for Lawyer Training and Professional Improvement of the Bar Association of the Kingdom of Cambodia:</strong> Administrative Law, Lawyer's activities in criminal and civil procedures, Criminal and Civil Law/Codes, Human Rights and NGOs Law, Labor Code, Contract Writing, Negotiation/Mediation Advocacy, Skills to communicate with clients, Commercial Law, E-commerce, Accounting, Tax Law, Bankruptcy, Prosecutor's Role and Legal Ethics & Professional Responsibility</p>
-											</div>
-										</div>
+                                        @endforeach
 									</div>
 								</div>
 							</div>
@@ -146,83 +123,28 @@
 										<h4 class="h2">Professional experience</h4>
 
 											<div class="panel-group" id="accordion_reg" role="tablist" aria-multiselectable="true">
+												@foreach(json_decode($teamsingle->experience)->data as $experience)
+												<input type="hidden" name="{{ $i++ }}">
+												{{--  {{ i++ }}  --}}
 												<div class="item">
 													<i class="circled"></i>
 													<div class="panel panel-default">
-								                	<div class="panel-heading" role="tab" id="headingOne_reg">
+								                	<div class="panel-heading" role="tab" id="heading{{ $i }}_reg">
 								                  	<h4 class="panel-title">
-								                    		<a role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapseOne_reg" aria-expanded="true" aria-controls="collapseOne_reg">
-																	<h4 class="title">Judicial Assistant at Judicial Mentor Programme, UNHCHR</h4>
-	  		 														<span class="date">1995 - 1999<i class="fa fa-chevron-down pull-right"></i></span>
+								                    		<a role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapse{{ $i }}_reg" aria-expanded="false" aria-controls="collapse{{ $i }}_reg">
+																	<h4 class="title">{{$experience->title}}</h4>
+	  		 														<span class="date">{{$experience->year}}<i class="fa fa-chevron-down pull-right"></i></span>
 								                    		</a>
 								                  	</h4>
 								                	</div>
-								                	<div id="collapseOne_reg" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_reg">
+								                	<div id="collapse{{ $i }}_reg" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
 								                  	<div class="panel-body">
-																<i class="fa fa-check"></i> Assisting international legal expert attached to provincial courts (Kompong Speu amd Takeo Courts) in providing trainings on human rights and laws to judicial police, judges and prosecutors<br/>
-																<i class="fa fa-check"></i> Interpreting legal lectures or consultation given by UNCHR's consultants attached to Kompongspeu and Takeo courts to respective judges, prosecutors, clerks and police officers<br/>
-																<i class="fa fa-check"></i> Assisting the aforementioned consultants in liaison with government and non-government institutions or Human Rights' NGOs<br/>
-																<i class="fa fa-check"></i> Translating laws, decrees, letters, and other documents akin to legal field<br/>
-																<i class="fa fa-check"></i> Performs other duties as required by the UN Center for Human Rights<br/>
+														{{$experience->description}}
 								                  	</div>
 								                	</div>
 								              	</div>
 												</div>
-
-												<div class="item">
-													<i class="circled"></i>
-													<div class="panel panel-default">
-								                	<div class="panel-heading" role="tab" id="headingTwo_reg">
-								                  	<h4 class="panel-title">
-								                    		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapseTwo_reg" aria-expanded="false" aria-controls="collapseTwo_reg">
-															  		<h4 class="title">Child Protection Officer at Legal Protection, Child Protection Section, UNICEF Cambodia</h4>
-	 		 														<span class="date">1999 - August 2009<i class="fa fa-chevron-down pull-right"></i></span>
-								                    		</a>
-								                  	</h4>
-								                	</div>
-								                	<div id="collapseTwo_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_reg">
-								                  	<div class="panel-body">
-								                    		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-								                  	</div>
-								                	</div>
-								              	</div>
-												</div>
-
-												<div class="item">
-													<i class="circled"></i>
-													<div class="panel panel-default">
-								                	<div class="panel-heading" role="tab" id="headingThree_reg">
-								                  	<h4 class="panel-title">
-								                    		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapseThree_reg" aria-expanded="false" aria-controls="collapseThree_reg">
-																	<h4 class="title">Attorney-At-Law at Asia Cambodia Law Group, Cambodia</h4>
-	 		 														<span class="date">August 2009 - December 2010<i class="fa fa-chevron-down pull-right"></i></span>
-								                    		</a>
-								                  	</h4>
-								                	</div>
-								                	<div id="collapseThree_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree_reg">
-								                  	<div class="panel-body">
-								                    		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-								                  	</div>
-								                	</div>
-								              	</div>
-												</div>
-												<div class="item">
-													<i class="circled"></i>
-													<div class="panel panel-default">
-								                	<div class="panel-heading" role="tab" id="headingFour_reg">
-								                  	<h4 class="panel-title">
-								                    		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapseFour_reg" aria-expanded="false" aria-controls="collapseFour_reg">
-																	<h4 class="title">Founder/Attorney-At-Law at SK &amp; P Cambodia Law Firm</h4>
-	 		 														<span class="date">December 2010 - Present<i class="fa fa-chevron-down pull-right"></i></span>
-								                    		</a>
-								                  	</h4>
-								                	</div>
-								                	<div id="collapseFour_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour_reg">
-								                  	<div class="panel-body">
-								                    		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-								                  	</div>
-								                	</div>
-								              	</div>
+												@endforeach
 												</div>
 							            </div>
 									</div>

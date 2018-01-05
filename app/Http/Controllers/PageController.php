@@ -68,6 +68,7 @@ class PageController extends Controller
         $top_left_content = Content::where('position', 1)->first();
         $welcome_content = Content::where('position', 2)->first();
         $quote_content = Content::where('position', 3)->first();
+        $quotes = Team::take(4)->get();
         return view('visitor.index')->with([
           'sliders' => $sliders,
           // 'partners' => $partners,
@@ -76,7 +77,8 @@ class PageController extends Controller
           'experiences' => $experiences,
           'quote_content' => $quote_content,
           'welcome_content' => $welcome_content,
-          'top_left_content' => $top_left_content
+          'top_left_content' => $top_left_content,
+          'quotes' => $quotes
         ]);
     }
 
@@ -104,7 +106,13 @@ class PageController extends Controller
       $teams = Team::all();
       return view('visitor.pages.team.team',compact('teams'));
     }
-
+    // Return individaul team member
+    public function teamsingle($name)
+    {
+      $teamsingle = Team::where('fullname', $name)->first();
+      $i = 0;
+      return view('visitor.pages.team.team_single',compact('teamsingle','i'));
+    }
     // Return Services page
     public function service()
     {
@@ -272,9 +280,5 @@ class PageController extends Controller
       ]);
     }
 
-    // Return individaul team member
-    public function teamsingle()
-    {
-      return view('visitor.pages.team.team_single');
-    }
+    
 }

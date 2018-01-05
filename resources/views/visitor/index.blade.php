@@ -122,71 +122,31 @@
 						<div class="inner">
 							<div class="feedback-bxslider-container bxslider-container">
 								<ul class="bxslider" data-mode="fade" data-slidewidth="970" data-slidemargin="20" data-speed="300" data-auto="false" data-adaptiveheight="true" data-pager="false" data-prevselector="#feedback-slide-prev-3" data-nextselector="#feedback-slide-next-3">
+									@foreach($quotes as $quote)
 									<li class="slide">
 										<div class="text">
 											<p>
-												Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet
+												{{$quote->quote}}
 											</p>
 										</div>
 
 										<div class="author">
 											<div class="b-table">
 												<div class="cell v-middle">
-													<img class="circled" src="../img/users_photos/1.png" height="84" width="84" alt="demo" />
+													<img class="circled" src="{{ $quote->profile_pic }}" height="84" width="84" alt="demo" />
 												</div>
 
 												<div class="cell v-middle">
-													<h3 class="name">Keo Sokea</h3>
-
-													<h5 class="position">Director / Founder</h5>
+													<h3 class="name">{{ $quote->fullname }}</h3>
+                                                     @foreach(json_decode($quote->position)->data as $pos)
+													<h5 class="position">{{ $pos }}</h5>
+													 @endforeach
 												</div>
 											</div>
 										</div>
 									</li>
-
-									<li class="slide">
-										<div class="text">
-											<p>
-												2 Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet to repeat predefined chunks as necessary, making this the first true generator on the Internet
-											</p>
-										</div>
-
-										<div class="author">
-											<div class="b-table">
-												<div class="cell v-middle">
-													<img class="circled" src="../img/users_photos/2.png" height="84" width="84" alt="demo" />
-												</div>
-
-												<div class="cell v-middle">
-													<h3 class="name">Andrew Dowson</h3>
-
-													<h5 class="position">Art Directoar</h5>
-												</div>
-											</div>
-										</div>
-									</li>
-
-									<li class="slide">
-										<div class="text">
-											<p>
-												3 Some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-											</p>
-										</div>
-
-										<div class="author">
-											<div class="b-table">
-												<div class="cell v-middle">
-													<img class="circled" src="../img/users_photos/3.png" height="84" width="84" alt="demo" />
-												</div>
-
-												<div class="cell v-middle">
-													<h3 class="name">John Smith</h3>
-
-													<h5 class="position">Art Directoar</h5>
-												</div>
-											</div>
-										</div>
-									</li>
+									@endforeach
+									
 								</ul>
 
 								<div class="control-wrp">
