@@ -12,6 +12,7 @@
 @endpush
 @push('styles')
 <style type="text/css">
+
 .tab-content>.tab-pane {
     display: none
 }
@@ -43,7 +44,7 @@
 	font-family: Rufina, serif;
 	background-color: #e4e4e4;
 	padding: 10px 20px;
-	margin-bottom: .1em;
+	margin-bottom: 2px;
 
 }
 .panel-default .title{
@@ -57,10 +58,6 @@ font-family: 'Raleway', sans-serif;
 .date{
 	font-size: 11px;
 	font-family: 'Raleway', sans-serif;
-}
-
-.test{
-   position: absolute;
 }
 .circlelist{
    list-style-type: circle;

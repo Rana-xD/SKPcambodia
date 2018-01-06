@@ -20,6 +20,10 @@
 	h2{
 		font-family: Rufina, serif, Suwannaphum !important;
 	}
+	.more , .more:hover {
+		color: white;
+		text-decoration: underline;
+	}
 </style>
 @endpush
 
@@ -66,6 +70,7 @@
 
 													<p>
 														{{ $service->getTranslatedAttribute('excerpt', $locale) }}
+														<a class="more" href="/services#s-services">...more</a>
 													</p>
 												</div>
 											</div>
