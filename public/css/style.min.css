@@ -2321,6 +2321,7 @@ main p:last-child {
     width: 84px;
     height: 84px;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 .feedback-bxslider-container .author .name, .feedback-bxslider-container .author .position {
     margin-top: 0;
@@ -4199,7 +4200,7 @@ main form button[type=submit] {
     margin-top: 0;
 }
 #single-post--container .timeline:last-child {
-    margin-bottom: 0;
+    margin-bottom: 50px;
 }
 #single-post--container .timeline .item {
     position: relative;

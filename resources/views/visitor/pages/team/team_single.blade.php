@@ -89,6 +89,9 @@
 											<a class="icon-gplus" href="{{ json_decode($teamsingle->social_media)->data->gplus }}" target="_blank"></a>
 											@endif
 										</div>
+										<div>
+											<p>{{$teamsingle->bio}}</p>
+										</div>
 
 									</div>
 								</div>
@@ -99,7 +102,25 @@
 							<div class="col-xs-12 col-md-6">
 								<div class="col-md-MB-30">
 									<div class="timeline">
-										<h4 class="h2">Education</h4>
+										<h4 class="h2">Educations</h4>
+                                        @foreach(json_decode($teamsingle->education)->data as $education)
+										<div class="item">
+											<i class="circled"></i>
+
+											<div class="inner">
+												<h4 class="title">{{ $education->title }}</h4>
+
+												<span class="date">{{ $education->year }}</span>
+
+												<p>{{ $education->description }}</p>
+											</div>
+										</div>
+                                        @endforeach
+									</div>
+								</div>
+								<div class="col-md-MB-30">
+									<div class="timeline">
+										<h4 class="h2">Trainings</h4>
                                         @foreach(json_decode($teamsingle->education)->data as $education)
 										<div class="item">
 											<i class="circled"></i>
@@ -120,7 +141,7 @@
 							<div class="col-xs-12 col-md-6">
 								<div class="col-md-MB-30">
 									<div class="timeline">
-										<h4 class="h2">Professional experience</h4>
+										<h4 class="h2">Professional experiences</h4>
 
 											<div class="panel-group" id="accordion_reg" role="tablist" aria-multiselectable="true">
 												@foreach(json_decode($teamsingle->experience)->data as $experience)
@@ -147,6 +168,24 @@
 												@endforeach
 												</div>
 							            </div>
+									</div>
+									<div class="col-md-MB-30">
+										<div class="timeline">
+											<h4 class="h2">Awards and Achievements</h4>
+	                                        @foreach(json_decode($teamsingle->education)->data as $education)
+											<div class="item">
+												<i class="circled"></i>
+
+												<div class="inner">
+													<h4 class="title">{{ $education->title }}</h4>
+
+													<span class="date">{{ $education->year }}</span>
+
+													<p>{{ $education->description }}</p>
+												</div>
+											</div>
+	                                        @endforeach
+										</div>
 									</div>
 
 								</div>
