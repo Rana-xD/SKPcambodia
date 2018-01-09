@@ -20,7 +20,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-5">
-						<p id="page-title" class="h1">{{ $teamsingle->fullname }}</p>
+						<p id="page-title" class="h1">{{ $teamsingle->getTranslatedAttribute('fullname', App::getLocale()) }}</p>
 					</div>
 				</div>
 			</div>
@@ -41,8 +41,8 @@
 								<div class="col-xs-12 col-md-6">
 									<div class="col-MB-30">
 										<div class="col-MB-30">
-											<h2 class="name">{{ $teamsingle->fullname }}</h2>
-											@foreach(json_decode($teamsingle->position)->data as $pos)
+											<h2 class="name">{{ $teamsingle->getTranslatedAttribute('fullname', App::getLocale()) }}</h2>
+											@foreach(json_decode($teamsingle->getTranslatedAttribute('position', App::getLocale()))->data as $pos)
 											<h5 class="position">{{ $pos }}<br/></h5>
 											@endforeach
 										</div>
@@ -90,7 +90,7 @@
 											@endif
 										</div>
 										<div>
-											<p>{{$teamsingle->bio}}</p>
+											<p>{!! $teamsingle->getTranslatedAttribute('bio', App::getLocale()) !!}</p>
 										</div>
 
 									</div>
@@ -103,7 +103,7 @@
 								<div class="col-md-MB-30">
 									<div class="timeline">
 										<h4 class="h2">Educations</h4>
-                                        @foreach(json_decode($teamsingle->education)->data as $education)
+                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('education', App::getLocale()))->data as $education)
 										<div class="item">
 											<i class="circled"></i>
 
@@ -112,7 +112,7 @@
 
 												<span class="date">{{ $education->year }}</span>
 
-												<p>{{ $education->description }}</p>
+												<p>{!! $education->description !!}</p>
 											</div>
 										</div>
                                         @endforeach
@@ -121,7 +121,7 @@
 								<div class="col-md-MB-30">
 									<div class="timeline">
 										<h4 class="h2">Trainings</h4>
-                                        @foreach(json_decode($teamsingle->education)->data as $education)
+                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('education', App::getLocale()))->data as $education)
 										<div class="item">
 											<i class="circled"></i>
 
@@ -130,7 +130,7 @@
 
 												<span class="date">{{ $education->year }}</span>
 
-												<p>{{ $education->description }}</p>
+												<p>{!! $education->description !!}</p>
 											</div>
 										</div>
                                         @endforeach
@@ -144,7 +144,7 @@
 										<h4 class="h2">Professional experiences</h4>
 
 											<div class="panel-group" id="accordion_reg" role="tablist" aria-multiselectable="true">
-												@foreach(json_decode($teamsingle->experience)->data as $experience)
+												@foreach(json_decode($teamsingle->getTranslatedAttribute('experience', App::getLocale()))->data as $experience)
 												<input type="hidden" name="{{ $i++ }}">
 												{{--  {{ i++ }}  --}}
 												<div class="item">
@@ -160,7 +160,7 @@
 								                	</div>
 								                	<div id="collapse{{ $i }}_reg" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
 								                  	<div class="panel-body">
-														{{$experience->description}}
+														{!! $experience->description !!}
 								                  	</div>
 								                	</div>
 								              	</div>
@@ -172,7 +172,7 @@
 									<div class="col-md-MB-30">
 										<div class="timeline">
 											<h4 class="h2">Awards and Achievements</h4>
-	                                        @foreach(json_decode($teamsingle->education)->data as $education)
+	                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('education', App::getLocale()))->data as $education)
 											<div class="item">
 												<i class="circled"></i>
 

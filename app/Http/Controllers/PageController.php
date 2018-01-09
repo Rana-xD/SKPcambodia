@@ -107,13 +107,23 @@ class PageController extends Controller
     // Return our team page
     public function team()
     {
-      $teams = Team::all();
+      $locale = App::getLocale();
+      $fallback_locale = config('app.fallback_locale', 'en');
+      $teams = Team::with(['translations' => function ($query) use ($locale, $fallback_locale) {
+        $query->where('locale', $locale)
+              ->orWhere('locale', $fallback_locale);
+    }])->get();
       return view('visitor.pages.team.team',compact('teams'));
     }
     // Return individaul team member
     public function teamsingle($name)
     {
-      $teamsingle = Team::where('fullname', $name)->first();
+      $locale = App::getLocale();
+      $fallback_locale = config('app.fallback_locale', 'en');
+      $teamsingle = Team::where('fullname', $name)->with(['translations' => function ($query) use ($locale, $fallback_locale) {
+        $query->where('locale', $locale)
+              ->orWhere('locale', $fallback_locale);
+    }])->first();
       $i = 0;
       return view('visitor.pages.team.team_single',compact('teamsingle','i'));
     }
