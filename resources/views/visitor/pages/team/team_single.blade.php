@@ -160,7 +160,11 @@
 								                	</div>
 								                	<div id="collapse{{ $i }}_reg" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
 								                  	<div class="panel-body">
+<<<<<<< HEAD
 														{!! $experience->description !!}
+=======
+														{!!$experience->description!!}
+>>>>>>> 5b12c931d9f303b7c2994f91fe52f5403d9dff8d
 								                  	</div>
 								                	</div>
 								              	</div>
