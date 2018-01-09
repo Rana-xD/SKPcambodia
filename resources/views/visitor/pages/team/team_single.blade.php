@@ -90,7 +90,7 @@
 											@endif
 										</div>
 										<div>
-											<p>{{$teamsingle->bio}}</p>
+											<p>{!! $teamsingle->bio !!}</p>
 										</div>
 
 									</div>
@@ -160,7 +160,7 @@
 								                	</div>
 								                	<div id="collapse{{ $i }}_reg" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
 								                  	<div class="panel-body">
-														{{$experience->description}}
+														{!!$experience->description!!}
 								                  	</div>
 								                	</div>
 								              	</div>
