@@ -67,7 +67,7 @@
 	}
 	.title-training{
 	margin-bottom: 0px;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif, Suwannaphum;
 	}
 
 	.top{
@@ -109,7 +109,7 @@
 			<section id="s-services" class="section transparent">
 				<div class="container">
 					<div class="s-title">
-						<h2>We Are Effective In<br />Such Areas Of Practices</h2>
+						<h2>@lang('text.we_are_effective')<br />@lang('text.practice_areas')</h2>
 					</div>
 
 					<div class="services-container services-style-1">

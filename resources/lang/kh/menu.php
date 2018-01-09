@@ -4,7 +4,7 @@ return [
 
     'home' => 'ទំព័រដើម',
     'about_us' => 'អំពីយើង',
-    'mission' => 'បេសកម្ម',
+    'mission' => 'បេសកកម្ម',
     'team' => 'ក្រុមការងារ',
     'services' => 'សេវាកម្ម',
     'resources' => 'ឯកសារ',

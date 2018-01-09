@@ -20,7 +20,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-md-12">
-						<p id="page-title" class="h1">Meet Our Attorneys</p>
+						<p id="page-title" class="h1">@lang('text.meet_attorney')</p>
 					</div>
 				</div>
 			</div>

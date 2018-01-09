@@ -3666,6 +3666,7 @@ main form button[type=submit] {
 }
 .services-container.services-style-3 .service-item:hover .title {
     color: #c1aa81;
+    padding-top: 10px;
 }
 .services-container.services-style-4 {
     padding-top: 50px;
@@ -5368,6 +5369,17 @@ main form button[type=submit] {
     text-decoration: none;
     font-family: 'Raleway', sans-serif, Suwannaphum;
 }
+
+#accordion1 .panel-heading { padding: 0;}
+#accordion1 .panel-title > a {
+	display: block;
+	padding: 0.7em 1em;
+    outline: none;
+    font-weight:bold;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif, Suwannaphum;
+}
+
 
 .collapse {
     display: none

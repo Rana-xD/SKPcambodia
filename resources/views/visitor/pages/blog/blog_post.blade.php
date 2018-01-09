@@ -22,7 +22,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-5">
-					<p id="page-title" class="h1">Blog Post</p>
+					<p id="page-title" class="h1">@lang('text.blog_post')</p>
 				</div>
 			</div>
 		</div>
@@ -56,7 +56,7 @@
 
 									<span class="sep"></span>
 
-									<h4 class="h2">Send a Message</h4>
+									<h4 class="h2">@lang('text.Your_message')</h4>
 
 									<form action="#">
 										<div class="row">
@@ -64,25 +64,25 @@
 												<div class="row">
 													<div class="col-xs-12 col-sm-6">
 														<label class="input-wrp">
-															<input type="text" placeholder="Your name">
+															<input type="text" placeholder="@lang('text.Name')">
 															<span></span>
 														</label>
 													</div>
 
 													<div class="col-xs-12 col-sm-6">
 														<label class="input-wrp">
-															<input type="text" placeholder="Your E-mail">
+															<input type="text" placeholder="@lang('text.Email')">
 															<span></span>
 														</label>
 													</div>
 												</div>
 
 												<label class="input-wrp">
-													<textarea placeholder="Comments"></textarea>
+													<textarea placeholder="@lang('text.comments')"></textarea>
 													<span></span>
 												</label>
 
-												<button class="custom-btn small dark-color fl-r" type="submit" data-text="Submit"><span>Submit</span></button>
+												<button class="custom-btn small dark-color fl-r" type="submit" data-text="Submit"><span>@lang('text.send')</span></button>
 											</div>
 										</div>
 									</form>
@@ -104,7 +104,7 @@
 							</div> -->
 
 							<div class="widget widget-categories">
-								<h4 class="widget-title h3">Post Categories</h4>
+								<h4 class="widget-title h3">@lang('text.post_categories')</h4>
 
 								<ul>
 								@foreach($categories as $category)
@@ -120,7 +120,7 @@
 							<span class="sep"></span>
 
 							<div class="widget widget-posts">
-								<h4 class="widget-title h3">Latest Posts</h4>
+								<h4 class="widget-title h3">@lang('text.latest_posts')</h4>
 
 								<div>
 								@foreach($related_posts as $related_post)

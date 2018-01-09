@@ -2,7 +2,7 @@
     <div class="blog-item center-block">
         <div class="inner">
             <figure class="img-wrap">
-                <img class="img-responsive" src="@if($post->image){{ asset('/storage/'.$post->image) }}@endif" alt="{{ $post->getTranslatedAttribute('title', $locale) }}" />
+                <img class="img-responsive" src="@if($post->image){{ $post->image }}@endif" alt="{{ $post->getTranslatedAttribute('title', $locale) }}" />
             </figure>
 
             <a href="{{ route('visitor.blog.detail', $post->slug) }}"></a>
@@ -23,7 +23,7 @@
                 {{ $post->getTranslatedAttribute('excerpt', $locale) }}
             </p>
 
-            <a class="custom-btn medium dark-color" href="{{ route('visitor.blog.detail', $post->slug) }}" data-text="Continue Reading"><span>@lang('text.continue_reading')</span></a>
+            <a class="custom-btn medium dark-color" href="{{ route('visitor.blog.detail', $post->slug) }}" data-text="@lang('text.continue_reading')"><span>@lang('text.continue_reading')</span></a>
         </div>
     </div>
 </div>

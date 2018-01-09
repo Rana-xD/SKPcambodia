@@ -26,5 +26,11 @@ return [
     'blog_post' => '博客文章',
     'continue_reading' => '继续阅读',
     'details' => '细节',
-    'experience' => '我们的经验'
+    'experience' => '我们的经验',
+    'post_categories' => '发布类别',
+    'latest_posts' => '最新帖子',
+    'comments' => '注释',
+    'we_are_effective' => 'We Are Effective In',
+    'practice_areas' => 'Such Areas of Practices',
+    'meet_attorney' => 'ជួបជាមួយមេធាវីរបស់ពួកយើង'
 ];

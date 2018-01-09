@@ -26,5 +26,12 @@ return [
     'blog_post' => 'Blog Posts',
     'continue_reading' => 'Continue Reading',
     'details' => 'Details',
-    'experience' => 'Our Experiences'
+    'experience' => 'Our Experiences',
+    'post_categories' => 'Post Categories',
+    'latest_posts' => 'Latest Posts',
+    'comments' => 'Comments',
+    'we_are_effective' => 'We Are Effective In',
+    'practice_areas' => 'Such Areas of Practices',
+    'meet_attorney' => 'Meet Our Attorneys'
+
 ];
