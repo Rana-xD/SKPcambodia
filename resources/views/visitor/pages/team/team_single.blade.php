@@ -160,11 +160,7 @@
 								                	</div>
 								                	<div id="collapse{{ $i }}_reg" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
 								                  	<div class="panel-body">
-<<<<<<< HEAD
 														{!! $experience->description !!}
-=======
-														{!!$experience->description!!}
->>>>>>> 5b12c931d9f303b7c2994f91fe52f5403d9dff8d
 								                  	</div>
 								                	</div>
 								              	</div>
@@ -176,16 +172,16 @@
 									<div class="col-md-MB-30">
 										<div class="timeline">
 											<h4 class="h2">Awards and Achievements</h4>
-	                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('education', App::getLocale()))->data as $education)
+	                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('award', App::getLocale()))->data as $award)
 											<div class="item">
 												<i class="circled"></i>
 
 												<div class="inner">
-													<h4 class="title">{{ $education->title }}</h4>
+													<h4 class="title">{{ $award->title }}</h4>
 
-													<span class="date">{{ $education->year }}</span>
+													<span class="date">{{ $award->year }}</span>
 
-													<p>{{ $education->description }}</p>
+													<p>{{ $award->description }}</p>
 												</div>
 											</div>
 	                                        @endforeach
