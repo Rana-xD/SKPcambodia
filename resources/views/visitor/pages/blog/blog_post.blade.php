@@ -56,8 +56,6 @@
 
 									<span class="sep"></span>
 
-									<div class="fb-comments" data-href="http://104.236.61.61/blog/{{$post->slug}}" data-width="100%" data-numposts="5"></div>
-
 									<h4 class="h2">@lang('text.Your_message')</h4>
 
 									<form action="#">
