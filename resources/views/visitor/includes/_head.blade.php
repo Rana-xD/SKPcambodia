@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#C1AA81" />
 <meta name="msapplication-navbutton-color" content="#C1AA81" />
 <meta name="apple-mobile-web-app-status-bar-style" content="#C1AA81" />
-<meta property="fb:app_id" content="{1842814452671356}" />
+<meta property="fb:app_id" content="1842814452671356" />
 
 <!-- Favicons
 ================================================== -->
