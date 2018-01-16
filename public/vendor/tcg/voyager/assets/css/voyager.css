@@ -1411,3 +1411,16 @@ ul.checkbox label {
 .alerts .alert>ul {
   margin-top: 0;
 }
+
+.group-format{
+   box-shadow: 2px 2px 4px rgba(34, 34, 34, 0.12);
+   padding: 10px;
+}
+
+.input-format{
+   margin-bottom: 5px;
+}
+
+.input-format2{
+   border: 1px solid;
+}

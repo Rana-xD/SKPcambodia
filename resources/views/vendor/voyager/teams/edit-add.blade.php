@@ -90,7 +90,7 @@
                 </div><!-- .panel -->
 
                 <!-- ### QUOTE ### -->
-                <div class="panel">
+                <!--<div class="panel">
                     <div class="panel-heading">
                         <h3 class="panel-title">Quote</h3>
                         <div class="panel-actions">
@@ -104,12 +104,60 @@
                         ])
                         <textarea class="form-control" name="quote">@if(isset($dataTypeContent->quote)){{ old('quote', $dataTypeContent->quote) }}@elseif(isset($options->default)){{ old('quote', $options->default) }}@else{{ old('quote') }}@endif</textarea>
                     </div>
+                </div>-->
+
+                <!-- ### Educations ### -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="icon wb-clipboard"></i> Education</h3>
+                        <div class="panel-actions">
+                            <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+
+                        <input type="hidden" id="educationDataJson" name="education" value="@if(isset($dataTypeContent->education)){{ $dataTypeContent->education }}@endif">
+                        <div id="educationFormDiv">
+
+
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btnAddForm" data-form-type="education" type="button">
+                                Add More Education
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ### Experiences ### -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="icon wb-clipboard"></i> Experience</h3>
+                        <div class="panel-actions">
+                            <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <input type="hidden" id="experienceDataJson" name="experience" value="@if(isset($dataTypeContent->experience)){{ $dataTypeContent->experience }}@endif">
+                        <div id="experienceFormDiv">
+
+
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btnAddForm" data-form-type="experience" type="button">
+                                Add More Experience
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- ### Training ### -->
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Training</h3>
+                        <h3 class="panel-title">Trainings</h3>
                         <div class="panel-actions">
                             <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
                         </div>
@@ -132,7 +180,7 @@
                 <!-- ### REWARD ### -->
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Reward</h3>
+                        <h3 class="panel-title">Awards and Achievements</h3>
                         <div class="panel-actions">
                             <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
                         </div>
@@ -190,6 +238,14 @@
                             ])
                             <input type="text" class="form-control" name="fullname" placeholder="Fullname" value="@if(isset($dataTypeContent->fullname)){{ old('fullname', $dataTypeContent->fullname) }}@elseif(isset($options->default)){{ old('fullname', $options->default) }}@else{{ old('fullname') }}@endif">
                         </div>
+                        <div class="form-group ">
+                            <label for="name">Quote</label>
+                            @include('voyager::multilingual.input-hidden', [
+                            '_field_name'  => 'quote',
+                            '_field_trans' => get_field_translations($dataTypeContent, 'quote')
+                            ])
+                            <textarea class="form-control" name="quote">@if(isset($dataTypeContent->quote)){{ old('quote', $dataTypeContent->quote) }}@elseif(isset($options->default)){{ old('quote', $options->default) }}@else{{ old('quote') }}@endif</textarea>
+                        </div>
 
                         <!-- Featured image field -->
                         <div class="custom-form-group">
@@ -207,54 +263,6 @@
                                     @endif
                                 </div>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Experience -->
-                <div class="panel panel panel-bordered panel-warning">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><i class="icon wb-clipboard"></i> Experience</h3>
-                        <div class="panel-actions">
-                            <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <input type="hidden" id="experienceDataJson" name="experience" value="@if(isset($dataTypeContent->experience)){{ $dataTypeContent->experience }}@endif">
-                        <div id="experienceFormDiv">
-
-
-                        </div>
-
-                        <div class="form-group">
-                            <button class="btnAddForm" data-form-type="experience" type="button">
-                                Add More Experience
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="panel panel panel-bordered panel-warning">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><i class="icon wb-clipboard"></i> Education</h3>
-                        <div class="panel-actions">
-                            <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-
-                        <input type="hidden" id="educationDataJson" name="education" value="@if(isset($dataTypeContent->education)){{ $dataTypeContent->education }}@endif">
-                        <div id="educationFormDiv">
-
-
-                        </div>
-
-                        <div class="form-group">
-                            <button class="btnAddForm" data-form-type="education" type="button">
-                                Add More Education
-                            </button>
                         </div>
 
                     </div>
@@ -380,28 +388,32 @@
 @section('javascript')
 <script>
     var training_html_template =
-        '<div class="form-group">' +
-        '<input data-key="title" class="inputOnWatch training_title form-control" type="text" placeholder="Training title">' +
-        '<input data-key="year" class="inputOnWatch training_year form-control" type="text" placeholder="From year - until year">' +
-        '<textarea data-key="description" class="inputOnWatch training_desc form-control"></textarea>' +
+        '<div class="form-group group-format">' +
+        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+        '<div class="input-group input format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
+        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
         var award_html_template =
-        '<div class="form-group">' +
-        '<input data-key="title" class="inputOnWatch award_title form-control" type="text" placeholder="Award title">' +
-        '<input data-key="year" class="inputOnWatch award_year form-control" type="text" placeholder="From year - until year">' +
-        '<textarea data-key="description" class="inputOnWatch award_desc form-control"></textarea>' +
+        '<div class="form-group group-format">' +
+        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch award_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2"></textarea></div>' +
+        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
         var exp_html_template =
-        '<div class="form-group">' +
-        '<input data-key="title" class="inputOnWatch exp_title form-control" type="text" placeholder="Experience title">' +
-        '<input data-key="year" class="inputOnWatch exp_year form-control" type="text" placeholder="From year - until year">' +
-        '<textarea data-key="description" class="inputOnWatch exp_desc form-control"></textarea>' +
+        '<div class="form-group group-format">' +
+        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2"></textarea></div>' +
+        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
         var edu_html_template =
-        '<div class="form-group">' +
-        '<input data-key="title" class="inputOnWatch edu_title form-control" type="text" placeholder="Education title">' +
-        '<input data-key="year" class="inputOnWatch edu_year form-control" type="text" placeholder="From year - until year">' +
-        '<textarea data-key="description" class="inputOnWatch edu_desc form-control"></textarea>' +
+        '<div class="form-group group-format">' +
+        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch edu_title form-control input-format2" type="text" placeholder="Education title"></div>' +
+        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch edu_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch edu_desc form-control input-format2"></textarea></div>' +
+        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
 
         var email_html_template =
@@ -580,10 +592,11 @@
             var data = trainingsJSON.data;
             data.forEach(function(trainingRecord){
               $('#trainingFormDiv').append(
-                '<div class="form-group">' +
-                '<input value="'+ trainingRecord.title +'" data-key="title" class="inputOnWatch training_title form-control" type="text" placeholder="Training title">' +
-                '<input value="'+ trainingRecord.year +'" data-key="year" class="inputOnWatch training_year form-control" type="text" placeholder="From year - until year">' +
-                '<textarea data-key="description" class="inputOnWatch training_desc form-control">'+ trainingRecord.description +'</textarea>' +
+                '<div class="form-group group-format">' +
+                '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ trainingRecord.title +'" data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ trainingRecord.year +'" data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2">'+ trainingRecord.description +'</textarea></div>' +
+                '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
                 '</div>'
                 );
             });
@@ -596,10 +609,11 @@
             var data = awardsJSON.data;
             data.forEach(function(awardRecord){
                 $('#awardFormDiv').append(
-                '<div class="form-group">' +
-                '<input value="'+ awardRecord.title +'" data-key="title" class="inputOnWatch raward_title form-control" type="text" placeholder="Award title">' +
-                '<input value="'+ awardRecord.year +'" data-key="year" class="inputOnWatch award_year form-control" type="text" placeholder="From year - until year">' +
-                '<textarea data-key="description" class="inputOnWatch award_desc form-control">'+ awardRecord.description +'</textarea>' +
+                '<div class="form-group group-format">' +
+                '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ awardRecord.title +'" data-key="title" class="inputOnWatch raward_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ awardRecord.year +'" data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2">'+ awardRecord.description +'</textarea></div>' +
+                '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
                 '</div>'
                 );
             });
@@ -612,10 +626,11 @@
             var data = experiencesJSON.data;
             data.forEach(function(expRecord){
             $('#experienceFormDiv').append(
-            '<div class="form-group">' +
-            '<input value="'+ expRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control" type="text" placeholder="Experience title">' +
-            '<input value="'+ expRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control" type="text" placeholder="From year - until year">' +
-            '<textarea data-key="description" class="inputOnWatch exp_desc form-control">'+ expRecord.description +'</textarea>' +
+            '<div class="form-group group-format">' +
+            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ expRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ expRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ expRecord.description +'</textarea></div>' +
+            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
             '</div>'
             );
           });
@@ -628,10 +643,11 @@
             var data = educationsJSON.data;
                 data.forEach(function(eduRecord){
                 $('#educationFormDiv').append(
-                    '<div class="form-group">' +
-                    '<input value="'+ eduRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control" type="text" placeholder="Experience title">' +
-                    '<input value="'+ eduRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control" type="text" placeholder="From year - until year">' +
-                    '<textarea data-key="description" class="inputOnWatch exp_desc form-control">'+ eduRecord.description +'</textarea>' +
+                    '<div class="form-group group-format">' +
+                    '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ eduRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+                    '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ eduRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                    '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ eduRecord.description +'</textarea></div>' +
+                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
                     '</div>'
                 );
             });

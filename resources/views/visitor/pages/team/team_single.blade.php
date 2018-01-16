@@ -121,16 +121,16 @@
 								<div class="col-md-MB-30">
 									<div class="timeline">
 										<h4 class="h2">Trainings</h4>
-                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('education', App::getLocale()))->data as $education)
+                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('training', App::getLocale()))->data as $training)
 										<div class="item">
 											<i class="circled"></i>
 
 											<div class="inner">
-												<h4 class="title">{{ $education->title }}</h4>
+												<h4 class="title">{{ $training->title }}</h4>
 
-												<span class="date">{{ $education->year }}</span>
+												<span class="date">{{ $training->year }}</span>
 
-												<p>{!! $education->description !!}</p>
+												<p>{!! $training->description !!}</p>
 											</div>
 										</div>
                                         @endforeach
