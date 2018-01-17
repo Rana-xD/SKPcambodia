@@ -32,7 +32,7 @@ Route::group(['middleware' =>'locale'],function(){
 });
 
 Route::get('locale/{localeId?}','LocaleController@locales');
-Route::get('/storage/uploads/files/{date}/{path}/PDF','System@downloadpdf');
+Route::get('PDF/storage/uploads/files/{date}/{path}','System@downloadpdf');
 Route::post('mail','System@sendmail');
 
 
