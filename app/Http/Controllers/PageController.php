@@ -68,7 +68,10 @@ class PageController extends Controller
         $top_left_content = Content::where('position', 1)->first();
         $welcome_content = Content::where('position', 2)->first();
         $quote_content = Content::where('position', 3)->first();
-        $quotes = Team::take(4)->get();
+        $quotes = Team::select('fullname','quote','position','profile_pic')->where('quote','<>','')->take(4)->with(['translations' => function ($query) use ($locale, $fallback_locale) {
+          $query->where('locale', $locale)
+                ->orWhere('locale', $fallback_locale);
+      }])->get();
         return view('visitor.index')->with([
           'sliders' => $sliders,
           // 'partners' => $partners,
