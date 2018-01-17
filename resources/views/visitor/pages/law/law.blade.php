@@ -101,7 +101,7 @@
 										 <div class="panel-body">
 											 @foreach ($left->files as $file)
 											 <li class="file-item">
-												 <a class="download" href="PDF/{{ $file->file_url }}"><i class="fa fa-download"></i></a>
+												 <a class="download" href="PDF{{ $file->file_url }}"><i class="fa fa-download"></i></a>
 												 <a class="view" href="{{ $file->file_url }}" target="_blank">{{ $file->name }}.pdf</a>
 											 </li>
 											 @endforeach
