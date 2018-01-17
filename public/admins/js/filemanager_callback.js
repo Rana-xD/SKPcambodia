@@ -47,6 +47,7 @@ function responsive_filemanager_callback(field_id) {
             fileUrl = $('#' + field_id).val();
             file_name = fileUrl.split('\\').pop().split('/').pop();
             filename = file_name.substring(0, file_name.lastIndexOf('.'));
+            
             $('.form-edit-add input[name="name"]').val(filename);
             break;
 
