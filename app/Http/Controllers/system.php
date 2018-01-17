@@ -13,7 +13,7 @@ class System extends Controller
 {
     public function downloadpdf($date,$path)
     {
-        $pathToFile = 'storage/law-files/'.$date.'/'.$path;
+        $pathToFile = 'storage/uploads/files/'.$date.'/'.$path;
         return response()->download($pathToFile);
     }
     public function sendmail(Request $request)
