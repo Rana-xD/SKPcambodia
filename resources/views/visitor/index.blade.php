@@ -131,7 +131,7 @@
 									<li class="slide">
 										<div class="text">
 											<p>
-												{{$quote->quote}}
+												{{ $quote->getTranslatedAttribute('quote', App::getLocale()) }}
 											</p>
 										</div>
 
@@ -142,8 +142,8 @@
 												</div>
 
 												<div class="cell v-middle">
-													<h3 class="name">{{ $quote->fullname }}</h3>
-                                                     @foreach(json_decode($quote->position)->data as $pos)
+													<h3 class="name">{{ $quote->getTranslatedAttribute('fullname', App::getLocale()) }}</h3>
+                                                     @foreach(json_decode($quote->getTranslatedAttribute('position', App::getLocale()))->data as $pos)
 													<h5 class="position">{{ $pos }}</h5>
 													 @endforeach
 												</div>
