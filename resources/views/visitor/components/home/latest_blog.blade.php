@@ -1,7 +1,7 @@
 <section class="section transparent">
     <div class="container">
         <div class="s-title">
-            <h2>Latest Blog Posts</h2>
+            <h2>@lang('text.latest_posts')</h2>
             <p>Get the latest information, insights, announcements, and news from SK &amp; P Cambodia Law Group experts through our blog posts.</p>
         </div>
 
@@ -34,7 +34,7 @@
                                     {{ $post->getTranslatedAttribute('excerpt', $locale) }}
                                 </p>
 
-                                <a class="custom-btn medium dark-color" href="{{ route('visitor.blog.detail', $post->slug) }}" data-text="Continue Reading"><span>@lang('text.continue_reading')</span></a>
+                                <a class="custom-btn medium dark-color" href="{{ route('visitor.blog.detail', $post->slug) }}" data-text="@lang('text.continue_reading')"><span>@lang('text.continue_reading')</span></a>
                             </div>
                         </div>
                     </div>

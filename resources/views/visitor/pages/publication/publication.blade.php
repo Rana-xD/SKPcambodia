@@ -46,7 +46,7 @@
 				@foreach ($result as $info)
 					<div class="col-xs-12 col-sm-6 col-md-3 book">
 						<div class="book-img">
-								<img src="{{ $info->featured_image }}" alt="demo" />
+								<a href="{{ $info->file_url }}" target="_blank"><img src="{{ $info->featured_image }}" alt="demo" /></a>
 						</div>
 						<div class="description">
 							<h3 class="h4 title center"><a href="{{ $info->file_url }}" target="_blank">{{ $info->getTranslatedAttribute('title', App::getLocale()) }}</a></h3>
