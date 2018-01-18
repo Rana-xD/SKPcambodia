@@ -389,41 +389,43 @@
 <script>
     var training_html_template =
         '<div class="form-group group-format">' +
-        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
-        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-        '<div class="input-group input format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
-        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
+            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+            '<div class="input-group input format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
+            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
         var award_html_template =
         '<div class="form-group group-format">' +
-        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch award_title form-control input-format2" type="text" placeholder="Award title"></div>' +
-        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2"></textarea></div>' +
-        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
+            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch award_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2"></textarea></div>' +
+            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
         var exp_html_template =
         '<div class="form-group group-format">' +
-        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
-        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2"></textarea></div>' +
-        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
+            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2"></textarea></div>' +
+            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
         var edu_html_template =
         '<div class="form-group group-format">' +
-        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch edu_title form-control input-format2" type="text" placeholder="Education title"></div>' +
-        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch edu_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch edu_desc form-control input-format2"></textarea></div>' +
-        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
+            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch edu_title form-control input-format2" type="text" placeholder="Education title"></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch edu_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch edu_desc form-control input-format2"></textarea></div>' +
+            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
 
         var email_html_template =
         '<div class="form-group">' +
-        '<input data-key="email" class="inputOnWatch email_input form-control" type="text" placeholder="Email address">' +
+            '<input data-key="email" class="inputOnWatch email_input form-control" type="text" placeholder="Email address">' +
+            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
 
         var position_html_template =
         '<div class="form-group">' +
-        '<input data-key="position" class="inputOnWatch position_input form-control" type="text" placeholder="Position">' +
+            '<input data-key="position" class="inputOnWatch position_input form-control" type="text" placeholder="Position">' +
+            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
 
     $('document').ready(function () {
@@ -460,6 +462,10 @@
                 default:
                     break;
             }
+        });
+
+        $('.btnRemoveFormGroup').on('click', function (e) {
+            $(this).parents('.form-group')[0].remove();
         });
 
         $('#formAddEdit').on('submit', function(e){
@@ -593,10 +599,10 @@
             data.forEach(function(trainingRecord){
               $('#trainingFormDiv').append(
                 '<div class="form-group group-format">' +
-                '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ trainingRecord.title +'" data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
-                '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ trainingRecord.year +'" data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-                '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2">'+ trainingRecord.description +'</textarea></div>' +
-                '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
+                    '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ trainingRecord.title +'" data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+                    '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ trainingRecord.year +'" data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                    '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2">'+ trainingRecord.description +'</textarea></div>' +
+                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
                 '</div>'
                 );
             });
@@ -610,10 +616,10 @@
             data.forEach(function(awardRecord){
                 $('#awardFormDiv').append(
                 '<div class="form-group group-format">' +
-                '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ awardRecord.title +'" data-key="title" class="inputOnWatch raward_title form-control input-format2" type="text" placeholder="Award title"></div>' +
-                '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ awardRecord.year +'" data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-                '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2">'+ awardRecord.description +'</textarea></div>' +
-                '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
+                    '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ awardRecord.title +'" data-key="title" class="inputOnWatch raward_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+                    '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ awardRecord.year +'" data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                    '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2">'+ awardRecord.description +'</textarea></div>' +
+                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
                 '</div>'
                 );
             });
@@ -627,10 +633,10 @@
             data.forEach(function(expRecord){
             $('#experienceFormDiv').append(
             '<div class="form-group group-format">' +
-            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ expRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ expRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ expRecord.description +'</textarea></div>' +
-            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
+                '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ expRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ expRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ expRecord.description +'</textarea></div>' +
+                '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
             '</div>'
             );
           });
@@ -644,10 +650,10 @@
                 data.forEach(function(eduRecord){
                 $('#educationFormDiv').append(
                     '<div class="form-group group-format">' +
-                    '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ eduRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
-                    '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ eduRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-                    '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ eduRecord.description +'</textarea></div>' +
-                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete"><i class="voyager-trash"></i> Delete</button></div>'+
+                        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ eduRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+                        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ eduRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ eduRecord.description +'</textarea></div>' +
+                        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
                     '</div>'
                 );
             });
@@ -669,7 +675,8 @@
             data.forEach(function(email){
                 $('#emailFormDiv').append(
                 '<div class="form-group">' +
-                '<input value="'+ email +'" data-key="email" class="inputOnWatch email_input form-control" type="text" placeholder="Email address">' +
+                    '<input value="'+ email +'" data-key="email" class="inputOnWatch email_input form-control" type="text" placeholder="Email address">' +
+                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
                 '</div>'
                 );
             });
@@ -691,7 +698,8 @@
             data.forEach(function(position){
                 $('#positionFormDiv').append(
                 '<div class="form-group">' +
-                '<input value="'+ position +'" data-key="position" class="inputOnWatch email_input form-control" type="text" placeholder="Email address">' +
+                    '<input value="'+ position +'" data-key="position" class="inputOnWatch email_input form-control" type="text" placeholder="Email address">' +
+                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
                 '</div>'
                 );
             });
