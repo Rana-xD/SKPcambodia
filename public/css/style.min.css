@@ -3745,6 +3745,7 @@ main form button[type=submit] {
 }
 .services-container.services-style-4 .service-item .title {
     color: #fff;
+    padding-top: 10px;
 }
 .services-container.services-style-5 {
     background-color: #c1aa81;
@@ -5411,7 +5412,8 @@ main form button[type=submit] {
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05)
 }
 .panel-body {
-    padding: 15px
+    padding: 15px;
+    white-space: pre-line;
 }
 .panel-body li{
     text-decoration: none;

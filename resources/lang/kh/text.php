@@ -28,9 +28,13 @@ return [
     'details' => 'ព័ត៌មានលំអិត',
     'experience' => 'បទពិសោធន៍របស់ពួកយើង',
     'post_categories' => 'ប្រភេទអត្ថបទ',
-    'latest_posts' => 'អត្ថបទថ្មីៗ',
+    'latest_posts' => 'អត្ថបទប្លុកថ្មីៗ',
     'comments' => 'មតិយោបល់',
     'we_are_effective' => 'យើងមានសក្តានុពលនៅក្នុង',
     'practice_areas' => 'វិស័យនៃការអនុវត្តដូចខាងក្រោម',
-    'meet_attorney' => 'ជួបជាមួយមេធាវីរបស់ពួកយើង'
+    'meet_attorney' => 'ជួបជាមួយមេធាវីរបស់ពួកយើង',
+    'education' => 'ប្រវត្តិ​នៃ​ការសិក្សា',
+    'professional_experiences' => 'បទពិសោធន៍វិជ្ជាជីវៈ',
+    'trainings' => 'បទពិសោធន៍បណ្តុះបណ្តាល',
+    'awards_achievements' => 'ពានរង្វាន់និងស្នាដៃ'
 ];

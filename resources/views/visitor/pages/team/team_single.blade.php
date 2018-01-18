@@ -50,7 +50,7 @@
 										<div class="row">
 											<div class="col-xs-12 col-md-6">
 												<div class="col-md-MB-20">
-													<h4>Contact</h4>
+													<h4>@lang('text.contact_information')</h4>
 
 													{{--  N0: 220 Eo, Street 156, Sangkat Tuklaak II, Khan Toulkok, Phnom Penh<br />  --}}
 													@if(json_decode($teamsingle->contact)->data->tel)
@@ -67,7 +67,7 @@
 
 											<div class="col-xs-12 col-md-6">
 												<div class="col-md-MB-20">
-													<h4>Email</h4>
+													<h4>@lang('text.Email')</h4>
 													@foreach(json_decode($teamsingle->email)->data as $email)
 													<strong><a href="mailto:{{ $email }}">{{ $email }}</a></strong><br />
 													@endforeach
@@ -102,7 +102,7 @@
 							<div class="col-xs-12 col-md-6">
 								<div class="col-md-MB-30">
 									<div class="timeline">
-										<h4 class="h2">Educations</h4>
+										<h4 class="h2">@lang('text.educations')</h4>
                                         @foreach(json_decode($teamsingle->getTranslatedAttribute('education', App::getLocale()))->data as $education)
 										<div class="item">
 											<i class="circled"></i>
@@ -120,7 +120,7 @@
 								</div>
 								<div class="col-md-MB-30">
 									<div class="timeline">
-										<h4 class="h2">Trainings</h4>
+										<h4 class="h2">@lang('text.trainings')</h4>
                                         @foreach(json_decode($teamsingle->getTranslatedAttribute('training', App::getLocale()))->data as $training)
 										<div class="item">
 											<i class="circled"></i>
@@ -141,7 +141,7 @@
 							<div class="col-xs-12 col-md-6">
 								<div class="col-md-MB-30">
 									<div class="timeline">
-										<h4 class="h2">Professional experiences</h4>
+										<h4 class="h2">@lang('text.professional_experiences')</h4>
 
 											<div class="panel-group" id="accordion_reg" role="tablist" aria-multiselectable="true">
 												@foreach(json_decode($teamsingle->getTranslatedAttribute('experience', App::getLocale()))->data as $experience)
@@ -158,7 +158,7 @@
 								                    		</a>
 								                  	</h4>
 								                	</div>
-								                	<div id="collapse{{ $i }}_reg" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
+								                	<div id="collapse{{ $i }}_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
 								                  	<div class="panel-body">
 														{!! $experience->description !!}
 								                  	</div>
@@ -171,7 +171,7 @@
 									</div>
 									<div class="col-md-MB-30">
 										<div class="timeline">
-											<h4 class="h2">Awards and Achievements</h4>
+											<h4 class="h2">@lang('text.awards_achievements')</h4>
 	                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('award', App::getLocale()))->data as $award)
 											<div class="item">
 												<i class="circled"></i>

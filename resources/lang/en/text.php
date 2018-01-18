@@ -28,10 +28,13 @@ return [
     'details' => 'Details',
     'experience' => 'Our Experiences',
     'post_categories' => 'Post Categories',
-    'latest_posts' => 'Latest Posts',
+    'latest_posts' => 'Latest Blog Posts',
     'comments' => 'Comments',
     'we_are_effective' => 'We Are Effective In',
     'practice_areas' => 'Such Areas of Practices',
-    'meet_attorney' => 'Meet Our Attorneys'
-
+    'meet_attorney' => 'Meet Our Attorneys',
+    'educations' => 'Educations',
+    'professional_experiences' => 'Professional Experiences',
+    'trainings' => 'Trainings',
+    'awards_achievements' => 'Awards and Achievements'
 ];
