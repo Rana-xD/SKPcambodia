@@ -216,7 +216,6 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <!--
                         <div class="form-group ">
                             <label for="name">Firstname</label>
                             @include('voyager::multilingual.input-hidden', [
@@ -232,7 +231,7 @@
                             '_field_trans' => get_field_translations($dataTypeContent, 'lastname')
                             ])
                             <input type="text" class="form-control" name="lastname" placeholder="Lastname" value="@if(isset($dataTypeContent->lastname)){{ old('lastname', $dataTypeContent->lastname) }}@elseif(isset($options->default)){{ old('lastname', $options->default) }}@else{{ old('lastname') }}@endif">
-                        </div> -->
+                        </div>
                         <div class="form-group ">
                             <label for="name">Full Name</label>
                             @include('voyager::multilingual.input-hidden', [
