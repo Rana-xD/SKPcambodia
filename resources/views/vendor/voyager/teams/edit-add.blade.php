@@ -394,7 +394,7 @@
         '<div class="form-group group-format">' +
             '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
             '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-            '<div class="input-group input format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
             '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
         var award_html_template =
