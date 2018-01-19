@@ -52,6 +52,9 @@
     overflow-x: hidden;
     min-height: 100%;
 }
+.quote{
+   height: 100px;
+}
 </style>
 @stop
 
@@ -102,7 +105,7 @@
                         '_field_name'  => 'quote',
                         '_field_trans' => get_field_translations($dataTypeContent, 'quote')
                         ])
-                        <textarea class="form-control" name="quote">@if(isset($dataTypeContent->quote)){{ old('quote', $dataTypeContent->quote) }}@elseif(isset($options->default)){{ old('quote', $options->default) }}@else{{ old('quote') }}@endif</textarea>
+                        <textarea class="form-control quote" name="quote">@if(isset($dataTypeContent->quote)){{ old('quote', $dataTypeContent->quote) }}@elseif(isset($options->default)){{ old('quote', $options->default) }}@else{{ old('quote') }}@endif</textarea>
                     </div>
                 </div>-->
 
@@ -213,7 +216,6 @@
                         </div>
                     </div>
                     <div class="panel-body">
-
                         <div class="form-group ">
                             <label for="name">Firstname</label>
                             @include('voyager::multilingual.input-hidden', [
@@ -231,7 +233,7 @@
                             <input type="text" class="form-control" name="lastname" placeholder="Lastname" value="@if(isset($dataTypeContent->lastname)){{ old('lastname', $dataTypeContent->lastname) }}@elseif(isset($options->default)){{ old('lastname', $options->default) }}@else{{ old('lastname') }}@endif">
                         </div>
                         <div class="form-group ">
-                            <label for="name">Fullname</label>
+                            <label for="name">Full Name</label>
                             @include('voyager::multilingual.input-hidden', [
                             '_field_name'  => 'fullname',
                             '_field_trans' => get_field_translations($dataTypeContent, 'fullname')
@@ -337,13 +339,13 @@
                         <input type="hidden" id="contactDataJson" class="form-control" name="contact" placeholder="Contact" value="@if(isset($dataTypeContent->contact)){{ old('contact', $dataTypeContent->contact) }}@elseif(isset($options->default)){{ old('contact', $options->default) }}@else{{ old('contact') }}@endif">
                         <div id="contactFormDiv">
                             <div class="form-group">
-                                <input data-key="tel" class="inputOnWatch contact_tel form-control" type="text" placeholder="Telephone number">
+                                <div class="input-group input-format"><span class="input-group-addon">Tel:</span><input data-key="tel" class="inputOnWatch contact_tel form-control input-format2" type="text" placeholder="Telephone number"></div>
                             </div>
                             <div class="form-group">
-                                <input data-key="hp" class="inputOnWatch contact_hp form-control" type="text" placeholder="H/P number">
+                                <div class="input-group input-format"><span class="input-group-addon">H/P:</span><input data-key="hp" class="inputOnWatch contact_hp form-control input-format2" type="text" placeholder="H/P number"></div>
                             </div>
                             <div class="form-group">
-                                <input data-key="fax" class="inputOnWatch contact_fax form-control" type="text" placeholder="Fax number">
+                                <div class="input-group input-format"><span class="input-group-addon">Fax:</span><input data-key="fax" class="inputOnWatch contact_fax form-control input-format2" type="text" placeholder="Fax number"></div>
                             </div>
                         </div>
                     </div>
@@ -391,7 +393,7 @@
         '<div class="form-group group-format">' +
             '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
             '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-            '<div class="input-group input format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
+            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
             '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
         var award_html_template =
@@ -418,14 +420,14 @@
 
         var email_html_template =
         '<div class="form-group">' +
-            '<input data-key="email" class="inputOnWatch email_input form-control" type="text" placeholder="Email address">' +
-            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
+            '<div class="input-group"><input data-key="email" class="inputOnWatch email_input form-control input-format" type="text" placeholder="Email address">' +
+            '<span class="input-group-addon btnRemoveFormGroup" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
         '</div>';
 
         var position_html_template =
         '<div class="form-group">' +
-            '<input data-key="position" class="inputOnWatch position_input form-control" type="text" placeholder="Position">' +
-            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
+            '<div class="input-group"><input data-key="position" class="inputOnWatch position_input form-control input-format" type="text" placeholder="Position">' +
+            '<span class="input-group-addon btnRemoveFormGroup" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
         '</div>';
 
     $('document').ready(function () {
@@ -464,9 +466,13 @@
             }
         });
 
-        $('.btnRemoveFormGroup').on('click', function (e) {
-            $(this).parents('.form-group')[0].remove();
-        });
+        $(document).on('click', '.btnRemoveFormGroup', function() {
+             $(this).parents('.form-group')[0].remove();
+         });
+
+        // $('.btnRemoveFormGroup').on('click', function (e) {
+        //     $(this).parents('.form-group')[0].remove();
+        // });
 
         $('#formAddEdit').on('submit', function(e){
             e.preventDefault();
@@ -675,8 +681,8 @@
             data.forEach(function(email){
                 $('#emailFormDiv').append(
                 '<div class="form-group">' +
-                    '<input value="'+ email +'" data-key="email" class="inputOnWatch email_input form-control" type="text" placeholder="Email address">' +
-                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
+                    '<div class="input-group"><input value="'+ email +'" data-key="email" class="inputOnWatch email_input form-control input-format" type="text" placeholder="Email address">' +
+                    '<span class="input-group-addon btnRemoveFormGroup" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
                 '</div>'
                 );
             });
@@ -698,8 +704,8 @@
             data.forEach(function(position){
                 $('#positionFormDiv').append(
                 '<div class="form-group">' +
-                    '<input value="'+ position +'" data-key="position" class="inputOnWatch email_input form-control" type="text" placeholder="Email address">' +
-                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
+                    '<div class="input-group"><input value="'+ position +'" data-key="position" class="inputOnWatch position_input form-control input-format" type="text" placeholder="Email address">' +
+                    '<span class="input-group-addon btnRemoveFormGroup" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
                 '</div>'
                 );
             });

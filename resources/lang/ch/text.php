@@ -33,7 +33,7 @@ return [
     'we_are_effective' => 'We Are Effective In',
     'practice_areas' => 'Such Areas of Practices',
     'meet_attorney' => 'ជួបជាមួយមេធាវីរបស់ពួកយើង',
-    'education' => 'Educations',
+    'educations' => 'Educations',
     'professional_experiences' => 'Professional Experiences',
     'trainings' => 'Trainings',
     'awards_achievements' => 'Awards and Achievements'
