@@ -100,6 +100,7 @@
 
 						<div class="row">
 							<div class="col-xs-12 col-md-6">
+							    @if(json_decode($teamsingle->education)->data)
 								<div class="col-md-MB-30">
 									<div class="timeline">
 										<h4 class="h2">@lang('text.educations')</h4>
@@ -118,6 +119,8 @@
                                         @endforeach
 									</div>
 								</div>
+								@endif
+								@if(json_decode($teamsingle->training)->data)
 								<div class="col-md-MB-30">
 									<div class="timeline">
 										<h4 class="h2">@lang('text.trainings')</h4>
@@ -136,9 +139,11 @@
                                         @endforeach
 									</div>
 								</div>
+								@endif
 							</div>
 
 							<div class="col-xs-12 col-md-6">
+								@if(json_decode($teamsingle->experience)->data)
 								<div class="col-md-MB-30">
 									<div class="timeline">
 										<h4 class="h2">@lang('text.professional_experiences')</h4>
@@ -169,6 +174,8 @@
 												</div>
 							            </div>
 									</div>
+									@endif
+									@if(json_decode($teamsingle->award)->data)
 									<div class="col-md-MB-30">
 										<div class="timeline">
 											<h4 class="h2">@lang('text.awards_achievements')</h4>
@@ -187,7 +194,7 @@
 	                                        @endforeach
 										</div>
 									</div>
-
+								@endif
 								</div>
 							</div>
 						</div>
