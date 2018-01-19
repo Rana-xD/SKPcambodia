@@ -337,13 +337,13 @@
                         <input type="hidden" id="contactDataJson" class="form-control" name="contact" placeholder="Contact" value="@if(isset($dataTypeContent->contact)){{ old('contact', $dataTypeContent->contact) }}@elseif(isset($options->default)){{ old('contact', $options->default) }}@else{{ old('contact') }}@endif">
                         <div id="contactFormDiv">
                             <div class="form-group">
-                                <input data-key="tel" class="inputOnWatch contact_tel form-control" type="text" placeholder="Telephone number">
+                                <div class="input-group input-format"><span class="input-group-addon">Tel:</span><input data-key="tel" class="inputOnWatch contact_tel form-control input-format2" type="text" placeholder="Telephone number"></div>
                             </div>
                             <div class="form-group">
-                                <input data-key="hp" class="inputOnWatch contact_hp form-control" type="text" placeholder="H/P number">
+                                <div class="input-group input-format"><span class="input-group-addon">H/P:</span><input data-key="hp" class="inputOnWatch contact_hp form-control input-format2" type="text" placeholder="H/P number"></div>
                             </div>
                             <div class="form-group">
-                                <input data-key="fax" class="inputOnWatch contact_fax form-control" type="text" placeholder="Fax number">
+                                <div class="input-group input-format"><span class="input-group-addon">Fax:</span><input data-key="fax" class="inputOnWatch contact_fax form-control input-format2" type="text" placeholder="Fax number"></div>
                             </div>
                         </div>
                     </div>
