@@ -58,7 +58,7 @@
 											</div> -->
 										</div>
 
-										<h3 class="name"><a href="teamsingle/{{ $team->fullname }}">{{ $team->fullname }}</a></h3>
+										<h3 class="name"><a href="teamsingle/{{ $team->fullname }}">{{ $team->getTranslatedAttribute('fullname', App::getLocale()) }}</a></h3>
 										@foreach(json_decode($team->getTranslatedAttribute('position', App::getLocale()))->data as $pos)
 										<h5 class="position">{{ $pos }}<br/></h5>
 										@endforeach
