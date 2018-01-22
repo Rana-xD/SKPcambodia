@@ -77,16 +77,16 @@
 
 										<div class="social-btns style-1">
 											@if(json_decode($teamsingle->social_media)->data->facebook)
-											<a class="icon-facebook" href="{{ json_decode($teamsingle->social_media)->data->facebook }}" target="_blank"></a>
+											<a class="fa social fa-facebook" href="{{ json_decode($teamsingle->social_media)->data->facebook }}" target="_blank"></a>
 											@endif
 											@if(json_decode($teamsingle->social_media)->data->twitter)
-											<a class="icon-twitter" href="{{ json_decode($teamsingle->social_media)->data->twitter }}" target="_blank"></a>
+											<a class="fa social fa-twitter" href="{{ json_decode($teamsingle->social_media)->data->twitter }}" target="_blank"></a>
 											@endif
 											@if(json_decode($teamsingle->social_media)->data->linkedin)
-											<a class="icon-linkedin" href="{{ json_decode($teamsingle->social_media)->data->linkedin }}" target="_blank"></a>
+											<a class="fa social fa-linkedin" href="{{ json_decode($teamsingle->social_media)->data->linkedin }}" target="_blank"></a>
 											@endif
 											@if(json_decode($teamsingle->social_media)->data->gplus)
-											<a class="icon-gplus" href="{{ json_decode($teamsingle->social_media)->data->gplus }}" target="_blank"></a>
+											<a class="fa social fa-google" href="{{ json_decode($teamsingle->social_media)->data->gplus }}" target="_blank"></a>
 											@endif
 										</div>
 										<div>

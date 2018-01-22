@@ -56,6 +56,8 @@
 
 									<span class="sep"></span>
 
+									<div id="share"></div>
+
 									<h4 class="h2">@lang('text.Your_message')</h4>
 
 									<form action="#">
@@ -237,6 +239,10 @@
 @endpush
 @section('scripts')
 <script>
+	$("#share").jsSocials({
+				shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+		  });
+
 	$(document).ready(function(){
 	});
 </script>
