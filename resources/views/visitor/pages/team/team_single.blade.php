@@ -165,7 +165,7 @@
 								                	</div>
 														@if ($experience->description)
 															<div id="collapse{{ $i }}_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
-									                  	<div class="panel-body">
+									                  	<div class="panel-body pre-line">
 															{!! $experience->description !!}
 									                  	</div>
 									                	</div>

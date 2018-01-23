@@ -5413,7 +5413,6 @@ main form button[type=submit] {
 }
 .panel-body {
     padding: 15px;
-    white-space: pre-line;
 }
 .panel-body li{
     text-decoration: none;
@@ -5518,4 +5517,8 @@ main form button[type=submit] {
 .fa-linkedin {
   background: #007bb5;
   color: white !important;
+}
+
+.pre-line{
+   white-space: pre-line !important;
 }

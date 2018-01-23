@@ -33,8 +33,9 @@
 
 					<div class="team-container team-four-columns team-style-2">
 						<div class="team-container--inner">
+							@foreach ($teams->chunk(4) as $team_contents)
 							<div class="row">
-								@foreach($teams as $team)
+								@foreach($team_contents as $team)
 								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 									<div class="team-item center-block">
 										<div class="inner">
@@ -66,6 +67,7 @@
 								</div>
 								@endforeach
 							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>
