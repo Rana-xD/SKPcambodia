@@ -159,15 +159,18 @@
 								                  	<h4 class="panel-title">
 								                    		<a role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapse{{ $i }}_reg" aria-expanded="false" aria-controls="collapse{{ $i }}_reg">
 																	<h4 class="title">{{$experience->title}}</h4>
-	  		 														<span class="date">{{$experience->year}}<i class="fa fa-chevron-down pull-right"></i></span>
+	  		 														<span class="date">{{$experience->year}}@if ($experience->description)<i class="fa fa-chevron-down pull-right"></i>@endif</span>
 								                    		</a>
 								                  	</h4>
 								                	</div>
-								                	<div id="collapse{{ $i }}_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
-								                  	<div class="panel-body">
-														{!! $experience->description !!}
-								                  	</div>
-								                	</div>
+														@if ($experience->description)
+															<div id="collapse{{ $i }}_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
+									                  	<div class="panel-body">
+															{!! $experience->description !!}
+									                  	</div>
+									                	</div>
+														@endif
+
 								              	</div>
 												</div>
 												@endforeach
