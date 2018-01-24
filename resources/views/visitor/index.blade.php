@@ -70,7 +70,7 @@
 
 													<p>
 														{{ $service->getTranslatedAttribute('excerpt', $locale) }}
-														<a class="more" href="/services#s-services">...more</a>
+														<a class="more" href="/services#article{{$service->id}}">...more</a>
 													</p>
 												</div>
 											</div>

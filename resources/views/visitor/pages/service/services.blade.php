@@ -119,8 +119,8 @@
 						    	<div class="col-md-5" >
 									<ul class="list-group nav" role="tablist">
 			                @foreach($services as $key => $service)
-			                        <a href="#article{{ $service->id }}" data-toggle="tab" aria-controls="article{{ $service->id }}" role="tab" >
-												<li class="list-group-item @if($key==0){{ 'selected' }}@endif">
+			                        <a id="title_article{{ $service->id }}" href="#article{{ $service->id }}" data-toggle="tab" aria-controls="article{{ $service->id }}" role="tab" >
+												<li class="list-group-item">
 			      								<p class="title-training">{{ $service->getTranslatedAttribute('title', $locale) }}</p>
 			                           </li>
 											</a>
@@ -129,7 +129,7 @@
 								</div>
 								<div class="col-md-6 tab-content">
 			            	@foreach($services as $key=> $service)
-									<div role="tabpanel" class="tab-pane @if($key==0){{ 'active' }}@endif" id="article{{$service->id}}">
+									<div role="tabpanel" class="tab-pane" id="article{{$service->id}}">
 										<article class="panel-default">
 											<div class="panel-body">
 												<div class="row">
@@ -204,5 +204,20 @@
             $(this).addClass('selected');
          });
       });
+		$(document).ready(function() {
+		    var idToToggle = window.location.hash.replace("#","");
+			 if(idToToggle==""){
+				 $('#title_article1 li').addClass('selected');
+   		    $("#article1" ).addClass('active');
+			 }else{
+				 $('html,body').animate({
+				  scrollTop: $("#s-services").offset().top
+				});
+				 $('#title_' + idToToggle+' li').addClass('selected');
+   		    $("#"+idToToggle ).addClass('active');
+			 }
+
+				// window.scrollTo(0, 0);
+		});
 	</script>
 	@endsection
