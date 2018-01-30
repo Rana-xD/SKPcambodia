@@ -612,9 +612,10 @@
                 '</div>'
                 );
             });
-        }else{
-            $('#trainingFormDiv').append(training_html_template);
         }
+        // else{
+        //     $('#trainingFormDiv').append(training_html_template);
+        // }
 
         // Render reward
         if(awardsJSON.hasOwnProperty("data")){
@@ -629,9 +630,10 @@
                 '</div>'
                 );
             });
-        }else{
-            $('#awardFormDiv').append(award_html_template);
         }
+        // else{
+        //     $('#awardFormDiv').append(award_html_template);
+        // }
 
         // Render experiences
         if(experiencesJSON.hasOwnProperty("data")){
@@ -646,9 +648,10 @@
             '</div>'
             );
           });
-        }else{
-            $('#experienceFormDiv').append(exp_html_template);
         }
+        // else{
+        //     $('#experienceFormDiv').append(exp_html_template);
+        // }
 
         // Render educations
         if(educationsJSON.hasOwnProperty("data")){
@@ -663,9 +666,10 @@
                     '</div>'
                 );
             });
-        }else{
-            $('#educationFormDiv').append(edu_html_template);
         }
+        // else{
+        //     $('#educationFormDiv').append(edu_html_template);
+        // }
 
         // Render socials
         if(socialsJSON.hasOwnProperty("data")){
