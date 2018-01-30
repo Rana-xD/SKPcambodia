@@ -36,7 +36,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-md-8 col-lg-9">
 						<div id="single-post--container">
-							<img class="img-responsive" src="@if($post->image){{ asset('/storage/'.$post->image) }}@endif" alt="{{ $post->getTranslatedAttribute('title', $locale) }}">
+							<img class="img-responsive" src="@if($post->image){{ $post->image }}@endif" alt="{{ $post->getTranslatedAttribute('title', $locale) }}">
 
 							<div class="row">
 								<div class="col-xs-12 col-md-11">
@@ -128,7 +128,7 @@
 								@foreach($related_posts as $related_post)
 									<article class="clearfix">
 										<a class="link" href="{{ route('visitor.blog.detail', $related_post->slug) }}">
-											<img src="@if($post->image){{ asset('/storage/'.$post->related_post) }}@endif" alt="{{ $post->getTranslatedAttribute('title', $locale) }}" />
+											<img src="@if($post->image){{ $post->related_post }}@endif" alt="{{ $related_post->getTranslatedAttribute('title', $locale) }}" />
 										</a>
 
 										<div class="inner">

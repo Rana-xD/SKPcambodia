@@ -121,7 +121,7 @@
                     <!-- ### EXCERPT ### -->
                     <div class="panel">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Excerpt <small>Small description of this post</small></h3>
+                            <h3 class="panel-title">Excerpt [ Small description of this post ]</h3>
                             <div class="panel-actions">
                                 <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
                             </div>
@@ -277,7 +277,7 @@
     @if($isModelTranslatable)
         <script src="{{ voyager_asset('js/multilingual.js') }}"></script>
     @endif
-    
+
     <script src="{{ asset('/admins/plugins/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('/admins/plugins/tinymce/tinymce-config.js') }}"></script>
     <script src="{{ voyager_asset('js/slugify.js') }}"></script>
