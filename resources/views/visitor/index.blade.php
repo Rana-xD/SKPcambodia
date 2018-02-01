@@ -173,7 +173,7 @@
 							<div class="inner">
 								{{-- <p><img src="../img/logo_2.png" alt="logo" /></p> --}}
 
-								<a class="custom-btn medium light-color" href="about" data-text="@lang('text.contact_us')"><span>@lang('text.contact_us')</span></a>
+								<a class="custom-btn medium light-color" href="contacts" data-text="@lang('text.contact_us')"><span>@lang('text.contact_us')</span></a>
 							</div>
 						</div>
 					</div>

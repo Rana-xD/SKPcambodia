@@ -58,7 +58,7 @@
 
 									<div id="share"></div>
 
-									<h4 class="h2">@lang('text.Your_message')</h4>
+									{{-- <h4 class="h2">@lang('text.Your_message')</h4>
 
 									<form action="#">
 										<div class="row">
@@ -87,7 +87,7 @@
 												<button class="custom-btn small dark-color fl-r" type="submit" data-text="Submit"><span>@lang('text.send')</span></button>
 											</div>
 										</div>
-									</form>
+									</form> --}}
 								</div>
 							</div>
 						</div>
@@ -128,13 +128,13 @@
 								@foreach($related_posts as $related_post)
 									<article class="clearfix">
 										<a class="link" href="{{ route('visitor.blog.detail', $related_post->slug) }}">
-											<img src="@if($post->image){{ $post->related_post }}@endif" alt="{{ $related_post->getTranslatedAttribute('title', $locale) }}" />
+											<img src="@if($related_post->image){{ $related_post->image }}@endif" alt="{{ $related_post->getTranslatedAttribute('title', $locale) }}" />
 										</a>
 
 										<div class="inner">
 											<h5 class="title">
 												<a href="{{ route('visitor.blog.detail', $related_post->slug) }}">
-													{{ $post->getTranslatedAttribute('title', $locale) }}
+													{{ $related_post->getTranslatedAttribute('title', $locale) }}
 												</a>
 											</h5>
 

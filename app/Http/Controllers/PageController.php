@@ -97,7 +97,7 @@ class PageController extends Controller
     public function about()
     {
       $about_content = Content::where('position', 4)->first();
-      $about_sidebar = Content::where('position', 5)->first();
+      $about_sidebar = Content::where('position', 3)->first();
       $quote_content = Content::where('position', 6)->first();
       $quotes = Team::take(7)->get();
       return view('visitor.pages.about.about')->with([
@@ -291,7 +291,7 @@ class PageController extends Controller
     public function mission()
     {
       $mission_content = Content::where('position', 6)->first();
-      $mission_sidebar = Content::where('position', 7)->first();
+      $mission_sidebar = Content::where('position', 3)->first();
       $quote_content = Content::where('position', 8)->first();
       $quotes = Team::take(9)->get();
       return view('visitor.pages.mission.mission')->with([

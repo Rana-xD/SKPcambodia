@@ -3940,6 +3940,7 @@ main form button[type=submit] {
     display: block;
     width: 70px;
     height: 60px;
+    object-fit: contain;
 }
 #sidebar .widget-posts .date-post {
     font-size: 9px;
