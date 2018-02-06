@@ -69,7 +69,7 @@
 							</div>
 						</div>
 
-						<div class="text-center"><a id="portfolio-more-btn" class="custom-btn medium dark-color" href="#" data-text="More Shots"><span>More Shots</span></a></div>
+						{{-- <div class="text-center"><a id="portfolio-more-btn" class="custom-btn medium dark-color" href="#" data-text="More Shots"><span>More Shots</span></a></div> --}}
 					</div>
 				</div>
 			</section>

@@ -23,7 +23,7 @@
 	box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	padding: 15px;
 	margin: 0px 15px;
-	height: 450px;
+	height: 480px;
 	transition: box-shadow 0.3s ease-in-out;
 }
 </style>
@@ -50,6 +50,7 @@
 						</div>
 						<div class="description">
 							<h3 class="h4 title center"><a href="{{ $info->file_url }}" target="_blank">{{ $info->getTranslatedAttribute('title', App::getLocale()) }}</a></h3>
+							<p> {{ $info->getTranslatedAttribute('description', App::getLocale()) }}</p>
 						</div>
 					</div>
 				@endforeach

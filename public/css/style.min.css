@@ -2091,6 +2091,7 @@ main p:last-child {
     padding-top: 62.16216216216216%}
 .blog-container .blog-item .inner.fixed img, .blog-container .blog-item .inner a {
     position: absolute;
+    object-fit: cover;
     top: 0;
     left: 0;
     width: 100%;
