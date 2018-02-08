@@ -30,11 +30,11 @@ return [
     'post_categories' => '发布类别',
     'latest_posts' => '最新帖子',
     'comments' => '注释',
-    'we_are_effective' => 'We Are Effective In',
-    'practice_areas' => 'Such Areas of Practices',
-    'meet_attorney' => 'ជួបជាមួយមេធាវីរបស់ពួកយើង',
-    'educations' => 'Educations',
-    'professional_experiences' => 'Professional Experiences',
-    'trainings' => 'Trainings',
-    'awards_achievements' => 'Awards and Achievements'
+    'we_are_effective' => '我们在这些',
+    'practice_areas' => '实践领域是有效的',
+    'meet_attorney' => '见我们的律师',
+    'educations' => '的教育',
+    'professional_experiences' => '专业经验',
+    'trainings' => '培训',
+    'awards_achievements' => '奖项和成就'
 ];

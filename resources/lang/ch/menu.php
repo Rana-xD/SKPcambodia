@@ -5,7 +5,7 @@ return [
     'home' => '主页',
     'about_us' => '关于我们',
     'mission' => '任务',
-    'team' => '球队',
+    'team' => '团队',
     'services' => '服务',
     'resources' => '资源',
     'report' => '报告',
