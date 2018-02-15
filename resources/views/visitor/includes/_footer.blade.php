@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-sm-5">
                         <div class="footer-item">
                            <h3 class="title">@lang('text.contact_us')</h3>
                             <address>
@@ -39,7 +39,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-sm-7">
                         <div class="footer-item">
                             <h3 class="title">@lang('text.link')</h3>
 

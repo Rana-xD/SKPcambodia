@@ -37,7 +37,7 @@ class PartnerComposer
         $this->useful_links = UsefulLink::orderBy('created_at')->with(['translations' => function ($query) use ($locale, $fallback_locale) {
             $query->where('locale', $locale)
                   ->orWhere('locale', $fallback_locale);
-        }])->take(5)->get();
+        }])->take(10)->get();
 
     }
 
