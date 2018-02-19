@@ -46,7 +46,7 @@
 								<img class="img-responsive center-block hidden-xs" src="{{ asset($mission_sidebar->image) }}" alt="" >
 								@endif
 								<blockquote class="quote">
-						      	{!! $mission_sidebar->getTranslatedAttribute('quote', App::getLocale()) !!}
+						      	{!! $mission_sidebar->getTranslatedAttribute('body', App::getLocale()) !!}
 						    	</blockquote>
 							@endif
 						</div>
