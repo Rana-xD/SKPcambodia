@@ -72,6 +72,12 @@ class TrainingProgram extends Model
         $this->attributes['featured_image'] = $img_path;
     }
 
+    // Overrid upload file path by removed base domain
+    public function setFileUrlAttribute($value){
+        $file_path = str_replace(URL('/'), '', $value);
+        $this->attributes['file_url'] = $file_path;
+    }
+
     /**
      * Mutator for updated_by attribute
      * Set mutator to current authenticated user

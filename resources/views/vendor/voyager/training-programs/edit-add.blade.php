@@ -61,19 +61,19 @@
                             @endif
 
                             @foreach($dataTypeRows as $row)
-                                <div class="form-group @if($row->type == 'hidden' && $row->field != 'featured_image') hidden @endif">
-                                    
-                                    @if($row->field == 'featured_image')
+                                <div class="form-group @if($row->type == 'hidden' && $row->field != 'file_url') hidden @endif">
+
+                                    @if($row->field == 'file_url')
                                         <div class="custom-form-group">
                                             <div class="file-input-wrapper">
-                                                <button class="custom-upload-btn image uploadFile" data-type="image" id="uploadImage"><i class="fa fa-upload"></i>Featured image</button>
-                                                <input value="@if(isset($dataTypeContent->featured_image)){{ $dataTypeContent->featured_image }}@endif" type="hidden" name="featured_image" id="txtFeaturedImage" />
+                                                <button class="custom-upload-btn file uploadFile" data-type="file" id="uploadFile"><i class="fa fa-upload"></i>Upload Attachment</button>
+                                                <input value="@if(isset($dataTypeContent->file_url)){{ $dataTypeContent->file_url }}@endif" type="hidden" name="file_url" id="txtFileUpload" />
                                             </div>
-                                            <div class="imagePreview uk-padding-small">
-                                                <!-- <p>Image Preview</p> -->
-                                                <div id="imagePreviewDiv">
-                                                    @if(isset($dataTypeContent->featured_image))
-                                                    <img src="{{ $dataTypeContent->featured_image }}" style="width:150px; height: auto; margin-bottom: 15px;" />
+                                            <div class="previewFileName uk-padding-small">
+                                                <!-- <p>Attachment Preview</p> -->
+                                                <div id="previewFileName">
+                                                    @if(isset($dataTypeContent->file_url))
+                                                    <li class="uk-display-block uk-padding-small">{{ $dataTypeContent->file_url }}</li>
                                                     @endif
                                                 </div>
                                             </div>
@@ -144,7 +144,7 @@
 
         $('document').ready(function () {
             $('.toggleswitch').bootstrapToggle();
-            
+
             //Init datepicker for date fields if data-datepicker attribute defined
             //or if browser does not handle date inputs
             $('.form-group input[type=date]').each(function (idx, elt) {
