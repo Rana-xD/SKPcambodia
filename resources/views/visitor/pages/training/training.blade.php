@@ -102,10 +102,6 @@ font-family: 'Raleway', sans-serif;
 									<div class="row">
 	                            <div class="textbox">
                                   {!! $result->getTranslatedAttribute('content', $locale) !!}
-                                  <li class="file-item">
-												 <a class="download" href="PDF/{{ $result->file_url }}"><i class="fa fa-download"></i></a>
-												 <a class="view" href="{{ $result->file_url }}" target="_blank">pppp.pdf</a>
-											 </li>
                                </div>
 									</div>
 		                  </div>
