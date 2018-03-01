@@ -7,7 +7,7 @@
                         <div class="footer-item">
                            <h3 class="title">@lang('text.contact_us')</h3>
                             <address>
-                                <span>{{ Voyager::setting('company_address_kh') }}</span>
+                                <span>{{ Voyager::setting('company_address_kh') }} {{$locale}}</span>
                                 <br />
                                 <span>@lang('text.Phone'): {{ Voyager::setting('company_tel') }}</span>
                                 <span>@lang('text.fax'): {{ Voyager::setting('company_fax') }}</span>
