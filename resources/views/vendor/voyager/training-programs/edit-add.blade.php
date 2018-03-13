@@ -194,6 +194,15 @@
                 $('#confirm_delete_modal').modal('hide');
             });
             $('[data-toggle="tooltip"]').tooltip();
+
+            $('.form-group input[type=date]').each(function (idx, elt) {
+                if (elt.type != 'date' || elt.hasAttribute('data-datepicker')) {
+                    elt.type = 'text';
+                    $(elt).datetimepicker({format : 'YYYY/MM/DD'},
+                        $(elt).data('datepicker')
+                    );
+                }
+            });
         });
     </script>
     @if($isModelTranslatable)
