@@ -37,13 +37,13 @@
 								<div class="contact-item_info">
 									<article>
 										<h4>@lang('text.Address')</h4>
-										@if($locale == 'en')
+										@if(App::getLocale() == 'en')
 											{{ Voyager::setting('company_address_en') }}
 										@endif
-										@if($locale == 'kh')
+										@if(App::getLocale() == 'kh')
 											{{ Voyager::setting('company_address_kh') }}
 										@endif
-										@if($locale == 'ch')
+										@if(App::getLocale() == 'ch')
 											{{ Voyager::setting('company_address_ch') }}
 										@endif
 									</article>
