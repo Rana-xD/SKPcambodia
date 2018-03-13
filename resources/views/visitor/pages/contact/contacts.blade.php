@@ -37,7 +37,15 @@
 								<div class="contact-item_info">
 									<article>
 										<h4>@lang('text.Address')</h4>
-										{{ Voyager::setting('company_address') }}
+										@if($locale == 'en')
+											{{ Voyager::setting('company_address_en') }}
+										@endif
+										@if($locale == 'kh')
+											{{ Voyager::setting('company_address_kh') }}
+										@endif
+										@if($locale == 'ch')
+											{{ Voyager::setting('company_address_ch') }}
+										@endif
 									</article>
 
 									<article>
