@@ -1,7 +1,7 @@
 
 @extends('visitor.layouts.main')
 
-@section('title', 'welcome to SKP Cambodia Attorney and Law Group')
+@section('title', 'Welcome to SKP Cambodia Attorney and Law Group')
 
 @push('meta')
 <meta name="description" content="Welcome to SK &amp; P Cambodia Law Group">
