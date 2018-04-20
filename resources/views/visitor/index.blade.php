@@ -9,7 +9,7 @@
 <meta property="og:url" content="http://www.skpcambodia.com/" />
 <meta name="og:title" content="Welcome to SK &amp; P Cambodia Law Group">
 <meta name="og:type" content="article">
-<meta name="og:image" content="../img/small_logo.png">
+<meta name="og:image" content="../img/logo.png">
 <meta name="og:description" content="We have built our reputation by providing clients with exceptional creative thinking, and a deep commitment to solving their problems.">
 @endpush
 
