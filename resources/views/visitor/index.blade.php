@@ -1,14 +1,14 @@
 
 @extends('visitor.layouts.main')
 
-@section('title', 'welcome to SKP Cambodia Attorney and Law firm')
+@section('title', 'welcome to SKP Cambodia Attorney and Law Group')
 
 @push('meta')
-<meta name="description" content="">
-<meta name="keyword" content="">
+<meta name="description" content="Welcome to SK &amp; P Cambodia Law Group">
+<meta name="keyword" content="skpcambodia">
 <meta name="og:type" content="">
-<meta name="og:title" content="">
-<meta name="og:image" content="">
+<meta name="og:title" content="SK &amp; P Cambodia Law Group">
+<meta name="og:image" content="../img/small_logo.png">
 <meta name="og:description" content="">
 @endpush
 
