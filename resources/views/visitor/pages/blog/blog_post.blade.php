@@ -5,8 +5,9 @@
 @push('meta')
 <meta name="description" content="">
 <meta name="keyword" content="">
-<meta name="og:type" content="">
-<meta name="og:title" content="">
+<meta property="og:url" content="http://www.skpcambodia.com/{{ Request::path() }}" />
+<meta name="og:type" content="article">
+<meta name="og:title" content="{{ $post->getTranslatedAttribute('title', $locale) }}">
 <meta name="og:image" content="">
 <meta name="og:description" content="">
 @endpush
