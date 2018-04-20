@@ -7,7 +7,7 @@
 <meta name="keyword" content="">
 <meta property="og:url" content="http://www.skpcambodia.com/{{ Request::path() }}" />
 <meta name="og:type" content="article">
-<meta name="og:title" content="{{ $post->getTranslatedAttribute('title', $locale) }}">
+<meta name="og:title" content="{{ $post->title }}">
 <meta name="og:image" content="">
 <meta name="og:description" content="">
 @endpush
