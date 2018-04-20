@@ -8,13 +8,6 @@
 <meta name="msapplication-navbutton-color" content="#C1AA81" />
 <meta name="apple-mobile-web-app-status-bar-style" content="#C1AA81" />
 
-<meta name="description" content="Welcome to SK &amp; P Cambodia Law Group">
-<meta name="keyword" content="skpcambodia">
-<meta name="og:type" content="article">
-<meta name="og:title" content="SK &amp; P Cambodia Law Group">
-<meta name="og:image" content="http://www.skpcambodia.com/">
-<meta name="og:description" content="We have built our reputation by providing clients with exceptional creative thinking, and a deep commitment to solving their problems.">
-
 <!-- Favicons
 ================================================== -->
 <link rel="shortcut icon" href="../img/favicon.ico">
