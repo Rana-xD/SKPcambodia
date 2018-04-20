@@ -29,6 +29,7 @@ Route::group(['middleware' =>'locale'],function(){
   Route::get('mission','PageController@mission');
   Route::get('teamsingle/{name}','PageController@teamsingle');
   Route::post('mail','System@sendmail');
+  Route::get('laws-and-regulations-of-kingdom-of-cambodia.html','PageController@law');
 });
 
 Route::get('locale/{localeId?}','LocaleController@locales');
