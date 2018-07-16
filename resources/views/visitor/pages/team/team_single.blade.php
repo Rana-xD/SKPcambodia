@@ -164,7 +164,7 @@
 									<div class="timeline">
 										<h4 class="h2">@lang('text.trainings')</h4>
                                         @foreach(json_decode($teamsingle->getTranslatedAttribute('training', App::getLocale()))->data as $training)
-														 @if (isset( $education->title ))
+														 @if (isset( $training->title ))
 														   @if(App::getLocale() == 'en')
 																<div class="item">
 																	<i class="circled"></i>
@@ -179,7 +179,7 @@
 																</div>
 															@endif
 														@endif
-														@if (isset( $education->title_kh ))
+														@if (isset( $training->title_kh ))
 														  @if(App::getLocale() == 'kh')
 															  <div class="item">
 		  														<i class="circled"></i>
@@ -195,7 +195,7 @@
 														  @endif
 													  @endif
 
-													  @if (isset( $education->title_ch ))
+													  @if (isset( $training->title_ch ))
 														 @if(App::getLocale() == 'ch')
 															 <div class="item">
 		 														<i class="circled"></i>
@@ -227,7 +227,7 @@
 												@foreach(json_decode($teamsingle->getTranslatedAttribute('experience', App::getLocale()))->data as $experience)
 												<input type="hidden" name="{{ $i++ }}">
 												{{--  {{ i++ }}  --}}
-														@if (isset( $education->title ))
+														@if (isset( $experience->title ))
 														  @if(App::getLocale() == 'en')
 															  <div class="item">
  		 														<i class="circled"></i>
@@ -252,7 +252,7 @@
  		 													</div>
 														  @endif
 													  @endif
-													  @if (isset( $education->title_kh ))
+													  @if (isset( $experience->title_kh ))
 														 @if(App::getLocale() == 'kh')
 															 <div class="item">
 		 														<i class="circled"></i>
@@ -278,7 +278,7 @@
 														 @endif
 													 @endif
 
-													 @if (isset( $education->title_ch ))
+													 @if (isset( $experience->title_ch ))
 														@if(App::getLocale() == 'ch')
 															<div class="item">
 																<i class="circled"></i>
@@ -315,7 +315,7 @@
 											<h4 class="h2">@lang('text.awards_achievements')</h4>
 	                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('award', App::getLocale()))->data as $award)
 
-															 @if (isset( $education->title ))
+															 @if (isset( $award->title ))
 															   @if(App::getLocale() == 'en')
 																	<div class="item">
 																		<i class="circled"></i>
@@ -330,7 +330,7 @@
 																	</div>
 																@endif
 															@endif
-															@if (isset( $education->title_kh ))
+															@if (isset( $award->title_kh ))
 															  @if(App::getLocale() == 'kh')
 																  <div class="item">
 																   <i class="circled"></i>
@@ -346,7 +346,7 @@
 															  @endif
 														  @endif
 
-														  @if (isset( $education->title_ch ))
+														  @if (isset( $award->title_ch ))
 															 @if(App::getLocale() == 'ch')
 																 <div class="item">
 					 												<i class="circled"></i>
