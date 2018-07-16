@@ -106,17 +106,55 @@
 									<div class="timeline">
 										<h4 class="h2">@lang('text.educations')</h4>
                                         @foreach(json_decode($teamsingle->getTranslatedAttribute('education', App::getLocale()))->data as $education)
-										<div class="item">
-											<i class="circled"></i>
+														 @if (isset( $education->title ))
+															@if(App::getLocale() == 'en')
+																<div class="item">
+  															 	<i class="circled"></i>
 
-											<div class="inner">
-												<h4 class="title">{{ $education->title }}</h4>
+  															 	<div class="inner">
+  															 		<h4 class="title">{{ $education->title }}</h4>
 
-												<span class="date">{{ $education->year }}</span>
+  															 		<span class="date">{{ $education->year }}</span>
 
-												<p>{!! $education->description !!}</p>
-											</div>
-										</div>
+  															 		<p>{!! $education->description !!}</p>
+  															 	</div>
+  															 </div>
+					 										@endif
+
+														 @endif
+														 @if (isset( $education->title_kh ))
+															 @if(App::getLocale() == 'kh')
+																 <div class="item">
+   															 	<i class="circled"></i>
+
+   															 	<div class="inner">
+   															 		<h4 class="title">{{ $education->title_kh }}</h4>
+
+   															 		<span class="date">{{ $education->year_kh }}</span>
+
+   															 		<p>{!! $education->description_kh !!}</p>
+   															 	</div>
+   															 </div>
+					 										@endif
+
+														 @endif
+														 @if (isset( $education->title_ch ))
+															 @if(App::getLocale() == 'ch')
+																 <div class="item">
+   															 	<i class="circled"></i>
+
+   															 	<div class="inner">
+   															 		<h4 class="title">{{ $education->title_ch }}</h4>
+
+   															 		<span class="date">{{ $education->year_ch }}</span>
+
+   															 		<p>{!! $education->description_ch !!}</p>
+   															 	</div>
+   															 </div>
+					 										@endif
+
+														 @endif
+
                                         @endforeach
 									</div>
 								</div>
@@ -126,17 +164,53 @@
 									<div class="timeline">
 										<h4 class="h2">@lang('text.trainings')</h4>
                                         @foreach(json_decode($teamsingle->getTranslatedAttribute('training', App::getLocale()))->data as $training)
-										<div class="item">
-											<i class="circled"></i>
+														 @if (isset( $education->title ))
+														   @if(App::getLocale() == 'en')
+																<div class="item">
+																	<i class="circled"></i>
 
-											<div class="inner">
-												<h4 class="title">{{ $training->title }}</h4>
+																	<div class="inner">
+																		<h4 class="title">{{ $training->title }}</h4>
 
-												<span class="date">{{ $training->year }}</span>
+																		<span class="date">{{ $training->year }}</span>
 
-												<p>{!! $training->description !!}</p>
-											</div>
-										</div>
+																		<p>{!! $training->description !!}</p>
+																	</div>
+																</div>
+															@endif
+														@endif
+														@if (isset( $education->title_kh ))
+														  @if(App::getLocale() == 'kh')
+															  <div class="item">
+		  														<i class="circled"></i>
+
+		  														<div class="inner">
+		  															<h4 class="title">{{ $training->title_kh }}</h4>
+
+		  															<span class="date">{{ $training->year_kh }}</span>
+
+		  															<p>{!! $training->description_kh !!}</p>
+		  														</div>
+		  													</div>
+														  @endif
+													  @endif
+
+													  @if (isset( $education->title_ch ))
+														 @if(App::getLocale() == 'ch')
+															 <div class="item">
+		 														<i class="circled"></i>
+
+		 														<div class="inner">
+		 															<h4 class="title">{{ $training->title_ch }}</h4>
+
+		 															<span class="date">{{ $training->year_ch }}</span>
+
+		 															<p>{!! $training->description_ch !!}</p>
+		 														</div>
+		 													</div>
+														 @endif
+													 @endif
+
                                         @endforeach
 									</div>
 								</div>
@@ -153,27 +227,83 @@
 												@foreach(json_decode($teamsingle->getTranslatedAttribute('experience', App::getLocale()))->data as $experience)
 												<input type="hidden" name="{{ $i++ }}">
 												{{--  {{ i++ }}  --}}
-												<div class="item">
-													<i class="circled"></i>
-													<div class="panel panel-default">
-								                	<div class="panel-heading" role="tab" id="heading{{ $i }}_reg">
-								                  	<h4 class="panel-title">
-								                    		<a role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapse{{ $i }}_reg" aria-expanded="false" aria-controls="collapse{{ $i }}_reg">
-																	<h4 class="title">{{$experience->title}}</h4>
-	  		 														<span class="date">{{$experience->year}}@if ($experience->description)<i class="fa fa-chevron-down pull-right"></i>@endif</span>
-								                    		</a>
-								                  	</h4>
-								                	</div>
-														@if ($experience->description)
-															<div id="collapse{{ $i }}_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
-									                  	<div class="panel-body pre-line">
-															{!! $experience->description !!}
-									                  	</div>
-									                	</div>
-														@endif
+														@if (isset( $education->title ))
+														  @if(App::getLocale() == 'en')
+															  <div class="item">
+ 		 														<i class="circled"></i>
+ 		 														<div class="panel panel-default">
+ 		 									                	<div class="panel-heading" role="tab" id="heading{{ $i }}_reg">
+ 		 									                  	<h4 class="panel-title">
+ 		 									                    		<a role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapse{{ $i }}_reg" aria-expanded="false" aria-controls="collapse{{ $i }}_reg">
+ 		 																		<h4 class="title">{{$experience->title}}</h4>
+ 		 		  		 														<span class="date">{{$experience->year}}@if ($experience->description)<i class="fa fa-chevron-down pull-right"></i>@endif</span>
+ 		 									                    		</a>
+ 		 									                  	</h4>
+ 		 									                	</div>
+ 		 															@if ($experience->description)
+ 		 																<div id="collapse{{ $i }}_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
+ 		 										                  	<div class="panel-body pre-line">
+ 		 																{!! $experience->description !!}
+ 		 										                  	</div>
+ 		 										                	</div>
+ 		 															@endif
 
-								              	</div>
-												</div>
+ 		 									              	</div>
+ 		 													</div>
+														  @endif
+													  @endif
+													  @if (isset( $education->title_kh ))
+														 @if(App::getLocale() == 'kh')
+															 <div class="item">
+		 														<i class="circled"></i>
+		 														<div class="panel panel-default">
+		 									                	<div class="panel-heading" role="tab" id="heading{{ $i }}_reg">
+		 									                  	<h4 class="panel-title">
+		 									                    		<a role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapse{{ $i }}_reg" aria-expanded="false" aria-controls="collapse{{ $i }}_reg">
+		 																		<h4 class="title">{{$experience->title_kh}}</h4>
+		 		  		 														<span class="date">{{$experience->year_kh}}@if ($experience->description_kh)<i class="fa fa-chevron-down pull-right"></i>@endif</span>
+		 									                    		</a>
+		 									                  	</h4>
+		 									                	</div>
+		 															@if ($experience->description_kh)
+		 																<div id="collapse{{ $i }}_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
+		 										                  	<div class="panel-body pre-line">
+		 																{!! $experience->description_kh !!}
+		 										                  	</div>
+		 										                	</div>
+		 															@endif
+
+		 									              	</div>
+		 													</div>
+														 @endif
+													 @endif
+
+													 @if (isset( $education->title_ch ))
+														@if(App::getLocale() == 'ch')
+															<div class="item">
+																<i class="circled"></i>
+																<div class="panel panel-default">
+											                	<div class="panel-heading" role="tab" id="heading{{ $i }}_reg">
+											                  	<h4 class="panel-title">
+											                    		<a role="button" data-toggle="collapse" data-parent="#accordion_reg" href="#collapse{{ $i }}_reg" aria-expanded="false" aria-controls="collapse{{ $i }}_reg">
+																				<h4 class="title">{{$experience->title_ch}}</h4>
+				  		 														<span class="date">{{$experience->year_ch}}@if ($experience->description_ch)<i class="fa fa-chevron-down pull-right"></i>@endif</span>
+											                    		</a>
+											                  	</h4>
+											                	</div>
+																	@if ($experience->description_ch)
+																		<div id="collapse{{ $i }}_reg" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ $i }}_reg">
+												                  	<div class="panel-body pre-line">
+																		{!! $experience->description_ch !!}
+												                  	</div>
+												                	</div>
+																	@endif
+
+											              	</div>
+															</div>
+														@endif
+													@endif
+
 												@endforeach
 												</div>
 							            </div>
@@ -184,18 +314,55 @@
 										<div class="timeline">
 											<h4 class="h2">@lang('text.awards_achievements')</h4>
 	                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('award', App::getLocale()))->data as $award)
-											<div class="item">
-												<i class="circled"></i>
 
-												<div class="inner">
-													<h4 class="title">{{ $award->title }}</h4>
+															 @if (isset( $education->title ))
+															   @if(App::getLocale() == 'en')
+																	<div class="item">
+																		<i class="circled"></i>
 
-													<span class="date">{{ $award->year }}</span>
+																		<div class="inner">
+																			<h4 class="title">{{ $award->title }}</h4>
 
-													<p>{{ $award->description }}</p>
-												</div>
-											</div>
-	                                        @endforeach
+																			<span class="date">{{ $award->year }}</span>
+
+																			<p>{{ $award->description }}</p>
+																		</div>
+																	</div>
+																@endif
+															@endif
+															@if (isset( $education->title_kh ))
+															  @if(App::getLocale() == 'kh')
+																  <div class="item">
+																   <i class="circled"></i>
+
+																   <div class="inner">
+																	   <h4 class="title">{{ $award->title_kh }}</h4>
+
+																	   <span class="date">{{ $award->year_kh }}</span>
+
+																	   <p>{{ $award->description_kh }}</p>
+																   </div>
+															   </div>
+															  @endif
+														  @endif
+
+														  @if (isset( $education->title_ch ))
+															 @if(App::getLocale() == 'ch')
+																 <div class="item">
+					 												<i class="circled"></i>
+
+					 												<div class="inner">
+					 													<h4 class="title">{{ $award->title_kh }}</h4>
+
+					 													<span class="date">{{ $award->year_kh }}</span>
+
+					 													<p>{{ $award->description_kh }}</p>
+					 												</div>
+					 											</div>
+															 @endif
+														 @endif
+
+	                                     @endforeach
 										</div>
 									</div>
 								@endif
@@ -216,6 +383,7 @@
 	@section('scripts')
 	<script>
 		$(document).ready(function(){
+
 		});
 	</script>
 	@endsection

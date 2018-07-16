@@ -31,9 +31,9 @@
           @endif
         </div>
         <div class="header-contact">
-          <span class="phone"><a href="/locale/en">English</a></span>
-          <span class="mail"><a href="/locale/kh">ភាសាខ្មែរ</a></span>
-          <span class="mail"><a href="/locale/ch">中文</a></span>
+          <span class="language active_language"><a href="/locale/en">English</a></span>
+          <span class="language"><a href="/locale/kh">ភាសាខ្មែរ</a></span>
+          <span class="language"><a href="/locale/ch">中文</a></span>
         </div>
       </div>
       <div class="">
@@ -114,9 +114,9 @@
             </div>
 
             <div class="header-contact">
-              <span class="phone"><a href="/locale/en">English</a></span>
-              <span class="mail"><a href="/locale/kh">ភាសាខ្មែរ</a></span>
-              <span class="mail"><a href="/locale/ch">中文</a></span>
+              <span class="language active_language"><a href="/locale/en">English</a></span>
+              <span class="lauguage"><a href="/locale/kh">ភាសាខ្មែរ</a></span>
+              <span class="language"><a href="/locale/ch">中文</a></span>
             </div>
           </div>
       </div>

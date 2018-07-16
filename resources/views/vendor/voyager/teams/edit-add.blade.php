@@ -390,32 +390,85 @@
 @section('javascript')
 <script>
     var training_html_template =
-        '<div class="form-group group-format">' +
-            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
+         '<div class="form-data">'+
+            '<div class="form-group group-format english">' +
+                '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
+            '</div>'+
+            '<div class="form-group group-format khmer">' +
+                '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title_kh" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year_kh" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_kh" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
+            '</div>'+
+            '<div class="form-group group-format chinese">' +
+                '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title_kh" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year_kh" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_kh" class="inputOnWatch training_desc form-control input-format2"></textarea></div>' +
+            '</div>'+
             '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
-        '</div>';
+         '</div>'
+
         var award_html_template =
-        '<div class="form-group group-format">' +
-            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch award_title form-control input-format2" type="text" placeholder="Award title"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2"></textarea></div>' +
-            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
+        '<div class="form-data">'+
+              '<div class="form-group group-format english">' +
+                 '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch award_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+                 '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                 '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2"></textarea></div>' +
+             '</div>'+
+             '<div class="form-group group-format khmer">' +
+                 '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title_kh" class="inputOnWatch award_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+                 '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year_kh" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                 '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_kh" class="inputOnWatch award_desc form-control input-format2"></textarea></div>' +
+             '</div>'+
+             '<div class="form-group group-format chinese">' +
+                 '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title_ch" class="inputOnWatch award_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+                 '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year_ch" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                 '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_ch" class="inputOnWatch award_desc form-control input-format2"></textarea></div>' +
+             '</div>'+
+             '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
+
         var exp_html_template =
-        '<div class="form-group group-format">' +
-            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2"></textarea></div>' +
-            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
+        '<div class="form-data">'+
+           '<div class="form-group group-format english">' +
+               '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2"></textarea></div>' +
+           '</div>'+
+           '<div class="form-group group-format khmer">' +
+               '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title_kh" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year_kh" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_kh" class="inputOnWatch exp_desc form-control input-format2"></textarea></div>' +
+           '</div>'+
+           '<div class="form-group group-format chinese">' +
+               '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title_ch" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year_ch" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_ch" class="inputOnWatch exp_desc form-control input-format2"></textarea></div>' +
+           '</div>'+
+           '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
+
         var edu_html_template =
-        '<div class="form-group group-format">' +
-            '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch edu_title form-control input-format2" type="text" placeholder="Education title"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch edu_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-            '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch edu_desc form-control input-format2"></textarea></div>' +
-            '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
+        '<div class="form-data">'+
+           '<div class="form-group group-format english">' +
+               '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title" class="inputOnWatch edu_title form-control input-format2" type="text" placeholder="Education title"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year" class="inputOnWatch edu_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch edu_desc form-control input-format2"></textarea></div>' +
+           '</div>'+
+           '<div class="form-group group-format khmer">' +
+               '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title_kh" class="inputOnWatch edu_title form-control input-format2" type="text" placeholder="Education title"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year_kh" class="inputOnWatch edu_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_kh" class="inputOnWatch edu_desc form-control input-format2"></textarea></div>' +
+
+           '</div>'+
+           '<div class="form-group group-format chinese">' +
+               '<div class="input-group input-format"><span class="input-group-addon">Title</span><input data-key="title_ch" class="inputOnWatch edu_title form-control input-format2" type="text" placeholder="Education title"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Year</span><input data-key="year_ch" class="inputOnWatch edu_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+               '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_ch" class="inputOnWatch edu_desc form-control input-format2"></textarea></div>' +
+
+           '</div>'+
+           '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
         '</div>';
 
         var email_html_template =
@@ -438,6 +491,15 @@
         @endif
 
         renderJSONData();
+        checkLanguage();
+
+        $(document).on('click','.language-selector .btn',function(){
+           setTimeout(function(){
+               checkLanguage();
+           }, 0);
+           return ;
+        });
+
 
         $('.btnAddForm').on('click', function(e){
             e.preventDefault();
@@ -445,9 +507,11 @@
             switch(formType){
                 case 'experience':
                     $('#experienceFormDiv').append(exp_html_template);
+                    checkLanguage();
                     break;
                 case 'education':
                     $('#educationFormDiv').append(edu_html_template);
+                    checkLanguage();
                     break;
                 case 'email':
                     $('#emailFormDiv').append(email_html_template);
@@ -457,9 +521,11 @@
                     break;
                 case 'training':
                     $('#trainingFormDiv').append(training_html_template);
+                    checkLanguage();
                     break;
                 case 'award':
                     $('#awardFormDiv').append(award_html_template);
+                    checkLanguage();
                     break;
                 default:
                     break;
@@ -467,7 +533,7 @@
         });
 
         $(document).on('click', '.btnRemoveFormGroup', function() {
-             $(this).parents('.form-group')[0].remove();
+             $(this).parents('.form-data')[0].remove();
          });
 
         // $('.btnRemoveFormGroup').on('click', function (e) {
@@ -478,10 +544,28 @@
             e.preventDefault();
 
             // Set training data json
-            var trainingRecordDivs = $('#trainingFormDiv .form-group');
+            var trainingRecordDivs = $('#trainingFormDiv .english');
+            var trainingRecordDivs_kh = $('#trainingFormDiv .khmer');
+            var trainingRecordDivs_ch = $('#trainingFormDiv .chinese');
             var trainingRecords = [];
             var trainingJSON = {};
             trainingRecordDivs.each(function(key, ele){
+                var trainingPrepareObject = {};
+                var inputs = $(ele).find('.inputOnWatch');
+                inputs.each(function(k, inputEle){
+                  trainingPrepareObject[$(inputEle).attr('data-key')] = $(inputEle).val();
+                });
+                trainingRecords.push(trainingPrepareObject);
+            });
+            trainingRecordDivs_kh.each(function(key, ele){
+                var trainingPrepareObject = {};
+                var inputs = $(ele).find('.inputOnWatch');
+                inputs.each(function(k, inputEle){
+                  trainingPrepareObject[$(inputEle).attr('data-key')] = $(inputEle).val();
+                });
+                trainingRecords.push(trainingPrepareObject);
+            });
+            trainingRecordDivs_ch.each(function(key, ele){
                 var trainingPrepareObject = {};
                 var inputs = $(ele).find('.inputOnWatch');
                 inputs.each(function(k, inputEle){
@@ -493,10 +577,28 @@
             $('#trainingDataJson').val(JSON.stringify(trainingJSON));
 
             // Set reward data json
-            var awardRecordDivs = $('#awardFormDiv .form-group');
+            var awardRecordDivs = $('#awardFormDiv .english');
+            var awardRecordDivs_kh = $('#awardFormDiv .khmer');
+            var awardRecordDivs_ch = $('#awardFormDiv .chinese');
             var awardRecords = [];
             var awardJSON = {};
             awardRecordDivs.each(function(key, ele){
+                var awardPrepareObject = {};
+                var inputs = $(ele).find('.inputOnWatch');
+                inputs.each(function(k, inputEle){
+                    awardPrepareObject[$(inputEle).attr('data-key')] = $(inputEle).val();
+                });
+                awardRecords.push(awardPrepareObject);
+            });
+            awardRecordDivs_kh.each(function(key, ele){
+                var awardPrepareObject = {};
+                var inputs = $(ele).find('.inputOnWatch');
+                inputs.each(function(k, inputEle){
+                    awardPrepareObject[$(inputEle).attr('data-key')] = $(inputEle).val();
+                });
+                awardRecords.push(awardPrepareObject);
+            });
+            awardRecordDivs_ch.each(function(key, ele){
                 var awardPrepareObject = {};
                 var inputs = $(ele).find('.inputOnWatch');
                 inputs.each(function(k, inputEle){
@@ -508,10 +610,28 @@
             $('#awardDataJson').val(JSON.stringify(awardJSON));
 
             // Set experiences data json
-            var experienceRecordDivs = $('#experienceFormDiv .form-group');
+            var experienceRecordDivs = $('#experienceFormDiv .english');
+            var experienceRecordDivs_kh = $('#experienceFormDiv .khmer');
+            var experienceRecordDivs_ch = $('#experienceFormDiv .chinese');
             var experienceRecords = [];
             var experienceJSON = {};
             experienceRecordDivs.each(function(key, ele){
+                var expPrepareObject = {};
+                var inputs = $(ele).find('.inputOnWatch');
+                inputs.each(function(k, inputEle){
+                    expPrepareObject[$(inputEle).attr('data-key')] = $(inputEle).val();
+                });
+                experienceRecords.push(expPrepareObject);
+            });
+            experienceRecordDivs_kh.each(function(key, ele){
+                var expPrepareObject = {};
+                var inputs = $(ele).find('.inputOnWatch');
+                inputs.each(function(k, inputEle){
+                    expPrepareObject[$(inputEle).attr('data-key')] = $(inputEle).val();
+                });
+                experienceRecords.push(expPrepareObject);
+            });
+            experienceRecordDivs_ch.each(function(key, ele){
                 var expPrepareObject = {};
                 var inputs = $(ele).find('.inputOnWatch');
                 inputs.each(function(k, inputEle){
@@ -523,7 +643,9 @@
             $('#experienceDataJson').val(JSON.stringify(experienceJSON));
 
             // Set educations data json
-            var educationRecordDivs = $('#educationFormDiv .form-group');
+            var educationRecordDivs = $('#educationFormDiv .english');
+            var educationRecordDivs_kh = $('#educationFormDiv .khmer');
+            var educationRecordDivs_ch = $('#educationFormDiv .chinese');
             var educationRecords = [];
             var educationJSON = {};
             educationRecordDivs.each(function(key, ele){
@@ -533,9 +655,43 @@
                     eduPrepareObject[$(inputEle).attr('data-key')] = $(inputEle).val();
                 });
                 educationRecords.push(eduPrepareObject);
+
+            });
+            educationRecordDivs_kh.each(function(key, ele){
+                var eduPrepareObject = {};
+                var inputs = $(ele).find('.inputOnWatch');
+                inputs.each(function(k, inputEle){
+                    eduPrepareObject[$(inputEle).attr('data-key')] = $(inputEle).val();
+                });
+                educationRecords.push(eduPrepareObject);
+
+            });
+            educationRecordDivs_ch.each(function(key, ele){
+                var eduPrepareObject = {};
+                var inputs = $(ele).find('.inputOnWatch');
+                inputs.each(function(k, inputEle){
+                    eduPrepareObject[$(inputEle).attr('data-key')] = $(inputEle).val();
+                });
+                educationRecords.push(eduPrepareObject);
+
             });
             educationJSON.data = educationRecords;
             $('#educationDataJson').val(JSON.stringify(educationJSON));
+
+            // var educationRecordDivs_kh = $('#educationFormDiv .khmer');
+            // var educationRecords_kh = [];
+            // var educationJSON_kh = {};
+            // educationRecordDivs_kh.each(function(key, ele){
+            //     var eduPrepareObject_kh = {};
+            //     var inputs_kh = $(ele).find('.inputOnWatch_kh');
+            //     inputs_kh.each(function(k, inputEle){
+            //         eduPrepareObject_kh[$(inputEle).attr('data-key')] = $(inputEle).val();
+            //     });
+            //     educationRecords_kh.push(eduPrepareObject);
+            //
+            // });
+            // educationJSON_kh.data = educationRecords_kh;
+            // $('#educationDataJson').val(JSON.stringify(educationJSON_kh));
 
             // Set social media data json
             var socialRecordInputs = $('#socialFormDiv .inputOnWatch');
@@ -577,6 +733,7 @@
             positionJSON.data = positionRecords;
             $('#positionDataJson').val(JSON.stringify(positionJSON));
 
+            checkLanguage();
         });
     });
 
@@ -603,14 +760,47 @@
         if(trainingsJSON.hasOwnProperty("data")){
             var data = trainingsJSON.data;
             data.forEach(function(trainingRecord){
-              $('#trainingFormDiv').append(
-                '<div class="form-group group-format">' +
-                    '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ trainingRecord.title +'" data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
-                    '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ trainingRecord.year +'" data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-                    '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2">'+ trainingRecord.description +'</textarea></div>' +
-                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
-                '</div>'
-                );
+               if(trainingRecord.hasOwnProperty('title')){
+                  $('#trainingFormDiv').append(
+                  '<div class="form-data">'+
+                     '<div class="form-group group-format english">' +
+                        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ trainingRecord.title +'" data-key="title" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+                        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ trainingRecord.year +'" data-key="year" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch training_desc form-control input-format2">'+ trainingRecord.description +'</textarea></div>' +
+                     '</div>'+
+                  '</div>'
+                  );
+               }
+               if(trainingRecord.hasOwnProperty('title_kh')){
+                  $('#trainingFormDiv .form-data').each(function(){
+                     if(!$(this).children().hasClass('khmer')){
+                        $(this).append(
+                           '<div class="form-group group-format khmer">' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ trainingRecord.title_kh +'" data-key="title_kh" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ trainingRecord.year_kh +'" data-key="year_kh" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_kh" class="inputOnWatch training_desc form-control input-format2">'+ trainingRecord.description_kh +'</textarea></div>' +
+                           '</div>'
+                        );
+                        return false;
+                     }
+                  });
+
+               }
+               if(trainingRecord.hasOwnProperty('title_ch')){
+                  $('#trainingFormDiv .form-data').each(function(){
+                     if(!$(this).children().hasClass('chinese')){
+                        $(this).append(
+                           '<div class="form-group group-format chinese">' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ trainingRecord.title_ch +'" data-key="title_ch" class="inputOnWatch training_title form-control input-format2" type="text" placeholder="Training title"></div>' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ trainingRecord.year_ch +'" data-key="year_ch" class="inputOnWatch training_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_ch" class="inputOnWatch training_desc form-control input-format2">'+ trainingRecord.description_ch +'</textarea></div>' +
+                           '</div>'+
+                           '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'
+                        );
+                        return false;
+                     }
+                  });
+               }
             });
         }
         // else{
@@ -621,14 +811,47 @@
         if(awardsJSON.hasOwnProperty("data")){
             var data = awardsJSON.data;
             data.forEach(function(awardRecord){
-                $('#awardFormDiv').append(
-                '<div class="form-group group-format">' +
-                    '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ awardRecord.title +'" data-key="title" class="inputOnWatch raward_title form-control input-format2" type="text" placeholder="Award title"></div>' +
-                    '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ awardRecord.year +'" data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-                    '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2">'+ awardRecord.description +'</textarea></div>' +
-                    '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
-                '</div>'
-                );
+               if(awardRecord.hasOwnProperty('title')){
+                  $('#awardFormDiv').append(
+                  '<div class="form-data">'+
+                     '<div class="form-group group-format english">' +
+                        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ awardRecord.title +'" data-key="title" class="inputOnWatch raward_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+                        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ awardRecord.year +'" data-key="year" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch award_desc form-control input-format2">'+ awardRecord.description +'</textarea></div>' +
+                     '</div>'+
+                  '</div>'
+                  );
+               }
+               if(awardRecord.hasOwnProperty('title_kh')){
+                  $('#awardFormDiv .form-data').each(function(){
+                     if(!$(this).children().hasClass('khmer')){
+                        $(this).append(
+                           '<div class="form-group group-format khmer">' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ awardRecord.title_kh +'" data-key="title_kh" class="inputOnWatch raward_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ awardRecord.year_kh +'" data-key="year_kh" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_kh" class="inputOnWatch award_desc form-control input-format2">'+ awardRecord.description_kh +'</textarea></div>' +
+                           '</div>'
+                        );
+                        return false;
+                     }
+                  });
+
+               }
+               if(awardRecord.hasOwnProperty('title_ch')){
+                  $('#awardFormDiv .form-data').each(function(){
+                     if(!$(this).children().hasClass('chinese')){
+                        $(this).append(
+                           '<div class="form-group group-format chinese">' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ awardRecord.title_ch +'" data-key="title_ch" class="inputOnWatch raward_title form-control input-format2" type="text" placeholder="Award title"></div>' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ awardRecord.year_ch +'" data-key="year_ch" class="inputOnWatch award_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                              '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_ch" class="inputOnWatch award_desc form-control input-format2">'+ awardRecord.description_ch +'</textarea></div>' +
+                           '</div>'+
+                           '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'
+                        );
+                        return false;
+                     }
+                  });
+               }
             });
         }
         // else{
@@ -639,14 +862,48 @@
         if(experiencesJSON.hasOwnProperty("data")){
             var data = experiencesJSON.data;
             data.forEach(function(expRecord){
-            $('#experienceFormDiv').append(
-            '<div class="form-group group-format">' +
-                '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ expRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
-                '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ expRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-                '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ expRecord.description +'</textarea></div>' +
-                '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
-            '</div>'
-            );
+               if(expRecord.hasOwnProperty('title')){
+                  $('#experienceFormDiv').append(
+                  '<div class="form-data">'+
+                     '<div class="form-group group-format english">' +
+                         '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ expRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+                         '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ expRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                         '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ expRecord.description +'</textarea></div>' +
+                     '</div>'+
+                  '</div>'
+                  );
+               }
+               if(expRecord.hasOwnProperty('title_kh')){
+                  $('#experienceFormDiv .form-data').each(function(){
+                     if(!$(this).children().hasClass('khmer')){
+                        $(this).append(
+                           '<div class="form-group group-format khmer">' +
+                               '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ expRecord.title_kh +'" data-key="title_kh" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+                               '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ expRecord.year_kh +'" data-key="year_kh" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                               '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_kh" class="inputOnWatch exp_desc form-control input-format2">'+ expRecord.description_kh +'</textarea></div>' +
+                           '</div>'
+                        );
+                        return false;
+                     }
+                  });
+
+               }
+               if(expRecord.hasOwnProperty('title_ch')){
+                  $('#experienceFormDiv .form-data').each(function(){
+                     if(!$(this).children().hasClass('chinese')){
+                        $(this).append(
+                           '<div class="form-group group-format chinese">' +
+                               '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ expRecord.title_ch +'" data-key="title_ch" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+                               '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ expRecord.year_ch +'" data-key="year_ch" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                               '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_ch" class="inputOnWatch exp_desc form-control input-format2">'+ expRecord.description_ch +'</textarea></div>' +
+                           '</div>'+
+                           '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'
+                        );
+                        return false;
+                     }
+                  });
+               }
+
           });
         }
         // else{
@@ -656,20 +913,53 @@
         // Render educations
         if(educationsJSON.hasOwnProperty("data")){
             var data = educationsJSON.data;
+            var count = 0;
                 data.forEach(function(eduRecord){
-                $('#educationFormDiv').append(
-                    '<div class="form-group group-format">' +
-                        '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ eduRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
-                        '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ eduRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
-                        '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ eduRecord.description +'</textarea></div>' +
-                        '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'+
-                    '</div>'
-                );
-            });
+                   if(eduRecord.hasOwnProperty('title')){
+                      $('#educationFormDiv').append(
+                        '<div class="form-data">'+
+                           '<div class="form-group group-format english">' +
+                               '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ eduRecord.title +'" data-key="title" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+                               '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ eduRecord.year +'" data-key="year" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                               '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description" class="inputOnWatch exp_desc form-control input-format2">'+ eduRecord.description +'</textarea></div>'+
+                           '</div>'+
+                        '</div>'
+
+                      );
+                   }
+                   if(eduRecord.hasOwnProperty('title_kh')){
+                      $( "#educationFormDiv .form-data" ).each(function() {
+                       if(!$(this).children().hasClass('khmer')){
+                             $(this).append(
+                                '<div class="form-group group-format khmer">' +
+                                    '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ eduRecord.title_kh +'" data-key="title_kh" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+                                    '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ eduRecord.year_kh +'" data-key="year_kh" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                                    '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_kh" class="inputOnWatch exp_desc form-control input-format2">'+ eduRecord.description_kh +'</textarea></div>' +
+                                '</div>'
+                            );
+                            return false;
+                        }
+                     });
+                   }
+                   if(eduRecord.hasOwnProperty('title_ch')){
+                      $("#educationFormDiv .form-data").each(function(){
+                        if(!$(this).children().hasClass('chinese')){
+                           $(this).append(
+                               '<div class="form-group group-format chinese">' +
+                                   '<div class="input-group input-format"><span class="input-group-addon">Title</span><input value="'+ eduRecord.title_ch +'" data-key="title_ch" class="inputOnWatch exp_title form-control input-format2" type="text" placeholder="Experience title"></div>' +
+                                   '<div class="input-group input-format"><span class="input-group-addon">Year</span><input value="'+ eduRecord.year_ch +'" data-key="year_ch" class="inputOnWatch exp_year form-control input-format2" type="text" placeholder="From year - until year"></div>' +
+                                   '<div class="input-group input-format"><span class="input-group-addon">Description</span><textarea data-key="description_ch" class="inputOnWatch exp_desc form-control input-format2">'+ eduRecord.description_ch +'</textarea></div>' +
+                               '</div>'+
+                               '<div class="text-right"><button type="button" class="btn-sm btn-danger delete btnRemoveFormGroup"><i class="voyager-trash"></i> Delete</button></div>'
+                           );
+                           return false;
+                        }
+                     });
+
+                   }
+             });
+
         }
-        // else{
-        //     $('#educationFormDiv').append(edu_html_template);
-        // }
 
         // Render socials
         if(socialsJSON.hasOwnProperty("data")){
@@ -718,6 +1008,26 @@
         }
 
     }
+
+    function checkLanguage(){
+      langSelectors = $('.language-selector .active').children().attr('id');
+      console.log('langSelectors: '+langSelectors);
+      if(langSelectors == 'en'){
+         $('.english').removeClass('hidden');
+         $('.khmer').addClass('hidden');
+         $('.chinese').addClass('hidden');
+      }
+      else if(langSelectors == 'kh'){
+         $('.english').addClass('hidden');
+         $('.khmer').removeClass('hidden');
+         $('.chinese').addClass('hidden');
+      }
+      else if(langSelectors == 'ch'){
+         $('.english').addClass('hidden');
+         $('.khmer').addClass('hidden');
+         $('.chinese').removeClass('hidden');
+      }
+   }
 </script>
 @if($isModelTranslatable)
 <script src="{{ voyager_asset('js/multilingual.js') }}"></script>
