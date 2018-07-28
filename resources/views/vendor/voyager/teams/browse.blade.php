@@ -11,16 +11,66 @@
             </a>
         @endif
     </h1>
+
     @include('voyager::multilingual.language-selector')
 @stop
 
 @section('content')
+   <a class="btn btn-arrange" data-popup-open="popup-1" href="#">Team Arrangement</a>
+
+    <div class="popup" data-popup="popup-1">
+        <div class="popup-inner">
+           <h2>Change Team Order Arrangement!!!</h2>
+              <div id="tableContainer" class="tableContainer">
+                 <table class="table table-hover">
+                      <thead class="fixedHeader">
+                         <tr>
+                             <th >Order</th>
+                             <th style="padding-left: 60px !important;">Fullname</th>
+                             <th >Actions</th>
+                         </tr>
+                      </thead>
+
+                      <tbody class="scrollContent">
+                       @foreach($dataTypeContent->sort(function ($a, $b) {
+                             if (!$a->order_id) {
+                                 return !$b->order_id ? 1 : 1;
+                             }
+                             if (!$b->order_id) {
+                                 return -1;
+                             }
+                             if ($a->order_id == $b->order_id) {
+                                 return 0;
+                             }
+                             return $a->order_id < $b->order_id ? -1 : 1;
+                          }); as $data)
+                         <tr>
+                          <td class="order_id"><span >{{ $loop->iteration }}</span></td>
+                          <td class="name"><span >{{ $data->fullname }}</span></td>
+                          <td class="id hidden"><span >{{ $data->id }}</span></td>
+                          <td>
+                              <icon class="up glyphicon glyphicon-arrow-up" style="margin: 0px 15px 0px 60px; color:green"></icon>
+                              <icon class="down glyphicon glyphicon-arrow-down" style="color:red"></icon>
+                           </td>
+                         </tr>
+                      @endforeach
+
+                      </tbody>
+                 </table>
+              </div>
+           <p><a class="btn btnSave" data-popup-close="popup-1" href="#">Save</a></p>
+           <p><a class="btn btnCancel" data-popup-close="popup-1" href="#">Cancel</a></p>
+           <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+        </div>
+    </div>
+
     <div class="page-content container-fluid">
         @include('voyager::alerts')
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-bordered">
                     <div class="panel-body">
+
                         <table id="dataTable" class="table table-hover">
                             <thead>
                                 <tr>
@@ -31,7 +81,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($dataTypeContent as $data)
+                                @foreach($dataTypeContent->sort(function ($a, $b) {
+                                     if (!$a->order_id) {
+                                         return !$b->order_id ? 0 : -1;
+                                     }
+                                     if (!$b->order_id) {
+                                         return 1;
+                                     }
+                                     if ($a->order_id == $b->order_id) {
+                                         return 0;
+                                     }
+                                     return $a->order_id > $b->order_id ? -1 : 1;
+                                 }); as $data)
                                 <tr>
                                     @foreach($dataType->browseRows as $row)
                                     <td>
@@ -123,8 +184,92 @@
             $('#delete_form')[0].action = $('#delete_form')[0].action.replace('__id', $(e.target).data('id'));
             $('#delete_modal').modal('show');
         });
+
+        $(function() {
+         	//----- OPEN
+         	$('[data-popup-open]').on('click', function(e) {
+         		var targeted_popup_class = jQuery(this).attr('data-popup-open');
+         		$('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+               $('html').css('overflow', 'hidden');
+         		e.preventDefault();
+         	});
+
+         	//----- CLOSE
+         	$('[data-popup-close]').on('click', function(e) {
+         		var targeted_popup_class = jQuery(this).attr('data-popup-close');
+         		$('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+               $('html').css('overflow', '');
+         		e.preventDefault();
+         	});
+
+            // $( ".scrollContent" ).sortable();
+
+            checkFirstAndLast();
+
+
+            $(".up,.down").click(function(){
+                var row = $(this).parents("tr:first");
+                if ($(this).is(".up")) {
+                    row.insertBefore(row.prev());
+                    var first = row.closest("tr").find('td.order_id').text();
+                    var second = row.closest("tr").next('tr').find('td.order_id').text();
+                    row.closest("tr").find('td.order_id').html(second);
+                    row.closest("tr").next('tr').find('td.order_id').html(first);
+                } else {
+                    row.insertAfter(row.next());
+                    var first = row.closest("tr").find('td.order_id').text();
+                    var second = row.closest("tr").prev('tr').find('td.order_id').text();
+                    row.closest("tr").find('td.order_id').html(second);
+                    row.closest("tr").prev('tr').find('td.order_id').html(first);
+                }
+                checkFirstAndLast();
+            });
+
+            $(".btnSave").click(function(e) {
+               e.preventDefault();
+               var rowvalue = [];
+               var map = {};
+
+               $(".scrollContent tr").each(function() {
+                  map['id'] = $(this).find('.id').text();
+                  map['name'] = $(this).find('.name').text();
+                  map['order_id'] = $(this).find('.order_id').text();
+                  rowvalue.push(map);
+                  map = {};
+               });
+
+               $.ajax({
+                   url:"{{ url('/teams/updateOrder') }}",
+                   type: 'POST',
+                   dataType: 'json',
+                   data: {
+                        "_token": "{{ csrf_token() }}",
+                        "teamData": rowvalue,
+                    }
+               }).done(function (result) {
+                  toastr.success("Successfully updated team order.");
+               }).fail(function (data) {
+                   alert("Errorrrrrr");
+               })
+               location.reload();
+            });
+
+         });
+
+         function checkFirstAndLast() {
+
+
+            $("#tableContainer > table > tbody > tr").each(function() {
+                     $(this).find('.up').removeClass( "hidden");
+                     $(this).find('.down').removeClass( "hidden");
+             });
+            $("#tableContainer table tbody tr:first").find('.up').addClass('hidden');
+            $("#tableContainer table tbody tr:last").find('.down').addClass('hidden');
+         }
+
     </script>
     @if($isModelTranslatable)
         <script src="{{ voyager_asset('js/multilingual.js') }}"></script>
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     @endif
 @stop

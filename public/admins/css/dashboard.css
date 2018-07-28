@@ -19,3 +19,135 @@
   z-index: 1;
 }
 
+
+/* Outer */
+.popup {
+	width:100%;
+	height:100%;
+	display:none;
+	position: fixed;
+	top:0px;
+	left:0px;
+   z-index: 1000;
+	background:rgba(0,0,0,0.75);
+}
+
+/* Inner */
+.popup-inner {
+	max-width:700px;
+	width:90%;
+   height: 80%;
+	padding:40px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	box-shadow:0px 2px 6px rgba(0,0,0,1);
+	border-radius:3px;
+	background:#fff;
+}
+
+
+
+div.tableContainer table {
+   font-family:"Gill Sans", sans-serif;
+   border: 1px solid grey;
+   font-size: 18px;
+	width: 100%;
+}
+
+thead.fixedHeader tr {
+	position: relative;
+}
+
+tbody.scrollContent tr {
+	table-layout: fixed;
+   display: table;
+   width: 100%;
+   float: left;
+}
+
+tbody.scrollContent tr:first-child td icon{
+   padding-left: 100px !important;
+}
+
+/* make the TH elements pretty */
+thead.fixedHeader th {
+	background: #C96;
+	border-left: 1px solid #EB8;
+	border-right: 1px solid #B74;
+	border-top: 1px solid #EB8;
+	font-weight: bolder;
+	padding: 4px 3px;
+	text-align: left
+}
+
+html>body tbody.scrollContent {
+	display: block;
+	height: 300px;
+	overflow: auto;
+   table-layout: fixed;
+	width: inherit !important;
+}
+
+html>body thead.fixedHeader {
+	display: table;
+	overflow: auto;
+	width: 100%
+}
+
+.btnCancel{
+   border: 1px solid;
+   color: black;
+   float: right;
+   margin-right: 10px;
+   font-family:"Gill Sans", sans-serif;
+   font-size: 18px;
+   width: 100px;
+}
+
+.btnSave{
+   background-color: #62a8ea;
+   color: white;
+   float: right;
+   font-family:"Gill Sans", sans-serif;
+   font-size: 18px;
+   width: 100px;
+}
+
+
+
+/* Close Button */
+.popup-close {
+	width:30px;
+	height:30px;
+	padding-top:4px;
+	display:inline-block;
+	position:absolute;
+	top:0px;
+	right:0px;
+	transition:ease 0.25s all;
+	-webkit-transform:translate(50%, -50%);
+	transform:translate(50%, -50%);
+	border-radius:1000px;
+	background:rgba(0,0,0,0.8);
+	font-family:Arial, Sans-Serif;
+	font-size:20px;
+	text-align:center;
+	line-height:100%;
+	color:#fff;
+}
+
+.popup-close:hover {
+	-webkit-transform:translate(50%, -50%) rotate(180deg);
+	transform:translate(50%, -50%) rotate(180deg);
+	background:rgba(0,0,0,1);
+	text-decoration:none;
+}
+
+.btn-arrange{
+   background-color: grey;
+   color: white;
+   margin-left: 20px !important;
+}

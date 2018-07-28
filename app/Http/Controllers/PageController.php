@@ -116,7 +116,7 @@ class PageController extends Controller
       $teams = Team::with(['translations' => function ($query) use ($locale, $fallback_locale) {
         $query->where('locale', $locale)
               ->orWhere('locale', $fallback_locale);
-    }])->get();
+    }])->orderByRaw ('order_id IS NULL ASC')-> orderBy ('order_id')->get();
       return view('visitor.pages.team.team',compact('teams'));
     }
     // Return individaul team member

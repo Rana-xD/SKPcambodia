@@ -35,6 +35,7 @@ Route::group(['middleware' =>'locale'],function(){
 Route::get('locale/{localeId?}','LocaleController@locales');
 Route::get('PDF/storage/uploads/files/{date}/{path}','System@downloadpdf');
 Route::post('mail','System@sendmail');
+Route::post('teams/updateOrder', 'OrderController@updateOrder');
 
 
 Route::group(['prefix' => 'admin'], function () {
