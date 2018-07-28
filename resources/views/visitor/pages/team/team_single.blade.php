@@ -107,7 +107,7 @@
 										<h4 class="h2">@lang('text.educations')</h4>
                                         @foreach(json_decode($teamsingle->getTranslatedAttribute('education', App::getLocale()))->data as $education)
 														 @if (isset( $education->title ))
-															@if(App::getLocale() == 'en')
+															@if(App::getLocale() == 'en' && $education->title != null)
 																<div class="item">
   															 	<i class="circled"></i>
 
@@ -123,7 +123,7 @@
 
 														 @endif
 														 @if (isset( $education->title_kh ))
-															 @if(App::getLocale() == 'kh')
+															 @if(App::getLocale() == 'kh' && $education->title_kh != null)
 																 <div class="item">
    															 	<i class="circled"></i>
 
@@ -139,7 +139,7 @@
 
 														 @endif
 														 @if (isset( $education->title_ch ))
-															 @if(App::getLocale() == 'ch')
+															 @if(App::getLocale() == 'ch' && $education->title_ch != null)
 																 <div class="item">
    															 	<i class="circled"></i>
 
@@ -165,7 +165,7 @@
 										<h4 class="h2">@lang('text.trainings')</h4>
                                         @foreach(json_decode($teamsingle->getTranslatedAttribute('training', App::getLocale()))->data as $training)
 														 @if (isset( $training->title ))
-														   @if(App::getLocale() == 'en')
+														   @if(App::getLocale() == 'en' && $training->title != null)
 																<div class="item">
 																	<i class="circled"></i>
 
@@ -179,8 +179,8 @@
 																</div>
 															@endif
 														@endif
-														@if (isset( $training->title_kh ))
-														  @if(App::getLocale() == 'kh')
+														@if (isset( $training->title_kh  ))
+														  @if(App::getLocale() == 'kh' && $training->title_kh != null)
 															  <div class="item">
 		  														<i class="circled"></i>
 
@@ -196,7 +196,7 @@
 													  @endif
 
 													  @if (isset( $training->title_ch ))
-														 @if(App::getLocale() == 'ch')
+														 @if(App::getLocale() == 'ch' && $training->title_ch != null)
 															 <div class="item">
 		 														<i class="circled"></i>
 
@@ -227,8 +227,8 @@
 												@foreach(json_decode($teamsingle->getTranslatedAttribute('experience', App::getLocale()))->data as $experience)
 												<input type="hidden" name="{{ $i++ }}">
 												{{--  {{ i++ }}  --}}
-														@if (isset( $experience->title ))
-														  @if(App::getLocale() == 'en')
+														@if (isset( $experience->title  ))
+														  @if(App::getLocale() == 'en' && $experience->title !=null)
 															  <div class="item">
  		 														<i class="circled"></i>
  		 														<div class="panel panel-default">
@@ -253,7 +253,7 @@
 														  @endif
 													  @endif
 													  @if (isset( $experience->title_kh ))
-														 @if(App::getLocale() == 'kh')
+														 @if(App::getLocale() == 'kh' && $experience->title_kh !=null)
 															 <div class="item">
 		 														<i class="circled"></i>
 		 														<div class="panel panel-default">
@@ -278,8 +278,8 @@
 														 @endif
 													 @endif
 
-													 @if (isset( $experience->title_ch ))
-														@if(App::getLocale() == 'ch')
+													 @if (isset( $experience->title_ch  ))
+														@if(App::getLocale() == 'ch' && $experience->title_ch !=null)
 															<div class="item">
 																<i class="circled"></i>
 																<div class="panel panel-default">
@@ -316,7 +316,7 @@
 	                                        @foreach(json_decode($teamsingle->getTranslatedAttribute('award', App::getLocale()))->data as $award)
 
 															 @if (isset( $award->title ))
-															   @if(App::getLocale() == 'en')
+															   @if(App::getLocale() == 'en' && $award->title !=null )
 																	<div class="item">
 																		<i class="circled"></i>
 
@@ -331,7 +331,7 @@
 																@endif
 															@endif
 															@if (isset( $award->title_kh ))
-															  @if(App::getLocale() == 'kh')
+															  @if(App::getLocale() == 'kh' && $award->title_kh !=null)
 																  <div class="item">
 																   <i class="circled"></i>
 
@@ -347,7 +347,7 @@
 														  @endif
 
 														  @if (isset( $award->title_ch ))
-															 @if(App::getLocale() == 'ch')
+															 @if(App::getLocale() == 'ch' && $award->title_ch !=null)
 																 <div class="item">
 					 												<i class="circled"></i>
 
