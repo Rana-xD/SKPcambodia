@@ -69,6 +69,7 @@
 
 								<form action="mail" id="myForm" method="post">
 									{{ csrf_field() }}
+									<input type="hidden" name="_token" value="{{ csrf_token() }}">
 									<label class="input-wrp">
 										<input type="text" placeholder="@lang('text.Name')" name="name"/>
 										<span></span>
