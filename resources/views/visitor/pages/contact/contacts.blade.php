@@ -13,7 +13,9 @@
 @endpush
 @push('styles')
 <style type="text/css">
-
+.red{
+	background-color: red;
+}
 </style>
 @endpush
 @section('content')
@@ -69,28 +71,27 @@
 
 								<form action="mail" id="myForm" method="post">
 									{{ csrf_field() }}
-									<input type="hidden" name="_token" value="{{ csrf_token() }}">
 									<label class="input-wrp">
-										<input type="text" placeholder="@lang('text.Name')" name="name"/>
-										<span></span>
+										<input type="text" placeholder="@lang('text.Name')" name="name" class="require"/>
+										<span class="spanStyle"></span>
 									</label>
 
 									<label class="input-wrp">
-										<input type="email" placeholder="@lang('text.Email')" name="email"/>
-										<span></span>
+										<input type="email" placeholder="@lang('text.Email')" name="email" class="require"/>
+										<span class="spanStyle"></span>
 									</label>
 
 									<label class="input-wrp">
-										<input type="text" placeholder="@lang('text.Phone')" name="phone"/>
-										<span></span>
+										<input type="text" placeholder="@lang('text.Phone')" name="phone" class="require"/>
+										<span class="spanStyle"></span>
 									</label>
 
 									<label class="input-wrp">
 										<textarea placeholder="@lang('text.Your_message')" name="message"></textarea>
-										<span></span>
+										<span class="spanStyle"></span>
 									</label>
 
-									<button class="custom-btn small dark-color" type="submit" data-text="Submit"><span>@lang('text.Submit')</span></button>
+									<button class="custom-btn small dark-color submit" type="submit" data-text="Submit"><span>@lang('text.Submit')</span></button>
 								</form>
 							</div>
 						</div>
@@ -109,6 +110,36 @@
 
 	@section('scripts')
 	<script>
+	$(document).ready(function() {
+				$('.submit').click(function(event) {
+					var flag = false;
+					$('.require').each(function (i, el) {
+						var data = $(el).val();
+						// console.log(i + ': ' + data);
+						var len = data.length;
+						if (len<1) {
+							flag = true;
+							$(this).parent().find('span').addClass('red');
+						}
+					});
+					if(flag){
+						alert("Please Input Required Fields!!!");
+						event.preventDefault();
+						return;
+					}else{
+						$(this).submit();
+					}
 
+				});
+
+				$('input').on('keyup keydown keypress change paste', function() {
+				    if ($(this).val() == '') {
+				        // $('.spanStyle').addClass('red');
+						  $(this).parent().find('span').addClass('red');
+				    } else {
+				        $(this).parent().find('span').removeClass('red');
+				    }
+				});
+			});
 	</script>
 	@endsection
