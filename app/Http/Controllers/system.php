@@ -21,7 +21,6 @@ class System extends Controller
 
       $user = 'admin@skpcambodia.com';
       Mail::to($user)->send(new Contact($request));
-      Mail::from($request->get('email'));
       Session::flash('send_status', 1);
       return redirect()->back();
 
