@@ -3,5 +3,5 @@
 # Name: {{ $request->name }}
 # Phone: {{ $request->phone }}
 
-{{ $request->message }}
+# Message: {{ $request->message }}
 @endcomponent
