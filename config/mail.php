@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'contact@skpcambodia.com'),
-        'name' => env('MAIL_FROM_NAME', 'SKPWebsite Contact'),
+        'name' => env('MAIL_FROM_NAME', 'Message from SKPWebsite Contact'),
     ],
 
     /*
