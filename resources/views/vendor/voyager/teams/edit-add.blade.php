@@ -474,13 +474,13 @@
         var email_html_template =
         '<div class="form-group">' +
             '<div class="input-group"><input data-key="email" class="inputOnWatch email_input form-control input-format" type="text" placeholder="Email address">' +
-            '<span class="input-group-addon btnRemoveFormGroup" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
+            '<span class="input-group-addon btnRemoveFormGroup1" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
         '</div>';
 
         var position_html_template =
         '<div class="form-group">' +
             '<div class="input-group"><input data-key="position" class="inputOnWatch position_input form-control input-format" type="text" placeholder="Position">' +
-            '<span class="input-group-addon btnRemoveFormGroup" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
+            '<span class="input-group-addon btnRemoveFormGroup1" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
         '</div>';
 
     $('document').ready(function () {
@@ -536,9 +536,9 @@
              $(this).parents('.form-data')[0].remove();
          });
 
-        // $('.btnRemoveFormGroup').on('click', function (e) {
-        //     $(this).parents('.form-group')[0].remove();
-        // });
+        $('.btnRemoveFormGroup1').on('click', function (e) {
+            $(this).parents('.form-group')[0].remove();
+        });
 
         $('#formAddEdit').on('submit', function(e){
             e.preventDefault();
@@ -976,7 +976,7 @@
                 $('#emailFormDiv').append(
                 '<div class="form-group">' +
                     '<div class="input-group"><input value="'+ email +'" data-key="email" class="inputOnWatch email_input form-control input-format" type="text" placeholder="Email address">' +
-                    '<span class="input-group-addon btnRemoveFormGroup" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
+                    '<span class="input-group-addon btnRemoveFormGroup1" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
                 '</div>'
                 );
             });
@@ -998,8 +998,8 @@
             data.forEach(function(position){
                 $('#positionFormDiv').append(
                 '<div class="form-group">' +
-                    '<div class="input-group"><input value="'+ position +'" data-key="position" class="inputOnWatch position_input form-control input-format" type="text" placeholder="Email address">' +
-                    '<span class="input-group-addon btnRemoveFormGroup" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
+                    '<div class="input-group"><input value="'+ position +'" data-key="position" class="inputOnWatch position_input form-control input-format" type="text" placeholder="Position">' +
+                    '<span class="input-group-addon btnRemoveFormGroup1" id="basic-addon2"><i class="voyager-trash"></i></span></div>'+
                 '</div>'
                 );
             });
