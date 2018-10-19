@@ -10,22 +10,18 @@
     {{-- Header --}}
     @slot('header')
         @component('mail::header', ['url' => config('app.url')])
-            Header Title
+            Inquiry About SK & P Cambodia Law Group
         @endcomponent
     @endslot
 {{-- Body --}}
-    This is our main message
-    @component('mail::message')
     # From: {{ $request->email }}
     # Name: {{ $request->name }}
     # Phone: {{ $request->phone }}
-
     # Message: {{ $request->message }}
-    @endcomponent
 {{-- Footer --}}
     @slot('footer')
         @component('mail::footer')
-            © {{ date('Y') }} {{ config('app.name') }}. Super FOOTER!
+            © {{ date('Y') }} SK & P Cambodia Law Group Developer. All rights reserved.
         @endcomponent
     @endslot
 @endcomponent
