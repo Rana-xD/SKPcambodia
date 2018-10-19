@@ -535,10 +535,14 @@
         $(document).on('click', '.btnRemoveFormGroup', function() {
              $(this).parents('.form-data')[0].remove();
          });
+         $(document).on('click', '.btnRemoveFormGroup1', function() {
+              $(this).parents('.form-group')[0].remove();
+          });
 
-        $('.btnRemoveFormGroup1').on('click', function (e) {
-            $(this).parents('.form-group')[0].remove();
-        });
+        // $('.btnRemoveFormGroup1').on('click', function (e) {
+        //     e.preventDefault();
+        //     $(this).parents('.form-group')[0].remove();
+        // });
 
         $('#formAddEdit').on('submit', function(e){
             e.preventDefault();
