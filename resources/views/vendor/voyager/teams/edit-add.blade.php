@@ -279,7 +279,7 @@
                         </div>
                     </div>
                     <div class="panel-body">
-
+                        <p>If you have any personal social media accounts, please copy the url of your account and paste it in below field accordingly. Leave it blank if you don't have any.</p>
                         <input type="hidden" id="socialDataJson" value="@if(isset($dataTypeContent->social_media)){{ old('social_media', $dataTypeContent->social_media) }}@elseif(isset($options->default)){{ old('social_media', $options->default) }}@else{{ old('social_media') }}@endif" name="social_media">
                         <div id="socialFormDiv">
                             <div class="form-group">
