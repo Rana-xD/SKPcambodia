@@ -5,7 +5,7 @@
 @push('meta')
 <meta name="description" content="">
 <meta name="keyword" content="">
-<meta property="og:url" content="http://www.skpcambodia.com/teamsingle/{{ Request::path() }}" />
+<meta property="og:url" content="https://www.skpcambodia.com/teamsingle/{{ Request::path() }}" />
 <meta name="og:type" content="">
 <meta name="og:title" content="{{ $teamsingle->getTranslatedAttribute('fullname', App::getLocale()) }}'s Profile Background">
 <meta name="og:image" content="">

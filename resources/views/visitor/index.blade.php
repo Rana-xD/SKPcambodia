@@ -6,7 +6,7 @@
 @push('meta')
 <meta name="description" content="Welcome to SK &amp; P Cambodia Law Group">
 <meta name="keyword" content="skpcambodia">
-<meta property="og:url" content="http://www.skpcambodia.com/" />
+<meta property="og:url" content="https://www.skpcambodia.com/" />
 <meta name="og:title" content="Welcome to SK &amp; P Cambodia Law Group">
 <meta name="og:type" content="article">
 <meta name="og:image" content="../img/logo.png">
