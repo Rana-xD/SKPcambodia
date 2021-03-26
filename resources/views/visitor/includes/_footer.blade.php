@@ -88,20 +88,20 @@
                         <div class="footer-item">
                             <h3 class="title">@lang('text.contact_us')</h3>
 
-                            <form class="footer-form" action="mail" id="myForm" method="post">
+                            <form class="footer-form" action="mail" id="footerForm" method="post">
                                 {{ csrf_field() }}
                                 <label class="input-wrp">
-                                    <input type="text" name="name" placeholder="@lang('text.Name')" />
+                                    <input type="text" name="name" placeholder="@lang('text.Name')" Required/>
                                     <span></span>
                                 </label>
 
                                 <label class="input-wrp">
-                                    <input type="text" name="email" placeholder="@lang('text.Email')" />
+                                    <input type="email" name="email" placeholder="@lang('text.Email')" Required/>
                                     <span></span>
                                 </label>
 
                                 <label class="input-wrp">
-                                    <input type="text" name="phone" placeholder="@lang('text.Phone')" />
+                                    <input type="text" name="phone" placeholder="@lang('text.Phone')" Required/>
                                     <span></span>
                                 </label>
 

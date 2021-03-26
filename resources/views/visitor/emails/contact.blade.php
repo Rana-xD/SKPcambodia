@@ -14,9 +14,9 @@
         @endcomponent
     @endslot
 {{-- Body --}}
-    From: {{ $request->email }}
-    Name: {{ $request->name }}
-    Phone Number: {{ $request->phone }}
+    From: {{ $request->email }} <br/>
+    Name: {{ $request->name }} <br/>
+    Phone Number: {{ $request->phone }} <br/>
     Message Content: {{ $request->message }}
 {{-- Footer --}}
     @slot('footer')

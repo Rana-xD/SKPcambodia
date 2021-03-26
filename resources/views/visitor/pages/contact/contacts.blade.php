@@ -69,7 +69,7 @@
 							<div class="contact-item">
 								<h2>@lang('text.contact_us')</h2>
 
-								<form action="mail" id="myForm" method="post">
+								<form action="mail" id="contactForm" method="post">
 									{{ csrf_field() }}
 									<label class="input-wrp">
 										<input type="text" placeholder="@lang('text.Name')" name="name" class="require"/>

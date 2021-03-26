@@ -35,7 +35,7 @@
         <script src="sweetalert/dist/sweetalert.min.js"></script>
         <script>
             $(document).ready(function(){
-                $('#myForm').validate();
+                $('#contactForm').validate();
                 var send = @if(Session::has('send_status')) {{ Session::get('send_status') }} @else {{ 0 }}@endif;
 
                 if(send==1)
