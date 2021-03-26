@@ -19,7 +19,7 @@ class System extends Controller
     public function sendmail(Request $request)
     {
 
-      $user = 'info@skpcambodia.com';
+      $user = 'areumdarosemary@gmail.com';
       Mail::to($user)->send(new Contact($request));
       Session::flash('send_status', 1);
       return redirect()->back();
