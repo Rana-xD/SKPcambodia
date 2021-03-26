@@ -14,7 +14,7 @@
         @endcomponent
     @endslot
 {{-- Body --}}
-    From: {{ $request->email }} <br/>
+    Email: {{ $request->email }} <br/>
     Name: {{ $request->name }} <br/>
     Phone Number: {{ $request->phone }} <br/>
     Message Content: {{ $request->message }}
